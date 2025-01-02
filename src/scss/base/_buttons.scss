@@ -1,1 +1,27 @@
+@use "base/var" as *;
 
+.btn, .btn-outline {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: fit-content;
+	height: 52px;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	font-size: 20px;
+	font-weight: 700;
+	color: $text;
+	border: 1px solid currentColor;
+    border-radius: 8px;
+	cursor:pointer;
+	transition: .3s; 
+}
+.btn.btn--white{
+	background-color: #fff;
+}
+.btn.btn--accent{
+	color: $accent;
+}
+.btn-outline{
+	color: white;
+}

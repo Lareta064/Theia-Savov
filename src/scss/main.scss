@@ -1,8 +1,10 @@
 @use "base/_var";
 @use "base/_base";
+@use "base/_buttons";
+
 
 @use "blocks/_category-card";
-
+@use "blocks/_product-card";
 
 //ui
 @use "ui/_ui-navigation";

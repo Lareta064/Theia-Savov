@@ -11,6 +11,7 @@
 	position: relative;
 	width: 100%;
 	max-width: 372px;
+	
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='372' height='259' viewBox='0 0 372 259' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.5 0.5H370.751V129.5V194.027L299.041 258.5H278.438H185.626H0.5V0.5Z' stroke='%23EAEAEA' /%3e%3c/svg%3e");
 	background-size: contain;
 	aspect-ratio: 372 / 259;
@@ -25,4 +26,7 @@
 		z-index: 1;
 	}
 	
+}
+.category-cards .category-card{
+	grid-column: span 3;
 }
