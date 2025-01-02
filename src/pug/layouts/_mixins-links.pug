@@ -1,6 +1,7 @@
 //- include ../mixins/_header.pug
-
-
-
-
-
+mixin category-card(txt, img)
+	.category-card
+		p !{txt}
+		img(src="./category/cat"+ img +".webp", srcset="./category/cat"+ img +"@2x.webp 2x" alt="img")
+		
+		

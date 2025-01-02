@@ -1,12 +1,6 @@
 @use "base/var" as *;
 
-@font-face {
-	font-family: 'Inter';
-	src: url('../fonts/Inter-ExtraBold.woff2') format('woff2');
-	font-weight: 800;
-	font-style: normal;
-	font-display: swap;
-}
+
 
 *, *:after, *:before {
 	box-sizing: border-box;
@@ -24,7 +18,7 @@ html,
 body {
 	margin: 0;
 	padding: 0;
-	font-family: sans-serif;
+	font-family: $ff;
 	-webkit-font-smoothing: subpixel-antialiased;
 	-moz-osx-font-smoothing: auto;
 }
@@ -32,7 +26,7 @@ body {
 a,
 a:hover {
 	text-decoration: none;
-	color: $bg-black;
+	color: $text;
 }
 a[href^="tel:"],
 a[href^="mailto:"] {
@@ -64,7 +58,7 @@ img {
 }
 
 input,
-button{border: none;}
+button, textarea{border: none;}
 button:focus,
 input:focus,textarea:focus{outline: none;}
 button {
@@ -82,14 +76,16 @@ input[type="submit"] {
 	cursor: pointer;
 }
 
-input[type="radio"],
-input[type='checkbox'],
 input[type="submit"] {
 	appearance: none;
 	-moz-appearance: none;
 	-webkit-appearance: none;
 }
-input::placeholder, textarea::placeholder{
+input::placeholder, textarea::placeholder, textarea::placeholder{
 	font-family: inherit;
 	font-size: inherit;
+}
+.category-card {
+	display: flex;
+	flex-direction: column;
 }
