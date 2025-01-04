@@ -1,10 +1,15 @@
 @use "base/_var";
+@use "base/_typography";
 @use "base/_base";
+
 @use "base/_buttons";
 
 
 @use "blocks/_category-card";
 @use "blocks/_product-card";
+@use "blocks/_description-block";
+
+
 
 //ui
 @use "ui/_ui-navigation";

@@ -1,0 +1,50 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../fonts/fonts.css")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Текст + картинка
+				.container-dashboard__content
+					.description-block
+						.description-block__text
+							h2.h2 Опыт, отвественность, компетентность - наши отличительные черты
+							p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно&shy;монтажных работ в промышленном и гражданском строительстве
+							p Работаем собственными силами, обеспечиваем высокое качество строительств
+						
+						.description-block__img
+							img(src="../img/block3_bg.webp", srcset="../img/block3_bg@2x.webp 2x", width="784" height="489" alt="img")
+					//==== statistic-block ====
+					.statistic-block.grid-border
+						.grid-border__item
+							.statistic-item
+								.accent-txt 10 лет
+								p На рынке
+						.grid-border__item
+							.statistic-item
+								.accent-txt 350+
+								p Сотрудников
+						.grid-border__item
+							.statistic-item
+								.accent-txt 30+
+								p Объектов возведено
+						.grid-border__item
+							.statistic-item
+								.accent-txt 246%
+								p Увеличение оборота за год

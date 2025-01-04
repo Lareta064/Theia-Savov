@@ -1,1 +1,10 @@
-
+@use "base/var" as *;
+.h2{
+	font-family:$fs;
+	font-weight: 400;
+	font-size: 50px;
+	line-height: 100%;
+}
+.accent-txt{
+	color: $accent;
+}

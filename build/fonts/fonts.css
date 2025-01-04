@@ -1,9 +1,9 @@
-@font-face{
+/* @font-face{
 	font-family: 'TT Runs Trial Variable';
 	src: url('./TT Runs Trial Variable Roman.woff2') format("woff2");
 	font-weight: 700;
 	font-display: swap;
-}
+} */
 @font-face{
 	font-family: 'Zekton';
 	src: url('./zekton.woff2') format("woff2");
