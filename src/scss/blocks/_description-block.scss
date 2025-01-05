@@ -3,15 +3,18 @@
 	display: flex;
 	align-items: center;
 	column-gap: 70px;
-	.h2{
-		margin-bottom: .9em;
-	}
-	p+p{margin-top: 12px;}
+	
 	.description-block__img{
 		flex-shrink: 0;
 		width: 50%;
 	}
+	
 }
+.description-block__text>*+*{
+	margin-top: 40px;
+}
+.description-block__text> p+p{margin-top: 12px;}
+.description-block__text> .h2+*{margin-top: 50px;}
 .statistic-item{
 	text-align: center;
 	font-weight: 500;

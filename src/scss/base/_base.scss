@@ -85,6 +85,9 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 	font-family: inherit;
 	font-size: inherit;
 }
+.container{
+	width: min(1550px, 100%);
+}
 .img-contain, .img-cover{
 	width: 100%;
 	height: 100%;
