@@ -1,4 +1,7 @@
 @use "../base/var" as *;
-.tabs-block.grid-wrapper{
-	
+.tabs-block.tabs-block--grid {
+	.tabs-nav{margin-bottom: 20px;}
+	.tabs-body>*{
+		grid-column: span 3;
+	}
 }

@@ -37,7 +37,7 @@ html(lang="ru")
 							button.tabs-swiper-prev.arrow-left
 							button.tabs-swiper-next.arrow-right
 					.swiper
-						#tab_1.tabs-nav__body.active
+						#tab_1.tabs-body.active
 							.tabs-swiper
 								.swiper-wrapper
 									.swiper-slide
@@ -57,7 +57,7 @@ html(lang="ru")
 									.swiper-slide
 										+product-card-ui(8,'ЩПС С2 фракции 0-20 мм', 2300)
 								.tabs-swiper-pagination
-						#tab_2.tabs-nav__body
+						#tab_2.tabs-body
 							.tabs-swiper
 								.swiper-wrapper
 									.swiper-slide
@@ -77,7 +77,7 @@ html(lang="ru")
 									.swiper-slide
 										+product-card-ui(8,'ЩПС С2 фракции 0-20 мм', 2300)
 								.tabs-swiper-pagination
-						#tab_3.tabs-nav__body
+						#tab_3.tabs-body
 							.tabs-swiper
 								.swiper-wrapper
 									.swiper-slide
@@ -89,13 +89,13 @@ html(lang="ru")
 									.swiper-slide
 										+product-card-ui(8,'ЩПС С2 фракции 0-20 мм', 2300)
 									.swiper-slide
-										+product-card-ui(5,'ЩПС С2 фракции 0-20 мм', 2300)
+										+product-card-ui(4,'ЩПС С2 фракции 0-20 мм', 2300)
 									.swiper-slide
-										+product-card-ui(6,'ЩПС С2 фракции 0-20 мм', 2300)
+										+product-card-ui(3,'ЩПС С2 фракции 0-20 мм', 2300)
 									.swiper-slide
-										+product-card-ui(7,'ЩПС С2 фракции 0-20 мм', 2300)
+										+product-card-ui(2,'ЩПС С2 фракции 0-20 мм', 2300)
 									.swiper-slide
-										+product-card-ui(8,'ЩПС С2 фракции 0-20 мм', 2300)
+										+product-card-ui(1,'ЩПС С2 фракции 0-20 мм', 2300)
 							.tabs-swiper-pagination
 
 		
@@ -108,7 +108,7 @@ html(lang="ru")
 
 				tabBlockSwiper.forEach((block) => {
 					const tabsNav = block.querySelectorAll(".tabs-nav__item");
-					const tabsBody = block.querySelectorAll(".tabs-nav__body");
+					const tabsBody = block.querySelectorAll(".tabs-body");
 					const swiperInstances = {};
 
 					// Инициализация Swiper для всех табов

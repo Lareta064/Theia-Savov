@@ -23,30 +23,23 @@ html(lang="ru")
 
 		block content
 			.container-dashboard
-				.tabs-block.grid-wrapper
+				.tabs-block.tabs-block--grid
 					.tabs-nav
 						a.tabs-nav__item.active(href="#tab_1" data-tab="tab_1") Все
 						a.tabs-nav__item(href="#tab_2" data-tab="tab_2") Песок 
 						a.tabs-nav__item(href="#tab_3" data-tab="tab_3") щебень 
 					
-					#tab_1.tabs-nav__body.active
+					#tab_1.tabs-body.active
 						+product-card-ui(5,'ЩПС С2 фракции 0-20 мм', 2300)
-					
 						+product-card-ui(6,'ЩПС С2 фракции 0-20 мм', 2300)
-					
 						+product-card-ui(7,'ЩПС С2 фракции 0-20 мм', 2300)
-					
 						+product-card-ui(8,'ЩПС С2 фракции 0-20 мм', 2300)
-					
+						+product-card-ui(8,'ЩПС С2 фракции 0-20 мм', 2300)
+						+product-card-ui(6,'ЩПС С2 фракции 0-20 мм', 2300)
+						+product-card-ui(7,'ЩПС С2 фракции 0-20 мм', 2300)
 						+product-card-ui(5,'ЩПС С2 фракции 0-20 мм', 2300)
-					
-						+product-card-ui(6,'ЩПС С2 фракции 0-20 мм', 2300)
-					
-						+product-card-ui(7,'ЩПС С2 фракции 0-20 мм', 2300)
-					
-						+product-card-ui(8,'ЩПС С2 фракции 0-20 мм', 2300)
 							
-					#tab_2.tabs-nav__body
+					#tab_2.tabs-body
 						+product-card-ui(1,'ЩПС С2 фракции 0-20 мм', 2300)
 					
 						+product-card-ui(2,'ЩПС С2 фракции 0-20 мм', 2300)
@@ -63,7 +56,7 @@ html(lang="ru")
 					
 						+product-card-ui(8,'ЩПС С2 фракции 0-20 мм', 2300)
 							
-					#tab_3.tabs-nav__body
+					#tab_3.tabs-body
 						+product-card-ui(5,'ЩПС С2 фракции 0-20 мм', 2300)
 					
 						+product-card-ui(6,'ЩПС С2 фракции 0-20 мм', 2300)
@@ -72,13 +65,13 @@ html(lang="ru")
 					
 						+product-card-ui(8,'ЩПС С2 фракции 0-20 мм', 2300)
 					
-						+product-card-ui(5,'ЩПС С2 фракции 0-20 мм', 2300)
+						+product-card-ui(4,'ЩПС С2 фракции 0-20 мм', 2300)
 					
-						+product-card-ui(6,'ЩПС С2 фракции 0-20 мм', 2300)
+						+product-card-ui(3,'ЩПС С2 фракции 0-20 мм', 2300)
 					
-						+product-card-ui(7,'ЩПС С2 фракции 0-20 мм', 2300)
+						+product-card-ui(2,'ЩПС С2 фракции 0-20 мм', 2300)
 					
-						+product-card-ui(8,'ЩПС С2 фракции 0-20 мм', 2300)
+						+product-card-ui(1,'ЩПС С2 фракции 0-20 мм', 2300)
 		
 				
 		
@@ -89,7 +82,7 @@ html(lang="ru")
 
 				tabBlocks.forEach((block) => {
 					const tabsNavItems = block.querySelectorAll(".tabs-nav__item");
-					const tabsBodies = block.querySelectorAll(".tabs-nav__body");
+					const tabsBodies = block.querySelectorAll(".tabs-body");
 
 					tabsNavItems.forEach((tab) => {
 					tab.addEventListener("click", (e) => {
