@@ -1,0 +1,61 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../fonts/fonts.css")
+		link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css')
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Swiper
+				.container-dashboard__content
+					.myswiper-container
+						.swiper-nav
+							button.myswiper-button-next.arrow-left
+							button.myswiper-button-prev.arrow-right
+						.mySwiper.swiper
+							.swiper-wrapper
+								.swiper-slide
+									+product-card-ui(5,'ЩПС С2 фракции 0-20 мм', 2300)
+								.swiper-slide
+									+product-card-ui(6,'ЩПС С2 фракции 0-20 мм', 2300)
+								.swiper-slide
+									+product-card-ui(7,'ЩПС С2 фракции 0-20 мм', 2300)
+								.swiper-slide
+									+product-card-ui(8,'ЩПС С2 фракции 0-20 мм', 2300)
+								.swiper-slide
+									+product-card-ui(5,'ЩПС С2 фракции 0-20 мм', 2300)
+								.swiper-slide
+									+product-card-ui(6,'ЩПС С2 фракции 0-20 мм', 2300)
+								.swiper-slide
+									+product-card-ui(7,'ЩПС С2 фракции 0-20 мм', 2300)
+								.swiper-slide
+									+product-card-ui(8,'ЩПС С2 фракции 0-20 мм', 2300)
+							
+							.my-swiper-pagination
+		script(src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js')
+		script.
+			const mySwiper = new Swiper('.mySwiper', {
+				slidesPerView: 4,
+				speed:1000,
+				spaceBetween:40,
+				navigation: {
+					nextEl: ".myswiper-button-next",
+					prevEl: ".myswiper-button-prev",
+				},
+
+			});

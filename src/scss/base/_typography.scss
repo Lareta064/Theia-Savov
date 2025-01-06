@@ -9,3 +9,15 @@
 .accent-txt{
 	color: $accent;
 }
+.arrow-link{
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 110%;
+	color: $text;
+	display: inline-flex;
+	align-items: center;
+	column-gap: 10px;
+	svg{
+		flex-shrink: 0;
+	}
+}

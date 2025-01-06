@@ -1,0 +1,112 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../fonts/fonts.css")
+		link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css')
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+		style.
+			
+				
+
+	body.body-dashboard
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				.tabs-block.grid-wrapper
+					.tabs-nav
+						a.tabs-nav__item.active(href="#tab_1" data-tab="tab_1") Все
+						a.tabs-nav__item(href="#tab_2" data-tab="tab_2") Песок 
+						a.tabs-nav__item(href="#tab_3" data-tab="tab_3") щебень 
+					
+					#tab_1.tabs-nav__body.active
+						+product-card-ui(5,'ЩПС С2 фракции 0-20 мм', 2300)
+					
+						+product-card-ui(6,'ЩПС С2 фракции 0-20 мм', 2300)
+					
+						+product-card-ui(7,'ЩПС С2 фракции 0-20 мм', 2300)
+					
+						+product-card-ui(8,'ЩПС С2 фракции 0-20 мм', 2300)
+					
+						+product-card-ui(5,'ЩПС С2 фракции 0-20 мм', 2300)
+					
+						+product-card-ui(6,'ЩПС С2 фракции 0-20 мм', 2300)
+					
+						+product-card-ui(7,'ЩПС С2 фракции 0-20 мм', 2300)
+					
+						+product-card-ui(8,'ЩПС С2 фракции 0-20 мм', 2300)
+							
+					#tab_2.tabs-nav__body
+						+product-card-ui(1,'ЩПС С2 фракции 0-20 мм', 2300)
+					
+						+product-card-ui(2,'ЩПС С2 фракции 0-20 мм', 2300)
+					
+						+product-card-ui(3,'ЩПС С2 фракции 0-20 мм', 2300)
+					
+						+product-card-ui(4,'ЩПС С2 фракции 0-20 мм', 2300)
+					
+						+product-card-ui(5,'ЩПС С2 фракции 0-20 мм', 2300)
+					
+						+product-card-ui(6,'ЩПС С2 фракции 0-20 мм', 2300)
+					
+						+product-card-ui(7,'ЩПС С2 фракции 0-20 мм', 2300)
+					
+						+product-card-ui(8,'ЩПС С2 фракции 0-20 мм', 2300)
+							
+					#tab_3.tabs-nav__body
+						+product-card-ui(5,'ЩПС С2 фракции 0-20 мм', 2300)
+					
+						+product-card-ui(6,'ЩПС С2 фракции 0-20 мм', 2300)
+					
+						+product-card-ui(7,'ЩПС С2 фракции 0-20 мм', 2300)
+					
+						+product-card-ui(8,'ЩПС С2 фракции 0-20 мм', 2300)
+					
+						+product-card-ui(5,'ЩПС С2 фракции 0-20 мм', 2300)
+					
+						+product-card-ui(6,'ЩПС С2 фракции 0-20 мм', 2300)
+					
+						+product-card-ui(7,'ЩПС С2 фракции 0-20 мм', 2300)
+					
+						+product-card-ui(8,'ЩПС С2 фракции 0-20 мм', 2300)
+		
+				
+		
+		script(src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js')
+		script.
+			document.addEventListener("DOMContentLoaded", () => {
+				const tabBlocks = document.querySelectorAll(".tabs-block");
+
+				tabBlocks.forEach((block) => {
+					const tabsNavItems = block.querySelectorAll(".tabs-nav__item");
+					const tabsBodies = block.querySelectorAll(".tabs-nav__body");
+
+					tabsNavItems.forEach((tab) => {
+					tab.addEventListener("click", (e) => {
+						e.preventDefault();
+
+						// Убираем активный класс со всех табов и контента
+						tabsNavItems.forEach((item) => item.classList.remove("active"));
+						tabsBodies.forEach((body) => body.classList.remove("active"));
+
+						// Добавляем активный класс на выбранный таб и его контент
+						tab.classList.add("active");
+						const targetId = tab.dataset.tab;
+						const targetBody = block.querySelector(`#${targetId}`);
+						if (targetBody) {
+						targetBody.classList.add("active");
+						}
+					});
+					});
+				});
+				});

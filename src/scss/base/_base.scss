@@ -96,11 +96,12 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 .img-cover{
 	object-fit:cover;
 }
-.flex-center, .product-card,  .product-card__desk{
+.flex,.flex-center, .product-card,  .product-card__desk{
 	display: flex;
 	justify-content: center;
 	align-items: center
 }
+.flex{justify-content: flex-start;}
 .category-card, .product-card, .product-card__desk {
 	display: flex;
 	flex-direction: column;

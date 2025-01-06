@@ -1,0 +1,23 @@
+@use "../base/var" as *;
+.swiper{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	.swiper-slide + .swiper-slide{
+		position: relative;
+		&:before{
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: -21px;
+			width: 1px;
+			background-color: rgba(43, 42, 41, .1);
+		}
+	}
+}
+.myswiper-container .swiper-nav{
+	margin-left: auto;
+	width: fit-content;
+	text-align: right;
+	margin-bottom: 20px;
+}

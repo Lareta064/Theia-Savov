@@ -1,0 +1,29 @@
+@use "../base/var" as *;
+.tabs-block-nav{
+	justify-content: space-between;
+	.swiper-nav,.tabs-nav{margin: 0;}
+}
+.tabs-nav>*+*{margin-left: 28px;}
+.tabs-nav__item {
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 1;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: $grey;
+	white-space: nowrap;
+	transition: .3s;
+	cursor:pointer;
+}
+
+.tabs-nav__item:hover, .tabs-nav__item.active {
+	color: black;
+}
+
+.tabs-nav__body {
+	display: none;
+}
+
+.tabs-nav__body.active {
+display: block;
+}
