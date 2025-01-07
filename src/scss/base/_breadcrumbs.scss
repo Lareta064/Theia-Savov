@@ -1,1 +1,39 @@
-
+@use "base/var" as *;
+/*.breadcrumbs*/
+.breadcrumbs{
+	li{display: inline-block;}
+	.svg-logo{
+		width: 68px;
+		height: 10px;
+		&:hover{color: $accent;}
+	}
+	
+	li+li{
+		padding-left: 7px;
+		padding-right: 7px;
+		position: relative;
+		&:before{
+			content: '/';
+			position: absolute;
+			left: -4px;
+			top: 1px;
+		}
+	}
+	li:first-child{padding-right: 7px;}
+	li:last-child{
+		padding-right: 0;
+		a{
+			cursor: default;
+			&:hover{color: $text;} 
+		}
+	}
+	a{
+		font-size: 14px;
+		line-height: 1.43;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: $text;
+		transition: .3s; 
+		&:hover{color: $accent;} 
+	}
+}

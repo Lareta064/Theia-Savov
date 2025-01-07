@@ -1,4 +1,11 @@
 @use "base/var" as *;
+.svg-logo{
+	display: inline-block;
+	width: 145px;
+	height: 20px;
+	object-fit: contain;
+	color: #2B2A29;
+}
 .arrow-left, .arrow-right{
 	width: 48px;
 	height: 12px;

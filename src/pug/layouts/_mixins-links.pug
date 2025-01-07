@@ -24,3 +24,13 @@ mixin product-card-ui(img, title, price)
 			.product-card__title !{title}
 			.product-card__price от !{price} руб./м3
 			button.btn Купить
+
+mixin breadcrumbs(...items)
+	ul.breadcrumbs
+		li
+			a(href="#!")
+				svg.svg-logo
+					use(href='../img/sprite.svg#svg-logo')
+		each item in ...items
+			li
+				a(href="#!") !{item}
