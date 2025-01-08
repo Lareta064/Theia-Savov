@@ -26,11 +26,34 @@ mixin product-card-ui(img, title, price)
 			button.btn Купить
 
 mixin breadcrumbs(...items)
-	ul.breadcrumbs
-		li
-			a(href="#!")
-				svg.svg-logo
-					use(href='../img/sprite.svg#svg-logo')
+	.breadcrumbs
+		a(href="#!")
+			svg.svg-logo
+				use(href='./img/sprite.svg#svg-logo')
 		each item in items
-			li
-				a(href="#!") !{item}
+			a(href="#!") !{item}
+
+mixin breadcrumbs-ui(...items)
+	.breadcrumbs
+		a(href="#!")
+			svg.svg-logo
+				use(href='../img/sprite.svg#svg-logo')
+		each item in items
+			a(href="#!") !{item}
+
+mixin select(plh="Пример заполнения", inpName = 'input_name', label)
+	.form-item&attributes(attributes)
+		if label
+			label #{label}
+		.dropdown
+			button.dropdown__button(type="button")
+				span #{plh}
+			.dropdown__list
+				ul
+					li.dropdown__list-item(data-value="Пример заполнения 1") Пример заполнения 1
+					li.dropdown__list-item(data-value="Пример заполнения 2") Пример заполнения 2
+					li.dropdown__list-item(data-value="Пример заполнения 3") Пример заполнения 3
+					li.dropdown__list-item(data-value="Пример заполнения 4") Пример заполнения 4
+
+			//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+			input.dropdown__input-hidden(type="text", name=""+ input_name)

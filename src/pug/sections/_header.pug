@@ -4,10 +4,11 @@ header.header
 			a(href="#!").logo
 				svg.logo-group
 					use(href='./img/sprite.svg#logo-group')
+			//=== search-form-open button ===
 			button.flex-link.search-form-open#search-form-open Поиск
 				svg.svg-search
 					use(href='./img/sprite.svg#svg-search')
-
+			//=== header-nav ===
 			.header-nav
 				ul.header-nav__list
 					li.header-nav__item
@@ -24,9 +25,14 @@ header.header
 						a(href="").header-nav__link О компании
 					li.header-nav__item
 						a(href="").header-nav__link Контакты
-			
+			//=== cart icon ===
 			a(href="#!").cart-button
 				svg.svg-cart
 					use(href='./img/sprite.svg#svg-cart')
-
+			//=== button Обратный звонок ===
 			button.btn.btn--white.callback-btn Обратный звонок
+	
+	//==========SEARCH FORM WRAPPER =========
+	.header-form-wrapper
+		form.header-search-form
+			

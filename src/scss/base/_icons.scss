@@ -1,5 +1,5 @@
 @use "base/var" as *;
-.svg-logo, .svg-search, .svg-cart, .logo-group{
+.svg-logo, .svg-search, .svg-cart, .logo-group, .svg-carret,.svg-plus{
 	display: inline-block;
 	width: 145px;
 	height: 20px;
@@ -16,7 +16,14 @@
 	height: 16px;
 	color: white;
 }
-
+.svg-carret{
+	width: 17px;
+	height: 10px;
+}
+.svg-plus{
+	width: 17px;
+	height: 16px;
+}
 .arrow-left, .arrow-right{
 	width: 48px;
 	height: 12px;

@@ -33,5 +33,16 @@
   			<path d="M48 6L38 0.226495L38 11.7735L48 6ZM39 5L1.99002e-07 4.99999L-1.99002e-07 6.99999L39 7L39 5Z" fill="currentColor" />
 		</g>
 	</symbol>
+	<symbol id="svg-carret" viewBox="0 0 17 10">
+		<g>
+  			<path d="M8.3844 7.61949L15.4474 0.00185977L16.5 1.10913L8.3844 10L0.5 1.10918L1.55263 0L8.3844 7.61949Z" fill="currentColor" />
+		</g>
+	</symbol>
+	<symbol id="svg-plus" viewBox="0 0 17 16">
+		<g>
+  			 <rect x="0.5" y="7" width="16" height="2" fill="currentColor" />
+  			 <rect x="7.5" y="16" width="16" height="2" transform="rotate(-90 7.5 16)" fill="currentColor" />
+		</g>
+	</symbol>
 	
 </svg>

@@ -21,4 +21,35 @@ html(lang="ru")
 			.container-dashboard
 				h2 Форма
 				.container-dashboard__content
-					
+					.form-item
+						input(type="text" placeholder="Адрес *")
+					pre.
+						.form-item
+							input(type="search" placeholder="Адрес *")
+					hr
+					.form-item
+						textarea(placeholder="Примечание")
+					pre.
+						.form-item
+							textarea(placeholder="Примечание")
+					br
+					.form-row
+						.form-item
+							input(type="tel" placeholder="Телефон *")
+						.form-item
+							input(type="email" placeholder="Email *")
+					pre.
+						.form-row
+							.form-item
+								input(type="tel" placeholder="Телефон *")
+							.form-item
+								input(type="email" placeholder="Email *")
+					hr
+					.form-light
+						.form-item
+							input(type="search" placeholder="Поиск")
+							button.btn(type="submit") Найти
+					hr
+					+select("Речной песок", 'product_name')
+		
+		script(src="../js/main.js")
