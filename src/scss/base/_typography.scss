@@ -17,7 +17,9 @@
 	display: inline-flex;
 	align-items: center;
 	column-gap: 10px;
+	transition: .3s; 
 	svg{
 		flex-shrink: 0;
+		color: inherit;
 	}
 }

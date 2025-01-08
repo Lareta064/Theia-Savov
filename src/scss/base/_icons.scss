@@ -1,11 +1,22 @@
 @use "base/var" as *;
-.svg-logo{
+.svg-logo, .svg-search, .svg-cart, .logo-group{
 	display: inline-block;
 	width: 145px;
 	height: 20px;
 	object-fit: contain;
 	color: #2B2A29;
 }
+.logo-group{
+	width: 146px;
+	height: 35px;
+	color: white;
+}
+.svg-search, .svg-cart{
+	width: 15px;
+	height: 16px;
+	color: white;
+}
+
 .arrow-left, .arrow-right{
 	width: 48px;
 	height: 12px;

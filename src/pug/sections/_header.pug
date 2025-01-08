@@ -1,1 +1,32 @@
+header.header
+	.container
+		.header-content
+			a(href="#!").logo
+				svg.logo-group
+					use(href='./img/sprite.svg#logo-group')
+			button.flex-link.search-form-open#search-form-open Поиск
+				svg.svg-search
+					use(href='./img/sprite.svg#svg-search')
 
+			.header-nav
+				ul.header-nav__list
+					li.header-nav__item
+						a(href="").header-nav__link Каталог
+					li.header-nav__item
+						a(href="").header-nav__link Аренда техники 
+					li.header-nav__item
+						a(href="").header-nav__link Строительство
+					li.header-nav__item
+						a(href="").header-nav__link Покупателям
+					li.header-nav__item
+						a(href="").header-nav__link Блог
+					li.header-nav__item
+						a(href="").header-nav__link О компании
+					li.header-nav__item
+						a(href="").header-nav__link Контакты
+			
+			a(href="#!").cart-button
+				svg.svg-cart
+					use(href='./img/sprite.svg#svg-cart')
+
+			button.btn.btn--white.callback-btn Обратный звонок

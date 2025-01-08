@@ -31,6 +31,6 @@ mixin breadcrumbs(...items)
 			a(href="#!")
 				svg.svg-logo
 					use(href='../img/sprite.svg#svg-logo')
-		each item in ...items
+		each item in items
 			li
 				a(href="#!") !{item}

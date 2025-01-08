@@ -87,6 +87,7 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 }
 .container{
 	width: min(1550px, 100%);
+	margin-inline: auto;
 }
 .img-contain, .img-cover{
 	width: 100%;
@@ -96,12 +97,18 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 .img-cover{
 	object-fit:cover;
 }
-.flex,.flex-center, .product-card,  .product-card__desk{
+.flex,
+.flex-center,
+.header-content,
+.product-card,
+.product-card__desk{
 	display: flex;
-	justify-content: center;
 	align-items: center
 }
-.flex{justify-content: flex-start;}
+.flex-center, .product-card,  .product-card__desk{
+	justify-content: center;
+}
+
 .category-card, .product-card, .product-card__desk {
 	display: flex;
 	flex-direction: column;
