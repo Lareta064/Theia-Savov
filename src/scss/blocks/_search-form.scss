@@ -1,20 +1,30 @@
 @use "../base/var" as *;
 .header-form-wrapper{
-	padding-top: 45px;
-	padding-bottom: 45px;
-	background-color: $dark;
-	transform: translateY(-100px);
-	transition: .7s; 
-	z-index: 1;
-	position: absolute;
-	top: 0;
+	background-color: rgba(255,255,255, .7);
+	position: fixed;
+	top: 74px;
+	bottom: 0;
 	left: 0;
 	right: 0;
+	display: none;
 	
-	&.active{transform: translateY(74px);}
+	z-index: 1;
+	position: absolute;
+	
+	
+	&.active{display: block;}
+	&.active .header-search-form{transform: translateY(0);}
+
 	.header-search-form{
+		padding: 45px 15px;
+		transition: .7s; 
+		transform: translateY(-100px);
+		background-color: $dark;
+		
+		
+	}
+	.search-form-group{
 		width: min(1100px,100%);
-		padding-inline: 15px;
 		margin: 0 auto;
 		input::-webkit-search-cancel-button {
 			-webkit-appearance: none;

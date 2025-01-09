@@ -7,9 +7,17 @@ document.addEventListener("DOMContentLoaded", function () {
         searchFormOpen.addEventListener('click', ()=>{
             if(headerSearchForm.classList.contains('active')){
                 headerSearchForm.classList.remove('active');
+                bodyEl.classList.remove('lock');
             }
             else{
                 headerSearchForm.classList.add('active');
+                bodyEl.classList.add('lock');
+            }
+        });
+        headerSearchForm.addEventListener('click', (e) => {
+            if (e.target == e.currentTarget) {
+                headerSearchForm.classList.remove('active');
+                bodyEl.classList.remove('lock');
             }
         });
     }
