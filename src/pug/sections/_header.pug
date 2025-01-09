@@ -5,7 +5,7 @@ header.header
 				svg.logo-group
 					use(href='./img/sprite.svg#logo-group')
 			//=== search-form-open button ===
-			button.flex-link.search-form-open#search-form-open Поиск
+			button.flex-link.search-form-open#searchForm-open Поиск
 				svg.svg-search
 					use(href='./img/sprite.svg#svg-search')
 			//=== header-nav ===
@@ -33,6 +33,10 @@ header.header
 			button.btn.btn--white.callback-btn Обратный звонок
 	
 	//==========SEARCH FORM WRAPPER =========
-	.header-form-wrapper
+	.header-form-wrapper#header-search-form
 		form.header-search-form
-			
+			.form-item.search-form-group
+				input(type="search" placeholder="Поиск")
+				button.btn.search-btn(type="submit")
+					svg.svg-search
+						use(href='../img/sprite.svg#svg-search')

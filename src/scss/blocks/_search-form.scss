@@ -1,0 +1,28 @@
+@use "../base/var" as *;
+.header-form-wrapper{
+	padding-top: 45px;
+	padding-bottom: 45px;
+	background-color: $dark;
+	transform: translateY(-100px);
+	transition: .7s; 
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	
+	&.active{transform: translateY(74px);}
+	.header-search-form{
+		width: min(1100px,100%);
+		padding-inline: 15px;
+		margin: 0 auto;
+		input::-webkit-search-cancel-button {
+			-webkit-appearance: none;
+			appearance: none;
+			height: 20px;
+			width: 20px;
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.8837 10L15 5.88375L14.1163 5L10 9.11625L5.88375 5L5 5.88375L9.11625 10L5 14.1163L5.88375 15L10 10.8837L14.1163 15L15 14.1163L10.8837 10Z' fill='%23ffffff'/%3e%3cmask id='mask0_311_6213' style='mask-type:luminance' maskUnits='userSpaceOnUse' x='5' y='5' width='10' height='10'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.8837 10L15 5.88375L14.1163 5L10 9.11625L5.88375 5L5 5.88375L9.11625 10L5 14.1163L5.88375 15L10 10.8837L14.1163 15L15 14.1163L10.8837 10Z' fill='white'/%3e%3c/mask%3e%3cg mask='url(%23mask0_311_6213)'%3e%3c/g%3e%3c/svg%3e ");
+			background-size: 20px 20px;
+			}
+	}
+}

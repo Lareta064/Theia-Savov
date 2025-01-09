@@ -22,7 +22,7 @@
 							<use href="./img/sprite.svg#logo-group"></use>
 						</svg></a>
 					<!--=== search-form-open button ===-->
-					<button class="flex-link search-form-open" id="search-form-open">Поиск
+					<button class="flex-link search-form-open" id="searchForm-open">Поиск
 						<svg class="svg-search">
 							<use href="./img/sprite.svg#svg-search"></use>
 						</svg>
@@ -48,8 +48,17 @@
 				</div>
 			</div>
 			<!--==========SEARCH FORM WRAPPER =========-->
-			<div class="header-form-wrapper">
-				<form class="header-search-form"></form>
+			<div class="header-form-wrapper" id="header-search-form">
+				<form class="header-search-form">
+					<div class="form-item search-form-group">
+						<input type="search" placeholder="Поиск">
+						<button class="btn search-btn" type="submit">
+							<svg class="svg-search">
+								<use href="../img/sprite.svg#svg-search"></use>
+							</svg>
+						</button>
+					</div>
+				</form>
 			</div>
 		</header>
 		<!--script(src="./libs/jquery/jquery-3.0.0.min.js")-->

@@ -1,6 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
     const bodyEl = document.body;
-   
+    // header search form
+    const searchFormOpen = document.querySelector('#searchForm-open');
+    if(searchFormOpen){
+        const headerSearchForm = document.querySelector('#header-search-form');
+        searchFormOpen.addEventListener('click', ()=>{
+            if(headerSearchForm.classList.contains('active')){
+                headerSearchForm.classList.remove('active');
+            }
+            else{
+                headerSearchForm.classList.add('active');
+            }
+        });
+    }
+    
     // const headerEl = document.querySelector('header');
     // const openSearchForm = document.querySelector('#search-btn');
     // const searchFormPopup = document.querySelector('#search-popup');
