@@ -13,8 +13,7 @@ html(lang="ru")
 		link(rel="stylesheet", href="../css/main.css")
 		title UI-KIT
 
-	body.body-dashboard(style="background: #f0f0f0")
-
+	body.body-dashboard
 		include ui-navigation.pug
 
 		block content
@@ -45,11 +44,24 @@ html(lang="ru")
 							.form-item
 								input(type="email" placeholder="Email *")
 					hr
-					.form-light
-						.form-item
-							input(type="search" placeholder="Поиск")
-							button.btn(type="submit") Найти
-					hr
 					+select("Речной песок", 'product_name')
+					pre.
+						+select("Речной песок", 'product_name')
+				div(style="background: #1c1c1c; padding:30px")
+					form.form.form-light
+						.form-item
+							input(type="text" placeholder="Адрес *")
+					pre.
+						form.form.form-light
+							.form-item
+								input(type="text" placeholder="Адрес *")
+						
+					.form-item.search-form-group
+						input(type="search" placeholder="Поиск")
+						button.btn.search-btn(type="submit")
+							svg.svg-search
+								use(href='../img/sprite.svg#svg-search')
+					hr
+					
 		
 		script(src="../js/main.js")

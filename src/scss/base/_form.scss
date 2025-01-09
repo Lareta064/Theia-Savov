@@ -11,6 +11,7 @@ input, textarea{
 	border-radius: 7px;
 	padding-inline: 12px;
 	height: 44px;
+	background-color: transparent;
 	&::placeholder{
 		color: inherit;
 		font-family: inherit;
@@ -44,6 +45,31 @@ textarea{
 		border: 1px solid currentColor;
 	}
 }
+/*search form*/
+.search-form-group{
+	display: flex;
+	column-gap:8px;
+	
+	.search-btn{
+		width: 44px;
+		height: 44px;
+		display: flex;
+		padding: 10px;
+		justify-content: center;
+		align-items: center;
+		background-color: #fff;
+		transition: .3s; 
+		svg{
+			color: #222222;
+			width: 25px;
+			height: 24px;
+		}
+		&:hover{
+			background-color: $accent;svg{color: #fff;}
+		}
+		
+	}
+}
 /*custom select*/
 .dropdown {
 	position: relative;
@@ -54,14 +80,18 @@ textarea{
 	display: block;
 	width: 100%;
 	text-align: left;
-	
-	border: 1px solid grey;
-	
+	height: 44px;
+	border: 1px solid #e9e9e9;
+	padding-left: 12px;
+	padding-right: 30px;
+	border-radius: 7px;
 	cursor: pointer;
-	span{
-	  color: grey;
-	 
-	}
+	
+	  color: $text;
+	  letter-spacing: -0.02em;
+	  font-size: 16px;
+	  font-weight: 700;
+	
 	
   }
   
@@ -69,15 +99,18 @@ textarea{
 	content: "";
 	position: absolute;
 	top: 50%;
-	right: 15px;
+	right: 8px;
+	transform: translateY(-50%);
 	width: 24px;
 	height: 24px;
 	display: block;
 	// z-index: 2;
-	transform: translateY(-50%);
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18 9L12 15L6 9' stroke='%23222222' stroke-linecap='round' /%3e%3c/svg%3e");
+	
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='10' viewBox='0 0 16 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7.8844 7.61949L14.9474 0.00185977L16 1.10913L7.8844 10L0 1.10918L1.05263 0L7.8844 7.61949Z' fill='%23222222' /%3e%3c/svg%3e");
 	transition: .3s; 
-	/* Снимаем клик с треугольника */
+	background-size: 16px 10px;
+	background-repeat: no-repeat;
+	background-position: center;
 	pointer-events: none;
   }
   .dropdown__button.dropdown__button--active:after{
@@ -88,7 +121,7 @@ textarea{
 	display: none;
 	position: absolute;
 	left: 0;
-	top: 72px;
+	top: 43px;
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
@@ -106,34 +139,29 @@ textarea{
 	  overflow: hidden;
 	  overflow-y: auto;
 	  scrollbar-width: thin;
-	  scrollbar-color: grey white;
-	  &::-webkit-scrollbar{
-		display: block;
-		width: 3px;
-		border-radius: 5px;
-	  }
-	  &::-webkit-scrollbar-thumb {
-		background-color: grey;
-		width: 3px;
-		border-radius: 5px;
-	  }
+	  scrollbar-color: #e9e9e9;
+	  scrollbar-width: 3px;
+	   border-radius: 5px;
+	  
 	  &::-webkit-scrollbar-track {
 		background-color:white;
 		border-radius: 5px;
 	  }
 	}
-  }
+ } 
   
   .dropdown__list--visible {
 	display: block;
-	box-shadow: 0 12px 32px 0 rgba(0, 0, 0, 0.16);
+	border:1px solid #e9e9e9;
+	border-top:0;
+	border-radius: 0 0 7px 7px;
   }
   
   .dropdown__list-item {
 	margin: 0;
 	padding: 0;
 	border-bottom: 0px;
-	padding: 4px 16px;
+	padding: 6px 12px;
 	line-height: 1.5;
 	transition: .3s; 
 	cursor: pointer;
@@ -141,7 +169,8 @@ textarea{
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	
+	font-size: 16px;
+	&:hover{color: $accent;}
   }
   
   .dropdown__input-hidden {

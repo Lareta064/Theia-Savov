@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="../css/main.css"/>
 		<title>UI-KIT</title>
 	</head>
-	<body class="body-dashboard" style="background: #f0f0f0">
+	<body class="body-dashboard">
 		<div class="ui-panel">
 			<div class="ui-panel-block">
 				<div class="ui-panel-block__part"><a class="back-index" href="http://localhost:3000/">На Главную</a>
@@ -72,19 +72,12 @@
 	.form-item
 		input(type="email" placeholder="Email *")</pre>
 				<hr/>
-				<div class="form-light">
-					<div class="form-item">
-						<input type="search" placeholder="Поиск"/>
-						<button class="btn" type="submit">Найти</button>
-					</div>
-				</div>
-				<hr/>
 				<div class="form-item">
 					<div class="dropdown">
-						<button class="dropdown__button" type="button"><span>Речной песок</span></button>
+						<button class="dropdown__button" type="button">Речной песок</button>
 						<div class="dropdown__list">
 							<ul>
-								<li class="dropdown__list-item" data-value="Пример заполнения 1">Пример заполнения 1</li>
+								<li class="dropdown__list-item" data-value="Речной песок">Речной песок</li>
 								<li class="dropdown__list-item" data-value="Пример заполнения 2">Пример заполнения 2</li>
 								<li class="dropdown__list-item" data-value="Пример заполнения 3">Пример заполнения 3</li>
 								<li class="dropdown__list-item" data-value="Пример заполнения 4">Пример заполнения 4</li>
@@ -94,6 +87,27 @@
 						<input class="dropdown__input-hidden" type="text" name="undefined"/>
 					</div>
 				</div>
+				<pre>+select("Речной песок", 'product_name')</pre>
+			</div>
+			<div style="background: #1c1c1c; padding:30px">
+				<form class="form form-light">
+					<div class="form-item">
+						<input type="text" placeholder="Адрес *"/>
+					</div>
+				</form>
+				<pre>form.form.form-light
+	.form-item
+		input(type="text" placeholder="Адрес *")
+</pre>
+				<div class="form-item search-form-group">
+					<input type="search" placeholder="Поиск"/>
+					<button class="btn search-btn" type="submit">
+						<svg class="svg-search">
+							<use href="../img/sprite.svg#svg-search"></use>
+						</svg>
+					</button>
+				</div>
+				<hr/>
 			</div>
 		</div>
 		<script src="../js/main.js"></script>

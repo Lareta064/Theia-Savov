@@ -46,11 +46,11 @@ mixin select(plh="Пример заполнения", inpName = 'input_name', la
 		if label
 			label #{label}
 		.dropdown
-			button.dropdown__button(type="button")
-				span #{plh}
+			button.dropdown__button(type="button") #{plh}
+			
 			.dropdown__list
 				ul
-					li.dropdown__list-item(data-value="Пример заполнения 1") Пример заполнения 1
+					li.dropdown__list-item(data-value="Речной песок") Речной песок
 					li.dropdown__list-item(data-value="Пример заполнения 2") Пример заполнения 2
 					li.dropdown__list-item(data-value="Пример заполнения 3") Пример заполнения 3
 					li.dropdown__list-item(data-value="Пример заполнения 4") Пример заполнения 4
