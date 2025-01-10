@@ -86,8 +86,12 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 	font-size: inherit;
 }
 .container{
-	width: min(1550px, 100%);
+	width: min(1610px, 100%);
+	padding-inline:30px;
 	margin-inline: auto;
+	@media (max-width: 1279px) {
+		padding-inline:20px;
+	}
 }
 .img-contain, .img-cover{
 	width: 100%;
