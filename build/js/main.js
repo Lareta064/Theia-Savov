@@ -21,7 +21,50 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-    
+    /*simpleBar */
+    // Array.prototype.forEach.call(
+    //     document.querySelectorAll('[data-simplebar]'),
+    //     (el) => new SimpleBar(el)
+    //   );
+    /*bigMenu */
+    const menuButton = document.getElementById("catalogy-menu-open");
+    const menuWrapper = document.querySelector(".cm-wrapper");
+  
+    let hoverTimeout;
+  
+    // Добавляем класс active при наведении на кнопку
+    menuButton.addEventListener("mouseenter", () => {
+      clearTimeout(hoverTimeout);
+      menuWrapper.classList.add("active");
+    });
+  
+    // Удаляем класс active при уходе курсора с меню
+    menuWrapper.addEventListener("mouseleave", () => {
+      hoverTimeout = setTimeout(() => {
+        menuWrapper.classList.remove("active");
+      }, 300); // Задержка для плавности (можно настроить)
+    });
+  
+    // Удаляем класс active, если мышка уходит с кнопки и не направляется в меню
+    menuButton.addEventListener("mouseleave", (e) => {
+      const rect = menuButton.getBoundingClientRect();
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+  
+      // Проверяем, ушла ли мышь вверх, влево, вправо
+      const isMouseOut = mouseY < rect.top || mouseX < rect.left || mouseX > rect.right;
+  
+      if (isMouseOut) {
+        hoverTimeout = setTimeout(() => {
+          menuWrapper.classList.remove("active");
+        }, 300);
+      }
+    });
+  
+    // Если мышка вернулась в меню, сбрасываем удаление
+    menuWrapper.addEventListener("mouseenter", () => {
+      clearTimeout(hoverTimeout);
+    });
     // const headerEl = document.querySelector('header');
     // const openSearchForm = document.querySelector('#search-btn');
     // const searchFormPopup = document.querySelector('#search-popup');

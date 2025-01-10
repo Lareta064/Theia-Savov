@@ -4,8 +4,10 @@
 @use "base/_icons";
 @use "base/_breadcrumbs";
 @use "base/_buttons";
+@use "base/_scroll-bar";
 @use "base/_form";
 @use "blocks/_search-form";
+
 
 
 @use "blocks/_category-card";
@@ -16,6 +18,8 @@
 @use "blocks/_tabs";
 
 @use "sections/_header";
+@use "sections/_catalogy-menu";
+
 
 
 //ui

@@ -1,0 +1,60 @@
+@use "../base/var" as *;
+.cm-wrapper{
+	position: fixed;
+	background-color: rgba(0,0,0, .5);
+	inset:0;
+	top:104px;
+	z-index: 2;
+	background-color: #f0f0f0;
+	padding-top: 100px;
+	display: none;
+	&.active{display: block;}
+	.cm-content{
+		background-color: #fff;
+		padding-top: 40px;
+		min-height: 523px;
+		display: flex;
+		flex-direction: column;
+	}
+	.cm-container{
+		width: min(1610px, 100%);
+		padding-inline:30px;
+		margin-inline: auto;
+		
+		@media (max-width: 1279px) {
+			padding-inline:20px;
+		}
+	}
+	.cm-nav{
+		flex-grow: 1;display: flex;	}
+	.cm-list{
+		width: 370px;
+		position: relative;
+		
+		
+	}
+	.cm-sublist, .cm-sub-sublist{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 100%;
+		border-left: 1px solid red;
+		
+		display: none;
+		margin-left: -5px;
+		
+	}
+	.cm-sublist{width: 465px;}
+	.cm-sub-sublist{
+		column-count: 2;
+	}
+	.cm-sublist__item,.cm-list__item{padding-inline:30px;}
+	.cm-list__item:hover .cm-sublist{
+		display: block;
+	}
+	.cm-sublist__item:hover .cm-sub-sublist{display: block;}
+	.cm-footer{
+		flex-shrink: 0;
+		padding-block: 40px;
+	}
+}

@@ -6,6 +6,8 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<!--=======убрать перевод цифр в номер телефона на ios  и safari ======-->
 		<meta name="format-detection" content="telephone=no">
+		<!--===custom scrollbar plugin ===-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
 		<link rel="stylesheet" href="./libs/swiper/swiper.min.css">
 		<!--========= custom styles ========-->
 		<link rel="stylesheet" href="./css/main.css">
@@ -15,6 +17,69 @@
 		-->
 	</head>
 	<body>
+		<!--==========SEARCH FORM =========-->
+		<div class="header-form-wrapper" id="header-search-form">
+			<form class="header-search-form">
+				<div class="form-item search-form-group">
+					<input type="search" placeholder="Поиск">
+					<button class="btn search-btn" type="submit">
+						<svg class="svg-search">
+							<use href="../img/sprite.svg#svg-search"></use>
+						</svg>
+					</button>
+				</div>
+			</form>
+		</div>
+		<!--======CATEGORY MENU======-->
+		<div class="cm-wrapper">
+			<div class="cm-content">
+				<div class="cm-nav cm-container">
+					<!--=== первый уровень меню===-->
+					<ul class="cm-list">
+						<li class="cm-list__item has-drop"><a class="cm-list__link" href="">Строительные материалы</a>
+							<!--=== второй уровень меню===-->
+							<ul class="cm-sublist has-subdrop">
+								<li class="cm-sublist__item has-subdrop"><a class="cm-sublist__link" href="">Песок</a>
+									<!--===третий уровень меню===-->
+									<ul class="cm-sub-sublist">
+										<li class="cm-sub-sublist__item"><a href="">Песок речной</a></li>
+										<li class="cm-sub-sublist__item"><a href="">Песок мытый</a></li>
+									</ul>
+								</li>
+								<li class="cm-sublist__item has-subdrop"><a class="cm-sublist__link" href="">Камень</a>
+									<!--===третий уровень меню===-->
+									<ul class="cm-sub-sublist">
+										<li class="cm-sub-sublist__item"><a href="">Камень речной</a></li>
+										<li class="cm-sub-sublist__item"><a href="">Камень мытый</a></li>
+									</ul>
+								</li>
+								<li class="cm-sublist__item has-subdrop"><a class="cm-sublist__link" href="">Железо</a>
+									<!--===третий уровень меню===-->
+									<ul class="cm-sub-sublist">
+										<li class="cm-sub-sublist__item"><a href="">Продукт материалов</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="cm-list__item has-drop"><a class="cm-list__link" href="">Лампочки</a>
+							<!--=== второй уровень меню===-->
+							<ul class="cm-sublist has-subdrop">
+								<li class="cm-sublist__item has-subdrop"><a class="cm-sublist__link" href="">Лампочки 1</a>
+									<!--===третий уровень меню===-->
+									<ul class="cm-sub-sublist">
+										<li class="cm-sub-sublist__item"><a href="">Лампочки 1 маленькие</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="cm-footer cm-container">
+					<button class="btn">Рассчитать стоимость	</button>
+				</div>
+			</div>
+		</div>
+		<!--====HEADER===-->
 		<header class="header">
 			<div class="container">
 				<div class="header-content"><a class="logo" href="#!">
@@ -30,7 +95,7 @@
 					<!--=== header-nav ===-->
 					<div class="header-nav">
 						<ul class="header-nav__list">
-							<li class="header-nav__item"><a class="header-nav__link" href="">Каталог</a></li>
+							<li class="header-nav__item"><a class="header-nav__link" href="" id="catalogy-menu-open">Каталог</a></li>
 							<li class="header-nav__item"><a class="header-nav__link" href="">Аренда техники </a></li>
 							<li class="header-nav__item"><a class="header-nav__link" href="">Строительство</a></li>
 							<li class="header-nav__item"><a class="header-nav__link" href="">Покупателям</a></li>
@@ -48,22 +113,11 @@
 				</div>
 			</div>
 		</header>
-		<!--==========SEARCH FORM WRAPPER =========-->
-		<div class="header-form-wrapper" id="header-search-form">
-			<form class="header-search-form">
-				<div class="form-item search-form-group">
-					<input type="search" placeholder="Поиск">
-					<button class="btn search-btn" type="submit">
-						<svg class="svg-search">
-							<use href="../img/sprite.svg#svg-search"></use>
-						</svg>
-					</button>
-				</div>
-			</form>
-		</div>
 		<!--script(src="./libs/jquery/jquery-3.0.0.min.js")-->
 		<!--script(src="./libs/jquery.lazy.min.js")-->
 		<script src="./libs/swiper/swiper.js"></script>
+		<!--===custom scrollbar plugin ===-->
+		<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
 		<!--=============== custom scripts ===================-->
 		<script src="./js/main.js"></script>
 	</body>

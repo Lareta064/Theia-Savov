@@ -1,3 +1,63 @@
+//==========SEARCH FORM =========
+.header-form-wrapper#header-search-form
+	form.header-search-form
+		.form-item.search-form-group
+			input(type="search" placeholder="Поиск")
+			button.btn.search-btn(type="submit")
+				svg.svg-search
+					use(href='../img/sprite.svg#svg-search')
+//======CATEGORY MENU======
+.cm-wrapper
+	.cm-content
+		.cm-nav.cm-container
+			//=== первый уровень меню===
+			ul.cm-list
+				li.cm-list__item.has-drop
+					a(href="").cm-list__link Строительные материалы
+					
+					//=== второй уровень меню===
+					ul.cm-sublist.has-subdrop
+						li.cm-sublist__item.has-subdrop
+							a(href="").cm-sublist__link Песок
+							
+							//===третий уровень меню===
+							ul.cm-sub-sublist
+								li.cm-sub-sublist__item
+									a(href="") Песок речной
+								li.cm-sub-sublist__item
+									a(href="") Песок мытый
+						
+						li.cm-sublist__item.has-subdrop
+							a(href="").cm-sublist__link Камень
+							//===третий уровень меню===
+							ul.cm-sub-sublist
+								li.cm-sub-sublist__item
+									a(href="") Камень речной
+								li.cm-sub-sublist__item
+									a(href="") Камень мытый
+						li.cm-sublist__item.has-subdrop
+							a(href="").cm-sublist__link Железо
+							//===третий уровень меню===
+							ul.cm-sub-sublist
+								li.cm-sub-sublist__item
+									a(href="") Продукт материалов
+
+				li.cm-list__item.has-drop
+					a(href="").cm-list__link Лампочки
+					
+					//=== второй уровень меню===
+					ul.cm-sublist.has-subdrop
+						li.cm-sublist__item.has-subdrop
+							a(href="").cm-sublist__link Лампочки 1
+						
+							//===третий уровень меню===
+							ul.cm-sub-sublist
+								li.cm-sub-sublist__item
+									a(href="") Лампочки 1 маленькие
+		.cm-footer.cm-container
+			button.btn Рассчитать стоимость	
+
+//====HEADER===
 header.header
 	.container
 		.header-content
@@ -12,7 +72,7 @@ header.header
 			.header-nav
 				ul.header-nav__list
 					li.header-nav__item
-						a(href="").header-nav__link Каталог
+						a(href="")#catalogy-menu-open.header-nav__link Каталог
 					li.header-nav__item
 						a(href="").header-nav__link Аренда техники 
 					li.header-nav__item
@@ -32,11 +92,4 @@ header.header
 			//=== button Обратный звонок ===
 			button.btn.btn--white.callback-btn Обратный звонок
 	
-//==========SEARCH FORM WRAPPER =========
-.header-form-wrapper#header-search-form
-	form.header-search-form
-		.form-item.search-form-group
-			input(type="search" placeholder="Поиск")
-			button.btn.search-btn(type="submit")
-				svg.svg-search
-					use(href='../img/sprite.svg#svg-search')
+

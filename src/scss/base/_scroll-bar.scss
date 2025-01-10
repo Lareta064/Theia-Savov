@@ -1,0 +1,13 @@
+@use "base/var" as *;
+.simplebar-track.simplebar-vertical {
+    width: 5px;
+	
+}
+.simplebar-scrollbar::before {
+	background-color: $accent;
+	width: 5px;
+  }
+  .simplebar-track {
+    opacity: 1 !important; /* Принудительно отображаем */
+    visibility: visible !important; /* Гарантируем видимость */
+}
