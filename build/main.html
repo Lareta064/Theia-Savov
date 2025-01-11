@@ -32,47 +32,46 @@
 		</div>
 		<!--======CATEGORY MENU======-->
 		<div class="cm-wrapper">
+			<button class="close-menu-part">&larr;</button>
 			<div class="cm-content">
 				<div class="cm-nav cm-container">
-					<!--=== первый уровень меню===-->
-					<ul class="cm-list">
-						<li class="cm-list__item has-drop"><a class="cm-list__link" href="">Строительные материалы</a>
-							<!--=== второй уровень меню===-->
-							<ul class="cm-sublist has-subdrop">
-								<li class="cm-sublist__item has-subdrop"><a class="cm-sublist__link" href="">Песок</a>
-									<!--===третий уровень меню===-->
-									<ul class="cm-sub-sublist">
-										<li class="cm-sub-sublist__item"><a href="">Песок речной</a></li>
-										<li class="cm-sub-sublist__item"><a href="">Песок мытый</a></li>
-									</ul>
-								</li>
-								<li class="cm-sublist__item has-subdrop"><a class="cm-sublist__link" href="">Камень</a>
-									<!--===третий уровень меню===-->
-									<ul class="cm-sub-sublist">
-										<li class="cm-sub-sublist__item"><a href="">Камень речной</a></li>
-										<li class="cm-sub-sublist__item"><a href="">Камень мытый</a></li>
-									</ul>
-								</li>
-								<li class="cm-sublist__item has-subdrop"><a class="cm-sublist__link" href="">Железо</a>
-									<!--===третий уровень меню===-->
-									<ul class="cm-sub-sublist">
-										<li class="cm-sub-sublist__item"><a href="">Продукт материалов</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li class="cm-list__item has-drop"><a class="cm-list__link" href="">Лампочки</a>
-							<!--=== второй уровень меню===-->
-							<ul class="cm-sublist has-subdrop">
-								<li class="cm-sublist__item has-subdrop"><a class="cm-sublist__link" href="">Лампочки 1</a>
-									<!--===третий уровень меню===-->
-									<ul class="cm-sub-sublist">
-										<li class="cm-sub-sublist__item"><a href="">Лампочки 1 маленькие</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-					</ul>
+					<div class="scroll-wrapper cm-level-1">
+						<!--=== первый уровень меню===-->
+						<ul class="cm-list">
+							<li class="cm-list__item has-drop" data-drop="1"><a class="cm-list__link" href="#!">cat-1</a></li>
+							<li class="cm-list__item has-drop" data-drop="2"><a class="cm-list__link" href="#!">cat-2</a></li>
+							<li class="cm-list__item has-drop" data-drop="3"><a class="cm-list__link" href="#!">cat-3</a></li>
+						</ul>
+					</div>
+					<!--=== второй уровень меню===-->
+					<div class="scroll-wrapper cm-level-2">
+						<button class="close-menu-part">&larr;</button>
+						<ul class="cm-sublist has-subdrop" data-subdrop="1">
+							<li class="cm-sublist__item has-subdrop" data-sub-subdrop="11"><a class="cm-sublist__link" href="#!">cat-11</a></li>
+							<li class="cm-sublist__item has-subdrop" data-sub-subdrop="12"><a class="cm-sublist__link" href="#!">cat-12</a></li>
+							<li class="cm-sublist__item has-subdrop" data-sub-subdrop="13"><a class="cm-sublist__link" href="#!">cat-13</a></li>
+						</ul>
+						<ul class="cm-sublist has-subdrop" data-subdrop="2">
+							<li class="cm-sublist__item has-subdrop" data-sub-subdrop="21"><a class="cm-sublist__link" href="#!">cat-21</a></li>
+							<li class="cm-sublist__item has-subdrop" data-sub-subdrop="22"><a class="cm-sublist__link" href="#!">cat-22</a></li>
+							<li class="cm-sublist__item has-subdrop" data-sub-subdrop="23"><a class="cm-sublist__link" href="#!">cat-23</a></li>
+						</ul>
+					</div>
+					<!--===третий уровень меню===-->
+					<div class="scroll-wrapper cm-level-3">
+						<button class="close-menu-part">&larr;</button>
+						<ul class="cm-sub-sublist" data-sublist="11">
+							<li class="cm-sub-sublist__item"><a href="#!">Песок речной</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Песок мытый</a></li>
+						</ul>
+						<ul class="cm-sub-sublist" data-sublist="12">
+							<li class="cm-sub-sublist__item"><a href="#!">Камень речной</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Камень мытый</a></li>
+						</ul>
+						<ul class="cm-sub-sublist" data-sublist="13">
+							<li class="cm-sub-sublist__item"><a href="#!">Продукт материалов</a></li>
+						</ul>
+					</div>
 				</div>
 				<div class="cm-footer cm-container">
 					<button class="btn">Рассчитать стоимость	</button>
@@ -95,13 +94,9 @@
 					<!--=== header-nav ===-->
 					<div class="header-nav">
 						<ul class="header-nav__list">
-							<li class="header-nav__item"><a class="header-nav__link" href="" id="catalogy-menu-open">Каталог</a></li>
-							<li class="header-nav__item"><a class="header-nav__link" href="">Аренда техники </a></li>
-							<li class="header-nav__item"><a class="header-nav__link" href="">Строительство</a></li>
-							<li class="header-nav__item"><a class="header-nav__link" href="">Покупателям</a></li>
-							<li class="header-nav__item"><a class="header-nav__link" href="">Блог</a></li>
-							<li class="header-nav__item"><a class="header-nav__link" href="">О компании</a></li>
-							<li class="header-nav__item"><a class="header-nav__link" href="">Контакты</a></li>
+							<li class="header-nav__item"><a class="header-nav__link" href="#!" id="catalogy-menu-open">Каталог</a></li>
+							<li class="header-nav__item"><a class="header-nav__link" href="#!">Аренда техники </a></li>
+							<li class="header-nav__item"><a class="header-nav__link" href="#!">Строительство</a></li>
 						</ul>
 					</div>
 					<!--=== cart icon ===--><a class="cart-button" href="#!">

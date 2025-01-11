@@ -8,52 +8,60 @@
 					use(href='../img/sprite.svg#svg-search')
 //======CATEGORY MENU======
 .cm-wrapper
+	button.close-menu-part &larr;
 	.cm-content
 		.cm-nav.cm-container
-			//=== первый уровень меню===
-			ul.cm-list
-				li.cm-list__item.has-drop
-					a(href="").cm-list__link Строительные материалы
-					
-					//=== второй уровень меню===
-					ul.cm-sublist.has-subdrop
-						li.cm-sublist__item.has-subdrop
-							a(href="").cm-sublist__link Песок
-							
-							//===третий уровень меню===
-							ul.cm-sub-sublist
-								li.cm-sub-sublist__item
-									a(href="") Песок речной
-								li.cm-sub-sublist__item
-									a(href="") Песок мытый
+			.scroll-wrapper.cm-level-1
+				
+				//=== первый уровень меню===
+				ul.cm-list
+					li.cm-list__item.has-drop(data-drop='1')
+						a(href="#!").cm-list__link cat-1
+					li.cm-list__item.has-drop(data-drop='2')
+						a(href="#!").cm-list__link cat-2
+					li.cm-list__item.has-drop(data-drop='3')
+						a(href="#!").cm-list__link cat-3
 						
-						li.cm-sublist__item.has-subdrop
-							a(href="").cm-sublist__link Камень
-							//===третий уровень меню===
-							ul.cm-sub-sublist
-								li.cm-sub-sublist__item
-									a(href="") Камень речной
-								li.cm-sub-sublist__item
-									a(href="") Камень мытый
-						li.cm-sublist__item.has-subdrop
-							a(href="").cm-sublist__link Железо
-							//===третий уровень меню===
-							ul.cm-sub-sublist
-								li.cm-sub-sublist__item
-									a(href="") Продукт материалов
+			//=== второй уровень меню===
+			.scroll-wrapper.cm-level-2
+				button.close-menu-part &larr;
+				ul.cm-sublist.has-subdrop(data-subdrop='1')
+					li.cm-sublist__item.has-subdrop(data-sub-subdrop='11')
+						a(href="#!").cm-sublist__link cat-11
+					
+					li.cm-sublist__item.has-subdrop(data-sub-subdrop='12')
+						a(href="#!").cm-sublist__link cat-12
+					li.cm-sublist__item.has-subdrop(data-sub-subdrop='13')
+						a(href="#!").cm-sublist__link cat-13
+				ul.cm-sublist.has-subdrop(data-subdrop='2')
+					li.cm-sublist__item.has-subdrop(data-sub-subdrop='21')
+						a(href="#!").cm-sublist__link cat-21
+					
+					li.cm-sublist__item.has-subdrop(data-sub-subdrop='22')
+						a(href="#!").cm-sublist__link cat-22
+					li.cm-sublist__item.has-subdrop(data-sub-subdrop='23')
+						a(href="#!").cm-sublist__link cat-23
+						
+			//===третий уровень меню===
+			.scroll-wrapper.cm-level-3
+				button.close-menu-part &larr;
+				ul.cm-sub-sublist(data-sublist='11')
+					li.cm-sub-sublist__item
+						a(href="#!") Песок речной
+					li.cm-sub-sublist__item
+						a(href="#!") Песок мытый
 
-				li.cm-list__item.has-drop
-					a(href="").cm-list__link Лампочки
-					
-					//=== второй уровень меню===
-					ul.cm-sublist.has-subdrop
-						li.cm-sublist__item.has-subdrop
-							a(href="").cm-sublist__link Лампочки 1
+				ul.cm-sub-sublist(data-sublist='12')
+					li.cm-sub-sublist__item
+						a(href="#!") Камень речной
+					li.cm-sub-sublist__item
+						a(href="#!") Камень мытый
 						
-							//===третий уровень меню===
-							ul.cm-sub-sublist
-								li.cm-sub-sublist__item
-									a(href="") Лампочки 1 маленькие
+				
+				ul.cm-sub-sublist(data-sublist='13')
+					li.cm-sub-sublist__item
+						a(href="#!") Продукт материалов
+			
 		.cm-footer.cm-container
 			button.btn Рассчитать стоимость	
 
@@ -72,19 +80,19 @@ header.header
 			.header-nav
 				ul.header-nav__list
 					li.header-nav__item
-						a(href="")#catalogy-menu-open.header-nav__link Каталог
+						a(href="#!")#catalogy-menu-open.header-nav__link Каталог
 					li.header-nav__item
-						a(href="").header-nav__link Аренда техники 
+						a(href="#!").header-nav__link Аренда техники 
 					li.header-nav__item
-						a(href="").header-nav__link Строительство
-					li.header-nav__item
-						a(href="").header-nav__link Покупателям
-					li.header-nav__item
-						a(href="").header-nav__link Блог
-					li.header-nav__item
-						a(href="").header-nav__link О компании
-					li.header-nav__item
-						a(href="").header-nav__link Контакты
+						a(href="#!").header-nav__link Строительство
+					//- li.header-nav__item
+					//- 	a(href="#!").header-nav__link Покупателям
+					//- li.header-nav__item
+					//- 	a(href="#!").header-nav__link Блог
+					//- li.header-nav__item
+					//- 	a(href="#!").header-nav__link О компании
+					//- li.header-nav__item
+					//- 	a(href="#!").header-nav__link Контакты
 			//=== cart icon ===
 			a(href="#!").cart-button
 				svg.svg-cart
