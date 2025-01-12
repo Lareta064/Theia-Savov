@@ -30,45 +30,93 @@
 			</form>
 		</div>
 		<!--======CATEGORY MENU======-->
-		<div class="cm-wrapper">
+		<div class="cm-wrapper active">
 			<button class="close-menu-part">&larr;</button>
 			<div class="cm-content">
 				<div class="cm-nav cm-container">
 					<div class="scroll-wrapper cm-level-1">
 						<!--=== первый уровень меню===-->
 						<ul class="cm-list">
-							<li class="cm-list__item has-drop" data-drop="1"><a class="cm-list__link" href="#!">cat-1</a></li>
-							<li class="cm-list__item has-drop" data-drop="2"><a class="cm-list__link" href="#!">cat-2</a></li>
-							<li class="cm-list__item has-drop" data-drop="3"><a class="cm-list__link" href="#!">cat-3</a></li>
+							<li class="cm-list__item has-drop active" data-drop="1"><img src="./img/menu/cat-icon1.webp" srcset="./img/menu/cat-icon1@2x.webp 2x" alt="img" width="84" height="54"><a class="cm-list__link" href="#!">Строительные материалы</a></li>
+							<li class="cm-list__item has-drop" data-drop="2"><img src="./img/menu/cat-icon2.webp" srcset="./img/menu/cat-icon2@2x.webp 2x" alt="img" width="84" height="54"><a class="cm-list__link" href="#!">Аренда</a></li>
+							<li class="cm-list__item has-drop" data-drop="3"><img src="./img/menu/cat-icon3.webp" srcset="./img/menu/cat-icon3@2x.webp 2x" alt="img" width="84" height="54"><a class="cm-list__link" href="#!">Строительное оборудование</a></li>
 						</ul>
 					</div>
 					<!--=== второй уровень меню===-->
 					<div class="scroll-wrapper cm-level-2">
 						<button class="close-menu-part">&larr;</button>
-						<ul class="cm-sublist has-subdrop" data-subdrop="1">
-							<li class="cm-sublist__item has-subdrop" data-sub-subdrop="11"><a class="cm-sublist__link" href="#!">cat-11</a></li>
-							<li class="cm-sublist__item has-subdrop" data-sub-subdrop="12"><a class="cm-sublist__link" href="#!">cat-12</a></li>
-							<li class="cm-sublist__item has-subdrop" data-sub-subdrop="13"><a class="cm-sublist__link" href="#!">cat-13</a></li>
+						<!--=== подменю для Строительные материалы===-->
+						<ul class="cm-sublist has-subdrop active" data-subdrop="1">
+							<li class="cm-sublist__item has-subdrop" data-sub-subdrop="11"><a class="cm-sublist__link" href="#!">Песок</a></li>
+							<li class="cm-sublist__item has-subdrop" data-sub-subdrop="12"><a class="cm-sublist__link" href="#!">Щебень</a></li>
+							<li class="cm-sublist__item has-subdrop" data-sub-subdrop="13"><a class="cm-sublist__link" href="#!">Бетон</a></li>
+							<li class="cm-sublist__item has-subdrop" data-sub-subdrop="21"><a class="cm-sublist__link" href="#!">Бетонные материалы</a></li>
+							<li class="cm-sublist__item has-subdrop" data-sub-subdrop="22"><a class="cm-sublist__link" href="#!">Пластмасса</a></li>
 						</ul>
+						<!--=== подменю для Аренда===-->
 						<ul class="cm-sublist has-subdrop" data-subdrop="2">
-							<li class="cm-sublist__item has-subdrop" data-sub-subdrop="21"><a class="cm-sublist__link" href="#!">cat-21</a></li>
-							<li class="cm-sublist__item has-subdrop" data-sub-subdrop="22"><a class="cm-sublist__link" href="#!">cat-22</a></li>
-							<li class="cm-sublist__item has-subdrop" data-sub-subdrop="23"><a class="cm-sublist__link" href="#!">cat-23</a></li>
+							<li class="cm-sublist__item has-subdrop" data-sub-subdrop="21"><a class="cm-sublist__link" href="#!">Аренда самосвала</a></li>
+							<li class="cm-sublist__item has-subdrop" data-sub-subdrop="22"><a class="cm-sublist__link" href="#!">Аренда экскаватора</a></li>
+							<li class="cm-sublist__item has-subdrop" data-sub-subdrop="23"><a class="cm-sublist__link" href="#!">Аренда трактора</a></li>
+							<li class="cm-sublist__item has-subdrop" data-sub-subdrop="24"><a class="cm-sublist__link" href="#!">Аренда Подъемного крана</a></li>
+						</ul>
+						<!--=== подменю для Строительное оборудование===-->
+						<ul class="cm-sublist has-subdrop" data-subdrop="3">
+							<li class="cm-sublist__item has-subdrop" data-sub-subdrop="31"><a class="cm-sublist__link" href="#!">Перфоратры</a></li>
+							<li class="cm-sublist__item has-subdrop" data-sub-subdrop="32"><a class="cm-sublist__link" href="#!">Лопаты</a></li>
+							<li class="cm-sublist__item has-subdrop" data-sub-subdrop="33"><a class="cm-sublist__link" href="#!">Песок</a></li>
+							<li class="cm-sublist__item has-subdrop" data-sub-subdrop="34"><a class="cm-sublist__link" href="#!">Щебень</a></li>
+							<li class="cm-sublist__item has-subdrop" data-sub-subdrop="35"><a class="cm-sublist__link" href="#!">Бетон</a></li>
+							<li class="cm-sublist__item has-subdrop" data-sub-subdrop="36"><a class="cm-sublist__link" href="#!">Бетонные материалы</a></li>
+							<li class="cm-sublist__item has-subdrop" data-sub-subdrop="37"><a class="cm-sublist__link" href="#!">Пластмасса</a></li>
 						</ul>
 					</div>
 					<!--===третий уровень меню===-->
 					<div class="scroll-wrapper cm-level-3">
 						<button class="close-menu-part">&larr;</button>
-						<ul class="cm-sub-sublist" data-sublist="11">
-							<li class="cm-sub-sublist__item"><a href="#!">Песок речной</a></li>
-							<li class="cm-sub-sublist__item"><a href="#!">Песок мытый</a></li>
+						<!--=== подменю для Строительные материалы - Песок===-->
+						<ul class="cm-sub-sublist active" data-sublist="11">
+							<li class="cm-sub-sublist__item"><a href="#!">Гранитный</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Известняковый</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Базальтовый</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Песчаник</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Шлаковый</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Сланцевый</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Строительный</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Керамзитовый</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Черный</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Вторичный</a></li>
 						</ul>
+						<!--=== подменю для Строительные материалы - Щебень===	-->
 						<ul class="cm-sub-sublist" data-sublist="12">
-							<li class="cm-sub-sublist__item"><a href="#!">Камень речной</a></li>
-							<li class="cm-sub-sublist__item"><a href="#!">Камень мытый</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Песчаник</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Шлаковый</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Сланцевый</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Строительный</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Керамзитовый</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Песчаник</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Шлаковый</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Сланцевый</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Строительный</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Керамзитовый</a></li>
 						</ul>
-						<ul class="cm-sub-sublist" data-sublist="13">
-							<li class="cm-sub-sublist__item"><a href="#!">Продукт материалов</a></li>
+						<!--=== подменю для Аренда - Аренда самосвала===-->
+						<ul class="cm-sub-sublist" data-sublist="21">
+							<li class="cm-sub-sublist__item"><a href="#!">Самосвал 8т</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Самосвал 10т</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Самосвал 15т</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Самосвал крутой</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Самосвал супер</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Самосвал мощный</a></li>
+						</ul>
+						<!--=== подменю для Строительное оборудование - Перфораторы===-->
+						<ul class="cm-sub-sublist" data-sublist="31">
+							<li class="cm-sub-sublist__item"><a href="#!">Перфоратор</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Перфоратор</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Перфоратор</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Перфоратор</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Перфоратор</a></li>
+							<li class="cm-sub-sublist__item"><a href="#!">Перфоратор</a></li>
 						</ul>
 					</div>
 				</div>
@@ -91,12 +139,23 @@
 						</svg>
 					</button>
 					<!--=== header-nav ===-->
-					<div class="header-nav"></div>
+					<div class="header-nav">
+						<ul class="header-nav__list">
+							<li class="header-nav__item"><a class="header-nav__link" href="#!" id="catalogy-menu-open">Каталог</a></li>
+							<li class="header-nav__item"><a class="header-nav__link" href="#!">Аренда техники </a></li>
+							<li class="header-nav__item"><a class="header-nav__link" href="#!">Строительство</a></li>
+							<li class="header-nav__item"><a class="header-nav__link" href="#!">Покупателям</a></li>
+							<li class="header-nav__item"><a class="header-nav__link" href="#!">Блог</a></li>
+							<li class="header-nav__item"><a class="header-nav__link" href="#!">О компании</a></li>
+							<li class="header-nav__item"><a class="header-nav__link" href="#!">Контакты</a></li>
+						</ul>
+					</div>
 					<!--=== cart icon ===--><a class="cart-button" href="#!">
 						<svg class="svg-cart">
 							<use href="./img/sprite.svg#svg-cart"></use>
 						</svg></a>
 					<!--=== button Обратный звонок ===-->
+					<button class="btn btn--white callback-btn">Обратный звонок</button>
 				</div>
 			</div>
 		</header>

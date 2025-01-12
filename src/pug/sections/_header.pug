@@ -7,7 +7,7 @@
 				svg.svg-search
 					use(href='../img/sprite.svg#svg-search')
 //======CATEGORY MENU======
-.cm-wrapper
+.cm-wrapper.active
 	button.close-menu-part &larr;
 	.cm-content
 		.cm-nav.cm-container
@@ -15,55 +15,144 @@
 				
 				//=== первый уровень меню===
 				ul.cm-list
-					li.cm-list__item.has-drop(data-drop='1')
-						a(href="#!").cm-list__link cat-1
+					li.cm-list__item.has-drop.active(data-drop='1')
+						img(src="./img/menu/cat-icon1.webp", srcset="./img/menu/cat-icon1@2x.webp 2x" alt="img" width="84" height="54")
+						a(href="#!").cm-list__link Строительные материалы
 						
 					li.cm-list__item.has-drop(data-drop='2')
-						a(href="#!").cm-list__link cat-2
+						img(src="./img/menu/cat-icon2.webp", srcset="./img/menu/cat-icon2@2x.webp 2x" alt="img" width="84" height="54")
+						a(href="#!").cm-list__link Аренда
 						
 					li.cm-list__item.has-drop(data-drop='3')
-						a(href="#!").cm-list__link cat-3
+						img(src="./img/menu/cat-icon3.webp", srcset="./img/menu/cat-icon3@2x.webp 2x" alt="img" width="84" height="54")
+						a(href="#!").cm-list__link Строительное оборудование
 						
 						
 			//=== второй уровень меню===
 			.scroll-wrapper.cm-level-2
 				button.close-menu-part &larr;
-				ul.cm-sublist.has-subdrop(data-subdrop='1')
+				//=== подменю для Строительные материалы===
+				ul.cm-sublist.has-subdrop.active(data-subdrop='1')
 					li.cm-sublist__item.has-subdrop(data-sub-subdrop='11')
-						a(href="#!").cm-sublist__link cat-11
-					
+						a(href="#!").cm-sublist__link Песок
 					li.cm-sublist__item.has-subdrop(data-sub-subdrop='12')
-						a(href="#!").cm-sublist__link cat-12
+						a(href="#!").cm-sublist__link Щебень
 					li.cm-sublist__item.has-subdrop(data-sub-subdrop='13')
-						a(href="#!").cm-sublist__link cat-13
+						a(href="#!").cm-sublist__link Бетон
+					li.cm-sublist__item.has-subdrop(data-sub-subdrop='21')
+						a(href="#!").cm-sublist__link Бетонные материалы
+						
+					li.cm-sublist__item.has-subdrop(data-sub-subdrop='22')
+						a(href="#!").cm-sublist__link Пластмасса
+				//=== подменю для Аренда===
 				ul.cm-sublist.has-subdrop(data-subdrop='2')
 					li.cm-sublist__item.has-subdrop(data-sub-subdrop='21')
-						a(href="#!").cm-sublist__link cat-21
+						a(href="#!").cm-sublist__link Аренда самосвала
 					
 					li.cm-sublist__item.has-subdrop(data-sub-subdrop='22')
-						a(href="#!").cm-sublist__link cat-22
+						a(href="#!").cm-sublist__link Аренда экскаватора
 					li.cm-sublist__item.has-subdrop(data-sub-subdrop='23')
-						a(href="#!").cm-sublist__link cat-23
+						a(href="#!").cm-sublist__link Аренда трактора
+					li.cm-sublist__item.has-subdrop(data-sub-subdrop='24')
+						a(href="#!").cm-sublist__link Аренда Подъемного крана
+				
+				//=== подменю для Строительное оборудование===
+				ul.cm-sublist.has-subdrop(data-subdrop='3')
+					li.cm-sublist__item.has-subdrop(data-sub-subdrop='31')
+						a(href="#!").cm-sublist__link Перфоратры
+					
+					li.cm-sublist__item.has-subdrop(data-sub-subdrop='32')
+						a(href="#!").cm-sublist__link Лопаты
+					li.cm-sublist__item.has-subdrop(data-sub-subdrop='33')
+						a(href="#!").cm-sublist__link Песок
+					li.cm-sublist__item.has-subdrop(data-sub-subdrop='34')
+						a(href="#!").cm-sublist__link Щебень
+					li.cm-sublist__item.has-subdrop(data-sub-subdrop='35')
+						a(href="#!").cm-sublist__link Бетон
+					li.cm-sublist__item.has-subdrop(data-sub-subdrop='36')
+						a(href="#!").cm-sublist__link Бетонные материалы
 						
+					li.cm-sublist__item.has-subdrop(data-sub-subdrop='37')
+						a(href="#!").cm-sublist__link Пластмасса
+					
 			//===третий уровень меню===
 			.scroll-wrapper.cm-level-3
 				button.close-menu-part &larr;
-				ul.cm-sub-sublist(data-sublist='11')
+				//=== подменю для Строительные материалы - Песок===
+				ul.cm-sub-sublist.active(data-sublist='11')
 					li.cm-sub-sublist__item
-						a(href="#!") Песок речной
+						a(href="#!") Гранитный
 					li.cm-sub-sublist__item
-						a(href="#!") Песок мытый
-
+						a(href="#!") Известняковый
+					li.cm-sub-sublist__item
+						a(href="#!") Базальтовый
+					li.cm-sub-sublist__item
+						a(href="#!") Песчаник
+					li.cm-sub-sublist__item
+						a(href="#!") Шлаковый
+					li.cm-sub-sublist__item
+						a(href="#!") Сланцевый
+					li.cm-sub-sublist__item
+						a(href="#!") Строительный
+					li.cm-sub-sublist__item
+						a(href="#!") Керамзитовый
+					li.cm-sub-sublist__item
+						a(href="#!") Черный
+					li.cm-sub-sublist__item
+						a(href="#!") Вторичный
+				
+				//=== подменю для Строительные материалы - Щебень===	
 				ul.cm-sub-sublist(data-sublist='12')
 					li.cm-sub-sublist__item
-						a(href="#!") Камень речной
+						a(href="#!") Песчаник
 					li.cm-sub-sublist__item
-						a(href="#!") Камень мытый
-						
+						a(href="#!") Шлаковый
+					li.cm-sub-sublist__item
+						a(href="#!") Сланцевый
+					li.cm-sub-sublist__item
+						a(href="#!") Строительный
+					li.cm-sub-sublist__item
+						a(href="#!") Керамзитовый
+					li.cm-sub-sublist__item
+						a(href="#!") Песчаник
+					li.cm-sub-sublist__item
+						a(href="#!") Шлаковый
+					li.cm-sub-sublist__item
+						a(href="#!") Сланцевый
+					li.cm-sub-sublist__item
+						a(href="#!") Строительный
+					li.cm-sub-sublist__item
+						a(href="#!") Керамзитовый
 				
-				ul.cm-sub-sublist(data-sublist='13')
+				//=== подменю для Аренда - Аренда самосвала===
+				ul.cm-sub-sublist(data-sublist='21')
 					li.cm-sub-sublist__item
-						a(href="#!") Продукт материалов
+						a(href="#!") Самосвал 8т
+					li.cm-sub-sublist__item
+						a(href="#!") Самосвал 10т
+					li.cm-sub-sublist__item
+						a(href="#!") Самосвал 15т
+					li.cm-sub-sublist__item
+						a(href="#!") Самосвал крутой
+					li.cm-sub-sublist__item
+						a(href="#!") Самосвал супер
+					li.cm-sub-sublist__item
+						a(href="#!") Самосвал мощный
+				
+				//=== подменю для Строительное оборудование - Перфораторы===
+				ul.cm-sub-sublist(data-sublist='31')
+					li.cm-sub-sublist__item
+						a(href="#!") Перфоратор
+					li.cm-sub-sublist__item
+						a(href="#!") Перфоратор
+					li.cm-sub-sublist__item
+						a(href="#!") Перфоратор
+					li.cm-sub-sublist__item
+						a(href="#!") Перфоратор
+					li.cm-sub-sublist__item
+						a(href="#!") Перфоратор
+					li.cm-sub-sublist__item
+						a(href="#!") Перфоратор
 			
 		.cm-footer.cm-container
 			button.btn Рассчитать стоимость	
@@ -81,24 +170,28 @@ header.header
 					use(href='./img/sprite.svg#svg-search')
 			//=== header-nav ===
 			.header-nav
-				//- ul.header-nav__list
-				//- 	li.header-nav__item
-				//- 		a(href="#!")#catalogy-menu-open.header-nav__link Каталог
-				//- 	li.header-nav__item
-				//- 		a(href="#!").header-nav__link Аренда техники 
-				//- 	li.header-nav__item
-				//- 		a(href="#!").header-nav__link Строительство
-					//- li.header-nav__item
-					//- 	a(href="#!").header-nav__link Покупателям
-					//- li.header-nav__item
-					//- 	a(href="#!").header-nav__link Блог
-					//- li.header-nav__item
-					//- 	a(href="#!").header-nav__link О компании
-					//- li.header-nav__item
-					//- 	a(href="#!").header-nav__link Контакты
+				ul.header-nav__list
+					li.header-nav__item
+						a(href="#!")#catalogy-menu-open.header-nav__link Каталог
+					li.header-nav__item
+						a(href="#!").header-nav__link Аренда техники 
+					li.header-nav__item
+						a(href="#!").header-nav__link Строительство
+					li.header-nav__item
+						a(href="#!").header-nav__link Покупателям
+					li.header-nav__item
+						a(href="#!").header-nav__link Блог
+					li.header-nav__item
+						a(href="#!").header-nav__link О компании
+					li.header-nav__item
+						a(href="#!").header-nav__link Контакты
 			//=== cart icon ===
 			a(href="#!").cart-button
 				svg.svg-cart
 					use(href='./img/sprite.svg#svg-cart')
 			//=== button Обратный звонок ===
-			//- button.btn.btn--white.callback-btn Обратный звонок
+			button.btn.btn--white.callback-btn Обратный звонок
+
+			
+			
+
