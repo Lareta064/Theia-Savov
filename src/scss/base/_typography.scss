@@ -1,10 +1,21 @@
 @use "base/var" as *;
+.h1{
+	font-family:$fs;
+	font-size: 80px;
+	line-height: .9;
+	letter-spacing: -0.02em;
+	color: #f5f5f5;
+}
 .h2{
 	font-family:$fs;
 	font-weight: 400;
 	font-size: 50px;
 	margin-bottom: 1em;
 	line-height: 100%;
+}
+.txt-24{
+	font-size: 24px;
+	letter-spacing: -0.02em;
 }
 .accent-txt{
 	color: $accent!important;

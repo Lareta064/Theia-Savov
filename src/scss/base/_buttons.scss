@@ -8,7 +8,7 @@
 	height: 52px;
 	padding: 0;
 	padding-inline: 1.5em;
-	
+
 	font-size: 20px;
 	font-weight: 700;
 	color: $text;
@@ -19,6 +19,7 @@
 }
 .btn.btn--white{
 	background-color: #fff;
+	border: 1px solid #fff;
 }
 .btn.btn--accent{
 	color: $accent;
