@@ -30,7 +30,7 @@
 			</form>
 		</div>
 		<!--======CATEGORY MENU======-->
-		<div class="cm-wrapper active">
+		<div class="cm-wrapper">
 			<button class="close-menu-part">&larr;</button>
 			<div class="cm-content">
 				<div class="cm-nav cm-container">
@@ -143,17 +143,6 @@
 						</svg>
 					</button>
 					<!--=== header-nav ===-->
-					<div class="header-nav">
-						<ul class="header-nav__list">
-							<li class="header-nav__item"><a class="header-nav__link" href="#!" id="catalogy-menu-open">Каталог</a></li>
-							<li class="header-nav__item"><a class="header-nav__link" href="#!">Аренда техники </a></li>
-							<li class="header-nav__item"><a class="header-nav__link" href="#!">Строительство</a></li>
-							<li class="header-nav__item"><a class="header-nav__link" href="#!">Покупателям</a></li>
-							<li class="header-nav__item"><a class="header-nav__link" href="#!">Блог</a></li>
-							<li class="header-nav__item"><a class="header-nav__link" href="#!">О компании</a></li>
-							<li class="header-nav__item"><a class="header-nav__link" href="#!">Контакты</a></li>
-						</ul>
-					</div>
 					<!--=== cart icon ===--><a class="cart-button" href="#!">
 						<svg class="svg-cart">
 							<use href="./img/sprite.svg#svg-cart"></use>
@@ -165,7 +154,7 @@
 		</header>
 		<main class="main-page">
 			<!--====PROMO для экранов от 1200px===	-->
-			<section class="promo">
+			<div class="promo">
 				<div class="promo-slider">
 					<!--==== первый блок====-->
 					<div class="promo-slide promo-slide--first">
@@ -276,8 +265,8 @@
 						</div>
 					</div>
 				</div>
-			</section>
-			<section class="promo-mobile">
+			</div>
+			<div class="promo-mobile">
 				<div class="promo-swiper swiper">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
@@ -317,6 +306,595 @@
 								</div>
 								<div class="promo-slide__progress"><span></span></div>
 								<div class="promo-slide__link"><a href="#!">Ремонт помещений, строительные работы, загородные работы.</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--==== CATEGORY ===-->
+			<section class="categories">
+				<div class="container">
+					<div class="category-cards grid-wrapper">
+						<div class="category-card">
+							<p>Строительное оборудование, строительные материалы</p><img src="./img/category/cat1.webp" srcset="./img/category/cat1@2x.webp 2x" alt="img" width="312" height="165" loading="lazy"/>
+						</div>
+						<div class="category-card">
+							<p>Аренда спец техники, аренда дорожной техники</p><img src="./img/category/cat2.webp" srcset="./img/category/cat2@2x.webp 2x" alt="img" width="312" height="165" loading="lazy"/>
+						</div>
+						<div class="category-card">
+							<p>Оборудование для строительной техники</p><img src="./img/category/cat3.webp" srcset="./img/category/cat3@2x.webp 2x" alt="img" width="312" height="165" loading="lazy"/>
+						</div>
+						<div class="category-card">
+							<p>Ремонт помещений, строительные работы, загородные работы.</p><img src="./img/category/cat4.webp" srcset="./img/category/cat4@2x.webp 2x" alt="img" width="312" height="165" loading="lazy"/>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--===-->
+			<section class="building-materials">
+				<div class="container">
+					<div class="description-block">
+						<div class="description-block__text">
+							<h2 class="h2">Отделочные и строй материалы </h2>
+							<p>Возьмите любую спецтехнику в аренду в СПБ на срок от 3-х смен и получите скидку 5%. Торопитесь, срок действия акции ограничен!</p><a class="btn" href="#!">Перейти в каталог</a>
+						</div>
+						<div class="description-block__img"><img src="./img/block0_bg.webp" srcset="./img/block0_bg@2x.webp 2x" width="864" height="402" alt="img"></div>
+					</div>
+					<!--=====TABS SLIDERS ===-->
+					<div class="tabs-block myswiper-container">
+						<div class="tabs-block-nav flex">
+							<div class="tabs-nav"><a class="tabs-nav__item active" href="#tab_1" data-tab="tab_1">Все</a><a class="tabs-nav__item" href="#tab_2" data-tab="tab_2">Песок </a><a class="tabs-nav__item" href="#tab_3" data-tab="tab_3">щебень </a><a class="tabs-nav__item" href="#tab_4" data-tab="tab_4">метал</a><a class="tabs-nav__item" href="#tab_5" data-tab="tab_5">Пластик </a><a class="tabs-nav__item" href="#tab_6" data-tab="tab_6">метал</a><a class="tabs-nav__item" href="#tab_7" data-tab="tab_7">Бетоные смеси</a></div>
+							<div class="swiper-nav">
+								<button class="tabs-swiper-prev arrow-left"></button>
+								<button class="tabs-swiper-next arrow-right"></button>
+							</div>
+						</div>
+						<div class="swiper swiper-separate">
+							<div class="tabs-body active" id="tab_1">
+								<div class="tabs-swiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod5.webp" srcset="../img/products/prod5@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod6.webp" srcset="../img/products/prod6@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod7.webp" srcset="../img/products/prod7@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod8.webp" srcset="../img/products/prod8@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod5.webp" srcset="../img/products/prod5@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod6.webp" srcset="../img/products/prod6@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod7.webp" srcset="../img/products/prod7@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod8.webp" srcset="../img/products/prod8@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tabs-swiper-pagination"></div>
+								</div>
+							</div>
+							<div class="tabs-body" id="tab_2">
+								<div class="tabs-swiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod1.webp" srcset="../img/products/prod1@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod2.webp" srcset="../img/products/prod2@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod3.webp" srcset="../img/products/prod3@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod4.webp" srcset="../img/products/prod4@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod5.webp" srcset="../img/products/prod5@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod6.webp" srcset="../img/products/prod6@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod7.webp" srcset="../img/products/prod7@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod8.webp" srcset="../img/products/prod8@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tabs-swiper-pagination"></div>
+								</div>
+							</div>
+							<div class="tabs-body" id="tab_3">
+								<div class="tabs-swiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod5.webp" srcset="../img/products/prod5@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod6.webp" srcset="../img/products/prod6@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod7.webp" srcset="../img/products/prod7@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod8.webp" srcset="../img/products/prod8@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod4.webp" srcset="../img/products/prod4@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod3.webp" srcset="../img/products/prod3@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod2.webp" srcset="../img/products/prod2@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod1.webp" srcset="../img/products/prod1@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabs-swiper-pagination"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--===-->
+			<section class="rent">
+				<div class="container">
+					<div class="description-block">
+						<div class="description-block__text">
+							<h2 class="h2">Аренда спецтехники</h2>
+							<p>Возьмите любую спецтехнику в аренду в СПБ на срок от 3-х смен и получите скидку 5%. Торопитесь, срок действия акции ограничен!</p><a class="btn" href="#!">Перейти в каталог</a>
+						</div>
+						<div class="description-block__img"><img src="./img/block1_bg.webp" srcset="./img/block10_bg@2x.webp 2x" width="864" height="402" alt="img"></div>
+					</div>
+					<!--=====TABS SLIDERS ===-->
+					<div class="tabs-block myswiper-container">
+						<div class="tabs-block-nav flex">
+							<div class="tabs-nav"><a class="tabs-nav__item active" href="#tab_1" data-tab="tab_1">Все</a><a class="tabs-nav__item" href="#tab_2" data-tab="tab_2">Песок </a><a class="tabs-nav__item" href="#tab_3" data-tab="tab_3">щебень </a><a class="tabs-nav__item" href="#tab_4" data-tab="tab_4">метал</a><a class="tabs-nav__item" href="#tab_5" data-tab="tab_5">Пластик </a><a class="tabs-nav__item" href="#tab_6" data-tab="tab_6">метал</a><a class="tabs-nav__item" href="#tab_7" data-tab="tab_7">Бетоные смеси</a></div>
+							<div class="swiper-nav">
+								<button class="tabs-swiper-prev arrow-left"></button>
+								<button class="tabs-swiper-next arrow-right"></button>
+							</div>
+						</div>
+						<div class="swiper swiper-separate">
+							<div class="tabs-body active" id="tab_1">
+								<div class="tabs-swiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod5.webp" srcset="../img/products/prod5@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod6.webp" srcset="../img/products/prod6@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod7.webp" srcset="../img/products/prod7@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod8.webp" srcset="../img/products/prod8@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod5.webp" srcset="../img/products/prod5@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod6.webp" srcset="../img/products/prod6@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod7.webp" srcset="../img/products/prod7@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod8.webp" srcset="../img/products/prod8@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tabs-swiper-pagination"></div>
+								</div>
+							</div>
+							<div class="tabs-body" id="tab_2">
+								<div class="tabs-swiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod1.webp" srcset="../img/products/prod1@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod2.webp" srcset="../img/products/prod2@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod3.webp" srcset="../img/products/prod3@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod4.webp" srcset="../img/products/prod4@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod5.webp" srcset="../img/products/prod5@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod6.webp" srcset="../img/products/prod6@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod7.webp" srcset="../img/products/prod7@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod8.webp" srcset="../img/products/prod8@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tabs-swiper-pagination"></div>
+								</div>
+							</div>
+							<div class="tabs-body" id="tab_3">
+								<div class="tabs-swiper">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod5.webp" srcset="../img/products/prod5@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod6.webp" srcset="../img/products/prod6@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod7.webp" srcset="../img/products/prod7@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod8.webp" srcset="../img/products/prod8@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod4.webp" srcset="../img/products/prod4@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod3.webp" srcset="../img/products/prod3@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod2.webp" srcset="../img/products/prod2@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="product-card">
+												<div class="product-card__img"><img class="img-contain" src="../img/products/prod1.webp" srcset="../img/products/prod1@2x.webp 2x" alt="img" loading="lazy"/></div>
+												<div class="product-card__desk">
+													<div class="product-card__title">ЩПС С2 фракции 0-20 мм</div>
+													<div class="product-card__price">от 2300 руб./м3</div>
+													<button class="btn">Купить</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabs-swiper-pagination"></div>
 							</div>
 						</div>
 					</div>

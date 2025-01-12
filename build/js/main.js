@@ -21,13 +21,56 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-    /*simpleBar */
-    // Array.prototype.forEach.call(
-    //     document.querySelectorAll('[data-simplebar]'),
-    //     (el) => new SimpleBar(el)
-    //   );
-    /*bigMenu */
-    
+    /*Sliders in tabs */
+    const tabBlockSwiper = document.querySelectorAll(".tabs-block.myswiper-container");
+
+				tabBlockSwiper.forEach((block) => {
+					const tabsNav = block.querySelectorAll(".tabs-nav__item");
+					const tabsBody = block.querySelectorAll(".tabs-body");
+					const swiperInstances = {};
+
+					
+					tabsBody.forEach((tabBody) => {
+					const swiperContainer = tabBody.querySelector(".tabs-swiper");
+					if (swiperContainer) {
+						const swiper = new Swiper(swiperContainer, {
+						slidesPerView: 4,
+						speed:1000,
+						spaceBetween:40,
+						navigation: {
+							nextEl: block.querySelector(".tabs-swiper-next"),
+							prevEl: block.querySelector(".tabs-swiper-prev"),
+						},
+						pagination: {
+							el: tabBody.querySelector(".tabs-swiper-pagination"),
+							clickable: true,
+						},
+						});
+
+						swiperInstances[tabBody.id] = swiper;
+					}
+					});
+
+					
+					tabsNav.forEach((tab) => {
+					tab.addEventListener("click", (e) => {
+						e.preventDefault();
+						const targetTabId = tab.dataset.tab;
+
+						// Убираем активный класс со всех табов и контента
+						tabsNav.forEach((item) => item.classList.remove("active"));
+						tabsBody.forEach((body) => body.classList.remove("active"));
+
+					
+						tab.classList.add("active");
+						const targetBody = block.querySelector(`#${targetTabId}`);
+						if (targetBody) {
+						targetBody.classList.add("active");
+						swiperInstances[targetTabId]?.update(); 
+						}
+					});
+			});
+		});
 
      
       
@@ -172,44 +215,6 @@ document.addEventListener("DOMContentLoaded", function () {
    
 });
 /*PROMO-SLIDER */
-// document.addEventListener("DOMContentLoaded", () => {
-//     const slides = document.querySelectorAll(".promo-slide");
-
-//     let currentIndex = 0; // Текущий активный индекс
-  
-//     setInterval(() => {
-//       slides.forEach((slide) => {
-//         const contents = slide.querySelectorAll(".promo-slide-content");
-  
-//         // Получаем текущий активный и следующий контент
-//         const currentContent = contents[currentIndex];
-//         const nextIndex = (currentIndex + 1) % contents.length;
-//         const nextContent = contents[nextIndex];
-  
-//         // Устанавливаем следующий контент поверх текущего
-//         nextContent.classList.add("active");
-  
-//         // Убираем текущий контент с задержкой
-//         setTimeout(() => {
-//           currentContent.classList.remove("active");
-//           currentContent.classList.add("fading-out");
-  
-//           // После завершения анимации убираем fading-out
-//           setTimeout(() => {
-//             currentContent.classList.remove("fading-out");
-//           }, 500); // Должно совпадать с transition: opacity 0.5s
-//         }, 500); // Даем время новому контенту проявиться
-//       });
-  
-//       // Обновляем индекс
-//       currentIndex = (currentIndex + 1) % 3; // Учитываем 3 варианта содержимого
-//     }, 5000); // Интервал переключения
-
-//     const promoMobileSlider = new Swiper('.promo-swiper', {
-//         speed: 1000,
-//         spaceBetween:20,
-//     });
-//   });
 document.addEventListener("DOMContentLoaded", () => {
     let promoCustomSliderInterval = null; // Переменная для интервала кастомного слайдера
     let promoMobileSlider = null; // Переменная для Swiper
