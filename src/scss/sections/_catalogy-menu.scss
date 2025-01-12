@@ -6,6 +6,8 @@
 	top:74px;
 	z-index: 10;
 	background-color: #f0f0f0;
+	overflow: hidden;
+	
 	display: none;
 	&.active{display: block;}
 	.close-menu-part{
@@ -28,6 +30,7 @@
 		padding-inline:30px;
 		margin-inline: auto;
 		
+		
 		@media (max-width: 1279px) {
 			padding-inline:20px;
 		}
@@ -37,7 +40,7 @@
 		display: flex;
 		column-gap: 60px;
 		column-gap:30px;
-		.scroll-wrapper{position: relative;
+		.cm-level{position: relative;
 		}
 		@media (max-width: 1199px) {
 			display: block;
@@ -95,7 +98,15 @@
 	}
 	.cm-list__item{padding: 12px 30px 12px 0;}
 	.cm-sub-sublist__item,.cm-sublist__item{padding: 12px 30px;}
-	
+	.cm-image-group{
+		position: absolute;
+		right: 0;
+		top: 0;
+		transform: translateX(20%);
+		@media (max-width: 1199px) {
+		  display: none;
+		}
+	}
 	.cm-footer{
 		flex-shrink: 0;
 		padding-block: 40px;
