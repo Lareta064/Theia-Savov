@@ -1,0 +1,100 @@
+@use "../base/var" as *;
+.promo-slider{
+	display: flex;
+	position: relative;
+	width: 100%;
+	height: calc(100vh - 100px);
+	h2{
+		position: relative;
+		z-index: 3;
+		color: white;
+	}
+	.promo-slide--first{
+		clip-path: polygon(0 0, 100% 0, 76% 100%, 0% 100%);
+		z-index: 2;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 50%;
+		background:#1c1c1c;
+		
+		.container{
+			position: relative;
+			z-index: 2;
+		}
+	}
+	.promo-slide--two{
+		position: absolute;
+		inset:0;
+		z-index: 1;
+		background:#1c1c1c;
+		h2{position: absolute; left: 55%;}
+	}
+	.promo-slide--three{
+		clip-path: polygon(36% 0, 100% 0, 100% 100%, 0% 100%);
+		z-index: 2;
+		background:#1c1c1c;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		width: 35%;
+		
+		h2{position: absolute; left: 75%;}
+	}
+	.promo-slide:after{
+		content:'';
+		position: absolute;
+		inset: 0;
+		background:linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+		
+
+	}
+	.promo-slide-content {
+		position: absolute;
+		inset: 0;
+		opacity: 0; /* По умолчанию невидим */
+		z-index: 1; /* На фоне */
+		transition: opacity 0.5s ease; /* Плавная анимация */
+	  }
+	  
+	  .promo-slide-content.active {
+		z-index: 3; /* Поверх всех */
+		opacity: 1; /* Полностью видим */
+	  }
+	  
+	  .promo-slide-content.fading-out {
+		z-index: 2; /* Под новым контентом */
+		opacity: 0; /* Исчезает */
+	  }
+	.promo-slide__img {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		inset:0;
+	}
+	.promo-slide__img img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	
+}
+.promo-slide-progress{
+	position: relative;
+	width: 200px;
+	height: 2px;
+	background-color: #fff;
+	span{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		display: block;
+		z-index: 2;
+		background-color: $accent;
+	}
+}
+
+					

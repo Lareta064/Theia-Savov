@@ -169,9 +169,44 @@ document.addEventListener("DOMContentLoaded", function () {
 			}
 		});
 	});
+   
 });
+/*PRONO-SLIDER */
+document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll(".promo-slide");
 
-/************** */
+    let currentIndex = 0; // Текущий активный индекс
+  
+    // setInterval(() => {
+    //   slides.forEach((slide) => {
+    //     const contents = slide.querySelectorAll(".promo-slide-content");
+  
+    //     // Получаем текущий активный и следующий контент
+    //     const currentContent = contents[currentIndex];
+    //     const nextIndex = (currentIndex + 1) % contents.length;
+    //     const nextContent = contents[nextIndex];
+  
+    //     // Устанавливаем следующий контент поверх текущего
+    //     nextContent.classList.add("active");
+  
+    //     // Убираем текущий контент с задержкой
+    //     setTimeout(() => {
+    //       currentContent.classList.remove("active");
+    //       currentContent.classList.add("fading-out");
+  
+    //       // После завершения анимации убираем fading-out
+    //       setTimeout(() => {
+    //         currentContent.classList.remove("fading-out");
+    //       }, 500); // Должно совпадать с transition: opacity 0.5s
+    //     }, 500); // Даем время новому контенту проявиться
+    //   });
+  
+    //   // Обновляем индекс
+    //   currentIndex = (currentIndex + 1) % 3; // Учитываем 3 варианта содержимого
+    // }, 5000); // Интервал переключения
+  });
+  
+/****CATEGORY MENU**** */
 document.addEventListener("DOMContentLoaded", () => {
     const menuButton = document.getElementById("catalogy-menu-open");
     const menuWrapper = document.querySelector(".cm-wrapper");
