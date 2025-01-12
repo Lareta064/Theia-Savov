@@ -5,17 +5,20 @@
 	justify-content: center;
 	align-items: center;
 	width: fit-content;
-	height: 52px;
+	height: 2.6em;
 	padding: 0;
 	padding-inline: 1.5em;
-
+	white-space: nowrap;
 	font-size: 20px;
 	font-weight: 700;
 	color: $text;
 	border: 1px solid currentColor;
     border-radius: 8px;
 	cursor:pointer;
-	transition: .3s; 
+	transition: .3s;
+	@media (max-width: 1699px) {
+		font-size: 18px;
+	}
 }
 .btn.btn--white{
 	background-color: #fff;
