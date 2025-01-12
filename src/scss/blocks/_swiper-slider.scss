@@ -1,5 +1,5 @@
 @use "../base/var" as *;
-.swiper{
+.swiper-separate.swiper{
 	padding-top: 10px;
 	padding-bottom: 10px;
 	.swiper-slide + .swiper-slide{
@@ -43,7 +43,6 @@
 	}
 }
 .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active:after{background-color: #222222;}
-
 
 .myswiper-container .swiper-nav{
 	margin-left: auto;

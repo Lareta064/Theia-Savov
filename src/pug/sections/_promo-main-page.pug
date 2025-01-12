@@ -1,4 +1,4 @@
-//====PROMO ===	
+//====PROMO для экранов от 1200px===	
 section.promo
 	.promo-slider
 		//==== первый блок====
@@ -26,7 +26,7 @@ section.promo
 			//===слайд аренда===
 			.promo-slide-content 
 				.promo-slide__img
-					img(src="./img/block1_bg.webp", alt="img")
+					img(src="./img/block1_bg.webp", srcset="./img/block1_bg@2x.webp 2x" alt="img")
 				.promo-slide__info
 					.promo-slide__num 02
 					
@@ -45,7 +45,7 @@ section.promo
 			//===слайд оборудование===
 			.promo-slide-content
 				.promo-slide__img
-					img(src="./img/block2_bg.webp", alt="img")
+					img(src="./img/block2_bg.webp", srcset="./img/block2_bg@2x.webp 2x" alt="img")
 				.promo-slide__info
 					.promo-slide__num 03
 					
@@ -66,7 +66,7 @@ section.promo
 			//===слайд аренда===
 			.promo-slide-content.active
 				.promo-slide__img
-					img(src="./img/block1_bg.webp", alt="img")
+					img(src="./img/block1_bg.webp", srcset="./img/block1_bg@2x.webp 2x" alt="img")
 				.promo-slide__info
 					.promo-slide__num 02
 					.promo-slide__progress
@@ -76,7 +76,7 @@ section.promo
 			//===слайд оборудование===
 			.promo-slide-content
 				.promo-slide__img
-					img(src="./img/block2_bg.webp", alt="img")
+					img(src="./img/block2_bg.webp", srcset="./img/block2_bg@2x.webp 2x" alt="img")
 				.promo-slide__info
 					.promo-slide__num 03
 					.promo-slide__progress
@@ -86,7 +86,7 @@ section.promo
 			//===слайд материалы===
 			.promo-slide-content
 				.promo-slide__img
-					img(src="./img/block0_bg.webp", alt="img")
+					img(src="./img/block0_bg.webp", srcset="./img/block0_bg@2x.webp 2x" alt="img")
 				.promo-slide__info
 					.promo-slide__num 01
 					.promo-slide__progress
@@ -99,7 +99,7 @@ section.promo
 			//===слайд оборудование===
 			.promo-slide-content
 				.promo-slide__img
-					img(src="./img/block2_bg.webp", alt="img")
+					img(src="./img/block2_bg.webp", srcset="./img/block2_bg@2x.webp 2x" alt="img")
 				.promo-slide__info
 					.promo-slide__num 03
 					.promo-slide__progress
@@ -109,7 +109,7 @@ section.promo
 			//===слайд материалы===
 			.promo-slide-content
 				.promo-slide__img
-					img(src="./img/block0_bg.webp", alt="img")
+					img(src="./img/block0_bg.webp", srcset="./img/block0_bg@2x.webp 2x" alt="img")
 				.promo-slide__info
 					.promo-slide__num 01
 					.promo-slide__progress
@@ -119,10 +119,61 @@ section.promo
 			//===слайд аренда===
 			.promo-slide-content.active
 				.promo-slide__img
-					img(src="./img/block1_bg.webp", alt="img")
+					img(src="./img/block1_bg.webp", srcset="./img/block1_bg@2x.webp 2x" alt="img")
 				.promo-slide__info
 					.promo-slide__num 02
 					.promo-slide__progress
 						span
 					.promo-slide__link
 						a(href="#!") Аренда спец техники, аренда дорожной техники
+
+section.promo-mobile
+	.promo-swiper.swiper
+		.swiper-wrapper
+			.swiper-slide
+				.promo-card(style="background-image:url('./img/block0_bg.webp')")
+					.promo-slide__num 01
+					
+					h2.h1 Строй<br>материалы 
+					.txt-24 У нас вы можете найти строй материалы, арендовать строительный транспорт, купить оборугование для транспорта и закать большой спект услуг. 
+			
+					.promo-slide__buttons.flex
+						button.btn.btn--white Арендовать спецтехнику
+						button.btn-outline Узнать подробнее
+					
+					.promo-slide__progress
+						span
+					.promo-slide__link
+						a(href="#!") Строительное оборудование, строительные материалы
+			
+			.swiper-slide
+				.promo-card(style="background-image:url('./img/block1_bg.webp')")
+					.promo-slide__num 02
+					
+					h2.h1 Аренда<br>спецтехники 
+					.txt-24 У нас вы можете найти строй материалы, арендовать строительный транспорт, купить оборугование для транспорта и закать большой спект услуг. 
+			
+					.promo-slide__buttons.flex
+						button.btn.btn--white Арендовать спецтехнику
+						button.btn-outline Узнать подробнее
+					
+					.promo-slide__progress
+						span
+					.promo-slide__link
+						a(href="#!") Аренда спец техники, аренда дорожной техники
+			
+			.swiper-slide
+				.promo-card(style="background-image:url('./img/block3_bg.webp')")
+					.promo-slide__num 03
+					
+					h2.h1 Строительное<br>оборудование
+					.txt-24 У нас вы можете найти строй материалы, арендовать строительный транспорт, купить оборугование для транспорта и закать большой спект услуг. 
+			
+					.promo-slide__buttons.flex
+						button.btn.btn--white Арендовать спецтехнику
+						button.btn-outline Узнать подробнее
+					
+					.promo-slide__progress
+						span
+					.promo-slide__link
+						a(href="#!") Ремонт помещений, строительные работы, загородные работы.

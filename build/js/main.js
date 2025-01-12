@@ -171,39 +171,129 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
    
 });
-/*PRONO-SLIDER */
-document.addEventListener("DOMContentLoaded", () => {
-    const slides = document.querySelectorAll(".promo-slide");
+/*PROMO-SLIDER */
+// document.addEventListener("DOMContentLoaded", () => {
+//     const slides = document.querySelectorAll(".promo-slide");
 
-    let currentIndex = 0; // Текущий активный индекс
+//     let currentIndex = 0; // Текущий активный индекс
   
-    setInterval(() => {
-      slides.forEach((slide) => {
-        const contents = slide.querySelectorAll(".promo-slide-content");
+//     setInterval(() => {
+//       slides.forEach((slide) => {
+//         const contents = slide.querySelectorAll(".promo-slide-content");
   
-        // Получаем текущий активный и следующий контент
-        const currentContent = contents[currentIndex];
-        const nextIndex = (currentIndex + 1) % contents.length;
-        const nextContent = contents[nextIndex];
+//         // Получаем текущий активный и следующий контент
+//         const currentContent = contents[currentIndex];
+//         const nextIndex = (currentIndex + 1) % contents.length;
+//         const nextContent = contents[nextIndex];
   
-        // Устанавливаем следующий контент поверх текущего
-        nextContent.classList.add("active");
+//         // Устанавливаем следующий контент поверх текущего
+//         nextContent.classList.add("active");
   
-        // Убираем текущий контент с задержкой
-        setTimeout(() => {
-          currentContent.classList.remove("active");
-          currentContent.classList.add("fading-out");
+//         // Убираем текущий контент с задержкой
+//         setTimeout(() => {
+//           currentContent.classList.remove("active");
+//           currentContent.classList.add("fading-out");
   
-          // После завершения анимации убираем fading-out
+//           // После завершения анимации убираем fading-out
+//           setTimeout(() => {
+//             currentContent.classList.remove("fading-out");
+//           }, 500); // Должно совпадать с transition: opacity 0.5s
+//         }, 500); // Даем время новому контенту проявиться
+//       });
+  
+//       // Обновляем индекс
+//       currentIndex = (currentIndex + 1) % 3; // Учитываем 3 варианта содержимого
+//     }, 5000); // Интервал переключения
+
+//     const promoMobileSlider = new Swiper('.promo-swiper', {
+//         speed: 1000,
+//         spaceBetween:20,
+//     });
+//   });
+document.addEventListener("DOMContentLoaded", () => {
+    let promoCustomSliderInterval = null; // Переменная для интервала кастомного слайдера
+    let promoMobileSlider = null; // Переменная для Swiper
+  
+    // Функция для запуска кастомного слайдера
+    const initCustomSlider = () => {
+      const slides = document.querySelectorAll(".promo-slide");
+      let currentIndex = 0;
+  
+      promoCustomSliderInterval = setInterval(() => {
+        slides.forEach((slide) => {
+          const contents = slide.querySelectorAll(".promo-slide-content");
+  
+          // Получаем текущий активный и следующий контент
+          const currentContent = contents[currentIndex];
+          const nextIndex = (currentIndex + 1) % contents.length;
+          const nextContent = contents[nextIndex];
+  
+          // Устанавливаем следующий контент поверх текущего
+          nextContent.classList.add("active");
+  
+          // Убираем текущий контент с задержкой
           setTimeout(() => {
-            currentContent.classList.remove("fading-out");
-          }, 500); // Должно совпадать с transition: opacity 0.5s
-        }, 500); // Даем время новому контенту проявиться
-      });
+            currentContent.classList.remove("active");
+            currentContent.classList.add("fading-out");
   
-      // Обновляем индекс
-      currentIndex = (currentIndex + 1) % 3; // Учитываем 3 варианта содержимого
-    }, 5000); // Интервал переключения
+            // После завершения анимации убираем fading-out
+            setTimeout(() => {
+              currentContent.classList.remove("fading-out");
+            }, 500); // Время совпадает с transition: opacity 0.5s
+          }, 500);
+        });
+  
+        // Обновляем индекс
+        currentIndex = (currentIndex + 1) % 3; // Учитываем 3 варианта содержимого
+      }, 5000);
+    };
+  
+    // Функция для инициализации Swiper
+    const initSwiper = () => {
+      promoMobileSlider = new Swiper(".promo-swiper", {
+        speed: 1000,
+        spaceBetween: 20,
+        loop: true,
+        autoplay:{
+            delay: 5000,
+        }
+      });
+    };
+  
+    // Функция для удаления кастомного слайдера
+    const destroyCustomSlider = () => {
+      if (promoCustomSliderInterval) {
+        clearInterval(promoCustomSliderInterval);
+        promoCustomSliderInterval = null;
+      }
+    };
+  
+    // Функция для удаления Swiper
+    const destroySwiper = () => {
+      if (promoMobileSlider) {
+        promoMobileSlider.destroy(true, true);
+        promoMobileSlider = null;
+      }
+    };
+  
+    // Обработчик изменения ширины экрана
+    const handleResize = () => {
+      if (window.matchMedia("(min-width: 1200px)").matches) {
+        // Экран >= 1200px: кастомный слайдер
+        destroySwiper();
+        initCustomSlider();
+      } else {
+        // Экран < 1200px: обычный Swiper
+        destroyCustomSlider();
+        initSwiper();
+      }
+    };
+  
+    // Инициализация при загрузке страницы
+    handleResize();
+  
+    // Добавляем слушатель на изменение размеров экрана
+    window.addEventListener("resize", handleResize);
   });
   
 /****CATEGORY MENU**** */
