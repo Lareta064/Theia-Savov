@@ -12,6 +12,12 @@
 			left: -21px;
 			width: 1px;
 			background-color: rgba(43, 42, 41, .1);
+			@media (max-width: 1279px) {
+				left: -11px;
+			}
+			@media (max-width: 767px) {
+				display: none;
+			}
 		}
 	}
 }

@@ -23,7 +23,12 @@ body {
 	background-color: #fff;
 	-webkit-font-smoothing: subpixel-antialiased;
 	-moz-osx-font-smoothing: auto;
-	
+	@media (max-width: 1199px) {
+		font-size: 18px;
+	}
+	@media (max-width: 1023px) {
+		font-size: 16px;
+	}
 }
 .lock{overflow: hidden; }
 a,
@@ -58,6 +63,11 @@ img {
 	max-width: 100%;
 	height: auto;
 	display: block;
+	&.wh-100{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 }
 
 input,
@@ -97,6 +107,18 @@ section{
 	margin-inline: auto;
 	@media (max-width: 1279px) {
 		padding-inline:20px;
+	}
+}
+.visible-sm{
+	display: none!important;
+	@media (max-width: 767px) {
+		display: block!important;
+	}
+}
+.hide-sm{
+	display: block!important;
+	@media (max-width: 767px) {
+		display: none!important;
 	}
 }
 .img-contain, .img-cover{
