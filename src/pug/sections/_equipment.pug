@@ -1,38 +1,56 @@
-//===rent===
-section.rent
+//===equipment===
+section.equipment
 	.container.gap-60
 		.description-block
 			.description-block__text
-				h2.h2 Аренда спецтехники
+				h2.h2 Оборудование
 				p Возьмите любую спецтехнику в аренду в СПБ на срок от 3-х смен и получите скидку 5%. Торопитесь, срок действия акции ограничен!
 				a(href="#!").btn Перейти в каталог
 			.description-block__img
-				img.wh-100(src="./img/block1_bg.webp", srcset="./img/block1_bg@2x.webp 2x", width="864" height="402" alt="img" loading="lazy")
+				img.wh-100(src="./img/block2_bg.webp", srcset="./img/block2_bg@2x.webp 2x", width="864" height="402" alt="img" loading="lazy")
 		
 		//=====TABS SLIDERS ===
 		.tabs-block.myswiper-container
 			.tabs-block-nav.flex
 				.tabs-nav
-					a.tabs-nav__item.active(href="#tab_8" data-tab="tab_8") Все
-					a.tabs-nav__item(href="#tab_9" data-tab="tab_9") Песок 
-					a.tabs-nav__item(href="#tab_10" data-tab="tab_10") щебень 
-					a.tabs-nav__item(href="#tab_11" data-tab="tab_11") метал
-					a.tabs-nav__item(href="#tab_12" data-tab="tab_12") Пластик 
-					a.tabs-nav__item(href="#tab_13" data-tab="tab_13") метал
-					a.tabs-nav__item(href="#tab_14" data-tab="tab_14") Бетоные смеси
+					a.tabs-nav__item.active(href="#tab_15" data-tab="tab_15") Все
+					a.tabs-nav__item(href="#tab_16" data-tab="tab_16") Фронтальный погрузчик
+					a.tabs-nav__item(href="#tab_17" data-tab="tab_17") Погрузчик
+					a.tabs-nav__item(href="#tab_18" data-tab="tab_18") Экскаватор
+					
 				.swiper-nav
 					button.tabs-swiper-prev.arrow-left
 					button.tabs-swiper-next.arrow-right
 			.swiper.swiper-separate
-				#tab_8.tabs-body.active
+				#tab_15.tabs-body.active
 					.tabs-swiper
 						.swiper-wrapper
 							.swiper-slide
-								+product-card(1,'ЩПС С2 фракции', '0-20 мм', 2300)
+								+product-card(9,'ЩПС С2 фракции', '0-20 мм', 2300)
 							.swiper-slide
-								+product-card(2,'ЩПС С2 фракции', '0-20 мм', 2300)
+								+product-card(10,'ЩПС С2 фракции', '0-20 мм', 2300)
 							.swiper-slide
-								+product-card(3,'ЩПС С2 фракции', '0-20 мм', 2300)
+								+product-card(11,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(8,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(6,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(7,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(8,'ЩПС С2 фракции', '0-20 мм', 2300)
+						.tabs-swiper-pagination
+				#tab_16.tabs-body
+					.tabs-swiper
+						.swiper-wrapper
+							.swiper-slide
+								+product-card(11,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(10,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(9,'ЩПС С2 фракции', '0-20 мм', 2300)
 							.swiper-slide
 								+product-card(4,'ЩПС С2 фракции', '0-20 мм', 2300)
 							.swiper-slide
@@ -44,27 +62,7 @@ section.rent
 							.swiper-slide
 								+product-card(8,'ЩПС С2 фракции', '0-20 мм', 2300)
 						.tabs-swiper-pagination
-				#tab_9.tabs-body
-					.tabs-swiper
-						.swiper-wrapper
-							.swiper-slide
-								+product-card(1,'ЩПС С2 фракции', '0-20 мм', 2300)
-							.swiper-slide
-								+product-card(2,'ЩПС С2 фракции', '0-20 мм', 2300)
-							.swiper-slide
-								+product-card(3,'ЩПС С2 фракции', '0-20 мм', 2300)
-							.swiper-slide
-								+product-card(4,'ЩПС С2 фракции', '0-20 мм', 2300)
-							.swiper-slide
-								+product-card(5,'ЩПС С2 фракции', '0-20 мм', 2300)
-							.swiper-slide
-								+product-card(6,'ЩПС С2 фракции', '0-20 мм', 2300)
-							.swiper-slide
-								+product-card(7,'ЩПС С2 фракции', '0-20 мм', 2300)
-							.swiper-slide
-								+product-card(8,'ЩПС С2 фракции', '0-20 мм', 2300)
-						.tabs-swiper-pagination
-				#tab_10.tabs-body
+				#tab_17.tabs-body
 					.tabs-swiper
 						.swiper-wrapper
 							.swiper-slide
