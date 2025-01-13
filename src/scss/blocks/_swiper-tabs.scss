@@ -1,9 +1,22 @@
 @use "../base/var" as *;
 .tabs-block-nav{
 	justify-content: space-between;
+	margin-bottom: 10px;
 	.swiper-nav,.tabs-nav{margin: 0;}
+	
 }
-.tabs-nav>*+*{margin-left: 28px;}
+.tabs-nav{
+	display: flex;
+	flex-wrap:wrap;
+	align-items: center;
+	column-gap:28px;
+	row-gap:6px;
+	width: fit-content;
+	justify-content: center;
+	@media (max-width: 767px) {
+	justify-content: center;
+	}
+}
 .tabs-nav__item {
 	font-weight: 500;
 	font-size: 12px;

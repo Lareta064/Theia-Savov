@@ -100,6 +100,9 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 }
 section{
 	padding-block:45px;
+	@media (max-width: 1023px) {
+		padding-block:30px;
+	}
 }
 .container{
 	width: min(1610px, 100%);
@@ -119,6 +122,12 @@ section{
 	display: block!important;
 	@media (max-width: 767px) {
 		display: none!important;
+	}
+}
+.gap-60{
+	&>*+*{margin-top: 60px;}
+	@media (max-width: 1199px) {
+		&>*+*{margin-top: 40px;}
 	}
 }
 .img-contain, .img-cover{

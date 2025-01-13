@@ -26,7 +26,8 @@
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	gap: 16px;
+	column-gap: 16px;
+	row-gap: 8px;
 	margin-top: 16px;
 }
 .swiper-pagination-bullets .swiper-pagination-bullet{
@@ -55,4 +56,7 @@
 	width: fit-content;
 	text-align: right;
 	margin-bottom: 20px;
+	@media (max-width: 1199px) {
+	display: none;
+	}
 }

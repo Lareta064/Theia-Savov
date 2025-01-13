@@ -1,6 +1,6 @@
 @use "../base/var" as *;
 .category-card {
-	
+	display: block;
 	justify-content: space-between;
 	row-gap: 8px;
 	padding: 26px 29px 13px;
@@ -10,7 +10,7 @@
 	background-color: #fff;
 	position: relative;
 	width: 100%;
-	// max-width: 372px;
+	max-width: 372px;
 	
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='372' height='259' viewBox='0 0 372 259' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.5 0.5H370.751V129.5V194.027L299.041 258.5H278.438H185.626H0.5V0.5Z' stroke='%23EAEAEA' /%3e%3c/svg%3e");
 	background-size: contain;
@@ -24,6 +24,28 @@
 		bottom: 4px;
 		right: 4px;
 		z-index: 1;
+		@media (max-width: 1364px) {
+			width: 20px;
+			height: 20px;
+			bottom: 6px;
+		   
+		}
+		@media (max-width: 767px) {
+			width: 16px;
+			height: 16px;
+		     right: 0px;
+		}
+		@media (max-width: 499px) {
+			width: 25px;
+		    height: 25px;
+		     bottom: 4px;
+		    right: 4px;
+		}
+	}
+	p{height: 60px;}
+	img{
+		height: calc(100% - 60px);
+		object-fit: contain;
 	}
 	@media (max-width: 1439px) {
 		padding: 15px;
@@ -34,20 +56,23 @@
 	}
 	
 }
-
+.category-cards{align-items: stretch;}
 .category-cards .category-card{
 	grid-column: span 3;
-	height: 100%;
+	
 	@media (max-width: 1023px) {
+		
+		font-size: 14px;
+		padding: 16px;
+	}
+	@media (max-width: 799px) {
 		grid-column: span 6;
-		font-size: 20px;
-		padding: 30px;
 	}
 	@media (max-width: 767px) {
 		padding: 12px;
 		font-size: 16px;
 	}
-	@media (max-width: 424px) {
+	@media (max-width: 499px) {
 		grid-column: span 12;
 		font-size: 20px;
 	}
@@ -61,7 +86,7 @@
 	}
 	@media (max-width: 1023px) {
 		.category-cards {
-			gap:20px;
+			gap:10px;
 		}
 	}
 	@media (max-width: 767px) {

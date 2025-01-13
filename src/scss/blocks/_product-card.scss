@@ -1,6 +1,7 @@
 @use "../base/var" as *;
 .product-card{
 	border-radius: 10px;
+	overflow: hidden;
 	box-shadow: 0 0 22px 0 rgba(154, 152, 152, 0.1);
 
 	&__img{
@@ -12,6 +13,16 @@
 		padding: 25px;
 		background-color: #fff;
 		width: 100%;
+		.btn{
+			@media (max-width: 1023px) {
+			  height: 32px;
+			  font-size: 16px;
+			  line-height: 30px;
+			  padding-left: 15px;
+			  padding-right: 15px;
+
+			}
+		}
 	}
 	.product-card__title,
     .product-card__price{
@@ -20,6 +31,7 @@
 	  width: 100%;
 	  text-align: center;
 	  margin-bottom: 10px;
+	  span{white-space: nowrap;}
     }
 	.product-card__price{font-weight: 800; margin-top: auto;}
 	.product-card__price{margin-bottom: 30px; white-space: nowrap;}

@@ -20,18 +20,35 @@
 		font-size: 18px;
 	}
 }
+.btn:hover{color: $accent;}
 .btn.btn--white{
 	background-color: #fff;
 	border: 1px solid #fff;
+	&:hover{
+		background-color: $accent;
+	   border: 1px solid $accent;
+	   color: #fff;
+	}
 }
 .btn.btn--accent{
 	color: $accent;
+	&:hover{
+		border: 1px solid  $text;
+		background-color: #fff;
+		color:  $text;
+	}
 }
 .btn-outline{
 	color: white;
+	&:hover{color:  $accent; border: 1px solid $accent; }
 }
 .btn-primary{
 	border: 1px solid $accent;
 	background-color: $accent;
 	color: white;
+	&:hover{
+		
+		background-color: #fff;
+		color:   $accent;
+	}
 }
