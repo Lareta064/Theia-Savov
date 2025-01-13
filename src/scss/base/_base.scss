@@ -149,7 +149,12 @@ section{
 .flex-center, .product-card,  .product-card__desk{
 	justify-content: center;
 }
-
+.header-content{
+	margin-bottom: 50px;
+	@media (max-width: 767px) {
+	 margin-bottom: 30px;
+	}
+}
 .category-card, .product-card, .product-card__desk {
 	display: flex;
 	flex-direction: column;

@@ -43,6 +43,12 @@ mixin breadcrumbs-ui(...items)
 		each item in items
 			a(href="#!") !{item}
 
+mixin serv-card(img, title, txt)
+	a(href="#!").serv-card(style="background-image: url(./img/services/serv"+ img +".webp)")
+		.serv-card__title #{title}
+		p !{txt}
+		span.btn-outline Заказать услугу 
+
 mixin select(plh="Пример заполнения", inpName = 'input_name', label)
 	.form-item&attributes(attributes)
 		if label
@@ -59,3 +65,5 @@ mixin select(plh="Пример заполнения", inpName = 'input_name', la
 
 			//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
 			input.dropdown__input-hidden(type="text", name=""+ input_name)
+
+

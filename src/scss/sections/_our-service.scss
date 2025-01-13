@@ -1,0 +1,55 @@
+@use "../base/var" as *;
+.our-service{
+	.header-content{
+		justify-content: space-between;
+		
+	}
+}
+.serv-card{
+	background-color: $dark;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	border-radius: 10px;
+	padding: 36px 34px;
+	width: 100%;
+	max-width: 505px;
+	aspect-ratio:505/607;
+	max-height: 607px;
+	color: white;
+	position: relative;
+	overflow: hidden;
+	
+	&:after{
+		content:'';
+		position: absolute;
+		inset:0;
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+		z-index: 1;
+	}
+	&__title{
+		font-weight: 400;
+		font-size: 30px;
+		line-height: 100%;
+		letter-spacing: -0.01em;
+		font-family: $fs;
+		color: white;
+		margin-bottom: 30px;
+		transition: .3s; 
+	}
+	p{margin-bottom: 25px;}
+	&>*{position: relative;
+	z-index: 2;}
+	
+	&:hover { color: white;}
+	&:hover {
+		.serv-card__title{color: $accent;}
+		.btn-outline{color: $accent;}
+	}
+}
+.service-cards .serv-card{
+	grid-column: span 4;
+}
