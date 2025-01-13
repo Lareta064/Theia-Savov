@@ -1,7 +1,7 @@
 @use "../base/var" as *;
 .swiper-separate.swiper{
 	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-bottom: 15px;
 	.swiper-slide + .swiper-slide{
 		position: relative;
 		&:before{
@@ -28,7 +28,7 @@
 	flex-wrap: wrap;
 	column-gap: 16px;
 	row-gap: 8px;
-	margin-top: 16px;
+	margin-top: 34px;
 }
 .swiper-pagination-bullets .swiper-pagination-bullet{
 	height: 10px;

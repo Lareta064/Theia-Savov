@@ -44,7 +44,7 @@
 	@media (max-width: 576px) {grid-column: span 6;}
 	@media (max-width: 424px) {grid-column: span 12;&:before{display: none;}}
 }
-}
+
 @media (max-width: 1439px) {
 	.description-block{column-gap: 35px;}
 	.description-block__text>*+*,

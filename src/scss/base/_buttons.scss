@@ -38,9 +38,14 @@
 		color:  $text;
 	}
 }
+.dark-bg .btn.btn--accent:hover{
+	border: 1px solid  #fff;
+	background-color: transparent;
+	color:  #fff;
+}
 .btn-outline{
 	color: white;
-	&:hover{color:  $accent; border: 1px solid $accent; }
+	&:hover{color:  $accent; border: 1px solid $accent;}
 }
 .btn-primary{
 	border: 1px solid $accent;
