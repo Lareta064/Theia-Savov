@@ -28,6 +28,22 @@
 		font-family: $fs;
 	}
 	&>*+*{margin-top: 4px;}
+	@media (max-width: 1199px) {
+		font-size:16px;
+		.accent-txt{font-size: 2em;}
+	}
+	@media (max-width: 767px) {
+		.accent-txt{font-size: 26px;}
+	}
+	@media (max-width: 576px) {
+		.accent-txt{font-size: 26px;}
+	}
+	@media (max-width: 424px){text-align: left;font-size:16px; .accent-txt{font-size: 32px;}}
+}
+.statistic-block.grid-border > *{
+	@media (max-width: 576px) {grid-column: span 6;}
+	@media (max-width: 424px) {grid-column: span 12;&:before{display: none;}}
+}
 }
 @media (max-width: 1439px) {
 	.description-block{column-gap: 35px;}
