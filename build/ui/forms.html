@@ -1,115 +1,144 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-		<!--====убрать синий цвет у ссылок в сафари ========-->
-		<meta name="format-detection" content="telephone=no"/>
-		<link rel="stylesheet" href="../css/main.css"/>
-		<title>UI-KIT</title>
-	</head>
-	<body class="body-dashboard">
-		<div class="ui-panel">
-			<div class="ui-panel-block">
-				<div class="ui-panel-block__part"><a class="back-index" href="http://localhost:3000/">На Главную</a>
-					<h3>Базовые компоненты</h3>
-					<ul>
-						<li><a href="colors.html">Цветовая схема</a></li>
-						<li><a href="typography.html">Типографика</a></li>
-						<li><a href="icons.html">Иконки</a></li>
-						<li><a href="buttons.html">Кнопки</a></li>
-						<li><a href="forms.html">Формы</a></li>
-						<li><a href="breadcrumbs.html">Хлебные крошки</a></li>
-					</ul>
-				</div>
-				<div class="ui-panel-block__part">
-					<h3>Карточки</h3>
-					<ul>
-						<li><a href="category-card.html">Карточка Категории</a></li>
-						<li><a href="product-card.html">Карточка Продукта</a></li>
-					</ul>
-				</div>
-				<div class="ui-panel-block__part">
-					<h3>Блоки</h3>
-					<ul>
-						<li><a href="text-image.html">Текст + картинка</a></li>
-						<li><a href="product-slider.html">Слайдер товаров</a></li>
-						<li><a href="swiper-tabs.html">Слайдер в табах</a></li>
-						<li><a href="tabs.html">Табы</a></li>
-					</ul>
-				</div>
-				<div class="ui-panel-block__part">
-					<h3>Секции</h3>
-				</div>
-			</div>
-		</div>
-		<div class="container-dashboard">
-			<h2>Форма</h2>
-			<div class="container-dashboard__content">
-				<div class="form-item">
-					<input type="text" placeholder="Адрес *"/>
-				</div>
-				<pre>.form-item
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!--====убрать синий цвет у ссылок в сафари ========-->
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <title>UI-KIT</title>
+</head>
+
+<body class="body-dashboard">
+  <div class="ui-panel">
+    <div class="ui-panel-block">
+      <div class="ui-panel-block__part">
+        <a class="back-index" href="http://localhost:3000/">На Главную</a>
+        <h3>Базовые компоненты</h3>
+        <ul>
+          <li>
+            <a href="colors.html">Цветовая схема</a>
+          </li>
+          <li>
+            <a href="typography.html">Типографика</a>
+          </li>
+          <li>
+            <a href="icons.html">Иконки</a>
+          </li>
+          <li>
+            <a href="buttons.html">Кнопки</a>
+          </li>
+          <li>
+            <a href="forms.html">Формы</a>
+          </li>
+          <li>
+            <a href="breadcrumbs.html">Хлебные крошки</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ui-panel-block__part">
+        <h3>Карточки</h3>
+        <ul>
+          <li>
+            <a href="category-card.html">Карточка Категории</a>
+          </li>
+          <li>
+            <a href="product-card.html">Карточка Продукта</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ui-panel-block__part">
+        <h3>Блоки</h3>
+        <ul>
+          <li>
+            <a href="text-image.html">Текст + картинка</a>
+          </li>
+          <li>
+            <a href="product-slider.html">Слайдер товаров</a>
+          </li>
+          <li>
+            <a href="swiper-tabs.html">Слайдер в табах</a>
+          </li>
+          <li>
+            <a href="tabs.html">Табы</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ui-panel-block__part">
+        <h3>Секции</h3>
+      </div>
+    </div>
+  </div>
+  <div class="container-dashboard">
+    <h2>Форма</h2>
+    <div class="container-dashboard__content">
+      <div class="form-item">
+        <input type="text" placeholder="Адрес *" />
+      </div>
+      <pre>.form-item
 	input(type="search" placeholder="Адрес *")</pre>
-				<hr/>
-				<div class="form-item">
-					<textarea placeholder="Примечание"></textarea>
-				</div>
-				<pre>.form-item
-	textarea(placeholder="Примечание")</pre><br/>
-				<div class="form-row">
-					<div class="form-item">
-						<input type="tel" placeholder="Телефон *"/>
-					</div>
-					<div class="form-item">
-						<input type="email" placeholder="Email *"/>
-					</div>
-				</div>
-				<pre>.form-row
+      <hr />
+      <div class="form-item">
+        <textarea placeholder="Примечание"></textarea>
+      </div>
+      <pre>.form-item
+	textarea(placeholder="Примечание")</pre>
+      <br />
+      <div class="form-row">
+        <div class="form-item">
+          <input type="tel" placeholder="Телефон *" />
+        </div>
+        <div class="form-item">
+          <input type="email" placeholder="Email *" />
+        </div>
+      </div>
+      <pre>.form-row
 	.form-item
 		input(type="tel" placeholder="Телефон *")
 	.form-item
 		input(type="email" placeholder="Email *")</pre>
-				<hr/>
-				<div class="form-item">
-					<div class="dropdown">
-						<button class="dropdown__button" type="button">Речной песок</button>
-						<div class="dropdown__list">
-							<ul>
-								<li class="dropdown__list-item" data-value="Речной песок">Речной песок</li>
-								<li class="dropdown__list-item" data-value="Пример заполнения 2">Пример заполнения 2</li>
-								<li class="dropdown__list-item" data-value="Пример заполнения 3">Пример заполнения 3</li>
-								<li class="dropdown__list-item" data-value="Пример заполнения 4">Пример заполнения 4</li>
-							</ul>
-						</div>
-						<!--==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===-->
-						<input class="dropdown__input-hidden" type="text" name="undefined"/>
-					</div>
-				</div>
-				<pre>+select("Речной песок", 'product_name')</pre>
-			</div>
-			<div style="background: #1c1c1c; padding:30px">
-				<form class="form form-light">
-					<div class="form-item">
-						<input type="text" placeholder="Адрес *"/>
-					</div>
-				</form>
-				<pre>form.form.form-light
+      <hr />
+      <div class="form-item">
+        <div class="dropdown">
+          <button class="dropdown__button" type="button">Речной песок</button>
+          <div class="dropdown__list">
+            <ul>
+              <li class="dropdown__list-item" data-value="Речной песок">Речной песок</li>
+              <li class="dropdown__list-item" data-value="Пример заполнения 2">Пример заполнения 2</li>
+              <li class="dropdown__list-item" data-value="Пример заполнения 3">Пример заполнения 3</li>
+              <li class="dropdown__list-item" data-value="Пример заполнения 4">Пример заполнения 4</li>
+            </ul>
+          </div>
+          <!--==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===-->
+          <input class="dropdown__input-hidden" type="text" name="undefined" />
+        </div>
+      </div>
+      <pre>+select("Речной песок", 'product_name')</pre>
+    </div>
+    <div style="background: #1c1c1c; padding:30px">
+      <form class="form form-light">
+        <div class="form-item">
+          <input type="text" placeholder="Адрес *" />
+        </div>
+      </form>
+      <pre>form.form.form-light
 	.form-item
 		input(type="text" placeholder="Адрес *")
 </pre>
-				<div class="form-item search-form-group">
-					<input type="search" placeholder="Поиск"/>
-					<button class="btn search-btn" type="submit">
-						<svg class="svg-search">
-							<use href="../img/sprite.svg#svg-search"></use>
-						</svg>
-					</button>
-				</div>
-				<hr/>
-			</div>
-		</div>
-		<script src="../js/main.js"></script>
-	</body>
+      <div class="form-item search-form-group">
+        <input type="search" placeholder="Поиск" />
+        <button class="btn search-btn" type="submit">
+          <svg class="svg-search">
+            <use href="../img/sprite.svg#svg-search"></use>
+          </svg>
+        </button>
+      </div>
+      <hr />
+    </div>
+  </div>
+  <script src="../js/main.js"></script>
+</body>
+
 </html>
