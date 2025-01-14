@@ -44,7 +44,7 @@ mixin breadcrumbs-ui(...items)
 			a(href="#!") !{item}
 
 mixin serv-card(img, title, txt)
-	a(href="#!").serv-card(style="background-image: url(./img/services/serv"+ img +".webp)")
+	a.serv-card(href="#!" style="background-image: url(./img/services/serv"+ img +".webp)")
 		.serv-card__title #{title}
 		p !{txt}
 		span.btn-outline Заказать услугу 
