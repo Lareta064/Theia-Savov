@@ -41,6 +41,15 @@ h1, h2,h3{font-weight: 400;}
 		font-size: 24px;
 	}
 }
+.h4{
+	font-family:$fs;
+	font-size: 30px;
+    line-height: 1;
+    letter-spacing: -0.01em;
+	@media (max-width: 767px) {
+		font-size: 24px;
+	}
+}
 .txt-24{
 	font-size: 24px;
 	letter-spacing: -0.02em;

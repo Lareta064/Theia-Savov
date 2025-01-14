@@ -17,6 +17,24 @@
 	justify-content: center;
 	}
 }
+.tabs-nav.tabs-nav--marker{
+	.tabs-nav__item {
+		display: flex;
+		
+		position: relative;
+		column-gap:7px;
+		&:before{
+			content:'';
+			width: 11px;
+			height: 11px;
+			flex-shrink: 0;
+			background-color: $dark;
+		}
+	}
+	.tabs-nav__item.active:before{
+		background-color: $accent;;
+	}
+}
 .tabs-nav__item {
 	font-weight: 500;
 	font-size: 12px;

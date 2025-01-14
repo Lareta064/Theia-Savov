@@ -44,6 +44,10 @@ textarea{
 		color: white;
 		border: 1px solid currentColor;
 	}
+	.agree-txt{
+		color: white;
+		a{color: white;}
+	}
 }
 /*search form*/
 .search-form-group{
@@ -175,4 +179,15 @@ textarea{
   
   .dropdown__input-hidden {
 	display: none;
+  }
+  .agree-txt{
+	font-size: 12px;
+	font-family: $fs;
+	color: $dark;
+	a{
+		text-decoration-skip-ink: none;
+		transition: .3s;
+		text-decoration: underline;
+		&:hover{color: $accent;}
+	}
   }

@@ -1,0 +1,57 @@
+//=== blog ===
+section.blog
+	.container
+		.blog-content
+			.tabs-block.myswiper-container
+				.tabs-block-nav.flex
+					.tabs-nav.tabs-nav--marker
+						a.tabs-nav__item.active(href="#!" data-tab="all") Все
+						a.tabs-nav__item(href="#!" data-tab="news-tab") Новости
+						a.tabs-nav__item(href="#!" data-tab="project-tab") Проекты
+						a.tabs-nav__item(href="#!" data-tab="recomend-tab") советы 
+						
+				//===Слайдеры===	
+				.swiper.swiper-separate
+					#all.tabs-body.active
+						.tabs-swiper
+							.swiper-wrapper
+								.swiper-slide
+									+product-card-ui(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+								.swiper-slide
+									+product-card-ui(6,'ЩПС С2 фракции', '0-20 мм', 2300)
+								.swiper-slide
+									+product-card-ui(7,'ЩПС С2 фракции', '0-20 мм', 2300)
+								.swiper-slide
+									+product-card-ui(8,'ЩПС С2 фракции', '0-20 мм', 2300)
+								.swiper-slide
+									+product-card-ui(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+								.swiper-slide
+									+product-card-ui(6,'ЩПС С2 фракции', '0-20 мм', 2300)
+								.swiper-slide
+									+product-card-ui(7,'ЩПС С2 фракции', '0-20 мм', 2300)
+								.swiper-slide
+									+product-card-ui(8,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.tabs-swiper-pagination
+					#news-tab.tabs-body
+						.tabs-swiper
+							.swiper-wrapper
+								.swiper-slide
+									+product-card-ui(1,'ЩПС С2 фракции', '0-20 мм', 2300)
+								.swiper-slide
+									+product-card-ui(2,'ЩПС С2 фракции', '0-20 мм', 2300)
+								.swiper-slide
+									+product-card-ui(3,'ЩПС С2 фракции', '0-20 мм', 2300)
+								.swiper-slide
+									+product-card-ui(4,'ЩПС С2 фракции', '0-20 мм', 2300)
+								.swiper-slide
+									+product-card-ui(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+								.swiper-slide
+									+product-card-ui(6,'ЩПС С2 фракции', '0-20 мм', 2300)
+								.swiper-slide
+									+product-card-ui(7,'ЩПС С2 фракции', '0-20 мм', 2300)
+								.swiper-slide
+									+product-card-ui(8,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.tabs-swiper-pagination
+
+		include _dark-form-subscribe
+		

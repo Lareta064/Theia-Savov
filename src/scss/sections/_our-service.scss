@@ -1,6 +1,6 @@
 @use "../base/var" as *;
 .our-service{
-	.header-content{justify-content: space-between;}
+	
 	@media (max-width: 767px) {
 		.visible-sm{
 			display: flex!important;
@@ -8,9 +8,6 @@
 			margin-top: 40px;
 		}
 	}
-		
-		
-	
 }
 .serv-card{
 	background-color: $dark;

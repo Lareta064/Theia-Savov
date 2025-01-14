@@ -5,7 +5,7 @@
 	background-color: $dark;
 	color: white;
 	position: relative;
-	
+	z-index: 5;
 	&>.container{
 		position: relative;	
 	    z-index: 2;
@@ -68,10 +68,25 @@
 	flex-shrink: 0;
 	padding-left: 12px;
 	padding-right: 12px;
-	.header-nav__list{
-		display: flex;
-		align-items: center;
+	
+	@media (max-width: 1279px) {
+		padding-left: 0;
+		padding-right: 0;
 	}
+	@media (max-width: 1199px) {
+	    position: fixed;
+		top: 74px;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		background-color: $dark;
+		z-index: 10;
+		display: none;
+	}
+}
+.header-nav__list{
+	display: flex;
+	align-items: center;
 	
 	a{
 		font-size: 16px;
@@ -79,5 +94,11 @@
 		letter-spacing: -0.01em;
 		padding: 6px 12px;
 		color: white;
+		@media (max-width: 1439px) {
+			padding: 6px 8px
+		}
+	}
+	@media (max-width: 1199px){
+		flex-direction: column;
 	}
 }
