@@ -48,6 +48,11 @@ mixin serv-card(img, title, txt)
 		.serv-card__title #{title}
 		p !{txt}
 		span.btn-outline Заказать услугу 
+mixin blog-card(img)
+	a.blog-card(href="#!" style="background-image: url(./img/blog/blog"+ img +".webp)")
+		.blog-card__tag #trend
+		.blog-card__title Противогололедный реагент&nbsp;(ПГР)
+		.blog-card__date 18 июля
 
 mixin select(plh="Пример заполнения", inpName = 'input_name', label)
 	.form-item&attributes(attributes)
