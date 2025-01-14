@@ -21,7 +21,11 @@
 		}
 	}
 }
-
+/*для одинако высоты карточек на Главной*/
+.myswiper-container .swiper-wrapper, .swiper .swiper-slide {
+	display: flex;
+}
+.swiper .swiper-slide{height: unset;}
 .swiper-pagination-bullets{
 	display: flex;
 	justify-content: center;
