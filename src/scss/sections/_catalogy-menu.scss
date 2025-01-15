@@ -10,13 +10,8 @@
 	height: 0;
 	transition: .3s linear; 
 	&.active{height: calc(100vh - 74px);}
-	.close-menu-part{
-		position: absolute;
-		top: 10px;
-		left: 10px;
-		z-index: 2;
-		display: none;
-	}
+	.close-menu-part, .close-cat-menu{display: none;}
+	
 	&.active{display: block;}
 	.cm-content{
 		background-color: #fff;
@@ -31,11 +26,10 @@
 		padding-inline:30px;
 		margin-inline: auto;
 		height: 365px;
-		
-		
 		@media (max-width: 1279px) {
 			padding-inline:20px;
 		}
+		
 	}
 	.cm-nav{
 		flex-grow: 1;
@@ -124,6 +118,15 @@
 	
 	.cm-sub-sublist{
 		column-count: 2;
+		@media (max-width: 767px) {
+			column-count: 1;
+			&.active{
+				overflow: hidden;
+				overflow-y: auto;
+				scrollbar-width: none;
+				&::-webkit-scrollbar{display: none;}
+			}
+		}
 	}
 	.cm-list{
 		display: flex;
@@ -139,11 +142,17 @@
 			font-weight: 400;
             font-size: 23px;
 			transition: .3s; 
+			@media (max-width: 1023px) {
+				font-size: 20px;
+			}
 		}
 		img{
 			flex-shrink: 0;
 			width: 84px;
 			aspect-ratio: 42 /27;
+			@media (max-width: 767px) {
+				width: 50px;
+			}
 		}
 		&.active, &:hover{
 			a{color: $accent!important;}
@@ -164,9 +173,22 @@
 		transform: translateX(110%);
 		transition: .3s;
 		background-color: #fff;
-		.close-menu-part{display: block;}
+		.close-cat-menu,.close-menu-part{
+			position: absolute;
+			top: 14px;
+			left: 24px;
+			opacity: .5;
+			z-index: 2;
+			display: flex;
+			align-items: center;
+			column-gap:6px;
+			.arrow-left {width: 16px;}
+			&:hover{opacity: 1;}
+		}
+		.cm-container{padding-inline:15px;}
 		.cm-content{
 			min-height: 100%;
+			padding-top: 0;
 		}
 		&.active{transform: translateX(0);}
 		.cm-nav .cm-level-2, .cm-nav .cm-level-3{
@@ -175,11 +197,27 @@
 			position: absolute;
 			inset:0;
 			display: block; background-color: #fff; z-index:2;
+			width: 100%;
+			max-width: 100%;
+			padding-top: 40px;
+		}
+		.close-cat-menu{
+			font-size: 30px;
+			left: auto;
+			right:14px;
+			top:7px;
+		}
+		.cm-level-1{
+			width: 100%;
+			padding-top: 40px;
 		}
 		.cm-level-3{z-index:3;}
 		.cm-level-2.active, .cm-level-3.active{
 			
 			transform: translateX(0);
+		}
+		.cm-sublist, .cm-sub-sublist{
+			padding-top: 40px;
 		}
 	}
 }

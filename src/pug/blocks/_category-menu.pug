@@ -1,6 +1,6 @@
 //======CATEGORY MENU======
 .cm-wrapper
-	button.close-menu-part &larr;
+	button.close-cat-menu &#10006;
 	.cm-content
 		.cm-nav.cm-container
 			.cm-level.cm-level-1
@@ -22,7 +22,9 @@
 						
 			//=== второй уровень меню===
 			.cm-level.cm-level-2
-				button.close-menu-part &larr;
+				button.close-menu-part
+					span.arrow-left 
+					| Назад
 				//=== LEVEL 2 Строительные материалы===
 				ul.cm-sublist.has-subdrop.active(data-subdrop='1')
 					li.cm-sublist__item.has-subdrop(data-sub-subdrop='11')
@@ -75,7 +77,9 @@
 					
 			//===третий уровень Строительные материалы===
 			.cm-level.cm-level-3
-				button.close-menu-part &larr;
+				button.close-menu-part
+					span.arrow-left 
+					| Назад
 				//=== LEVEL 3 - Песок===
 				ul.cm-sub-sublist.active(data-sublist='11')
 					li.cm-sub-sublist__item
