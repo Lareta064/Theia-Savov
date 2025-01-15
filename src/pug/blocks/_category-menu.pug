@@ -13,64 +13,84 @@
 						
 					li.cm-list__item.has-drop(data-drop='2')
 						img(src="./img/menu/cat-icon2.webp", srcset="./img/menu/cat-icon2@2x.webp 2x" alt="img" width="84" height="54")
-						a(href="#!").cm-list__link Аренда
+						a(href="#!").cm-list__link Строительное оборудование 
 						
 					li.cm-list__item.has-drop(data-drop='3')
 						img(src="./img/menu/cat-icon3.webp", srcset="./img/menu/cat-icon3@2x.webp 2x" alt="img" width="84" height="54")
-						a(href="#!").cm-list__link Строительное оборудование
+						a(href="#!").cm-list__link Оборудование для строй техники
 						
 						
 			//=== второй уровень меню===
 			.cm-level.cm-level-2
 				button.close-menu-part &larr;
-				//=== подменю для Строительные материалы===
+				//=== LEVEL 2 Строительные материалы===
 				ul.cm-sublist.has-subdrop.active(data-subdrop='1')
 					li.cm-sublist__item.has-subdrop(data-sub-subdrop='11')
 						a(href="#!").cm-sublist__link Песок
 					li.cm-sublist__item.has-subdrop(data-sub-subdrop='12')
 						a(href="#!").cm-sublist__link Щебень
 					li.cm-sublist__item.has-subdrop(data-sub-subdrop='13')
-						a(href="#!").cm-sublist__link Бетон
-					li.cm-sublist__item.has-subdrop(data-sub-subdrop='21')
 						a(href="#!").cm-sublist__link Бетонные материалы
-						
-					li.cm-sublist__item.has-subdrop(data-sub-subdrop='22')
+					li.cm-sublist__item.has-subdrop(data-sub-subdrop='14')
 						a(href="#!").cm-sublist__link Пластмасса
-				//=== подменю для Аренда===
+					li.cm-sublist__item.has-subdrop(data-sub-subdrop='15')
+						a(href="#!").cm-sublist__link Бетон
+					li.cm-sublist__item.has-subdrop(data-sub-subdrop='16')
+						a(href="#!").cm-sublist__link Пластмасса
+				
+				//=== Строительное оборудование ===
 				ul.cm-sublist.has-subdrop(data-subdrop='2')
 					li.cm-sublist__item.has-subdrop(data-sub-subdrop='21')
-						a(href="#!").cm-sublist__link Аренда самосвала
+						a(href="#!").cm-sublist__link Виброрейки
 					li.cm-sublist__item.has-subdrop(data-sub-subdrop='22')
-						a(href="#!").cm-sublist__link Аренда экскаватора
+						a(href="#!").cm-sublist__link Запчасти для строительных подъемников
 					li.cm-sublist__item.has-subdrop(data-sub-subdrop='23')
-						a(href="#!").cm-sublist__link Аренда трактора
+						a(href="#!").cm-sublist__link Виброплиты
 					li.cm-sublist__item.has-subdrop(data-sub-subdrop='24')
-						a(href="#!").cm-sublist__link Аренда Подъемного крана
+						a(href="#!").cm-sublist__link Вибротрамбовки
+					li.cm-sublist__item.has-subdrop(data-sub-subdrop='25')
+						a(href="#!").cm-sublist__link Запасные части к строительным люлькам
+					li.cm-sublist__item.has-subdrop(data-sub-subdrop='26')
+						a(href="#!").cm-sublist__link Строительные люльки
+					li.cm-sublist__item.has-subdrop(data-sub-subdrop='27')
+						a(href="#!").cm-sublist__link Строительные подъемники
 				
-				//=== подменю для Строительное оборудование===
+				//=== подменю Оборудование для строй техники===
 				ul.cm-sublist.has-subdrop(data-subdrop='3')
 					li.cm-sublist__item.has-subdrop(data-sub-subdrop='31')
-						a(href="#!").cm-sublist__link Перфоратры
+						a(href="#!").cm-sublist__link Ковши
 					
 					li.cm-sublist__item.has-subdrop(data-sub-subdrop='32')
-						a(href="#!").cm-sublist__link Лопаты
+						a(href="#!").cm-sublist__link Щетки
 					li.cm-sublist__item.has-subdrop(data-sub-subdrop='33')
-						a(href="#!").cm-sublist__link Песок
+						a(href="#!").cm-sublist__link Виброплиты
 					li.cm-sublist__item.has-subdrop(data-sub-subdrop='34')
-						a(href="#!").cm-sublist__link Щебень
+						a(href="#!").cm-sublist__link Вибротрамбовки
 					li.cm-sublist__item.has-subdrop(data-sub-subdrop='35')
-						a(href="#!").cm-sublist__link Бетон
+						a(href="#!").cm-sublist__link Запасные части к строительным люлькам
 					li.cm-sublist__item.has-subdrop(data-sub-subdrop='36')
-						a(href="#!").cm-sublist__link Бетонные материалы
-						
+						a(href="#!").cm-sublist__link Строительные люльки
 					li.cm-sublist__item.has-subdrop(data-sub-subdrop='37')
-						a(href="#!").cm-sublist__link Пластмасса
+						a(href="#!").cm-sublist__link Строительные подъемники
 					
-			//===третий уровень меню===
+			//===третий уровень Строительные материалы===
 			.cm-level.cm-level-3
 				button.close-menu-part &larr;
-				//=== подменю для Строительные материалы - Песок===
+				//=== LEVEL 3 - Песок===
 				ul.cm-sub-sublist.active(data-sublist='11')
+					li.cm-sub-sublist__item
+						a(href="#!") Эфельный
+					li.cm-sub-sublist__item
+						a(href="#!") Намывной
+					li.cm-sub-sublist__item
+						a(href="#!") Карьерный
+					li.cm-sub-sublist__item
+						a(href="#!") Речной
+					li.cm-sub-sublist__item
+						a(href="#!") Вторичный
+					
+				//=== LEVEL 3  - Щебень===	
+				ul.cm-sub-sublist(data-sublist='12')
 					li.cm-sub-sublist__item
 						a(href="#!") Гранитный
 					li.cm-sub-sublist__item
@@ -78,9 +98,9 @@
 					li.cm-sub-sublist__item
 						a(href="#!") Базальтовый
 					li.cm-sub-sublist__item
-						a(href="#!") Песчаник
-					li.cm-sub-sublist__item
 						a(href="#!") Шлаковый
+					li.cm-sub-sublist__item
+						a(href="#!") Песчаник
 					li.cm-sub-sublist__item
 						a(href="#!") Сланцевый
 					li.cm-sub-sublist__item
@@ -92,74 +112,248 @@
 					li.cm-sub-sublist__item
 						a(href="#!") Вторичный
 				
-				//=== подменю для Строительные материалы - Щебень===	
-				ul.cm-sub-sublist(data-sublist='12')
+				//=== LEVEL 3  Бетонные материалы===	
+				ul.cm-sub-sublist(data-sublist='13')
 					li.cm-sub-sublist__item
-						a(href="#!") Песчаник
+						a(href="#!") Бетонные блоки 
 					li.cm-sub-sublist__item
-						a(href="#!") Шлаковый
+						a(href="#!") Бордюры
 					li.cm-sub-sublist__item
-						a(href="#!") Сланцевый
+						a(href="#!") Плитка 
 					li.cm-sub-sublist__item
-						a(href="#!") Строительный
+						a(href="#!") КЕРАМЗИТОБЕТОННЫЕ
 					li.cm-sub-sublist__item
-						a(href="#!") Керамзитовый
+						a(href="#!") ПАЗОГРЕБНЕВные
 					li.cm-sub-sublist__item
-						a(href="#!") Песчаник
+						a(href="#!") СПОЛИСТИРОЛБЕТОННЫЕ
 					li.cm-sub-sublist__item
-						a(href="#!") Шлаковый
+						a(href="#!") ПЕНОБЕТОННЫЕ
 					li.cm-sub-sublist__item
-						a(href="#!") Сланцевый
+						a(href="#!") ГАЗОБЕТОННЫЕ
 					li.cm-sub-sublist__item
-						a(href="#!") Строительный
-					li.cm-sub-sublist__item
-						a(href="#!") Керамзитовый
+						a(href="#!") ГАЗОСИЛИКАТНЫЕ
 				
-				//=== подменю для Аренда - Аренда самосвала===
+				//===  LEVEL 3  Пластмасса===	
+				ul.cm-sub-sublist(data-sublist='14')
+					li.cm-sub-sublist__item
+						a(href="#!") PET (PETE) 
+					li.cm-sub-sublist__item
+						a(href="#!") ПЭТ 
+					li.cm-sub-sublist__item
+						a(href="#!") ПЭТФ PVC
+					li.cm-sub-sublist__item
+						a(href="#!") ПВХ PEHD или HDPE
+					li.cm-sub-sublist__item
+						a(href="#!") ПЭНД LDPE или PELD
+					li.cm-sub-sublist__item
+						a(href="#!") ПЭВД PP
+					li.cm-sub-sublist__item
+						a(href="#!") ПП PS
+					li.cm-sub-sublist__item
+						a(href="#!") ПС OTHER или O
+					li.cm-sub-sublist__item
+						a(href="#!") Прочие
+				//===  LEVEL 3  Бетон ===	
+				ul.cm-sub-sublist(data-sublist='15')
+					li.cm-sub-sublist__item
+						a(href="#!") Готовый бетон 
+					li.cm-sub-sublist__item
+						a(href="#!") Бетонные смеси 
+					li.cm-sub-sublist__item
+						a(href="#!") Гидротехнический
+					li.cm-sub-sublist__item
+						a(href="#!") Бетон для покрытий
+					li.cm-sub-sublist__item
+						a(href="#!") Специальный бетон
+					li.cm-sub-sublist__item
+						a(href="#!") Стандартный	
+				//=== LEVEL 3  Пластмасса===	
+				ul.cm-sub-sublist(data-sublist='16')
+					li.cm-sub-sublist__item
+						a(href="#!") PET (PETE) 
+					li.cm-sub-sublist__item
+						a(href="#!") ПЭТ 
+					li.cm-sub-sublist__item
+						a(href="#!") ПЭТФ PVC
+					li.cm-sub-sublist__item
+						a(href="#!") ПВХ PEHD или HDPE
+					li.cm-sub-sublist__item
+						a(href="#!") ПЭНД LDPE или PELD
+					li.cm-sub-sublist__item
+						a(href="#!") ПЭВД PP
+					li.cm-sub-sublist__item
+						a(href="#!") ПП PS
+					li.cm-sub-sublist__item
+						a(href="#!") ПС OTHER или O
+					li.cm-sub-sublist__item
+						a(href="#!") Прочие
+				
+				//=====end LEVEL 3 Строительные материалы ==============//
+				
+				//===  LEVEL 3 Виброрейки ===
 				ul.cm-sub-sublist(data-sublist='21')
 					li.cm-sub-sublist__item
-						a(href="#!") Самосвал 8т
+						a(href="#!") Виброрейки
 					li.cm-sub-sublist__item
-						a(href="#!") Самосвал 10т
+						a(href="#!") Виброрейки
 					li.cm-sub-sublist__item
-						a(href="#!") Самосвал 15т
+						a(href="#!") Виброрейки
 					li.cm-sub-sublist__item
-						a(href="#!") Самосвал крутой
+						a(href="#!") Виброрейки
 					li.cm-sub-sublist__item
-						a(href="#!") Самосвал супер
+						a(href="#!") Виброрейки
 					li.cm-sub-sublist__item
-						a(href="#!") Самосвал мощный
-				//=== подменю для Аренда - Аренда самосвала===
+						a(href="#!") Виброрейки
+				
+				//=== подменю  Запчасти для строительных подъемников===
 				ul.cm-sub-sublist(data-sublist='22')
 					li.cm-sub-sublist__item
-						a(href="#!") Бульдозер 8т
+						a(href="#!") Запчасти для строительных подъемников
 					li.cm-sub-sublist__item
-						a(href="#!") Самосвал 10т
+						a(href="#!") Запчасти для строительных подъемников
 					li.cm-sub-sublist__item
-						a(href="#!") Самосвал 15т
+						a(href="#!") Запчасти для строительных подъемников Виброплиты
+					
+				//=== подменю для Виброплиты===
+				ul.cm-sub-sublist(data-sublist='23')
 					li.cm-sub-sublist__item
-						a(href="#!") Самосвал крутой
+						a(href="#!") Виброплиты
 					li.cm-sub-sublist__item
-						a(href="#!") Самосвал супер
+						a(href="#!") Виброплиты
 					li.cm-sub-sublist__item
-						a(href="#!") Самосвал мощный
+						a(href="#!") Виброплиты
+				//=== подменю для Вибротрамбовки===
+				ul.cm-sub-sublist(data-sublist='24')
+					li.cm-sub-sublist__item
+						a(href="#!") Вибротрамбовки
+					li.cm-sub-sublist__item
+						a(href="#!") Вибротрамбовки
+					li.cm-sub-sublist__item
+						a(href="#!") Вибротрамбовки
+				//=== подменю для Запасные части к строительным люлькам===
+				ul.cm-sub-sublist(data-sublist='25')
+					li.cm-sub-sublist__item
+						a(href="#!") Запасные части к строительным люлькам
+					li.cm-sub-sublist__item
+						a(href="#!") Запасные части к строительным люлькам
+					li.cm-sub-sublist__item
+						a(href="#!") Запасные части к строительным люлькам
+				//=== подменю для Строительные люльки===
+				ul.cm-sub-sublist(data-sublist='26')
+					li.cm-sub-sublist__item
+						a(href="#!") Строительные люльки
+					li.cm-sub-sublist__item
+						a(href="#!") Строительные люльки
+					li.cm-sub-sublist__item
+						a(href="#!") Строительные люльки
+				//=== подменю для Строительные подъемники===
+				ul.cm-sub-sublist(data-sublist='27')
+					li.cm-sub-sublist__item
+						a(href="#!") Строительные подъемники
+					li.cm-sub-sublist__item
+						a(href="#!") Строительные подъемники
+					li.cm-sub-sublist__item
+						a(href="#!") Строительные подъемники
 				
-				//=== подменю для Строительное оборудование - Перфораторы===
+				//=== подменю для Ковши===
 				ul.cm-sub-sublist(data-sublist='31')
 					li.cm-sub-sublist__item
-						a(href="#!") Перфоратор
+						a(href="#!") Ковши
 					li.cm-sub-sublist__item
-						a(href="#!") Перфоратор
+						a(href="#!") Ковши
 					li.cm-sub-sublist__item
-						a(href="#!") Перфоратор
+						a(href="#!") Ковши
 					li.cm-sub-sublist__item
-						a(href="#!") Перфоратор
+						a(href="#!") Ковши
 					li.cm-sub-sublist__item
-						a(href="#!") Перфоратор
+						a(href="#!") Ковши
 					li.cm-sub-sublist__item
-						a(href="#!") Перфоратор
-			//===Картинки категорий в правой части меню===
+						a(href="#!") Ковши
+				//=== подменю для Щетки===
+				ul.cm-sub-sublist(data-sublist='32')
+					li.cm-sub-sublist__item
+						a(href="#!") Щетки
+					li.cm-sub-sublist__item
+						a(href="#!") Щетки
+					li.cm-sub-sublist__item
+						a(href="#!") Щетки
+					li.cm-sub-sublist__item
+						a(href="#!") Щетки
+					li.cm-sub-sublist__item
+						a(href="#!") Щетки
+					li.cm-sub-sublist__item
+						a(href="#!") Щетки
+				//=== подменю для Виброплиты===
+				ul.cm-sub-sublist(data-sublist='33')
+					li.cm-sub-sublist__item
+						a(href="#!") Виброплиты
+					li.cm-sub-sublist__item
+						a(href="#!") Виброплиты
+					li.cm-sub-sublist__item
+						a(href="#!") Виброплиты
+					li.cm-sub-sublist__item
+						a(href="#!") Виброплиты
+					li.cm-sub-sublist__item
+						a(href="#!") Виброплиты
+					li.cm-sub-sublist__item
+						a(href="#!") Виброплиты
+				
+				//=== подменю для Вибротрамбовки===
+				ul.cm-sub-sublist(data-sublist='34')
+					li.cm-sub-sublist__item
+						a(href="#!") Вибротрамбовки
+					li.cm-sub-sublist__item
+						a(href="#!") Вибротрамбовки
+					li.cm-sub-sublist__item
+						a(href="#!") Вибротрамбовки
+					li.cm-sub-sublist__item
+						a(href="#!") Вибротрамбовки
+					li.cm-sub-sublist__item
+						a(href="#!") Вибротрамбовки
+					li.cm-sub-sublist__item
+						a(href="#!") Вибротрамбовки
+
+				//=== подменю для Запасные части к строительным люлькам===
+				ul.cm-sub-sublist(data-sublist='35')
+					li.cm-sub-sublist__item
+						a(href="#!") Запасные части к строительным люлькам
+					li.cm-sub-sublist__item
+						a(href="#!") Запасные части к строительным люлькам
+					li.cm-sub-sublist__item
+						a(href="#!") Запасные части к строительным люлькам
+					li.cm-sub-sublist__item
+						a(href="#!") Запасные части к строительным люлькам
+					li.cm-sub-sublist__item
+						a(href="#!") Запасные части к строительным люлькам
+					li.cm-sub-sublist__item
+						a(href="#!") Запасные части к строительным люлькам
+				
+				//=== подменю для Строительные люльки===
+				ul.cm-sub-sublist(data-sublist='36')
+					li.cm-sub-sublist__item
+						a(href="#!") Строительные люльки
+					li.cm-sub-sublist__item
+						a(href="#!") Строительные люльки
+					li.cm-sub-sublist__item
+						a(href="#!") Строительные люльки
+					li.cm-sub-sublist__item
+						a(href="#!") Строительные люльки
+					li.cm-sub-sublist__item
+						a(href="#!") Строительные люльки
+				//=== подменю для Строительные подъемники===
+				ul.cm-sub-sublist(data-sublist='37')
+					li.cm-sub-sublist__item
+						a(href="#!") Строительные подъемники
+					li.cm-sub-sublist__item
+						a(href="#!") Строительные подъемники
+					li.cm-sub-sublist__item
+						a(href="#!") Строительные подъемники
+					li.cm-sub-sublist__item
+						a(href="#!") Строительные подъемники
+					li.cm-sub-sublist__item
+						a(href="#!") Строительные подъемники
 			
+			//===Картинки категорий в правой части меню===
 			ul.cm-image-group
 				li.active(data-img='1')
 					img.wh-100(src="./img/menu/cat1-big.webp", srcset="./img/menu/cat1-big@2x.webp 2x" loading="lazy" width="762" height="321" alt="img")
