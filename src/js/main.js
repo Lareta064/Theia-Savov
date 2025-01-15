@@ -337,16 +337,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let hoverTimeout;
 
-  // Функция сброса всех активных классов
+  // Сброс всех активных классов
   function clearActiveClasses() {
       mainItems.forEach((item) => item.classList.remove("active"));
       subLists.forEach((list) => list.classList.remove("active"));
       subSubLists.forEach((list) => list.classList.remove("active"));
-      subItems.forEach((item) => item.classList.remove("active")); // Сбрасываем активные классы у subItems
+      subItems.forEach((item) => item.classList.remove("active"));
       imageItems.forEach((img) => img.classList.remove("active"));
+
+      cmLevel2?.classList.remove("active");
+      cmLevel3?.classList.remove("active");
   }
 
-  // Функция активации первого пункта меню
+  // Активировать первый пункт меню
   function activateFirstMenuItem() {
       const firstMainItem = document.querySelector("[data-drop='1']");
       const firstSubList = document.querySelector("[data-subdrop='1']");
@@ -359,66 +362,20 @@ document.addEventListener("DOMContentLoaded", () => {
       if (firstImage) firstImage.classList.add("active");
   }
 
-  // Логика для больших экранов
-  function setupLargeScreenLogic() {
-      console.log("Логика для больших экранов активна");
-
-      // Показать меню при наведении на кнопку
-      menuButton.addEventListener("mouseenter", () => {
-          menuWrapper.classList.add("active");
-          activateFirstMenuItem();
-      });
-
-      // Скрыть меню при уходе курсора за пределы .cm-wrapper
-      menuWrapper.addEventListener("mouseleave", () => {
-          hoverTimeout = setTimeout(() => {
-              menuWrapper.classList.remove("active");
-              clearActiveClasses();
-          }, 300); // Задержка
-      });
-
-      // Отменить скрытие при возврате курсора в .cm-wrapper
-      menuWrapper.addEventListener("mouseenter", () => {
-          clearTimeout(hoverTimeout);
-      });
-
-      // Наведение на первый уровень меню
-      mainItems.forEach((item) => {
-          item.addEventListener("mouseenter", () => {
-              const subdrop = item.getAttribute("data-drop");
-              const relatedSublist = document.querySelector(`[data-subdrop="${subdrop}"]`);
-              const relatedImage = document.querySelector(`[data-img="${subdrop}"]`);
-
-              clearActiveClasses();
-
-              item.classList.add("active");
-              if (relatedSublist) relatedSublist.classList.add("active");
-              if (relatedImage) relatedImage.classList.add("active");
-          });
-      });
-
-      // Наведение на второй уровень меню
-      subItems.forEach((item) => {
-          item.addEventListener("mouseenter", () => {
-              const subSubdrop = item.getAttribute("data-sub-subdrop");
-              const relatedSubSublist = document.querySelector(`[data-sublist="${subSubdrop}"]`);
-
-              subItems.forEach((subItem) => subItem.classList.remove("active"));
-              subSubLists.forEach((list) => list.classList.remove("active"));
-
-              item.classList.add("active");
-              if (relatedSubSublist) relatedSubSublist.classList.add("active");
-          });
-      });
-  }
-
   // Логика для маленьких экранов
   function setupSmallScreenLogic() {
       console.log("Логика для маленьких экранов активна");
 
       menuButton.addEventListener("click", () => {
-          clearActiveClasses();
-          menuWrapper.classList.add("active");
+          if (menuWrapper.classList.contains("active")) {
+              // Если меню активно, закрываем его
+              menuWrapper.classList.remove("active");
+              clearActiveClasses();
+          } else {
+              // Если меню не активно, открываем его
+              clearActiveClasses();
+              menuWrapper.classList.add("active");
+          }
       });
 
       mainItems.forEach((item) => {
@@ -426,9 +383,7 @@ document.addEventListener("DOMContentLoaded", () => {
               const subdrop = item.getAttribute("data-drop");
               const relatedSublist = document.querySelector(`[data-subdrop="${subdrop}"]`);
 
-              cmLevel2?.classList.remove("active");
-              cmLevel3?.classList.remove("active");
-              subLists.forEach((list) => list.classList.remove("active"));
+              clearActiveClasses();
 
               item.classList.add("active");
               cmLevel2?.classList.add("active");
@@ -457,28 +412,85 @@ document.addEventListener("DOMContentLoaded", () => {
       closeButtons.forEach((button) => {
           button.addEventListener("click", () => {
               const closestActive = button.closest(".cm-level.active");
+
               closestActive?.classList.remove("active");
               const childActive = closestActive?.querySelector(".active");
               childActive?.classList.remove("active");
           });
       });
+
+      document.addEventListener("click", (e) => {
+          if (!menuWrapper.contains(e.target) && e.target !== menuButton) {
+              menuWrapper.classList.remove("active");
+              clearActiveClasses();
+          }
+      });
   }
 
+  // Логика для больших экранов
+  function setupLargeScreenLogic() {
+      console.log("Логика для больших экранов активна");
+
+      menuButton.addEventListener("mouseenter", () => {
+          menuWrapper.classList.add("active");
+          activateFirstMenuItem();
+      });
+
+      menuWrapper.addEventListener("mouseleave", () => {
+          hoverTimeout = setTimeout(() => {
+              menuWrapper.classList.remove("active");
+              clearActiveClasses();
+          }, 300);
+      });
+
+      menuWrapper.addEventListener("mouseenter", () => {
+          clearTimeout(hoverTimeout);
+      });
+
+      mainItems.forEach((item) => {
+          item.addEventListener("mouseenter", () => {
+              const subdrop = item.getAttribute("data-drop");
+              const relatedSublist = document.querySelector(`[data-subdrop="${subdrop}"]`);
+              const relatedImage = document.querySelector(`[data-img="${subdrop}"]`);
+
+              clearActiveClasses();
+
+              item.classList.add("active");
+              if (relatedSublist) relatedSublist.classList.add("active");
+              if (relatedImage) relatedImage.classList.add("active");
+          });
+      });
+
+      subItems.forEach((item) => {
+          item.addEventListener("mouseenter", () => {
+              const subSubdrop = item.getAttribute("data-sub-subdrop");
+              const relatedSubSublist = document.querySelector(`[data-sublist="${subSubdrop}"]`);
+
+              subItems.forEach((subItem) => subItem.classList.remove("active"));
+              subSubLists.forEach((list) => list.classList.remove("active"));
+
+              item.classList.add("active");
+              if (relatedSubSublist) relatedSubSublist.classList.add("active");
+          });
+      });
+  }
+
+  // Переключение логики
   function handleResize() {
-      const isLarge = window.innerWidth >= 1200;
+      const isLargeScreen = window.innerWidth >= 1200;
 
-      clearActiveClasses();
       menuWrapper.classList.remove("active");
+      clearActiveClasses();
 
-      if (isLarge) {
+      if (isLargeScreen) {
           setupLargeScreenLogic();
       } else {
           setupSmallScreenLogic();
       }
   }
 
-  handleResize();
   window.addEventListener("resize", handleResize);
+  handleResize();
 });
 
 
