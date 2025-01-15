@@ -156,6 +156,8 @@
 	.cm-footer{
 		flex-shrink: 0;
 		padding-block: 40px;
+		border-top: 1px solid #EAEAEA;
+		margin-top: 20px;	
 	}
 	@media (max-width: 1199px) {
 		display: block;
@@ -181,3 +183,19 @@
 		}
 	}
 }
+@media(min-width: 1200px){
+	.cm-level-2{
+	 overflow: hidden;
+	 overflow-y: auto;
+	 scrollbar-width: thin;
+	 scrollbar-color: #EAEAEA white;
+	 &::-webkit-scrollbar{
+		width: 3px;
+		height: 20px;
+		&-track{background-color: #fff;}
+		&-thumb{background-color: #EAEAEA;}
+
+	 }
+ }
+}
+
