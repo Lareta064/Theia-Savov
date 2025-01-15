@@ -7,8 +7,9 @@
 	z-index: 10;
 	background-color: #f0f0f0;
 	overflow: hidden;
-	display: none;
-	&.active{display: block;}
+	height: 0;
+	transition: .4s linear; 
+	&.active{height: calc(100vh - 74px);}
 	.close-menu-part{
 		position: absolute;
 		top: 10px;
@@ -20,7 +21,7 @@
 	.cm-content{
 		background-color: #fff;
 		padding-top: 40px;
-		min-height: 223px;
+		
 		display: flex;
 		flex-direction: column;
 		position: relative;
@@ -29,7 +30,7 @@
 		width: min(1610px, 100%);
 		padding-inline:30px;
 		margin-inline: auto;
-		
+		height: 365px;
 		
 		
 		@media (max-width: 1279px) {
