@@ -19,14 +19,14 @@ mixin product-card(img, title, val, price)
 				.product-card__price от !{price}&nbsp;руб./м3
 		button.btn Купить
 mixin product-card-ui(img, title, val, price)
-	a(href="#!").product-card
-		.product-card__img
-			img.img-contain(src="../img/products/prod"+img+".webp", srcset="../img/products/prod"+img+"@2x.webp 2x" alt="img" loading="lazy")
-		.product-card__desk
-			.product-card__title !{title} #[span !{val}]
-				
-			.product-card__price от !{price}&nbsp;руб./м3
-			button.btn Купить
+	.product-card
+		a(href="#!").product-card__body
+			.product-card__img
+				img.img-contain(src="../img/products/prod"+img+".webp", srcset="./img/products/prod"+img+"@2x.webp 2x" alt="img" loading="lazy")
+			.product-card__desk
+				.product-card__title !{title} #[span !{val}]
+				.product-card__price от !{price}&nbsp;руб./м3
+		button.btn Купить
 
 mixin breadcrumbs(...items)
 	.breadcrumbs

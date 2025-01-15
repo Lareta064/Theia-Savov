@@ -7,7 +7,6 @@
 	z-index: 10;
 	background-color: #f0f0f0;
 	overflow: hidden;
-	
 	display: none;
 	&.active{display: block;}
 	.close-menu-part{
@@ -24,11 +23,13 @@
 		min-height: 223px;
 		display: flex;
 		flex-direction: column;
+		position: relative;
 	}
 	.cm-container{
 		width: min(1610px, 100%);
 		padding-inline:30px;
 		margin-inline: auto;
+		
 		
 		
 		@media (max-width: 1279px) {
@@ -50,6 +51,27 @@
 	
 	.cm-level-2{width: 408px;flex-shrink: 0;}
 	.cm-level-3{flex-grow: 1; max-width: 560px;}
+	.cm-image-group{
+		position: absolute;
+		right: 0;
+		top: 50%;
+		width: 300px;
+		transform: translateY(-50%);
+		z-index: 3;
+		height: 180px;
+		li{
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: -2;
+			background-color: #fff;
+		}
+		li.active{z-index: 1;}
+			
+		
+	}
 	.cm-sublist, .cm-sub-sublist{
 		position: absolute;
 		top: 0;
@@ -67,7 +89,18 @@
 			color: $text;
 		}
 	}
-	
+	.has-subdrop{
+		position: relative;
+		&:after{
+			content: '>';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			width: 40px;
+			z-index: 2;
+		}
+	}
 	.cm-sub-sublist{
 		column-count: 2;
 	}

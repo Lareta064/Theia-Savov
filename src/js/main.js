@@ -323,90 +323,91 @@ document.addEventListener("DOMContentLoaded", () => {
   
 /****CATEGORY MENU**** */
 document.addEventListener("DOMContentLoaded", () => {
-    const menuButton = document.getElementById("catalogy-menu-open");
-    const menuWrapper = document.querySelector(".cm-wrapper");
-    const menuContent = document.querySelector(".cm-content");
-    const mainItems = document.querySelectorAll("[data-drop]");
-    const subLists = document.querySelectorAll("[data-subdrop]");
-    const subItems = document.querySelectorAll("[data-sub-subdrop]");
-    const subSubLists = document.querySelectorAll("[data-sublist]");
-    const closeButtons = document.querySelectorAll(".close-menu-part");
-    const cmLevel2 = document.querySelector(".cm-level-2");
-    const cmLevel3 = document.querySelector(".cm-level-3");
+  const menuButton = document.getElementById("catalogy-menu-open");
+  const menuWrapper = document.querySelector(".cm-wrapper");
+  const menuContent = document.querySelector(".cm-content");
+  const mainItems = document.querySelectorAll("[data-drop]");
+  const subLists = document.querySelectorAll("[data-subdrop]");
+  const subItems = document.querySelectorAll("[data-sub-subdrop]");
+  const subSubLists = document.querySelectorAll("[data-sublist]");
+  const closeButtons = document.querySelectorAll(".close-menu-part");
+  const cmLevel2 = document.querySelector(".cm-level-2");
+  const cmLevel3 = document.querySelector(".cm-level-3");
+  const imageItems = document.querySelectorAll(".cm-image-group li");
 
-    let hoverTimeout;
+  let hoverTimeout;
 
-    function setupLargeScreenLogic() {
-        console.log("Логика для больших экранов активна");
-      
-        // Показать меню при наведении на кнопку
-        menuButton.addEventListener("mouseenter", () => {
+  // Функция сброса всех активных классов
+  function clearActiveClasses() {
+      mainItems.forEach((item) => item.classList.remove("active"));
+      subLists.forEach((list) => list.classList.remove("active"));
+      subSubLists.forEach((list) => list.classList.remove("active"));
+      imageItems.forEach((img) => img.classList.remove("active"));
+  }
+
+  // Функция активации первого пункта меню
+  function activateFirstMenuItem() {
+      const firstMainItem = document.querySelector("[data-drop='1']");
+      const firstSubList = document.querySelector("[data-subdrop='1']");
+      const firstImage = document.querySelector("[data-img='1']");
+
+      clearActiveClasses();
+
+      if (firstMainItem) firstMainItem.classList.add("active");
+      if (firstSubList) firstSubList.classList.add("active");
+      if (firstImage) firstImage.classList.add("active");
+  }
+
+  function setupLargeScreenLogic() {
+      console.log("Логика для больших экранов активна");
+
+      // Показать меню при наведении на кнопку
+      menuButton.addEventListener("mouseenter", () => {
           menuWrapper.classList.add("active");
-        });
-      
-        // Скрыть меню при уходе курсора за пределы .cm-wrapper
-        menuWrapper.addEventListener("mouseleave", () => {
+          activateFirstMenuItem(); // Активируем первый пункт меню
+      });
+
+      // Скрыть меню при уходе курсора за пределы .cm-wrapper
+      menuWrapper.addEventListener("mouseleave", () => {
           hoverTimeout = setTimeout(() => {
-            menuWrapper.classList.remove("active");
+              menuWrapper.classList.remove("active");
+              clearActiveClasses();
           }, 300); // Задержка
-        });
-      
-        // Отменить скрытие при возвращении курсора в .cm-wrapper
-        menuWrapper.addEventListener("mouseenter", () => {
+      });
+
+      // Отменить скрытие при возвращении курсора в .cm-wrapper
+      menuWrapper.addEventListener("mouseenter", () => {
           clearTimeout(hoverTimeout);
-        });
-      // Скрыть меню при уходе мыши за пределы .cm-content
-        menuContent.addEventListener("mouseleave", () => {
-           
-            console.log("Уход мыши за пределы .cm-content"); // Отладка
-            menuWrapper.classList.remove("active");
-            clearAllActiveClasses(); // Сбрасываем классы активности
-            
-        });
-        function clearActiveFromSubLists() {
-            subLists.forEach((list) => {
-              list.classList.remove("active");
-            });
-            subItems.forEach((item) => {
-              item.classList.remove("active");
-            });
-            clearActiveFromSubSubLists();
-          }
-        // Сброс всех активных классов
-        function clearAllActiveClasses() {
-            mainItems.forEach((item) => item.classList.remove("active"));
-            clearActiveFromSubLists();
-        }
-         // Сброс активных классов третьего уровня
-        function clearActiveFromSubSubLists() {
-            subSubLists.forEach((list) => {
-            list.classList.remove("active");
-            });
-        }
-                // Наведение на первый уровень меню
-        mainItems.forEach((item) => {
+      });
+
+      // Наведение на первый уровень меню
+      mainItems.forEach((item) => {
           item.addEventListener("mouseenter", () => {
-            const subdrop = item.getAttribute("data-drop");
-            const relatedSublist = document.querySelector(`[data-subdrop="${subdrop}"]`);
-            if (relatedSublist) {
-              subLists.forEach((list) => list.classList.remove("active")); // Сбрасываем другие
-              relatedSublist.classList.add("active");
-            }
+              const subdrop = item.getAttribute("data-drop");
+              const relatedSublist = document.querySelector(`[data-subdrop="${subdrop}"]`);
+              const relatedImage = document.querySelector(`[data-img="${subdrop}"]`);
+
+              clearActiveClasses();
+
+              item.classList.add("active");
+              if (relatedSublist) relatedSublist.classList.add("active");
+              if (relatedImage) relatedImage.classList.add("active");
           });
-        });
-      
-        // Наведение на второй уровень меню
-        subItems.forEach((item) => {
+      });
+
+      // Наведение на второй уровень меню
+      subItems.forEach((item) => {
           item.addEventListener("mouseenter", () => {
-            const subSubdrop = item.getAttribute("data-sub-subdrop");
-            const relatedSubSublist = document.querySelector(`[data-sublist="${subSubdrop}"]`);
-            if (relatedSubSublist) {
-              subSubLists.forEach((list) => list.classList.remove("active")); // Сбрасываем другие
-              relatedSubSublist.classList.add("active");
-            }
+              const subSubdrop = item.getAttribute("data-sub-subdrop");
+              const relatedSubSublist = document.querySelector(`[data-sublist="${subSubdrop}"]`);
+              if (relatedSubSublist) {
+                  subSubLists.forEach((list) => list.classList.remove("active"));
+                  relatedSubSublist.classList.add("active");
+              }
           });
-        });
-      }
+      });
+  }
+
       /*********************** */
       function setupSmallScreenLogic() {
         console.log("Логика для маленьких экранов активна");
@@ -475,3 +476,5 @@ document.addEventListener("DOMContentLoaded", () => {
       handleResize();
       window.addEventListener("resize", handleResize);
  });
+
+ 
