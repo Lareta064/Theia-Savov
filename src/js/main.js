@@ -379,7 +379,23 @@ document.addEventListener("DOMContentLoaded", () => {
       menuWrapper.addEventListener("mouseenter", () => {
           clearTimeout(hoverTimeout);
       });
+      // Удалить класс active при уводе мыши с menuButton в стороны или вверх
+      menuButton.addEventListener("mouseleave", (e) => {
+          const rect = menuButton.getBoundingClientRect();
+          const mouseX = e.clientX;
+          const mouseY = e.clientY;
 
+          // Проверяем, ушла ли мышь вверх, влево или вправо
+          const isMouseOut =
+              mouseY < rect.top || // Ушла вверх
+              mouseX < rect.left || // Ушла влево
+              mouseX > rect.right; // Ушла вправо
+
+          if (isMouseOut) {
+              menuWrapper.classList.remove("active");
+              clearActiveClasses();
+          }
+      });
       // Наведение на первый уровень меню
       mainItems.forEach((item) => {
           item.addEventListener("mouseenter", () => {
