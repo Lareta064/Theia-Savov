@@ -2,26 +2,25 @@
 section.blog
 	.container
 		.blog-content.mb-20
-			.tabs-block
-				.tabs-block.tabs-block--grid
-					.tabs-nav.tabs-nav--marker
-						a.tabs-nav__item.active(href="#!" data-tab="all") Все
-						a.tabs-nav__item(href="#!" data-tab="news-tab") Новости
-						a.tabs-nav__item(href="#!" data-tab="project-tab") Проекты
-						a.tabs-nav__item(href="#!" data-tab="recomend-tab") советы 
-						
-					//===Content===	
-				
-					#all.tabs-body.active
-						+blog-card(1)
-						+blog-card(2)
-						+blog-card(3)
-						+blog-card(4)
-						
-					#news-tab.tabs-body
-						+blog-card(1)
-						+blog-card(2)
-						+blog-card(3)
-						+blog-card(4)
+			.tabs-block.tabs-block--grid
+				.tabs-nav.tabs-nav--marker
+					a.tabs-nav__item.active(href="#!" data-tab="all") Все
+					a.tabs-nav__item(href="#!" data-tab="news-tab") Новости
+					a.tabs-nav__item(href="#!" data-tab="project-tab") Проекты
+					a.tabs-nav__item(href="#!" data-tab="recomend-tab") советы 
+					
+				//===Content===	
+			
+				#all.tabs-body.active
+					+blog-card(1)
+					+blog-card(2)
+					+blog-card(3)
+					+blog-card(4)
+					
+				#news-tab.tabs-body
+					+blog-card(1)
+					+blog-card(2)
+					+blog-card(3)
+					+blog-card(4)
 		include _dark-form-subscribe
 		

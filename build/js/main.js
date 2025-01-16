@@ -334,7 +334,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cmLevel2 = document.querySelector(".cm-level-2");
   const cmLevel3 = document.querySelector(".cm-level-3");
   const imageItems = document.querySelectorAll(".cm-image-group li");
-
+  const bodyEl = document.body;
   let hoverTimeout;
 
   // Сброс всех активных классов
@@ -370,11 +370,13 @@ document.addEventListener("DOMContentLoaded", () => {
           if (menuWrapper.classList.contains("active")) {
               // Если меню активно, закрываем его
               menuWrapper.classList.remove("active");
+              bodyEl.classList.remove('lock');
               clearActiveClasses();
           } else {
               // Если меню не активно, открываем его
               clearActiveClasses();
               menuWrapper.classList.add("active");
+              bodyEl.classList.add('lock');
           }
       });
 
@@ -433,12 +435,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       menuButton.addEventListener("mouseenter", () => {
           menuWrapper.classList.add("active");
+          bodyEl.classList.add('lock');
           activateFirstMenuItem();
       });
 
       menuWrapper.addEventListener("mouseleave", () => {
           hoverTimeout = setTimeout(() => {
               menuWrapper.classList.remove("active");
+              bodyEl.classList.remove('lock');
               clearActiveClasses();
           }, 300);
       });
@@ -493,5 +497,22 @@ document.addEventListener("DOMContentLoaded", () => {
   handleResize();
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector(".header"); // Замените .header на ваш класс шапки
+  let lastScrollTop = 0; // Переменная для хранения предыдущей позиции скролла
 
+  window.addEventListener("scroll", () => {
+      const currentScrollTop = window.scrollY || document.documentElement.scrollTop;
+
+      // Если пользователь прокручивает вверх
+      if (currentScrollTop < lastScrollTop) {
+          header.classList.add("fix-header"); // Добавляем класс
+      } else {
+          header.classList.remove("fix-header"); // Удаляем класс
+      }
+
+      // Обновляем предыдущую позицию скролла
+      lastScrollTop = currentScrollTop;
+  });
+});
  

@@ -67,9 +67,16 @@ h1, h2,h3{font-weight: 400;}
 	align-items: center;
 	column-gap: 10px;
 	transition: .3s; 
+	transition: .3s; 
+	white-space: nowrap;
 	svg{
 		flex-shrink: 0;
 		color: inherit;
+		
+	}
+	&:hover{
+		color: $accent!important;
+		
 	}
 }
 .dark-bg{

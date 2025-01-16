@@ -1,0 +1,37 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Карточка Блога
+				.container-dashboard__content
+					.post-card
+						.post-card__img
+							img.wh-100(src="../img/blog/post.webp", srcset="../img/blog/post@2x.webp 2x" alt="img" width="490" height="314" loading="lazy")
+						.post-card__body
+							.breadcrumbs
+								a(href="#!") крыши
+								a(href="#!") стройка
+							.post-card__title Щебень для кровли
+							p  #[a(href="#!") Щебень] на кровле – один из вариантов балласта, который используется для пригруза гидроизоляции плоской кровли. В балластной системе щебень считается самым доступным, эффективным и недорогим материалом для крепления и завершающего слоя кровельного пирога.
+							a(href="#!").flex-link Читать статью 
+								svg.svg-arrow-right
+									use(href='../img/sprite.svg#svg-arrow-right')
+					pre.
+						
