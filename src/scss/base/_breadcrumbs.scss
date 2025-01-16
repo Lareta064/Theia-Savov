@@ -7,13 +7,14 @@
 		line-height: 1.43;
 		letter-spacing: 0.04em;
 		text-transform: uppercase;
-		color: #838494;;
+		color: #838494;
 		transition: .3s; 
-		&:hover{color: $accent;}
+		&:hover{color: $accent!important;}
 		&:first-child{padding-right: 7px;}
 		&:last-child{
 			padding-right: 0;
 			cursor: default;
+			&:hover{color: #838494!important;}
 		}
 	 .svg-logo{
 		width: 68px;

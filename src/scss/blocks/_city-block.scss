@@ -1,0 +1,29 @@
+.city-selection{
+	column-gap:24px;
+
+	#city-name{margin-left: 8px;}
+
+	p{
+		font-size: 16px;
+		line-height: 137%;
+		letter-spacing: -0.01em;
+		color: #222;
+	}
+	&__btn{
+		display: flex;
+		column-gap:10px;
+		button{
+			font-size: 16px;
+			line-height: 137%;
+			letter-spacing: -0.01em;
+			color: #222;
+			width: 70px;
+			height: 39px;
+			transition: .3s; 
+			&:hover{opacity: .7;}
+		}
+	}
+}
+
+
+

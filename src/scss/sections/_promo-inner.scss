@@ -1,0 +1,12 @@
+@use "../base/var" as *;
+.promo-top{
+	justify-content: space-between;
+	@media (max-width: 1199px) {
+	display: none;
+	}
+}
+.promo-top--white{
+    .city-selection__btn button, .city-selection p{color: #f2f2f2;}
+	 .breadcrumbs a{color: white;}
+	 .breadcrumbs a:last-child:hover{color: white!important;}
+}

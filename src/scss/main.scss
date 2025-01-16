@@ -16,6 +16,8 @@
 @use "blocks/_swiper-slider";
 @use "blocks/_swiper-tabs";
 @use "blocks/_tabs";
+@use "blocks/_city-block";
+
 
 @use "sections/_header";
 @use "sections/_catalogy-menu";
@@ -26,6 +28,9 @@
 @use "sections/_blog";
 @use "sections/_dark-form-subscribe";
 @use "blocks/_post-card";
+
+@use "sections/_promo-inner";
+
 
 
 

@@ -43,7 +43,13 @@ mixin breadcrumbs-ui(...items)
 				use(href='../img/sprite.svg#svg-logo')
 		each item in items
 			a(href="#!") !{item}
-
+mixin city-block
+	.city-selection
+		p Ваш город
+			span#city-name Санкт-Петербург?
+		.city-selection__btn
+			button.bold-txt(type="button" aria-label="Да" tabindex="0") Да
+			button(type="button" aria-label="Нет" tabindex="1") Нет
 mixin serv-card(img, title, txt)
 	a.serv-card(href="#!" style="background-image: url(./img/services/serv"+ img +".webp)")
 		.serv-card__title #{title}
