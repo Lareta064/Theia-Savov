@@ -1,4 +1,41 @@
 @use "../base/var" as *;
+.promo{
+	position: relative;
+	height: 800px;
+	padding-top: 20px;
+	padding-bottom: 100px;
+	.container{
+		position: relative;
+		z-index: 2;
+		
+	}
+	&-bg-image{
+		position: absolute;
+		inset:0;
+		img{
+			object-position: bottom;
+			
+		}
+	}
+	.promo-top{
+		margin-bottom: 80px;
+	}
+}
+.promo-content{
+	max-width: 525px;
+	width: 50%;
+	.breadcrumbs{margin-bottom: 15px;}
+	.txt-20 {margin-bottom: 20px;}
+	.back-link .svg-arrow-left{width: 28px;}
+}
+.promo-txt p{
+	font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: -0.02em;
+    color: #2b2a29;
+	margin-bottom: 10px;
+}
+.promo-txt, .promo-content .h1{margin-bottom: 40px;}
 .promo-top{
 	justify-content: space-between;
 	@media (max-width: 1199px) {
@@ -9,4 +46,10 @@
     .city-selection__btn button, .city-selection p{color: #f2f2f2;}
 	 .breadcrumbs a{color: white;}
 	 .breadcrumbs a:last-child:hover{color: white!important;}
+}
+.promo-light .promo-content{
+	.breadcrumbs a,.h1{color: $text;}
+}
+.promo-light {
+	.breadcrumbs a, .breadcrumbs svg{color: $text;}
 }

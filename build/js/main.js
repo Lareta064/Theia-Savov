@@ -179,8 +179,9 @@ document.addEventListener("DOMContentLoaded", function () {
     //         );
     //     }
     // }
-    /*=====CUSTOM SELECT===== */
-	// polyfill for forEach для NodeList
+    
+  /*=====CUSTOM SELECT===== */
+	
 	if (window.NodeList && !NodeList.prototype.forEach) {
 		NodeList.prototype.forEach = function (callback, thisArg) {
 			thisArg = thisArg || window;
@@ -320,7 +321,32 @@ document.addEventListener("DOMContentLoaded", () => {
     // Добавляем слушатель на изменение размеров экрана
     window.addEventListener("resize", handleResize);
   });
-  
+  document.addEventListener("DOMContentLoaded", () => {
+    const tabBlocks = document.querySelectorAll(".tabs-block");
+
+    tabBlocks.forEach((block) => {
+      const tabsNavItems = block.querySelectorAll(".tabs-nav__item");
+      const tabsBodies = block.querySelectorAll(".tabs-body");
+
+      tabsNavItems.forEach((tab) => {
+      tab.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        // Убираем активный класс со всех табов и контента
+        tabsNavItems.forEach((item) => item.classList.remove("active"));
+        tabsBodies.forEach((body) => body.classList.remove("active"));
+
+        // Добавляем активный класс на выбранный таб и его контент
+        tab.classList.add("active");
+        const targetId = tab.dataset.tab;
+        const targetBody = block.querySelector(`#${targetId}`);
+        if (targetBody) {
+        targetBody.classList.add("active");
+        }
+      });
+      });
+    });
+  });
 /****CATEGORY MENU**** */
 document.addEventListener("DOMContentLoaded", () => {
   const menuButton = document.getElementById("catalogy-menu-open");
