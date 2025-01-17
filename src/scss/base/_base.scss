@@ -112,13 +112,17 @@ section + .dark-bg{margin-top: 45px;}
 	section + .dark-bg{margin-top: 30px;}
    .dark-bg + section{padding-top: 60px;}
 }
-.container{
+.container, .container-narrow{
 	width: min(1610px, 100%);
 	padding-inline:30px;
 	margin-inline: auto;
 	@media (max-width: 1279px) {
 		padding-inline:20px;
 	}
+}
+.container-narrow{
+	width: min(1182px, 100%);
+	
 }
 .visible-sm{
 	display: none!important;

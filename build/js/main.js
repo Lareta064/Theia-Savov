@@ -540,5 +540,17 @@ document.addEventListener("DOMContentLoaded", () => {
       // Обновляем предыдущую позицию скролла
       lastScrollTop = currentScrollTop;
   });
+
+
+ 
+  const productsSlider = new Swiper('.slider', {
+    slidesPerView: 4,
+    speed:1000,
+    spaceBetween:40,
+    pagination: {
+      el: (".products-swiper-pagination"),
+      clickable: true,
+    },
+  });
 });
  
