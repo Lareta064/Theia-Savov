@@ -73,3 +73,12 @@
 	justify-content: center;
 	
 }
+.blog-posts .tabs-nav{
+	column-gap: 30px;
+	a{
+		font-size: 13px;
+		line-height: 1.48;
+		letter-spacing: 0.04em;
+		color: rgba(34, 34, 34, 0.7);
+	}
+}

@@ -48,7 +48,7 @@
 }
 
 .tabs-nav__item:hover, .tabs-nav__item.active {
-	color: $accent;
+	color: $accent!important;
 }
 
 .tabs-body {
