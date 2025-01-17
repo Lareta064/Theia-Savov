@@ -21,6 +21,17 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+    /*article swiper */
+    const mySwiper = new Swiper('.mySwiper', {
+      slidesPerView: 4,
+      speed:1000,
+      spaceBetween:20,
+      pagination: {
+        el:".mySwiper-pagination",
+        clickable: true,
+      },
+
+    });
     /*Sliders in tabs */
     const tabBlockSwiper = document.querySelectorAll(".tabs-block.myswiper-container");
 
@@ -541,16 +552,5 @@ document.addEventListener("DOMContentLoaded", () => {
       lastScrollTop = currentScrollTop;
   });
 
-
- 
-  const productsSlider = new Swiper('.slider', {
-    slidesPerView: 4,
-    speed:1000,
-    spaceBetween:40,
-    pagination: {
-      el: (".products-swiper-pagination"),
-      clickable: true,
-    },
-  });
 });
  

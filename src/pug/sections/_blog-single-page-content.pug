@@ -37,31 +37,31 @@ section.blog-single
 		p Щебень для кровли берут не россыпью, а биг-бегами вместимостью 1 тонна. Биг-бег поднимают краном на любую высоту, после чего выгружают #[a(href="#!") щебень] на поверхность. Происходит это так: кран поднимает контейнер с щебнем, его надрезают и высыпают содержимое порционно, по зонам. Кран при этом двигается и подаёт биг-бег к нужному месту. Затем с помощью лопаты щебень распределяют по территории и разравнивают.
 		p Высота балластного слоя составляет 20-50 мм. Можно ориентироваться на эти цифры, но надежнее, — а ведь задача балласта в первую очередь удерживать гидроизоляцию — отсыпать щебень из расчета 50 кг на 1 кв.м. Тогда неприятных сюрпризов при резком ухудшении погоды и сильных порывах ветра не будет.
 
-section.slider
+section.article-slider
 	.container-narrow
 		.header-group
-			h2.h2 Товары которые были в статье
+			p.txt-24 Товары которые были в статье
 			a(href="#!").flex-link Показать больше
 				span.arrow-right
 
 		
-			.slider.swiper.swiper-separate
-				.swiper-wrapper
-					.swiper-slide
-						+product-card-ui(5,'ЩПС С2 фракции', '0-20 мм', 2300)
-					.swiper-slide
-						+product-card-ui(6,'ЩПС С2 фракции', '0-20 мм', 2300)
-					.swiper-slide
-						+product-card-ui(7,'ЩПС С2 фракции', '0-20 мм', 2300)
-					.swiper-slide
-						+product-card-ui(8,'ЩПС С2 фракции', '0-20 мм', 2300)
-					.swiper-slide
-						+product-card-ui(5,'ЩПС С2 фракции', '0-20 мм', 2300)
-					.swiper-slide
-						+product-card-ui(6,'ЩПС С2 фракции', '0-20 мм', 2300)
-					.swiper-slide
-						+product-card-ui(7,'ЩПС С2 фракции', '0-20 мм', 2300)
-					.swiper-slide
-						+product-card-ui(8,'ЩПС С2 фракции', '0-20 мм', 2300)
-				
-				.products-slider-swiper-pagination
+		.mySwiper.swiper
+			.swiper-wrapper
+				.swiper-slide
+					+product-card-ui(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+				.swiper-slide
+					+product-card-ui(6,'ЩПС С2 фракции', '0-20 мм', 2300)
+				.swiper-slide
+					+product-card-ui(7,'ЩПС С2 фракции', '0-20 мм', 2300)
+				.swiper-slide
+					+product-card-ui(8,'ЩПС С2 фракции', '0-20 мм', 2300)
+				.swiper-slide
+					+product-card-ui(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+				.swiper-slide
+					+product-card-ui(6,'ЩПС С2 фракции', '0-20 мм', 2300)
+				.swiper-slide
+					+product-card-ui(7,'ЩПС С2 фракции', '0-20 мм', 2300)
+				.swiper-slide
+					+product-card-ui(8,'ЩПС С2 фракции', '0-20 мм', 2300)
+			
+			.mySwiper-pagination
