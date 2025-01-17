@@ -1,4 +1,4 @@
-//=== blog ===
+// BLOG
 section.blog
 	.container
 		.blog-content.mb-20
@@ -9,18 +9,18 @@ section.blog
 					a.tabs-nav__item(href="#!" data-tab="project-tab") Проекты
 					a.tabs-nav__item(href="#!" data-tab="recomend-tab") советы 
 					
-				//===Content===	
-			
+				// SINGLE TAB CONTENT
 				#all.tabs-body.active
 					+blog-card(1)
 					+blog-card(2)
 					+blog-card(3)
 					+blog-card(4)
-					
+				// SINGLE TAB CONTENT	
 				#news-tab.tabs-body
 					+blog-card(1)
 					+blog-card(2)
 					+blog-card(3)
 					+blog-card(4)
+		
 		include _dark-form-subscribe
 		

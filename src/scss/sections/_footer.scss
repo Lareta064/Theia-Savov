@@ -1,0 +1,48 @@
+@use "../base/var" as *;
+.footer{
+	background-color: #fff;
+	padding-top: 45px;
+	font-size: 15px;
+	color: #1c1c1c;
+	&-content{
+		display: flex;
+		column-gap:144px;
+	}
+	&-form, &-text{
+		width: 402px;
+		flex-shrink: 0;
+	}
+	&-nav{
+		flex-grow:1;
+		display: flex;
+		column-gap:80px;
+		padding-top: 55px;	
+	}
+	&-nav__list{
+		column-count: 2;
+		a{
+			display: block;
+			width: fit-content;
+			font-weight: 300;
+			font-weight: 300;
+			line-height: 1.5;
+			transition: .3s;
+			padding-top: 3px;
+			padding-bottom: 3px;
+			&:hover{color: $accent;}
+		}
+	}
+	&-form{width: 300px;}
+	&-logo, .title-22 {
+		font-weight: 600;
+		font-size: 22px;
+		line-height: 2.73;
+		text-transform:capitalize;
+		
+	}
+	&-{
+	
+		font-size: 15px;
+		color: #1c1c1c;
+	}
+}

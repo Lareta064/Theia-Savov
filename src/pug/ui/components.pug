@@ -31,3 +31,20 @@ html(lang="ru")
 						.promo-top.promo-top--white
 							+breadcrumbs-ui('Каталог','Блог')
 							+city-block
+				h3 пагинация
+				nav.pagination
+					a(href="#").pagination-item.pagination-prev 
+						svg.svg-arrow-left
+							use(href='../img/sprite.svg#svg-arrow-left')
+						| Назад
+
+
+					
+					a(href="#").pagination-item 1
+					a(href="#").pagination-item 2
+					a(href="#").pagination-item 3
+					a(href="#").pagination-item 4
+					a(href="#").pagination-item.pagination-next Вперед
+						svg.svg-arrow-right
+							use(href='../img/sprite.svg#svg-arrow-right')
+

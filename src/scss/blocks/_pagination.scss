@@ -1,0 +1,20 @@
+@use "../base/var" as *;
+.pagination{
+	margin-top: 50px;
+	&-item{
+		font-weight: 700;
+		font-size: 20px;
+		line-height:2.25;
+		color: #2b2a29;
+		padding: 6px 12px;
+		column-gap:2px;
+		transition: .3s; 
+		&:hover{color: $accent!important;}
+	}
+	&-item.pagination-next, &-item.pagination-prev{
+		font-weight: 500;
+		column-gap:20px;
+		line-height:1.1;
+		svg{width: 34px; color: inherit;}
+	}
+}

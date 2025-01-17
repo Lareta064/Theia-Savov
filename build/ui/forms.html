@@ -100,11 +100,26 @@
           <input type="email" placeholder="Email *" />
         </div>
       </div>
+      <p class="agree-txt">Подписываясь на рассылку, вы соглашаетесь с <a href="#!">условиями оферты</a> и <a href="#!">политикой конфиденциальности</a>
+      </p>
       <pre>.form-row
 	.form-item
 		input(type="tel" placeholder="Телефон *")
 	.form-item
-		input(type="email" placeholder="Email *")</pre>
+		input(type="email" placeholder="Email *")
+p.agree-txt Подписываясь на рассылку, вы соглашаетесь с <a href="#!">условиями оферты</a> и <a href="#!">политикой конфиденциальности</a>
+</pre>
+      <hr />
+      <div class="form-item">
+        <input class="light-border" type="text" />
+        <button class="btn-send">
+          <img src="../img/send.svg" alt="send" />
+        </button>
+      </div>
+      <pre>.form-item
+	input.light-border(type="text")
+	button.btn-send
+		img(src="../img/send.svg", alt="send")</pre>
       <hr />
       <div class="form-item">
         <div class="dropdown">

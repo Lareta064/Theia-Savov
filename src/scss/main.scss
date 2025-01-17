@@ -17,7 +17,7 @@
 @use "blocks/_swiper-tabs";
 @use "blocks/_tabs";
 @use "blocks/_city-block";
-
+@use "blocks/_pagination";
 
 @use "sections/_header";
 @use "sections/_catalogy-menu";
@@ -28,6 +28,11 @@
 @use "sections/_blog";
 @use "sections/_dark-form-subscribe";
 @use "blocks/_post-card";
+
+@use "sections/_footer";
+
+
+
 
 @use "sections/_promo-inner";
 

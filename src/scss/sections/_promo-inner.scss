@@ -19,6 +19,13 @@
 	}
 	.promo-top{
 		margin-bottom: 80px;
+		
+	}
+	@media (max-width: 1439px) {
+		height: 680px;
+		padding-bottom: 70px;
+		.promo-top{margin-bottom: 40px;}
+		.promo-txt, .promo-content .h1{margin-bottom: 30px; }
 	}
 }
 .promo-content{

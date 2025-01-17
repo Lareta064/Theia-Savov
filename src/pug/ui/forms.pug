@@ -37,12 +37,26 @@ html(lang="ru")
 							input(type="tel" placeholder="Телефон *")
 						.form-item
 							input(type="email" placeholder="Email *")
+					p.agree-txt Подписываясь на рассылку, вы соглашаетесь с #[a(href="#!") условиями оферты] и #[a(href="#!") политикой конфиденциальности]
+					
 					pre.
 						.form-row
 							.form-item
 								input(type="tel" placeholder="Телефон *")
 							.form-item
 								input(type="email" placeholder="Email *")
+						p.agree-txt Подписываясь на рассылку, вы соглашаетесь с #[a(href="#!") условиями оферты] и #[a(href="#!") политикой конфиденциальности]
+					
+					hr
+					.form-item
+						input.light-border(type="text")
+						button.btn-send
+							img(src="../img/send.svg", alt="send")
+					pre.
+						.form-item
+							input.light-border(type="text")
+							button.btn-send
+								img(src="../img/send.svg", alt="send")
 					hr
 					+select("Речной песок", 'product_name')
 					pre.

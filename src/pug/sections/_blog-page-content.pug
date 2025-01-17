@@ -14,7 +14,7 @@ section.blog-posts
 				a.tabs-nav__item(href="#!" data-tab="tab_10") наши работы
 				a.tabs-nav__item(href="#!" data-tab="tab_11") строй оборудование
 				a.tabs-nav__item(href="#!" data-tab="tab_12") стротельство
-			
+			// SINGLE  TAB CONTENT
 			#all.tabs-body.active
 				+post-card
 				+post-card
@@ -22,21 +22,16 @@ section.blog-posts
 				+post-card
 				+post-card
 				+post-card
-				+post-card
-				+post-card
-				+post-card
-				+post-card
-				+post-card
-				+post-card
 				
-					
+				
+			// SINGLE  TAB CONTENT
 			#tab_2.tabs-body
 				+post-card
 				+post-card
 				+post-card
-				+post-card
-				+post-card
-				+post-card
+				
+				
+			// SINGLE  TAB CONTENT
 			#tab_3.tabs-body
 				+post-card
 				+post-card
@@ -44,3 +39,19 @@ section.blog-posts
 				+post-card
 				+post-card
 				+post-card
+		// pagination 
+		nav.pagination
+			// это кнопка НАЗАД изначально скрыта, добавлена, что бы показать ее код 
+				<a class="pagination-item pagination-prev" href="#"> 
+					<svg class="svg-arrow-left">
+						<use href="./img/sprite.svg#svg-arrow-left"></use>
+					</svg>Назад
+				</a>
+
+			a(href="#").pagination-item 1
+			a(href="#").pagination-item 2
+			a(href="#").pagination-item 3
+			a(href="#").pagination-item 4
+			a(href="#").pagination-item.pagination-next Вперед
+				svg.svg-arrow-right
+					use(href='./img/sprite.svg#svg-arrow-right')
