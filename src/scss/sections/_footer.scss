@@ -7,10 +7,17 @@
 	&-content{
 		display: flex;
 		column-gap:144px;
+		padding-bottom: 34px;
 	}
 	&-form, &-text{
 		width: 402px;
 		flex-shrink: 0;
+	}
+	&-contacts{
+		margin-top: 60px;
+		display: flex;
+		flex-direction: column;
+		row-gap:13px;
 	}
 	&-nav{
 		flex-grow:1;
@@ -44,5 +51,20 @@
 	
 		font-size: 15px;
 		color: #1c1c1c;
+	}
+
+	&-bottom{
+		padding-top: 16px;
+		padding-bottom: 16px;
+		justify-content: space-between;
+		border-top: 1px solid #1c1c1c;
+	}
+	.copyright, .politic-link, .brand-name{
+		font-size: 12px;
+        line-height: 1.80;
+		color: $text;
+	}
+	.politic-link:hover{
+		color: $accent;
 	}
 }
