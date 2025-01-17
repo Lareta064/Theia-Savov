@@ -23,7 +23,7 @@
 			}
 		}
 		
-		
+		&:hover .logo-group{color: $accent;}
 	}
 	.search-form-open, .cart-button, .callback-btn{
 		flex-shrink: 0;

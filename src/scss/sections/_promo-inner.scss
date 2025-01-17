@@ -47,14 +47,21 @@
 	justify-content: space-between;
 	
 }
-.promo-top--white{
-    .city-selection__btn button, .city-selection p{color: #f2f2f2;}
-	 .breadcrumbs a{color: white;}
-	//  .breadcrumbs a:last-child:hover{color: white!important;}
+
+.promo{
+	.h1, h2,h3, h4, p, ul, span {color: $text;}
 }
-.promo-light .promo-content{
-	.breadcrumbs a,.h1{color: $text;}
+.promo.promo-dark{
+	.breadcrumbs a, .h1, h2,h3, h4, p, ul, span{color: white;}
+	.city-selection__btn button, .city-selection p{color: #f2f2f2;}
+	
 }
-.promo-light {
-	.breadcrumbs a, .breadcrumbs svg{color: $text;}
+.promo.promo-slim{
+	height: 511px;
+	&:after{
+		content:'';
+		position: absolute;
+		inset:0;
+		background: linear-gradient(337deg, rgba(0, 0, 0, 0) 0%, rgba(20, 17, 14, 0.55) 38.85%, #241f1a 100%);
+	}
 }

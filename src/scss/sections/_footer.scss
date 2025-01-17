@@ -8,6 +8,15 @@
 		display: flex;
 		column-gap:144px;
 		padding-bottom: 34px;
+		@media (max-width: 1439px) {
+			column-gap:110px;
+		}
+		@media (max-width: 1364px) {
+			column-gap:80px;
+		}
+		@media (max-width: 1279px) {
+			column-gap:60px;
+		}
 	}
 	&-form, &-text{
 		width: 402px;

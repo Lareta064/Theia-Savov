@@ -1,6 +1,7 @@
 @use "../base/var" as *;
 .tabs-block.tabs-block--grid {
-	.tabs-nav{margin-bottom: 20px;}
+	.tabs-nav{margin-bottom: 20px; width: 100%;
+		justify-content: center;}
 	.tabs-body>*{
 		grid-column: span 3;
 	}

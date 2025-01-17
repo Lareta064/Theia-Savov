@@ -92,4 +92,15 @@ mixin post-card
 				svg.svg-arrow-right
 					use(href='../img/sprite.svg#svg-arrow-right')
 
-
+mixin promo-dark(img)
+	.promo-dark.promo.promo-slim(style="background-image: url(./img/"+ img+".webp)")
+		.container
+			.promo-top
+				.breadcrumbs
+					+breadcrumbs('каталог', 'Отделочные и строй материалы', 'Щебень')
+				+city-block
+			.promo-content
+				h1.h1 Щебень
+				.promo-txt
+					p Возьмите любую спецтехнику в аренду в СПБ на срок от 3-х смен и получите скидку 5%. Торопитесь, срок действия акции ограничен!
+				a(href="#!").btn.btn--white Рассчитать стоимость
