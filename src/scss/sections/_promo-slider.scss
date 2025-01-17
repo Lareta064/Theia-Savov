@@ -1,4 +1,8 @@
 @use "../base/var" as *;
+.promo.promo--animate{
+	height: auto;
+	padding-top: 0;
+}
 .promo-slider{
 	display: flex;
 	position: relative;
