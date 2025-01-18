@@ -1,8 +1,8 @@
 @use "../base/var" as *;
-.tabs-block-nav{
+.tabs-block-nav.flex{
 	justify-content: space-between;
 	margin-bottom: 10px;
-	.swiper-nav,.tabs-nav{margin: 0;}
+	.swiper-nav,.tabs-nav{margin-bottom: 0;}
 	
 }
 .tabs-nav{

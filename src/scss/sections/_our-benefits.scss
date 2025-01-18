@@ -1,9 +1,15 @@
-.about{
-	.description-block__text{
-		@media (max-width: 1023px) {
-		.h2{
-			font-size: 28px;
-		}
-		}
-	}
+@use "../base/var" as *;
+.our-benefits +.sales{margin-top: 0;}
+.benefits-item{
+	height: 207px;
+	padding-left: 26px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	font-size: 20px;
+	font-family: $fs;
+	color: white;
+	p{max-width: 312px; width: 100%;}
+	border-left: 1px solid white;
+	&:first-child{border-left:0;}
 }

@@ -170,16 +170,14 @@ section + .dark-bg{margin-top: 45px;}
 	margin-bottom: 50px;
 	justify-content: space-between;
 	column-gap:20px;
-	@media (max-width: 767px) {
-	 margin-bottom: 30px;
-	}
+	
 }
 .assort-card, .product-card, .product-card__desk,.geo-content {
 	display: flex;
 	flex-direction: column;
 	
 }
-.grid-wrapper, .grid-border{
+.grid-wrapper, .grid-border, .three-columns, .four-columns{
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	gap:20px;
@@ -203,14 +201,14 @@ section + .dark-bg{margin-top: 45px;}
 	}
 	
 }
-.two-columns, .three-columns, .four-columns{
+.two-columns{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap:20px;
 }
 .three-columns{
-	grid-template-columns: 1fr 1fr 1fr;
+	&>*{grid-column: span 4;}
 }
 .four-columns{
-	grid-template-columns: 1fr 1fr 1fr;
+	&>*{grid-column: span 3;}
 }
