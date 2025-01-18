@@ -1,10 +1,10 @@
 //- include ../mixins/_header.pug
-mixin category-card(txt, img)
-	a(href="#!").category-card
+mixin assort-card(txt, img)
+	a(href="#!").assort-card
 		p !{txt}
 		img(src="./img/category/cat"+ img +".webp", srcset="./img/category/cat"+ img +"@2x.webp 2x" alt="img" width="312" height="165" loading="lazy")
-mixin category-card-ui(txt, img)
-	a(href="#!").category-card
+mixin assort-card-ui(txt, img)
+	a(href="#!").assort-card
 		p !{txt}
 		img(src="../img/category/cat"+ img +".webp", srcset="../img/category/cat"+ img +"@2x.webp 2x" alt="img" width="312" height="165" loading="lazy")
 
