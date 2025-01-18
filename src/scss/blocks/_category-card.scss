@@ -1,1 +1,51 @@
 @use "../base/var" as *;
+.category-card{
+	background-color: #fff;
+	&__img{
+		width: 100%;
+		aspect-ratio: 254/107;
+		flex-shrink: 0;
+		overflow: hidden;
+		border-radius: 10px;
+		background-color: #EDEDED;
+	}
+	&__body{
+		padding: 25px 40px;
+		text-align: center;
+	}
+	&__title{
+		font-weight: 700;
+		font-size: 28px;
+		line-height: 114%;
+		letter-spacing: -0.01em;
+		text-align: center;
+		color: #1c1c1c;
+		margin-bottom: 30px;
+	}
+	&__img, &__links{
+		display: flex;
+		text-align: center;
+		justify-content: center;
+	}
+	&__links{
+		
+		flex-wrap: wrap;
+		column-gap:22px;
+		row-gap:6px;
+	}
+	a{
+		font-weight: 400;
+		font-size: 20px;
+		letter-spacing: -0.02em;
+		color: #1c1c1c;
+		transition: .3s; 
+		white-space: nowrap;
+	}
+}
+.main-categories-cards{
+	
+	.category-card:first-child .category-card__links{
+		max-width: 425px;
+		margin-inline: auto;
+	}
+}

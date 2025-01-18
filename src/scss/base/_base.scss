@@ -203,3 +203,14 @@ section + .dark-bg{margin-top: 45px;}
 	}
 	
 }
+.two-columns, .three-columns, .four-columns{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap:20px;
+}
+.three-columns{
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.four-columns{
+	grid-template-columns: 1fr 1fr 1fr;
+}

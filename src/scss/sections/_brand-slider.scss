@@ -1,0 +1,14 @@
+.brand-card{
+	width: 280px;
+	height: 106px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	img{
+       object-fit: contain;
+	}
+}
+.brands-swiper   .swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+          transition-timing-function: linear !important;
+}

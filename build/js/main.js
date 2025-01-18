@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     /*Sliders in tabs */
+
     const tabBlockSwiper = document.querySelectorAll(".tabs-block.myswiper-container");
 
 				tabBlockSwiper.forEach((block) => {
@@ -116,6 +117,20 @@ document.addEventListener("DOMContentLoaded", function () {
       spaceBetween:20,
       grabCursor: true,
      
+    });
+
+    /**.brands-swiper */
+    const brandsCards = new Swiper('.brands-swiper', {
+      slidesPerView: '5',
+      speed:10000,
+      spaceBetween:30,
+      loop: true,
+      grabCursor: true,
+      autoplay:{
+        delay: 0,
+        disableOnInteraction: false
+      },
+      allowTouchMove: false,
     });
   /*=====CUSTOM SELECT===== */
 	

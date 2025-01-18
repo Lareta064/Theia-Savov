@@ -8,6 +8,16 @@ mixin assort-card-ui(txt, img)
 		p !{txt}
 		img(src="../img/category/cat"+ img +".webp", srcset="../img/category/cat"+ img +"@2x.webp 2x" alt="img" width="312" height="165" loading="lazy")
 
+mixin category-card(img, title, ...items)
+	.category-card
+		.category-card__img
+			img(src="../img/category/cat"+ img +".webp", srcset="../img/category/cat"+ img +"@2x.webp 2x" alt="img" width="763" height="321" loading="lazy")
+		.category-card__body
+			.category-card__title !{title}
+			nav.category-card__links
+				each item in items
+					a(href="#!") !{item}
+
 mixin product-card(img, title, val, price)
 	.product-card
 		a(href="#!").product-card__body

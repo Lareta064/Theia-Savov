@@ -1,0 +1,61 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				section.promo
+					.promo-bg-image
+						picture
+							source(srcset='../img/blog/blog-bg-mob.webp' media='(max-width: 767px)' width='767')
+						
+							img.wh-100(src='../img/blog/blog-bg.webp'  alt='img')
+					.container
+						.promo-top
+							.breadcrumbs
+								+breadcrumbs('Блог')
+							+city-block
+
+						.promo-content
+							.breadcrumbs
+								a.bold-txt(href="#!") крыши
+								a.bold-txt(href="#!") стройка
+							
+							.txt-20 7 минут на прочтение
+							h1.h1 Щебень для кровли
+							.promo-txt
+								p #[a(href="#!") Щебень] на кровле – один из вариантов балласта, который используется для пригруза гидроизоляции плоской кровли.
+								p В балластной системе щебень считается самым доступным, эффективным и недорогим материалом для крепления и завершающего слоя кровельного пирога.
+								p Так как мы сами производим и поставляем щебень, расскажем, какой из его видов и фракций берут чаще, и как происходит процесс отсыпки.
+							a(href="#!").btn.btn--white Читать статью
+				hr
+				
+				hr
+				+promo-dark('promo')
+				hr
+				.promo-dark.promo(style="background-image: url(../img/blog/blog-bg.webp)")
+					.container
+						.promo-top
+							.breadcrumbs
+								+breadcrumbs('каталог', 'Отделочные и строй материалы', 'Щебень')
+							+city-block
+						.promo-content
+							h1.h1 Щебень
+							.promo-txt
+								p Возьмите любую спецтехнику в аренду в СПБ на срок от 3-х смен и получите скидку 5%. Торопитесь, срок действия акции ограничен!
+							a(href="#!").btn.btn--white Рассчитать стоимость

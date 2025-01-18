@@ -8,8 +8,6 @@
 @use "base/_form";
 @use "blocks/_search-form";
 
-
-
 @use "blocks/_assort-card";
 @use "blocks/_product-card";
 @use "blocks/_category-card";
@@ -36,6 +34,7 @@
 
 @use "blocks/_post-card";
 
+@use "sections/_brand-slider.scss";
 
 @use "sections/_footer";
 
