@@ -7,7 +7,7 @@
 	align-items: center;
 	.container{position: relative;
 	}
-
+	.logo-image{transform: translateY(-50%);}
 	
 }
 .sales-content{
@@ -16,14 +16,14 @@
 	position: relative;
 	z-index: 2;
 	&>*+*{margin-top: 35px;}
-	.logo-image{transform: translateY(-50%);}
+	
 	@media (max-width: 1023px) {
 		width: 100%;
 	}
 }
 .logo-image{
 	position: absolute;
-	left: 630px;
+	left: 720px;
 	top:50%;
 	
 	max-height: 175px;
