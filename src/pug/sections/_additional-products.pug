@@ -1,16 +1,9 @@
-// building-materials
-section.building-materials
-	.container.gap-60
-		.description-block
-			.description-block__text
-				h2.h2 Отделочные и строй материалы 
-				p Возьмите любую спецтехнику в аренду в СПБ на срок от 3-х смен и получите скидку 5%. Торопитесь, срок действия акции ограничен!
-				.hide-sm
-					a(href="#!").btn Перейти в каталог
-			.description-block__img
-				img.wh-100(src="./img/block0_bg.webp", srcset="./img/block0_bg@2x.webp 2x", width="864" height="402" alt="img" loading="lazy")
-			.visible-sm
-				a(href="#!").btn Перейти в каталог
+section.additional-products
+	.container
+		.header-group
+			h2.h3 Популярные товары 
+			a(href="#!").btn Перейти в каталог
+
 		// TABS SLIDERS
 		.tabs-block.myswiper-container
 			.tabs-block-nav.flex
@@ -46,8 +39,6 @@ section.building-materials
 							.swiper-slide
 								+product-card(8,'ЩПС С2 фракции', '0-20 мм', 2300)
 						.tabs-swiper-pagination
-
-		
 						
 				#tab_2.tabs-body
 					.tabs-swiper
@@ -69,23 +60,3 @@ section.building-materials
 							.swiper-slide
 								+product-card(8,'ЩПС С2 фракции', '0-20 мм', 2300)
 						.tabs-swiper-pagination
-				#tab_3.tabs-body
-					.tabs-swiper
-						.swiper-wrapper
-							.swiper-slide
-								+product-card(5,'ЩПС С2 фракции', '0-20 мм', 2300)
-							.swiper-slide
-								+product-card(6,'ЩПС С2 фракции', '0-20 мм', 2300)
-							.swiper-slide
-								+product-card(7,'ЩПС С2 фракции', '0-20 мм', 2300)
-							.swiper-slide
-								+product-card(8,'ЩПС С2 фракции', '0-20 мм', 2300)
-							.swiper-slide
-								+product-card(4,'ЩПС С2 фракции', '0-20 мм', 2300)
-							.swiper-slide
-								+product-card(3,'ЩПС С2 фракции', '0-20 мм', 2300)
-							.swiper-slide
-								+product-card(2,'ЩПС С2 фракции', '0-20 мм', 2300)
-							.swiper-slide
-								+product-card(1,'ЩПС С2 фракции', '0-20 мм', 2300)
-					.tabs-swiper-pagination
