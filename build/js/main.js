@@ -21,17 +21,14 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-    /*article swiper */
-    const mySwiper = new Swiper('.mySwiper', {
-      slidesPerView: 4,
-      speed:1000,
-      spaceBetween:20,
-      pagination: {
-        el:".mySwiper-pagination",
-        clickable: true,
-      },
 
-    });
+    /*Add class for footer prev siblings */
+    const pageFooter = document.querySelector('footer.footer');
+    const previousElement = pageFooter.previousElementSibling;
+      if (previousElement) {
+        previousElement.classList.add('pb-90');
+    }
+
     /*Sliders in tabs */
     const tabBlockSwiper = document.querySelectorAll(".tabs-block.myswiper-container");
 
@@ -39,8 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
 					const tabsNav = block.querySelectorAll(".tabs-nav__item");
 					const tabsBody = block.querySelectorAll(".tabs-body");
 					const swiperInstances = {};
-
-					
 					tabsBody.forEach((tabBody) => {
 					const swiperContainer = tabBody.querySelector(".tabs-swiper");
 					if (swiperContainer) {
@@ -103,94 +98,17 @@ document.addEventListener("DOMContentLoaded", function () {
 			});
 		});
 
-     
-      
-    // const headerEl = document.querySelector('header');
-    // const openSearchForm = document.querySelector('#search-btn');
-    // const searchFormPopup = document.querySelector('#search-popup');
+     /*article swiper */
+     const mySwiper = new Swiper('.mySwiper', {
+      slidesPerView: 4,
+      speed:1000,
+      spaceBetween:20,
+      pagination: {
+        el:".mySwiper-pagination",
+        clickable: true,
+      },
 
-    // const menuToggle = document.querySelector('#menu-toggle');
-    // const mobileMenu = document.querySelector('#mobile-menu');
-    
-
-    // function hideSerchForm(formBlock) {
-    //     formBlock.classList.remove('active');
-    //     formBlock.style.top = 'auto';
-    //     bodyEl.classList.remove('lock');
-    // }
-
-    // function resetActiveMenu() {
-    //     mobileMenu.querySelector('.active')?.classList.remove('active');
-    //     mobileMenu.classList.remove('active');
-    //     menuToggle.classList.remove('active');
-    // }
-
-    // if (openSearchForm) {
-    //     openSearchForm.addEventListener('click', () => {
-
-    //         if (searchFormPopup.classList.contains('active')) {
-    //             hideSerchForm(searchFormPopup);
-    //         } else {
-               
-    //             const topPosition = headerEl.getBoundingClientRect().bottom;
-    //             resetActiveMenu();
-    //             searchFormPopup.classList.add('active');
-    //             searchFormPopup.style.top = topPosition + 'px';
-    //             bodyEl.classList.add('lock');
-    //             fixedButtons.classList.remove('active');
-
-    //         }
-
-    //     });
-       
-    //     searchFormPopup.addEventListener('click', (e) => {
-    //         if (e.target == e.currentTarget) {
-    //             searchFormPopup.classList.remove('active');
-    //             bodyEl.classList.remove('lock');
-    //         }
-    //     });
-    // }
-   
-    // if (menuToggle) {
-    //     const mobMenuDropItem = mobileMenu.querySelectorAll('.drop-menu-li');
-
-      
-    //     menuToggle.addEventListener('click', () => {
-    //         hideSerchForm(searchFormPopup);
-    //         if (menuToggle.classList.contains('active')) {
-    //             resetActiveMenu();
-    //             bodyEl.classList.remove('lock');
-    //             if (window.scrollY > 500) {
-    //                 fixedButtons.classList.add('active');
-
-    //             }
-
-
-    //         } else {
-    //             menuToggle.classList.add('active');
-    //             mobileMenu.classList.add('active');
-    //             bodyEl.classList.add('lock');
-
-    //         }
-    //     });
-
-      
-    //     for (let item of mobMenuDropItem) {
-    //         item.addEventListener('click', function (e) {
-    //             item.querySelector('.drop-menu-wrapper').classList.add('active');
-                
-    //         });
-    //         item.querySelector('.back-link').addEventListener(
-    //             'click',
-    //             (e) => {
-    //                 e.stopPropagation();
-    //                 e.target.closest('.drop-menu-wrapper').classList.remove('active');
-                    
-    //             }
-    //         );
-    //     }
-    // }
-    
+    });
   /*=====CUSTOM SELECT===== */
 	
 	if (window.NodeList && !NodeList.prototype.forEach) {
