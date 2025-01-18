@@ -8,13 +8,17 @@
 .contacts-title{
 	flex-shrink: 0;
 }
+.contacts .contacts-group{
+	padding-top: 80px;
+	@media (max-width: 1439px) {padding-top: 60px;}
+}
 .contacts-group{
 	display: flex;
-	padding-top: 80px;
+	
 	&>*{
 		padding-left: 63px;
 		padding-right: 63px;
-		border-left:1px solid $text;
+		border-left:1px solid #ECECEC;
 		display: flex;
 		flex-direction: column; 
 		justify-content: center;
@@ -25,14 +29,14 @@
 		white-space: nowrap;
 	}
 	.contacts-group__city{max-width:422px;}
-	.txt-24{text-transform: uppercase; line-height: 1;	}
+	.txt-24{text-transform: uppercase; line-height: 1;font-size: 23px;}
 	.txt-24 +*{margin-top: 24px; font-size: 16px; line-height: 1.25;
 		letter-spacing: -0.02em; color:$text;}
-		@media (max-width: 1439px) {
-			padding-top: 60px;
-			&>*{padding-left: 50px;
-				padding-right: 50px;}
-			.txt-24 +*{margin-top: 16px;}
-			.txt-24{font-size: 18px;}
-		}
+	@media (max-width: 1439px) {
+		
+		&>*{padding-left: 50px;
+			padding-right: 50px;}
+		.txt-24 +*{margin-top: 16px;}
+		.txt-24{font-size: 18px;}
+	}
 }

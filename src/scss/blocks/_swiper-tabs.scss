@@ -12,6 +12,7 @@
 	column-gap:28px;
 	row-gap:6px;
 	width: fit-content;
+	margin-bottom: 30px;
 	
 }
 
@@ -53,12 +54,14 @@
 .tabs-body {
 	display: none;
 }
-
-.tabs-body.active {
-   display: block;
+.tabs-body.active{
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap:20px;
 }
-.tabs-block.tabs-block--grid {
-	.tabs-nav{margin-bottom: 20px; width: 100%;
+
+.tabs-block {
+	.tabs-nav{margin-bottom: 40px; width: 100%;
 		}
 	.tabs-nav.tabs-nav--center{justify-content: center;}	
 	.tabs-body>*{

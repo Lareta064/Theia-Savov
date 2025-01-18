@@ -179,7 +179,7 @@ section + .dark-bg{margin-top: 45px;}
 	flex-direction: column;
 	
 }
-.grid-wrapper, .grid-border, .tabs-block--grid .tabs-body.active{
+.grid-wrapper, .grid-border{
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	gap:20px;
