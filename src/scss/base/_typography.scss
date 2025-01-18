@@ -37,10 +37,12 @@ h1, h2,h3{font-weight: 400;}
 	font-size: 40px;
     line-height: 1.07;
     letter-spacing: -0.01em;
+	margin-bottom: 1em;
 	@media (max-width: 767px) {
 		font-size: 24px;
 	}
 }
+.dark-bg .h3{color: white;}
 .h4{
 	font-family:$fs;
 	font-size: 30px;

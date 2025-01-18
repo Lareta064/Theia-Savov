@@ -1,0 +1,27 @@
+.form-section{
+	position: relative;
+	background-image: url('../img/form-bg.webp');
+	background-repeat: no-repeat;
+	background-position: right top;
+	overflow: hidden;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	
+	&-content{
+		position: relative;
+		z-index: 2;
+		
+	}
+	form{
+		max-width: 680px;
+		.form-item{
+			margin-bottom: 15px;
+		}
+		.form-btn{margin-top: 40px;}
+	}
+	.logo-image{
+		top: auto;
+		bottom: 80px;
+		left:53%;
+	}
+}
