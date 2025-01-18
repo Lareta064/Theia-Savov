@@ -12,12 +12,11 @@
 	column-gap:28px;
 	row-gap:6px;
 	width: fit-content;
-	justify-content: center;
-	@media (max-width: 767px) {
-	justify-content: center;
-	}
+	
 }
+
 .tabs-nav.tabs-nav--marker{
+	
 	.tabs-nav__item {
 		display: flex;
 		
@@ -56,5 +55,13 @@
 }
 
 .tabs-body.active {
-display: block;
+   display: block;
+}
+.tabs-block.tabs-block--grid {
+	.tabs-nav{margin-bottom: 20px; width: 100%;
+		}
+	.tabs-nav.tabs-nav--center{justify-content: center;}	
+	.tabs-body>*{
+		grid-column: span 3;
+	}
 }
