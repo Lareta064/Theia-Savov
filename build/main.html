@@ -16,7 +16,7 @@
 		-->
 	</head>
 	<body>
-		<!--==========SEARCH FORM =========-->
+		<!--SEARCH FORM-->
 		<div class="header-form-wrapper" id="header-search-form">
 			<form class="header-search-form">
 				<div class="form-item search-form-group">
@@ -264,21 +264,21 @@
 				</div>
 			</div>
 		</div>
-		<!--====HEADER===-->
+		<!--HEADER-->
 		<header class="header">
 			<div class="container">
 				<div class="header-content"><a class="logo" href="index.html">
 						<svg class="logo-group">
 							<use href="./img/sprite.svg#logo-group"></use>
 						</svg></a>
-					<!--=== search-form-open button ===-->
+					<!--search-form-open button-->
 					<button class="flex-link search-form-open" id="searchForm-open">Поиск
 						<svg class="svg-search">
 							<use href="./img/sprite.svg#svg-search"></use>
 						</svg>
 					</button>
 					<button class="catalogy-menu-btn" id="catalogy-menu-open">Каталог</button>
-					<!--=== header-nav ===-->
+					<!--header-nav-->
 					<div class="header-nav">
 						<ul class="header-nav__list">
 							<li class="header-nav__item"><a class="header-nav__link" href="#!">Аренда техники </a></li>
@@ -289,11 +289,12 @@
 							<li class="header-nav__item"><a class="header-nav__link" href="#!">Контакты</a></li>
 						</ul>
 					</div>
-					<!--=== cart icon ===--><a class="cart-button" href="#!">
+					<!--cart icon--><a class="cart-button" href="#!">
 						<svg class="svg-cart">
 							<use href="./img/sprite.svg#svg-cart"></use>
 						</svg></a>
-					<!--=== button Обратный звонок ===-->
+					<!--Обратный звонок-->
+					<button class="btn btn--white callback-btn">Обратный звонок</button>
 				</div>
 			</div>
 		</header>
@@ -1340,15 +1341,34 @@
 						<h2 class="h3 white-txt">Наши услуги </h2>
 						<div class="hide-sm"><a class="btn-outline" href="#!">Посмотреть больше услуг</a></div>
 					</div>
-					<div class="service-cards grid-wrapper"><a class="serv-card" href="#!" style="background-image: url(./img/services/serv1.webp)">
-							<div class="serv-card__title">Отделочные работы</div>
-							<p>Возьмите любую спецтехнику в аренду в СПБ на срок от 3-х смен и получите скидку 5%. Торопитесь, срок действия акции ограничен!</p><span class="btn-outline">Заказать услугу </span></a><a class="serv-card" href="#!" style="background-image: url(./img/services/serv2.webp)">
-							<div class="serv-card__title">Бригадные работы </div>
-							<p>Возьмите любую спецтехнику в аренду в СПБ на срок от 3-х смен и получите скидку 5%. Торопитесь, срок действия акции ограничен!</p><span class="btn-outline">Заказать услугу </span></a><a class="serv-card" href="#!" style="background-image: url(./img/services/serv3.webp)">
-							<div class="serv-card__title">Геодезия под ключ </div>
-							<p>Возьмите любую спецтехнику в аренду в СПБ на срок от 3-х смен и получите скидку 5%. Торопитесь, срок действия акции ограничен!</p><span class="btn-outline">Заказать услугу </span></a>
+					<div class="service-cards swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="serv-card">
+									<div class="serv-card__img"><img class="wh-100" src="./img/services/serv1.webp" srcset="./img/services/serv1@2x.webp 2x" loading="lazy" width="600" height="399" alt="img"/></div>
+									<div class="serv-card__title">Частные дома,&lt;br&gt;коттеджи и виллы.</div>
+									<p>Строим комфортные дома из различных материалов (кирпич, дерево, монолит) по типовым и индивидуальным проектам, учитывая ваши индивидуальные предпочтения по планировке, стилю и используемым технологиям.</p>
+									<div class="serv-card__footer"><a class="btn-outline" href="#!">Посмотреть проэкты</a><a class="btn-outline" href="#!">Подать заявку</a></div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="serv-card">
+									<div class="serv-card__img"><img class="wh-100" src="./img/services/serv2.webp" srcset="./img/services/serv2@2x.webp 2x" loading="lazy" width="600" height="399" alt="img"/></div>
+									<div class="serv-card__title">Коммерческие объекты (офисы, магазины, рестораны).</div>
+									<p>Проектируем и строим функциональные и эстетичные объекты, учитывая специфику вашего бизнеса.</p>
+									<div class="serv-card__footer"><a class="btn-outline" href="#!">Посмотреть проэкты</a><a class="btn-outline" href="#!">Подать заявку</a></div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="serv-card">
+									<div class="serv-card__img"><img class="wh-100" src="./img/services/serv3.webp" srcset="./img/services/serv3@2x.webp 2x" loading="lazy" width="600" height="399" alt="img"/></div>
+									<div class="serv-card__title">Дороги, транспортные узлы и инженерные коммуникации.</div>
+									<p>Выполняем полный комплекс работ по строительству и ремонту дорожной и инженерной инфраструктуры.</p>
+									<div class="serv-card__footer"><a class="btn-outline" href="#!">Посмотреть проэкты</a><a class="btn-outline" href="#!">Подать заявку</a></div>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="visible-sm"><a class="btn-outline" href="#!">Посмотреть больше услуг</a></div>
 				</div>
 			</section>
 			<!--===BENEFITS===-->

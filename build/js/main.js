@@ -109,6 +109,14 @@ document.addEventListener("DOMContentLoaded", function () {
       },
 
     });
+    /*service-cards main page */
+    const serviceCards = new Swiper('.service-cards', {
+      slidesPerView: 'auto',
+      speed:1000,
+      spaceBetween:20,
+      grabCursor: true,
+     
+    });
   /*=====CUSTOM SELECT===== */
 	
 	if (window.NodeList && !NodeList.prototype.forEach) {

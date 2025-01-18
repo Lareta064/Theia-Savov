@@ -51,10 +51,14 @@ mixin city-block
 			button.bold-txt(type="button" aria-label="Да" tabindex="0") Да
 			button(type="button" aria-label="Нет" tabindex="1") Нет
 mixin serv-card(img, title, txt)
-	a.serv-card(href="#!" style="background-image: url(./img/services/serv"+ img +".webp)")
+	.serv-card
+		.serv-card__img
+			img.wh-100(src="./img/services/serv"+ img +".webp", srcset="./img/services/serv"+ img +"@2x.webp 2x"  loading="lazy" width="600" height="399" alt="img")
 		.serv-card__title #{title}
 		p !{txt}
-		span.btn-outline Заказать услугу 
+		.serv-card__footer
+			a(href="#!").btn-outline Посмотреть проэкты
+			a(href="#!").btn-outline Подать заявку
 mixin blog-card(img)
 	a.blog-card(href="#!" style="background-image: url(./img/blog/blog"+ img +".webp)")
 		.blog-card__tag #trend

@@ -1,6 +1,6 @@
 @use "../base/var" as *;
 .our-service{
-	
+	// overflow: hidden;
 	@media (max-width: 767px) {
 		.visible-sm{
 			display: flex!important;
@@ -11,81 +11,48 @@
 }
 .serv-card{
 	background-color: $dark;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: top;
+	transition: .3s; 
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
-	border-radius: 10px;
-	padding: 36px 34px;
-	width: 100%;
-	max-width: 505px;
-	aspect-ratio:505/607;
-	max-height: 607px;
-	min-height: 450px;
+	row-gap: 20px;
 	color: white;
-	position: relative;
-	overflow: hidden;
-	transition: .3s; 
-	&:after{
-		content:'';
-		position: absolute;
-		inset:0;
-		background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
-		z-index: 1;
+	&>*{width: 100%;}
+	&__img{
+		width: 100%;
+		border-radius: 10px;
+		overflow: hidden;
+		aspect-ratio:3 / 2;
 	}
 	&__title{
 		font-weight: 400;
-		font-size: 30px;
-		line-height: 100%;
-		letter-spacing: -0.01em;
+		font-size: 32px;
+		line-height: 1.19;
 		font-family: $fs;
 		color: white;
-		margin-bottom: 1em;
-		transition: .3s;
-		@media (max-width: 1279px) {
-			font-size: 24px;
-		}
-		@media (max-width: 1023px) {
-			font-size: 20px;
+		
+	}
+	p{flex-grow: 1; font-size: 20px;}
+	&__footer{
+		display: flex;
+		column-gap:20px;
+		.btn-outline{
+			padding-left: 30px;
+			padding-right: 30px;
 		}
 	}
-	p{margin-bottom: 25px;}
-	.btn-outline{margin-inline: auto;}
-	&>*{
-		position: relative;
-	  z-index: 2;
-   }
 	
 	&:hover { color: white;}
 	&:hover {
-		transform: scale(1.035);
+		transform: scale(1.025);
 		.btn-outline{color: $accent;}
 	}
-	@media (max-width: 1279px) {
-		padding: 24px;
-	}
-	@media (max-width: 1199px) {
-		font-size: 16px;
-		padding: 20px 16px;
-	}
-	@media (max-width: 1023px) {
-		font-size: 14px;
-		padding: 34px 20px;
-		
-	}
 }
-.service-cards {
-
- .serv-card{grid-column: span 4;}
-	@media (max-width: 1023px) {
-	column-gap:10px;
-	}
-	@media (max-width: 767px) {
-		row-gap: 20px;
-		.serv-card{grid-column: span 12; font-size: 16px; margin-inline: auto;}
-		.serv-card__title{font-size: 24px;}
-	}
+.service-cards{
+	width: calc(50% + 50vw - 10px);
+	padding-top: 20px;
+	padding-bottom: 30px;
 	
+}
+.service-cards .swiper-slide{
+	width: 600px!important;
 }
