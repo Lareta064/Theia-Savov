@@ -1,0 +1,71 @@
+@use "../base/var" as *;
+.counter{
+	display: flex;
+	background: #f6f5f5;
+	width: fit-content;
+	border-radius: 8px;
+	overflow: hidden;
+	button{
+		width: 48px;
+		height: 36px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-shrink: 0;
+		background: #f6f5f5;
+		border-radius: 8px;
+		font-size: 28px;
+		&[disabled], &.disabled{color:#d9d9d9;}
+	}
+	input.counter-value{
+		font-weight: 600;
+		font-size: 20px;
+		height: 36px;
+		color: #222;
+		text-align: center;
+		width: 80px;
+		
+		padding-left: 10px;
+		padding-right: 10px;
+		min-width: 60px;
+		border: 0;
+		border-radius: 0;
+		background: #f6f5f5;
+	}
+	input[type="number"]::-webkit-inner-spin-button,
+	input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+    input[type="number"] { -moz-appearance: textfield; }
+
+}
+
+.detailed-card{
+	&>*+*{margin-top: 20px;}
+	.detailed-title{font-family: $fs;}
+	&__body{
+		display: flex;
+		flex-direction: column;
+		row-gap:25px;
+		&>*+*{width: 100%;}
+	}
+	&-group{&>*+*{margin-top: 10px;}}
+}
+.rating-block{
+	column-gap:10px;
+	.rating-stars{
+		width: 86px;
+		height: 13px;
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='86' height='13' viewBox='0 0 86 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7 0L8.652 4.98105L14 4.96053L9.667 8.01895L11.333 13L7 9.90737L2.681 13L4.333 8.01895L0 4.96053L5.362 4.98105L7 0Z' fill='%23FFB700' /%3e%3cpath d='M25 0L26.652 4.98105L32 4.96053L27.667 8.01895L29.333 13L25 9.90737L20.681 13L22.333 8.01895L18 4.96053L23.362 4.98105L25 0Z' fill='%23FFB700' /%3e%3cpath d='M43 0L44.652 4.98105L50 4.96053L45.667 8.01895L47.333 13L43 9.90737L38.681 13L40.333 8.01895L36 4.96053L41.362 4.98105L43 0Z' fill='%23FFB700' /%3e%3cpath d='M61 0L62.652 4.98105L68 4.96053L63.667 8.01895L65.333 13L61 9.90737L56.681 13L58.333 8.01895L54 4.96053L59.362 4.98105L61 0Z' fill='%23FFB700' /%3e%3cpath d='M79 0L80.652 4.98105L86 4.96053L81.667 8.01895L83.333 13L79 9.90737L74.681 13L76.333 8.01895L72 4.96053L77.362 4.98105L79 0Z' fill='%23FFB700' /%3e%3c/svg%3e");
+		background-size: contain;
+	}
+}
+.price-block{
+	display: flex;
+	column-gap: 20px;
+	justify-content: space-between;
+	&__item{
+		flex:1;
+		font-size: 16px;
+		letter-spacing: -0.02em;
+		color: #222;font-weight: 800;
+	}
+}

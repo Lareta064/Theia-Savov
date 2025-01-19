@@ -59,7 +59,10 @@ h1, h2,h3{font-weight: 400;}
 	font-size: 24px;
 	letter-spacing: -0.02em;
 }
-
+.txt-12{
+	font-weight: 400;
+	font-size: 12px;
+}
 .accent-txt{
 	color: $accent!important;
 }
@@ -188,4 +191,28 @@ h1, h2,h3{font-weight: 400;}
 	&>*+ul{
 		margin-top: 20px;
 	}
+}
+.bx-sh{
+	padding: 20px;
+	box-shadow: 0 0 22px 0 rgba(154, 152, 152, 0.1);
+    border-radius: 10px;
+	background-color: #fff;
+}
+.dotted-list{
+	li{
+		display: flex;
+		column-gap:10px;
+		span{
+			border-bottom: 1px solid  rgba(34, 34, 34, 0.1);
+			flex-grow: 1;
+		}
+		margin-bottom: 10px;
+	}
+	.dotted-list__name,.dotted-list__val{
+		font-size: 16px;
+		line-height: 1.19;
+		color: #222;
+		flex-shrink: 0;
+	}
+	.dotted-list__val{font-weight: 700;}
 }

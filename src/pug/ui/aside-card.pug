@@ -1,0 +1,149 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Карточка продукта
+				.container-dashboard__content
+					//VARIANT #1
+					.detailed-card
+						.detailed-card__body.bx-sh
+							.detailed-card-group
+								span.detailed-art.txt-12 Код: 105703
+								.detailed-title.txt-24 Речной мытый песок
+								.rating-block.flex
+									.rating-stars
+									span.txt-12 39 отзывов
+							
+							.price-block
+								.price-block__item
+									p от от 870 руб./м3
+									span.txt-12 за шт
+								.price-block__item
+									p от 700 руб./тн
+									span.txt-12 В розницу
+							
+							.detailed-card-group
+								.counter
+									button(type="button" disabled aria-label="Уменьшить количество").counter-minus -
+									input.counter-value(type="number" value="1000" min="0")
+									button(type="button" aria-label="Увеличить количество").counter-plus +
+				
+								.detailed-total
+									span.txt-12 Стоимость
+									p 700 000 руб
+							
+							
+							button.btn-primary В корзину
+							button.btn Рассчитать стоимость
+						
+						.detailed-card__footer.bx-sh
+							ul.dotted-list
+								li
+									p.dotted-list__name Наличие
+									span
+									p.dotted-list__val Много
+								li
+									p.dotted-list__name Доставка
+									span
+									p.dotted-list__val 24/7
+								li
+									p.dotted-list__name Способ получения
+									span
+									p.dotted-list__val Самовывоз, Доставка
+					//VARIANT #2
+					.detailed-card
+						.detailed-card__body.bx-sh
+							.detailed-card-group
+								span.detailed-art.txt-12 Код: 105703
+								.detailed-title.txt-24 Гусеничный экскаватор Hyundai R 210LC-7
+								.rating-block.flex
+									.rating-stars
+									span.txt-12 39 отзывов
+							
+								.price-block
+									.price-block__item
+										p от 15 870 руб./смена
+										span.txt-12 за шт
+							
+							.detailed-card-group
+								.counter.counter-small
+									button(type="button" disabled aria-label="Уменьшить количество").counter-minus -
+									input.counter-value(type="number" value="1000" min="0")
+									button(type="button" aria-label="Увеличить количество").counter-plus +
+				
+								.detailed-total
+									span.txt-12 Стоимость
+									p 700 000 руб
+							
+							
+							button.btn-primary В корзину
+							button.btn Рассчитать стоимость
+						
+						.detailed-card__footer.bx-sh
+							ul.dotted-list
+								li
+									p.dotted-list__name Наличие
+									span
+									p.dotted-list__val Много
+								li
+									p.dotted-list__name Доставка
+									span
+									p.dotted-list__val 24/7
+								li
+									p.dotted-list__name Способ получения
+									span
+									p.dotted-list__val Самовывоз, Доставка
+
+								
+		
+		script.
+		
+			// Находим все элементы счетчика
+			const counters = document.querySelectorAll('.counter');
+		
+			// Перебираем каждый блок счетчика
+			counters.forEach((counter) => {
+				const minusButton = counter.querySelector('.counter-minus'); // Кнопка уменьшения
+				const plusButton = counter.querySelector('.counter-plus'); // Кнопка увеличения
+				const input = counter.querySelector('.counter-value'); // Поле ввода
+			
+				// Обработчик клика на кнопку уменьшения
+				minusButton.addEventListener('click', () => {
+					let currentValue = parseInt(input.value, 10) || 0; // Получаем текущее значение
+					if (currentValue > parseInt(input.min, 10)) {
+					input.value = currentValue - 1; // Уменьшаем значение
+					}
+				});
+			
+				// Обработчик клика на кнопку увеличения
+				plusButton.addEventListener('click', () => {
+					let currentValue = parseInt(input.value, 10) || 0; // Получаем текущее значение
+					input.value = currentValue + 1; // Увеличиваем значение
+				});
+			
+				// Ограничение на ввод в поле (для соблюдения min)
+				input.addEventListener('input', () => {
+					let currentValue = parseInt(input.value, 10) || 0;
+					if (currentValue < parseInt(input.min, 10)) {
+						input.value = input.min; // Если меньше min, сбрасываем
+					}
+				});
+			});
+			
