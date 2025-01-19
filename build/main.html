@@ -7,6 +7,9 @@
 		<!--=======убрать перевод цифр в номер телефона на ios  и safari ======-->
 		<meta name="format-detection" content="telephone=no">
 		<!--===custom scrollbar plugin ===-->
+		<!--Datapicker-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+		<!--Swiper-->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
 		<!--========= custom styles ========-->
 		<link rel="stylesheet" href="./css/main.css">
@@ -1565,13 +1568,92 @@
 			<div class="modal-frame visible" data-modal="city-list">
 				<div class="modal-frame-content">
 					<h3 class="h3">Заказать спецтехнику</h3>
-					<form class="order-form"></form>
+					<form class="order-form">
+						<!-- выбранный товар + выбор дополнительный товара-->
+						<div class="select-products-form" id="selectProductForm">
+							<!--один товар + даты-->
+							<div class="add-product-group flex">
+								<div class="form-dropdown dropdown">
+									<button class="dropdown__button" type="button">Речной песок</button>
+									<div class="dropdown__list">
+										<ul>
+											<li class="dropdown__list-item" data-value="select">Выбрать</li>
+											<li class="dropdown__list-item" data-value="Речной песок">Речной песок</li>
+											<li class="dropdown__list-item" data-value="Щебень">Щебень</li>
+											<li class="dropdown__list-item" data-value="Продукт 1">Продукт 1</li>
+											<li class="dropdown__list-item" data-value="Продукт 2">Продукт 2</li>
+											<li class="dropdown__list-item" data-value="Продукт 3">Продукт 3</li>
+											<li class="dropdown__list-item" data-value="Продукт 4">Продукт 4</li>
+										</ul>
+									</div>
+									<!-- в этот скрытый инпут в качестве value  выводится значение из data-value из.dropdown__list-item -->
+									<input class="dropdown__input-hidden" type="text" name="select_product">
+								</div>
+								<!--диапазон дат-->
+								<div class="select-date">
+									<div class="form-item">
+										<input id="start-date" type="text" name="startDay" placeholder="c">
+									</div>
+									<div class="form-item">
+										<input id="end-date" type="text" name="endtDay" placeholder="по">
+									</div>
+								</div>
+							</div>
+							<!-- кнопка выбрать еще-->
+							<button class="add-product-btn" id="add-product"><span class="button-icon">
+									<svg class="svg-plus">
+										<use href="../img/sprite.svg#svg-plus"></use>
+									</svg></span>Добавить еще товар</button>
+						</div>
+						<!--USER DATA-->
+						<div class="form-item">
+							<input type="text" placeholder="Адрес *" value="Достоевского 4">
+						</div>
+						<div class="form-row">
+							<div class="form-item">
+								<input type="text" placeholder="Имя *" value="Миша">
+							</div>
+							<div class="form-item">
+								<input type="text" placeholder="Фамилия *" value="Петров">
+							</div>
+						</div>
+						<div class="form-item">
+							<input type="text" placeholder="Email *" value="апри@gmail.com">
+						</div>
+						<div class="form-item">
+							<input type="text" placeholder="Телефон *" value="8 (911) 219 98 67">
+						</div>
+						<div class="form-item">
+							<input type="text" placeholder="Компания">
+						</div>
+						<div class="form-item">
+							<textarea placeholder="Примечания"></textarea>
+						</div>
+					</form>
 				</div>
 			</div>
 		</main>
 		<!--script(src="./libs/jquery/jquery-3.0.0.min.js")-->
 		<!--script(src="./libs/jquery.lazy.min.js")-->
+		<!--Swiper-->
 		<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+		<!--Datapicker-->
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js"></script>
+		<script>
+			flatpickr("#start-date", {
+				mode: "range",
+				locale: flatpickr.l10ns.ru,
+				dateFormat: "d.m.Y",
+				minDate:'today',
+				onChange: function(selectedDates) {
+					if (selectedDates.length === 2) {
+						document.getElementById("start-date").value = flatpickr.formatDate(selectedDates[0], "d.m.Y");
+						document.getElementById("end-date").value = flatpickr.formatDate(selectedDates[1], "d.m.Y");
+					}
+				}
+			});
+		</script>
 		<!--===custom scrollbar plugin ===-->
 		<!--=============== custom scripts ===================-->
 		<script src="./js/main.js"></script>

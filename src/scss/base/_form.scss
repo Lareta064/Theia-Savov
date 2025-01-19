@@ -95,8 +95,6 @@ textarea{
 	  letter-spacing: -0.02em;
 	  font-size: 16px;
 	  font-weight: 700;
-	
-	
   }
   
   .dropdown__button::after {
@@ -130,12 +128,21 @@ textarea{
 	padding: 0;
 	list-style-type: none;
 	background: #FFFFFF;
+	height: 220px;
 	overflow: hidden;
+	overflow-y: auto;
+	scrollbar-width: thin;
+	scrollbar-color: #EAEAEA white;
+	
 	width: 100%;
 	z-index: 1;
-	@media (max-width: 767px) {
-	  top: 64px;
-	}
+	&::-webkit-scrollbar{
+		width: 3px;
+		height: 20px;
+		&-track{background-color: #fff;}
+		&-thumb{background-color: #EAEAEA;}
+ 
+	 }
 	
 	ul{
 	  margin-block:10px; 

@@ -11,7 +11,9 @@ html(lang="ru")
 		meta(name="format-detection" content="telephone=no")
 		//===custom scrollbar plugin ===
 		//- link(rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css")
-
+		//Datapicker
+		link(rel='stylesheet' href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css")
+		//Swiper
 		link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css")
 		//========= custom styles ========
 		link(rel="stylesheet"  href="./css/main.css")
@@ -30,8 +32,25 @@ html(lang="ru")
 		
 		//script(src="./libs/jquery/jquery-3.0.0.min.js")
 		//script(src="./libs/jquery.lazy.min.js")
-		
+		//Swiper
 		script(src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js")
+		//Datapicker
+		script(src='https://cdn.jsdelivr.net/npm/flatpickr')
+		script(src='https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js')
+		script.
+			
+			flatpickr("#start-date", {
+				mode: "range",
+				locale: flatpickr.l10ns.ru,
+				dateFormat: "d.m.Y",
+				minDate:'today',
+				onChange: function(selectedDates) {
+					if (selectedDates.length === 2) {
+						document.getElementById("start-date").value = flatpickr.formatDate(selectedDates[0], "d.m.Y");
+						document.getElementById("end-date").value = flatpickr.formatDate(selectedDates[1], "d.m.Y");
+					}
+				}
+			});
 		//===custom scrollbar plugin ===
 		//- script(src='https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js')
 		//=============== custom scripts ===================

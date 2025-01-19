@@ -7,6 +7,9 @@
 		<!--=======убрать перевод цифр в номер телефона на ios  и safari ======-->
 		<meta name="format-detection" content="telephone=no">
 		<!--===custom scrollbar plugin ===-->
+		<!--Datapicker-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+		<!--Swiper-->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
 		<!--========= custom styles ========-->
 		<link rel="stylesheet" href="./css/main.css">
@@ -22,7 +25,25 @@
 		</div>
 		<!--script(src="./libs/jquery/jquery-3.0.0.min.js")-->
 		<!--script(src="./libs/jquery.lazy.min.js")-->
+		<!--Swiper-->
 		<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+		<!--Datapicker-->
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js"></script>
+		<script>
+			flatpickr("#start-date", {
+				mode: "range",
+				locale: flatpickr.l10ns.ru,
+				dateFormat: "d.m.Y",
+				minDate:'today',
+				onChange: function(selectedDates) {
+					if (selectedDates.length === 2) {
+						document.getElementById("start-date").value = flatpickr.formatDate(selectedDates[0], "d.m.Y");
+						document.getElementById("end-date").value = flatpickr.formatDate(selectedDates[1], "d.m.Y");
+					}
+				}
+			});
+		</script>
 		<!--===custom scrollbar plugin ===-->
 		<!--=============== custom scripts ===================-->
 		<script src="./js/main.js"></script>

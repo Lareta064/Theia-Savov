@@ -156,11 +156,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
       dropDownListItems.forEach(function (listItem) {
+        console.log(dropDownInput);
         listItem.addEventListener('click', function (e) {
           e.stopPropagation();
           dropDownBtn.innerText = this.innerText;
           dropDownBtn.focus();
           dropDownInput.value = this.dataset.value;
+          
           dropDownList.classList.remove('dropdown__list--visible');
           dropDownBtn.classList.remove('dropdown__button--active');
           
@@ -210,15 +212,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     
     /*==  закрыть модалки  frame-modal по клику на крестик ======*/
-    if(modalFramesClose){
-      for(let item of modalFramesClose){
-        item.addEventListener('click', function(e){
-        e.preventDefault();
-        item.closest('[data-modal]').classList.remove('visible');
-        bodyEl.classList.remove('lock');
-        });
-      }
-    }
+    // if(modalFramesClose){
+    //   for(let item of modalFramesClose){
+    //     item.addEventListener('click', function(e){
+    //     e.preventDefault();
+    //     item.closest('[data-modal]').classList.remove('visible');
+    //     bodyEl.classList.remove('lock');
+    //     });
+    //   }
+    // }
     
     /*=============== закрыть модалки по клику вне ===============*/
       for(let frame of modalFrames){
