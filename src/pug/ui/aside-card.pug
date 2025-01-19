@@ -47,7 +47,7 @@ html(lang="ru")
 				
 								.detailed-total
 									span.txt-12 Стоимость
-									p 700 000 руб
+									p.amount 700 000 руб
 							
 							
 							button.btn-primary В корзину
@@ -83,6 +83,13 @@ html(lang="ru")
 										span.txt-12 за шт
 							
 							.detailed-card-group
+								.select-date.select-date--light
+									.form-item.select-date-start
+										input#start-date(type='text' name="startDay" value="10.02.2025")
+									span &ndash;
+									.form-item.select-date-end
+										input#end-date(type='text' name="endtDay" value="12.02.2025")
+								
 								.counter.counter-small
 									button(type="button" disabled aria-label="Уменьшить количество").counter-minus -
 									input.counter-value(type="number" value="1000" min="0")
@@ -90,11 +97,12 @@ html(lang="ru")
 				
 								.detailed-total
 									span.txt-12 Стоимость
-									p 700 000 руб
+									p.amount 70 000 руб *
+									span.txt-12 *Цена указана без учета доставки 
 							
 							
 							button.btn-primary В корзину
-							button.btn Рассчитать стоимость
+							
 						
 						.detailed-card__footer.bx-sh
 							ul.dotted-list

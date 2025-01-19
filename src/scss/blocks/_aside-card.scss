@@ -48,6 +48,12 @@
 		&>*+*{width: 100%;}
 	}
 	&-group{&>*+*{margin-top: 10px;}}
+	.amount{
+		font-weight: 800;
+		font-size: 24px;
+		letter-spacing: -0.02em;
+		color: #222;
+	}
 }
 .rating-block{
 	column-gap:10px;
@@ -68,4 +74,5 @@
 		letter-spacing: -0.02em;
 		color: #222;font-weight: 800;
 	}
+	
 }
