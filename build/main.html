@@ -319,6 +319,15 @@
 		<main class="main">
 			<!-- PROMO ГЛАВНАЯ. Кастомный слайдер имеет три блока. внутри каждого по три слайда, они одинаковые, просто порядок следования разный-->
 			<div class="promo promo--animate">
+				<div class="container">
+					<div class="city-selection">
+						<p>Ваш город<span id="city-name">Санкт-Петербург?</span></p>
+						<div class="city-selection__btn">
+							<button class="bold-txt" type="button" aria-label="Да" tabindex="0">Да</button>
+							<button type="button" aria-label="Нет" tabindex="1" data-btn="city-list">Нет</button>
+						</div>
+					</div>
+				</div>
 				<div class="promo-slider">
 					<!-- ПЕРВЫЙ БЛОК-->
 					<div class="promo-slide promo-slide--first">
@@ -1565,7 +1574,7 @@
 				</div>
 			</footer>
 			<!-- POPUP-->
-			<div class="modal-frame visible" data-modal="city-list">
+			<div class="modal-frame" data-modal="city-list">
 				<div class="modal-frame-content">
 					<h3 class="h3">Заказать спецтехнику</h3>
 					<form class="order-form">

@@ -2,6 +2,14 @@
 .promo.promo--animate{
 	height: auto;
 	padding-top: 0;
+	.container{z-index: 4;}
+	.city-selection{
+		position: absolute;
+		right: 0;
+		top: 20px;
+		z-index: 5;
+		p, p span, .city-selection__btn button {color:white;}
+	}
 }
 .promo-slider{
 	display: flex;
