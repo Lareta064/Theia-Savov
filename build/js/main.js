@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     /*Sliders in tabs */
-
     const tabBlockSwiper = document.querySelectorAll(".tabs-block.myswiper-container");
 
 				tabBlockSwiper.forEach((block) => {
@@ -132,60 +131,94 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       allowTouchMove: false,
     });
-  /*=====CUSTOM SELECT===== */
-	
-	if (window.NodeList && !NodeList.prototype.forEach) {
-		NodeList.prototype.forEach = function (callback, thisArg) {
-			thisArg = thisArg || window;
-			for (var i = 0; i < this.length; i++) {
-				callback.call(thisArg, this[i], i, this);
-			}
-		};
-	}
+    /*=====CUSTOM SELECT===== */
+    if (window.NodeList && !NodeList.prototype.forEach) {
+      NodeList.prototype.forEach = function (callback, thisArg) {
+        thisArg = thisArg || window;
+        for (var i = 0; i < this.length; i++) {
+          callback.call(thisArg, this[i], i, this);
+        }
+      };
+    }
 
-	document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
-		const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
-		const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
-		const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
-		const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden');
+    document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
+      const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
+      const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
+      const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
+      const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden');
 
-		// Клик по кнопке. Открыть/Закрыть select
-		dropDownBtn.addEventListener('click', function (e) {
-			dropDownList.classList.toggle('dropdown__list--visible');
-			this.classList.toggle('dropdown__button--active');
-		});
-			
+      // Клик по кнопке. Открыть/Закрыть select
+      dropDownBtn.addEventListener('click', function (e) {
+        dropDownList.classList.toggle('dropdown__list--visible');
+        this.classList.toggle('dropdown__button--active');
+      });
+        
 
-		// Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
-		dropDownListItems.forEach(function (listItem) {
-			listItem.addEventListener('click', function (e) {
-				e.stopPropagation();
-				dropDownBtn.innerText = this.innerText;
-				dropDownBtn.focus();
-				dropDownInput.value = this.dataset.value;
-				dropDownList.classList.remove('dropdown__list--visible');
-				dropDownBtn.classList.remove('dropdown__button--active');
-				
-			});
-		});
+      // Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
+      dropDownListItems.forEach(function (listItem) {
+        listItem.addEventListener('click', function (e) {
+          e.stopPropagation();
+          dropDownBtn.innerText = this.innerText;
+          dropDownBtn.focus();
+          dropDownInput.value = this.dataset.value;
+          dropDownList.classList.remove('dropdown__list--visible');
+          dropDownBtn.classList.remove('dropdown__button--active');
+          
+        });
+      });
 
-		// Клик снаружи дропдауна. Закрыть дропдаун
-		document.addEventListener('click', function (e) {
-			if (e.target !== dropDownBtn) {
-				dropDownBtn.classList.remove('dropdown__button--active');
-				dropDownList.classList.remove('dropdown__list--visible');
-			}
-		});
+      // Клик снаружи дропдауна. Закрыть дропдаун
+      document.addEventListener('click', function (e) {
+        if (e.target !== dropDownBtn) {
+          dropDownBtn.classList.remove('dropdown__button--active');
+          dropDownList.classList.remove('dropdown__list--visible');
+        }
+      });
 
-		// Нажатие на Tab или Escape. Закрыть дропдаун
-		document.addEventListener('keydown', function (e) {
-			if (e.key === 'Tab' || e.key === 'Escape') {
-				dropDownBtn.classList.remove('dropdown__button--active');
-				dropDownList.classList.remove('dropdown__list--visible');
-			}
-		});
-	});
-   
+      // Нажатие на Tab или Escape. Закрыть дропдаун
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Tab' || e.key === 'Escape') {
+          dropDownBtn.classList.remove('dropdown__button--active');
+          dropDownList.classList.remove('dropdown__list--visible');
+        }
+      });
+    });
+
+    /* =============== modal с атрибутом [data-modal] ===============*/ 
+    const modalOpen = document.querySelectorAll('[data-btn]');
+    const modalFrames = document.querySelectorAll('[data-modal]');
+    if( modalFrames.length > 0){
+    //  const modalFramesClose = document.querySelectorAll('[data-close]');
+
+    for(let item of modalOpen){
+      item.addEventListener('click', function(e){
+        for(let item of  modalFrames){
+          item.classList.remove('visible');
+          bodyEl.classList.remove('lock');
+        }
+        e.preventDefault();
+        const itemAttr = item.getAttribute('data-btn');
+
+        for(let frame of modalFrames){
+          const frameAttr =frame.getAttribute('data-modal');	
+          if(frameAttr == itemAttr){
+          frame.classList.add('visible');
+          bodyEl.classList.add('lock');
+          }
+        }
+      });
+    }
+    
+    /*=============== закрыть модалки по клику вне ===============*/
+      for(let frame of modalFrames){
+        frame.addEventListener('click', function(e){
+          if(e.target === e.currentTarget){
+            this.classList.remove(`visible`);
+            bodyEl.classList.remove('lock');
+          }
+        });
+      }
+    }
 });
 /*PROMO-SLIDER */
 document.addEventListener("DOMContentLoaded", () => {
@@ -272,8 +305,8 @@ document.addEventListener("DOMContentLoaded", () => {
   
     // Добавляем слушатель на изменение размеров экрана
     window.addEventListener("resize", handleResize);
-  });
-  document.addEventListener("DOMContentLoaded", () => {
+});
+document.addEventListener("DOMContentLoaded", () => {
     const tabBlocks = document.querySelectorAll(".tabs-block");
 
     tabBlocks.forEach((block) => {
@@ -476,7 +509,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const header = document.querySelector(".header"); // Замените .header на ваш класс шапки
+  const header = document.querySelector(".header"); // 
   let lastScrollTop = 0; // Переменная для хранения предыдущей позиции скролла
 
   window.addEventListener("scroll", () => {

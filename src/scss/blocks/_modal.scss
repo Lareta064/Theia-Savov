@@ -1,0 +1,22 @@
+@use "base/var" as *;
+.modal-frame{
+	position: fixed;
+    inset:0;
+    z-index: 99;
+    display: none;
+    overflow: hidden;
+    overflow-y: auto;
+    outline: 0;
+	backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.5);
+	&.visible{display: flex;background-color: rgba(0,0,0,.35);}
+}
+
+.modal-frame-content{
+	box-shadow: 0 0 22px 0 rgba(154, 152, 152, 0.1);
+	background-color: #fff;
+	width: 870px;
+	margin:  auto;
+	padding: 50px;
+	border-radius: 10px;
+}
