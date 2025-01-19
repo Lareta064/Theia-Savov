@@ -87,5 +87,38 @@
 		letter-spacing: -0.02em;
 		color: #222;font-weight: 800;
 	}
-	
+}
+.product-table{
+	table{
+		border-collapse: collapse;
+		width: 100%;
+		thead tr{background: #f2f2f2;}
+		tbody tr td{border-bottom: 1px solid #f2f2f2;}
+		th, td{
+			padding: 8px 10px;
+			text-align: center;
+			width: 20%;
+			color: #222;font-size: 16px; 
+		}
+		.table-name a{
+			font-size: 16px;
+			letter-spacing: -0.02em;
+			text-transform: capitalize;
+			color: #222;
+			transition: .3s; 
+			&:hover{
+				color: $accent;
+			}
+		}
+		.table-btn .btn{
+			height: 36px;
+			&:hover{
+				color: white;
+				background-color: $accent;
+			}
+		}
+		.counter{margin-inline: 0; display: inline-flex;}
+		
+		
+	}
 }

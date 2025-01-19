@@ -143,6 +143,46 @@ html(lang="ru")
 							.center-txt *Цена указана без учета доставки
 							button.btn-primary Оформить заказ
 							p.agree-txt.center-txt Согласен с обработкой моих персональных данных в соответствии с #[a(href="#!") политикой конфиденциальности]. 
+		
+					.product-table
+						table
+							thead
+								tr
+									th.table-name Наименование
+									th.table-price Цена за куб
+									th Розницу
+									th.table-count Количество
+									th.table-btn
+							tbody
+								//ROW
+								tr
+									td.table-name 
+										a(href="#!") намывной песок
+									td.table-price 320 руб/м3
+									td 320 руб/м3
+									td.table-count
+										.counter
+											button(type="button" disabled aria-label="Уменьшить количество").counter-minus -
+											input.counter-value(type="number" value="1000" min="0")
+											button(type="button" aria-label="Увеличить количество").counter-plus +
+									td.table-btn 
+										a(href="#!").btn Заказать
+								
+								//ROW
+								tr
+									td.table-name 
+										a(href="#!") Крупнозернистый (>2.5 мм)
+									td.table-price 320 руб/м3
+									td 320 руб/м3
+									td.table-count
+										.counter
+											button(type="button" disabled aria-label="Уменьшить количество").counter-minus -
+											input.counter-value(type="number" value="1000" min="0")
+											button(type="button" aria-label="Увеличить количество").counter-plus +
+									td.table-btn 
+										a(href="#!").btn Заказать
+									
+		
 		script.
 		
 			// Находим все элементы счетчика
