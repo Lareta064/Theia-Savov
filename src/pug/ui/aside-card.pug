@@ -56,17 +56,17 @@ html(lang="ru")
 						.detailed-card__footer.bx-sh
 							ul.dotted-list
 								li
-									p.dotted-list__name Наличие
-									span
-									p.dotted-list__val Много
+									p.list__name Наличие
+									span.line-bwn
+									p.list__val Много
 								li
-									p.dotted-list__name Доставка
-									span
-									p.dotted-list__val 24/7
+									p.list__name Доставка
+									span.line-bwn
+									p.list__val 24/7
 								li
-									p.dotted-list__name Способ получения
-									span
-									p.dotted-list__val Самовывоз, Доставка
+									p.list__name Способ получения
+									span.line-bwn
+									p.list__val Самовывоз, Доставка
 					//VARIANT #2
 					.detailed-card
 						.detailed-card__body.bx-sh
@@ -107,20 +107,42 @@ html(lang="ru")
 						.detailed-card__footer.bx-sh
 							ul.dotted-list
 								li
-									p.dotted-list__name Наличие
-									span
-									p.dotted-list__val Много
+									p.list__name Наличие
+									span.line-bwn
+									p.list__val Много
 								li
-									p.dotted-list__name Доставка
-									span
-									p.dotted-list__val 24/7
+									p.list__name Доставка
+									span.line-bwn
+									p.list__val 24/7
 								li
-									p.dotted-list__name Способ получения
-									span
-									p.dotted-list__val Самовывоз, Доставка
+									p.list__name Способ получения
+									span.line-bwn
+									p.list__val Самовывоз, Доставка
 
-								
-		
+
+					//ORDER CARD
+					.order-card.detailed-card.bx-sh
+						.detailed-card__body
+							.detailed-card-group
+								.order-num.txt-12 Заказ: 105703
+								.detailed-title.txt-24 Всего в корзине
+								ul.detailed-list
+									li
+										span.list__name Строй материалы 
+										p.list__val 130 000 руб
+									li
+										span.list__name Аренда
+										p.list__val 500 200 руб
+									li
+										span.list__name Оборудование 
+										p.list__val 30 200 руб
+							
+								.order-list-total
+									span Всего: 
+									p.amount 206 200 руб*
+							.center-txt *Цена указана без учета доставки
+							button.btn-primary Оформить заказ
+							p.agree-txt.center-txt Согласен с обработкой моих персональных данных в соответствии с #[a(href="#!") политикой конфиденциальности]. 
 		script.
 		
 			// Находим все элементы счетчика

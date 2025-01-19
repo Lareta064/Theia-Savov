@@ -198,21 +198,26 @@ h1, h2,h3{font-weight: 400;}
     border-radius: 10px;
 	background-color: #fff;
 }
-.dotted-list{
+.dotted-list, .detailed-list{
 	li{
 		display: flex;
 		column-gap:10px;
-		span{
+		justify-content: space-between;
+		span.line-bwn{
 			border-bottom: 1px solid  rgba(34, 34, 34, 0.1);
 			flex-grow: 1;
 		}
-		margin-bottom: 10px;
+		padding-top: 7px;padding-bottom: 7px;
 	}
-	.dotted-list__name,.dotted-list__val{
+	.list__name,.list__val{
 		font-size: 16px;
 		line-height: 1.19;
 		color: #222;
 		flex-shrink: 0;
 	}
-	.dotted-list__val{font-weight: 700;}
+	.list__val{font-weight: 700;}
+}
+
+.detailed-list li+li{
+	border-top: 1px solid #ccc;
 }
