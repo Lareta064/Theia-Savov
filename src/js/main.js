@@ -185,7 +185,47 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     });
+    //======= INPUT TYPE="FILE"=====
+    const fileInputs = document.querySelectorAll(".fileUploadInput");
 
+    if (fileInputs) {
+      fileInputs.forEach((input) => {
+        input.addEventListener("change", (event) => {
+          const label = input.closest(".fileUpload-label");
+          const labelTxt = label.querySelector(".fileUpload-name");
+          const stateIcon = label.querySelector(".form-input-clear");
+    
+          // Получаем файл и его размер
+          const file = input.files[0];
+          const fileName = file?.name || "Приложить карточку предприятия ";
+    
+          if (file) {
+            // Если файл соответствует требованиям
+            labelTxt.textContent = fileName; // Отображаем имя файла
+            stateIcon.classList.add("active"); // Добавляем активный класс
+          } else {
+            // Если файл удален или не выбран
+            clearFile(label, labelTxt, stateIcon, input);
+          }
+    
+          // Обработчик клика на иконке очистки
+          stateIcon.addEventListener("click", (e) => {
+            e.stopPropagation(); // Останавливаем всплытие
+            e.preventDefault(); // Отменяем действие по умолчанию (для <label>)
+            clearFile(label, labelTxt, stateIcon, input);
+          });
+        });
+      });
+    
+      // Функция очистки файла
+      function clearFile(label, labelTxt, stateIcon, input) {
+        input.value = ""; // Очищаем input
+        
+        stateIcon.classList.remove("active"); // Удаляем active у иконки
+        labelTxt.textContent = "Приложить карточку предприятия "; // Возвращаем текст по умолчанию
+      }
+    }
+    
     /* =============== modal с атрибутом [data-modal] ===============*/ 
     const modalOpen = document.querySelectorAll('[data-btn]');
     const modalFrames = document.querySelectorAll('[data-modal]');

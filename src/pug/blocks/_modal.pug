@@ -52,6 +52,14 @@
 				input(type="text" placeholder="Компания")
 			.form-item
 				textarea(placeholder="Примечания")
+			//==== инпут загрузки файла с компьютера====
+			.fileUpload-group
+				label.fileUpload-label
+					input.form-input.fileUploadInput(type="file")
+					span.form-input-add +
+					span.form-input-clear &ndash;
+					span.fileUpload-name Приложить карточку предприятия 
 
-
-			
+			//КНОПКА ОТПРАВИТЬ
+			button.btn.btn--accent(type="submit") Заказать
+			p.agree-txt.center-txt Согласен с обработкой моих персональных данных в соответствии с #[a(href="#!") политикой конфиденциальности].<br> Поля, отмеченные *, являются обязательными для заполнения

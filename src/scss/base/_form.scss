@@ -26,6 +26,7 @@ form.form{
 textarea{
 	padding: 12px;
 	height: 119px;
+	resize: none;
 }
 .form-item{
 	position: relative;
@@ -90,7 +91,7 @@ textarea{
 	padding-right: 30px;
 	border-radius: 7px;
 	cursor: pointer;
-	
+	z-index: 3;
 	  color: $text;
 	  letter-spacing: -0.02em;
 	  font-size: 16px;
@@ -123,9 +124,10 @@ textarea{
 	display: none;
 	position: absolute;
 	left: 0;
-	top: 43px;
+	top: 34px;
 	margin: 0;
 	padding: 0;
+	width: 100%;
 	list-style-type: none;
 	background: #FFFFFF;
 	height: 220px;
@@ -133,9 +135,7 @@ textarea{
 	overflow-y: auto;
 	scrollbar-width: thin;
 	scrollbar-color: #EAEAEA white;
-	
-	width: 100%;
-	z-index: 1;
+	z-index: 2;
 	&::-webkit-scrollbar{
 		width: 3px;
 		height: 20px;
@@ -165,22 +165,25 @@ textarea{
 	display: block;
 	border:1px solid #e9e9e9;
 	border-top:0;
-	border-radius: 0 0 7px 7px;
+	border-radius: 0 0 8px 8px;
   }
   
   .dropdown__list-item {
 	margin: 0;
 	padding: 0;
 	border-bottom: 0px;
-	padding: 6px 12px;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 125%;
+	letter-spacing: -0.02em;
+	color: #222;
 	line-height: 1.5;
 	transition: .3s; 
 	cursor: pointer;
-	width: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	font-size: 16px;
+	
+	padding-block:5px;
+	margin-inline:12px 20px;
+	border-bottom: 1px solid #e9e9e9;
 	&:hover{color: $accent;}
   }
   
