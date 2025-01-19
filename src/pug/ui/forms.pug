@@ -22,12 +22,77 @@ html(lang="ru")
 			.container-dashboard
 				h2 Форма
 				.container-dashboard__content
-					.form-row
+					
+					.select-date
 						.form-item
 							input#start-date(type='text' name="startDay" placeholder="c")
 						.form-item
 							input#end-date(type='text' name="endtDay" placeholder="по")
 					br
+					#selectProductForm
+						.add-product-group.flex
+							.form-dropdown.dropdown
+								button.dropdown__button(type="button") Выбрать
+								
+								.dropdown__list
+									ul
+										li.dropdown__list-item(data-value="Речной песок") Речной песок
+										li.dropdown__list-item(data-value="Пример заполнения 2") Пример заполнения 2
+										li.dropdown__list-item(data-value="Пример заполнения 3") Пример заполнения 3
+										li.dropdown__list-item(data-value="Пример заполнения 4") Пример заполнения 4
+							.select-date
+								.form-item
+									input#start-date(type='text' name="startDay" placeholder="c")
+								.form-item
+									input#end-date(type='text' name="endtDay" placeholder="по")
+						button#add-product.add-product-btn
+							span.button-icon
+								svg.svg-plus
+									use(href='../img/sprite.svg#svg-plus')
+							| Добавить еще товар
+					script.
+						 const newProductHTML = `
+							<div class="add-product-group flex">
+								<div class="form-dropdown dropdown">
+								<button class="dropdown__button" type="button">Выбрать</button>
+								<div class="dropdown__list">
+									<ul>
+									<li class="dropdown__list-item" data-value="Речной песок">Речной песок</li>
+									<li class="dropdown__list-item" data-value="Пример заполнения 2">Пример заполнения 2</li>
+									<li class="dropdown__list-item" data-value="Пример заполнения 3">Пример заполнения 3</li>
+									<li class="dropdown__list-item" data-value="Пример заполнения 4">Пример заполнения 4</li>
+									</ul>
+								</div>
+								</div>
+								<div class="select-date">
+								<div class="form-item">
+									<input id="start-date" type="text" name="startDay" placeholder="c">
+								</div>
+								<div class="form-item">
+									<input id="end-date" type="text" name="endDay" placeholder="по">
+								</div>
+								</div>
+							</div>
+							`;
+
+							// Находим кнопку
+							const addButton = document.getElementById("add-product");
+
+							// Добавляем обработчик клика
+							addButton.addEventListener("click", () => {
+							// Находим контейнер
+							const container = document.getElementById("selectProductForm");
+
+							// Создаем временный элемент
+							const newBlock = document.createElement("div");
+							newBlock.innerHTML = newProductHTML;
+
+							// Вставляем перед кнопкой
+							container.insertBefore(newBlock.firstChild, addButton);
+							});
+					br
+					
+					
 					.form-item
 						input(type="text" placeholder="Адрес *")
 					pre.
@@ -170,26 +235,7 @@ html(lang="ru")
 					});
 				});
 
-				/* Локализация datepicker */
-				$.datepicker.regional['ru'] = {
-					closeText: 'Закрыть',
-					prevText: 'Предыдущий',
-					nextText: 'Следующий',
-					currentText: 'Сегодня',
-					monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-					monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
-					dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
-					dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
-					dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
-					weekHeader: 'Не',
-					dateFormat: 'dd.mm.yy',
-					firstDay: 1,
-					isRTL: false,
-					showMonthAfterYear: false,
-					yearSuffix: ''
-				};
-				$.datepicker.setDefaults($.datepicker.regional['ru']);
-
+				
 
 			});
 		
