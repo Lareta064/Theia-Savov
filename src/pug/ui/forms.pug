@@ -25,9 +25,9 @@ html(lang="ru")
 					
 					.select-date
 						.form-item
-							input#start-date(type='text' name="startDay" placeholder="c")
+							input.start-date(type='text' name="startDay")
 						.form-item
-							input#end-date(type='text' name="endtDay" placeholder="по")
+							input.end-date(type='text' name="endtDay")
 					br
 					#selectProductForm
 						.add-product-group.flex
@@ -42,9 +42,9 @@ html(lang="ru")
 										li.dropdown__list-item(data-value="Пример заполнения 4") Пример заполнения 4
 							.select-date
 								.form-item
-									input#start-date(type='text' name="startDay" placeholder="c")
+									input.start-date(type='text' name="startDay" )
 								.form-item
-									input#end-date(type='text' name="endtDay" placeholder="по")
+									input.end-date(type='text' name="endtDay" )
 						button#add-product.add-product-btn
 							span.button-icon
 								svg.svg-plus
@@ -155,88 +155,82 @@ html(lang="ru")
 		script(src='https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js')
 		script.
 			
-			flatpickr("#start-date", {
-				mode: "range",
-				locale: flatpickr.l10ns.ru,
-				dateFormat: "d.m.Y",
-				minDate:'today',
-				onChange: function(selectedDates) {
+			document.querySelectorAll('.select-date').forEach((dateBlock) => {
+				// Находим внутри блока input для начальной и конечной дат
+				const startDateInput = dateBlock.querySelector('.start-date');
+				const endDateInput = dateBlock.querySelector('.end-date');
+
+				// Инициализируем Flatpickr для начальной даты
+				flatpickr(startDateInput, {
+					mode: "range", // Режим выбора диапазона
+					locale: flatpickr.l10ns.ru, // Русификация
+					dateFormat: "d.m.Y", // Формат даты
+					minDate: 'today', // Минимальная дата
+					onChange: function(selectedDates) {
 					if (selectedDates.length === 2) {
-						document.getElementById("start-date").value = flatpickr.formatDate(selectedDates[0], "d.m.Y");
-						document.getElementById("end-date").value = flatpickr.formatDate(selectedDates[1], "d.m.Y");
+						// Устанавливаем выбранные даты в соответствующие инпуты
+						startDateInput.value = flatpickr.formatDate(selectedDates[0], "d.m.Y");
+						endDateInput.value = flatpickr.formatDate(selectedDates[1], "d.m.Y");
+					} else if (selectedDates.length === 1) {
+						// Если выбрана только одна дата, очищаем конечную дату
+						startDateInput.value = flatpickr.formatDate(selectedDates[0], "d.m.Y");
+						endDateInput.value = "";
 					}
-				}
+					}
+				});
 			});
 	
 		script.
-			//- document.addEventListener("DOMContentLoaded", () => {
-			//- 	flatpickr("#start-date", {
-			//- 		mode: "range",
-			//- 		locale: flatpickr.l10ns.ru,
-			//- 		dateFormat: "d.m.Y",
-			//- 		minDate:'today',
-			//- 		onChange: function(selectedDates) {
-			//- 			if (selectedDates.length === 2) {
-			//- 				document.getElementById("start-date").value = flatpickr.formatDate(selectedDates[0], "d.m.Y");
-			//- 				document.getElementById("end-date").value = flatpickr.formatDate(selectedDates[1], "d.m.Y");
-			//- 			}
-			//- 		}
-			//- 	});
-				/*=====CUSTOM SELECT===== */
-				if (window.NodeList && !NodeList.prototype.forEach) {
+			
+			/*=====CUSTOM SELECT===== */
+			if (window.NodeList && !NodeList.prototype.forEach) {
 				NodeList.prototype.forEach = function (callback, thisArg) {
 					thisArg = thisArg || window;
 					for (var i = 0; i < this.length; i++) {
 					callback.call(thisArg, this[i], i, this);
 					}
 				};
-				}
+			}
 
-				document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
-					const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
-					const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
-					const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
-					const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden');
+			document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
+				const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
+				const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
+				const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
+				const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden');
 
-					// Клик по кнопке. Открыть/Закрыть select
-					dropDownBtn.addEventListener('click', function (e) {
-						dropDownList.classList.toggle('dropdown__list--visible');
-						this.classList.toggle('dropdown__button--active');
-					});
-						
+				// Клик по кнопке. Открыть/Закрыть select
+				dropDownBtn.addEventListener('click', function (e) {
+					dropDownList.classList.toggle('dropdown__list--visible');
+					this.classList.toggle('dropdown__button--active');
+				});
+					
 
-					// Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
-					dropDownListItems.forEach(function (listItem) {
-						listItem.addEventListener('click', function (e) {
-						e.stopPropagation();
-						dropDownBtn.innerText = this.innerText;
-						dropDownBtn.focus();
-						dropDownInput.value = this.dataset.value;
-						dropDownList.classList.remove('dropdown__list--visible');
-						dropDownBtn.classList.remove('dropdown__button--active');
-						
-						});
-					});
-
-					// Клик снаружи дропдауна. Закрыть дропдаун
-					document.addEventListener('click', function (e) {
-						if (e.target !== dropDownBtn) {
-						dropDownBtn.classList.remove('dropdown__button--active');
-						dropDownList.classList.remove('dropdown__list--visible');
-						}
-					});
-
-					// Нажатие на Tab или Escape. Закрыть дропдаун
-					document.addEventListener('keydown', function (e) {
-						if (e.key === 'Tab' || e.key === 'Escape') {
-						dropDownBtn.classList.remove('dropdown__button--active');
-						dropDownList.classList.remove('dropdown__list--visible');
-						}
+				// Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
+				dropDownListItems.forEach(function (listItem) {
+					listItem.addEventListener('click', function (e) {
+					e.stopPropagation();
+					dropDownBtn.innerText = this.innerText;
+					dropDownBtn.focus();
+					dropDownInput.value = this.dataset.value;
+					dropDownList.classList.remove('dropdown__list--visible');
+					dropDownBtn.classList.remove('dropdown__button--active');
+					
 					});
 				});
 
-				
+				// Клик снаружи дропдауна. Закрыть дропдаун
+				document.addEventListener('click', function (e) {
+					if (e.target !== dropDownBtn) {
+					dropDownBtn.classList.remove('dropdown__button--active');
+					dropDownList.classList.remove('dropdown__list--visible');
+					}
+				});
 
+				// Нажатие на Tab или Escape. Закрыть дропдаун
+				document.addEventListener('keydown', function (e) {
+					if (e.key === 'Tab' || e.key === 'Escape') {
+					dropDownBtn.classList.remove('dropdown__button--active');
+					dropDownList.classList.remove('dropdown__list--visible');
+					}
+				});
 			});
-		
-			

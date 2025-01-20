@@ -6,6 +6,7 @@
 @use "base/_buttons";
 
 @use "base/_form";
+@use "base/_order-form";
 @use "blocks/_datapicker";
 
 @use "blocks/_search-form";
@@ -38,10 +39,11 @@
 
 @use "blocks/_post-card";
 
+
 @use "sections/_brand-slider.scss";
 @use "sections/_our-benefits.scss";
 @use "sections/_contacts-form-dark";
-
+@use "blocks/_product-table";
 
 
 @use "sections/_footer";

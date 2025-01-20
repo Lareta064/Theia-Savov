@@ -10,6 +10,8 @@ html(lang="ru")
 
 		//====убрать синий цвет у ссылок в сафари ========
 		meta(name="format-detection" content="telephone=no")
+		
+		link(rel='stylesheet' href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css")
 		link(rel="stylesheet", href="../css/main.css")
 		title UI-KIT
 
@@ -42,8 +44,8 @@ html(lang="ru")
 							.detailed-card-group
 								.counter
 									button(type="button" disabled aria-label="Уменьшить количество").counter-minus -
-									input.counter-value(type="number" value="1000" min="0")
-									button(type="button" aria-label="Увеличить количество").counter-plus +
+									input.counter-value(type="number" value="1000" min="0" )
+									button(type="button" aria-label="Увеличить количество" ).counter-plus +
 				
 								.detailed-total
 									span.txt-12 Стоимость
@@ -85,10 +87,10 @@ html(lang="ru")
 							.detailed-card-group
 								.select-date.select-date--light
 									.form-item.select-date-start
-										input#start-date(type='text' name="startDay" value="10.02.2025")
-									span &ndash;
+										input.start-date(type='text' name="startDay" value="22.01.2025")
+									span -
 									.form-item.select-date-end
-										input#end-date(type='text' name="endtDay" value="12.02.2025")
+										input.end-date(type='text' name="endtDay" value="26.01.2025")
 								
 								.counter.counter-small
 									button(type="button" disabled aria-label="Уменьшить количество").counter-minus -
@@ -144,45 +146,36 @@ html(lang="ru")
 							button.btn-primary Оформить заказ
 							p.agree-txt.center-txt Согласен с обработкой моих персональных данных в соответствии с #[a(href="#!") политикой конфиденциальности]. 
 		
-					.product-table
-						table
-							thead
-								tr
-									th.table-name Наименование
-									th.table-price Цена за куб
-									th Розницу
-									th.table-count Количество
-									th.table-btn
-							tbody
-								//ROW
-								tr
-									td.table-name 
-										a(href="#!") намывной песок
-									td.table-price 320 руб/м3
-									td 320 руб/м3
-									td.table-count
-										.counter
-											button(type="button" disabled aria-label="Уменьшить количество").counter-minus -
-											input.counter-value(type="number" value="1000" min="0")
-											button(type="button" aria-label="Увеличить количество").counter-plus +
-									td.table-btn 
-										a(href="#!").btn Заказать
-								
-								//ROW
-								tr
-									td.table-name 
-										a(href="#!") Крупнозернистый (>2.5 мм)
-									td.table-price 320 руб/м3
-									td 320 руб/м3
-									td.table-count
-										.counter
-											button(type="button" disabled aria-label="Уменьшить количество").counter-minus -
-											input.counter-value(type="number" value="1000" min="0")
-											button(type="button" aria-label="Увеличить количество").counter-plus +
-									td.table-btn 
-										a(href="#!").btn Заказать
+
 									
-		
+		script(src='https://cdn.jsdelivr.net/npm/flatpickr')
+		script(src='https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js')
+		script.
+			
+			document.querySelectorAll('.select-date').forEach((dateBlock) => {
+				// Находим внутри блока input для начальной и конечной дат
+				const startDateInput = dateBlock.querySelector('.start-date');
+				const endDateInput = dateBlock.querySelector('.end-date');
+
+				// Инициализируем Flatpickr для начальной даты
+				flatpickr(startDateInput, {
+					mode: "range", // Режим выбора диапазона
+					locale: flatpickr.l10ns.ru, // Русификация
+					dateFormat: "d.m.Y", // Формат даты
+					minDate: 'today', // Минимальная дата
+					onChange: function(selectedDates) {
+					if (selectedDates.length === 2) {
+						// Устанавливаем выбранные даты в соответствующие инпуты
+						startDateInput.value = flatpickr.formatDate(selectedDates[0], "d.m.Y");
+						endDateInput.value = flatpickr.formatDate(selectedDates[1], "d.m.Y");
+					} else if (selectedDates.length === 1) {
+						// Если выбрана только одна дата, очищаем конечную дату
+						startDateInput.value = flatpickr.formatDate(selectedDates[0], "d.m.Y");
+						endDateInput.value = "";
+					}
+					}
+				});
+			});
 		script.
 		
 			// Находим все элементы счетчика

@@ -8,13 +8,8 @@
 }
 .flatpickr-weekdays,.flatpickr-months{padding: 14px 14px 7px;}
 .flatpickr-weekdays{padding-top: 7px;}
-.dayContainer{
+.dayContainer{padding: 7px 14px 14px 12px; }
 
-	padding: 14px;
-	
-	// box-sizing:border-box;
-	
-}
 .flatpickr-current-month .flatpickr-monthDropdown-months, span.flatpickr-weekday {
 	border: 0;
 	background-color: #fff;
@@ -29,12 +24,11 @@
 	&:hover{
 		background-color: $accent!important;
 		border-radius: 0;
-		// border: 0;
 		color: white!important;
 	}
 }
 .flatpickr-day.flatpickr-disabled, .flatpickr-day.flatpickr-disabled:hover, .flatpickr-day.prevMonthDay, .flatpickr-day.nextMonthDay, .flatpickr-day.notAllowed, .flatpickr-day.notAllowed.prevMonthDay, .flatpickr-day.notAllowed.nextMonthDay {
-    color: rgba(57, 57, 57, 0.5);
+    color: rgba(57, 57, 57, 0.8);
 	pointer-events: none;
 }
 .flatpickr-day {
@@ -71,19 +65,20 @@
 }
 .flatpickr-months .flatpickr-prev-month, .flatpickr-months .flatpickr-next-month{
 	padding: 0;
-	width: 20px;
-	height: 20px;
+	width: 24px!important;
+	height: 24px!important;
 	border-radius: 50%;
+	flex-shrink: 0;
 	background-color: $accent;
 	fill: white;
 	color: white;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	top:24px;
+	top:16px!important;
 }
-.flatpickr-months .flatpickr-prev-month.flatpickr-prev-month{left:15px}
-.flatpickr-months .flatpickr-next-month.flatpickr-next-month{right:15px}
+.flatpickr-months .flatpickr-prev-month{left:15px!important;}
+.flatpickr-months .flatpickr-next-month{right:15px!important;}
 
 .flatpickr-months .flatpickr-prev-month svg, .flatpickr-months .flatpickr-next-month svg{
 	width: 13px;
@@ -96,7 +91,7 @@
 .flatpickr-month .numInputWrapper {
     display: none; /* Скрыть год */
 }
-
+.flatpickr-months .flatpickr-prev-month:hover svg, .flatpickr-months .flatpickr-next-month:hover svg{fill: white;}
 .select-date{
 	display: flex;
 	column-gap: 13px;
@@ -159,101 +154,22 @@
 	background-color: #f6f5f5;
 }
 .select-date.select-date--light{
-	 align-items: center;
-	 padding-left: 14px;
+	 align-items: baseline;
+	 padding-left: 0;
+	 
 	 column-gap:0px;
 	.form-item.select-date-end:after{display: none;}
 	.form-item.select-date-start:after{
 		right:auto;
-		left:-14px;
+		left:0;
 	}
+	
 	.form-item input{
 		background: white;
        border-color: white;
-	   width: 95px;
+	   width: 93px;
 	   padding: 5px;
 	   padding-right: 5px;
-	}
-	
-}
-/*//datapicker*/
-.order-form{
-	display: flex;
-	flex-direction: column;
-	row-gap:15px;
-	&>*{width: 100%;}
-	textarea{height: 44px;}
-	input{font-weight: 600;
-	&::placeholder{font-weight: 400;}}
-	.btn{
-		width: fit-content;
-		margin:0 auto;
-		margin-top: 30px!important;
-	}
-}
-.fileUpload-group{
-	display: flex;
-	column-gap: 10px;
-	align-items: center;
-	.fileUpload-label{
-		height: 48px;
-		padding: 12px;
-		display: flex;
-		position: relative;
-		column-gap:12px;
-		align-items: center;
-		width: fit-content;
-		border: 1px solid #e9e9e9;
-		border-radius: 7px;
-	}
-	.fileUploadInput{
-		border:0;
-		background-color: transparent;
-		height: auto;
-		width: 0.01em;
-		height: 0.01em;
-		position: absolute;
-		top: 0;
-		left: 0;
-		opacity: 0;
-	}
-	
-	.fileUpload-name{
-		font-weight: 600;
-		overflow: hidden;
-		white-space: nowrap;
-		position: relative;
-		font-size: 16px;
-		line-height: 1.25;
-		letter-spacing: -0.02em;
-		color: rgba(34, 34, 34, .8);
-	}
-	.form-input-add, .form-input-clear{
-		width: 24px;
-		height: 24px;
-		flex-shrink: 0;
-		border-radius: 50%;
-		border: 1px solid #e9e9e9;
-		text-align: center;
-		line-height: 22px;
-		background-color: #fff;
-		cursor:pointer;
-		color: #c0c0c0;
-		font-size: 20px;
-		transition: .3s;
-		padding-left: 1px;
-		&:hover{
-			color: #222;
-		}
-	}
-	.form-input-clear{
-		position: absolute;
-		top: 12px;
-		bottom: 12px;
-		left: 12px;
-		line-height: .9;
-		z-index: -1;
-		transition: .3s; 
-		&.active{z-index: 2;}
+	   &.start-date{padding-left: 7px; padding-right: 3px;  width: 108px; padding-left: 21px;}
 	}
 }
