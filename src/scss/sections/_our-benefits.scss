@@ -17,6 +17,14 @@
 		height: 30px;
 		flex-shrink: 0;
 	}
+	@media (max-width: 1439px) {
+		padding: 25px 16px;
+	}
+	@media (max-width: 1279px) {
+		padding: 25px 10px;
+	}
+	.flex-center{width: 20px;
+	height: 20px;}
 }
 .benefit-item:nth-child(3n +2){
 	position: relative;

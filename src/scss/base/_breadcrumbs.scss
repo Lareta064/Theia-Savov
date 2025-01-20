@@ -15,11 +15,17 @@
 			padding-right: 0;
 			cursor: default;
 			// &:hover{color: #838494!important;}
+
 		}
 	 .svg-logo{
 		width: 68px;
 		height: 10px;
 		color: inherit!important;}
+		@media (max-width: 1279px) {
+		font-size: 12px;
+		.svg-logo{width: 48px;}
+		}
+		
 	}
 	
 	a+a{

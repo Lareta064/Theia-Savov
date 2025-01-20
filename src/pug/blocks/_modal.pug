@@ -1,5 +1,5 @@
 // POPUP
-.modal-frame(data-modal="city-list")
+.modal-frame(data-modal="calc-order")
 	.modal-frame-content
 		h3.h3 Заказать спецтехнику
 		form.order-form
@@ -63,3 +63,17 @@
 			//КНОПКА ОТПРАВИТЬ
 			button.btn.btn--accent(type="submit") Заказать
 			p.agree-txt.center-txt Согласен с обработкой моих персональных данных в соответствии с #[a(href="#!") политикой конфиденциальности].<br> Поля, отмеченные *, являются обязательными для заполнения
+
+
+//ВЫБОР ГОРОДА
+//- .modal-frame.visible(data-modal="select-city")
+//- 	.modal-frame-content
+//- 		h3.h3 Ваш регион
+//- 		.form-item.search-form-group
+//- 			input(type="search" placeholder="Найдите свой регион")
+//- 			button.btn.search-btn(type="submit")
+//- 				svg.svg-search
+//- 					use(href='../img/sprite.svg#svg-search')
+//- 		ul.city-list
+//- 			li(data-value="Москва")
+//- 			li(data-value="Санкт-Петербург")

@@ -67,6 +67,12 @@ h1, h2,h3{font-weight: 400;}
 .accent-txt{
 	color: $accent!important;
 }
+.preview-text{
+	font-size: 20px;
+	@media (max-width: 1279px) {
+		font-size: 16px;
+	}
+}
 .white-txt{color: white;}
 .bold-txt{font-weight: 700;}
 .center-txt{text-align: center;}

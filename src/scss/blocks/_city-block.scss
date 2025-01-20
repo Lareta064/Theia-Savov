@@ -1,6 +1,6 @@
 .city-selection{
 	column-gap:24px;
-
+	white-space: nowrap;
 	#city-name{margin-left: 8px;}
 
 	p{
@@ -21,7 +21,14 @@
 			height: 39px;
 			transition: .3s; 
 			&:hover{opacity: .7;}
+			@media (max-width: 1279px) {
+				width: 50px;
+			}
 		}
+	}
+	@media (max-width: 1279px) {
+		column-gap:16px;
+		p{font-size: 14px;}
 	}
 }
 

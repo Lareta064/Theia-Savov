@@ -10,14 +10,20 @@
 			padding: 8px 10px;
 			text-align: center;
 			width: 20%;
-			color: #222;font-size: 16px; 
+			color: #222;font-size: 16px;
+			@media (max-width: 1279px) {
+				font-size: 12px;
+			}
 		}
 		.table-name{
 			padding: 0;
+			@media (max-width: 1279px) {
+				font-size: 14px;
+			}
 		}
 		.label-hide-chebx{padding: 8px 10px;}
 		.table-name span{
-			font-size: 16px;
+			
 			letter-spacing: -0.02em;
 			text-transform: capitalize;
 			color: #222;
@@ -32,7 +38,13 @@
 				background-color: $accent;
 			}
 		}
-		.counter{margin-inline: 0; display: inline-flex;}
+		.counter{
+			margin-inline: 0; display: inline-flex;
+			@media (max-width: 1279px) {
+				 button{width: 36px;}
+			}
+			input.counter-value {font-size: 16px; }
+		}
 		
 		
 	}

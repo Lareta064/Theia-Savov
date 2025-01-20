@@ -224,6 +224,9 @@ section + .dark-bg{margin-top: 45px;}
 	.aside{
 		width: 410px;
 		flex-shrink: 0;
+		@media (max-width: 1279px) {
+			width: 380px;
+		}
 	}
 }
 
@@ -234,6 +237,9 @@ section + .dark-bg{margin-top: 45px;}
 	row-gap:40px;
 	width: calc(100% - 430px);
 	&>*{width: 100%;}
+	@media (max-width: 1279px) {
+		width: calc(100% - 400px);
+	}
 }
 
 .header-block{
