@@ -55,10 +55,11 @@ h1, h2,h3{font-weight: 400;}
 .txt-20 {
 	font-size: 20px;
 }
-.txt-24{
+.txt-24, .title-24{
 	font-size: 24px;
 	letter-spacing: -0.02em;
 }
+.title-24{font-family: $fs; margin-bottom: 20px;}
 .txt-12{
 	font-weight: 400;
 	font-size: 12px;

@@ -38,7 +38,7 @@
 	font-weight: 600;
 	font-size: 16px;
 	color: #222;
-	&:hover{background-color: #fff;}
+	&:hover{color: #fff;background-color: $accent; border: 1px solid $accent;}
 }
 .btn.btn--accent{
 	color: $accent;

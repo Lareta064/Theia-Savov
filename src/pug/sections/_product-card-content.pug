@@ -210,108 +210,112 @@ section.product-details
 
 			//DESCRIP TEXT
 			.information-article
-				h2.h3 О компании 
+				h2.title-24 О компании
 				p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно-монтажных работ в промышленном и гражданском строительстве 
 				p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно-монтажных работ в промышленном и гражданском строительстве 
 			//DESCRIP TEXT
 			.information-article
-				h2.h3 Как происходит доставка 
+				h2.title-24 Как происходит доставка 
 				p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно-монтажных работ в промышленном и гражданском строительстве 
 				p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно-монтажных работ в промышленном и гражданском строительстве 
 		
 			//REVIEW SWIPER
 			.review
 				.header-group
-					h2.h3 Отзывы
+					h2.title-24 Отзывы
 					a(href="#!").flex-link Смотреть подробнее
 						span.arrow-right
 		
 				include _review-swiper
 			
 			//CARDS SLIDER
-			//- .article-slider
-			//- 	.header-group
-			//- 		p.txt-24 Товары которые вам могут понравиться 
-			//- 		a(href="#!").flex-link Показать больше
-			//- 			span.arrow-right
+			.article-slider
+				.header-group
+					p.title-24 Товары которые вам могут понравиться 
+					a(href="#!").flex-link Показать больше
+						span.arrow-right
 				
-			//- 	.mySwiper.swiper
-			//- 		.swiper-wrapper
-			//- 			.swiper-slide
-			//- 				+product-card-ui(5,'ЩПС С2 фракции', '0-20 мм', 2300)
-			//- 			.swiper-slide
-			//- 				+product-card-ui(6,'ЩПС С2 фракции', '0-20 мм', 2300)
-			//- 			.swiper-slide
-			//- 				+product-card-ui(7,'ЩПС С2 фракции', '0-20 мм', 2300)
-			//- 			.swiper-slide
-			//- 				+product-card-ui(8,'ЩПС С2 фракции', '0-20 мм', 2300)
-			//- 			.swiper-slide
-			//- 				+product-card-ui(5,'ЩПС С2 фракции', '0-20 мм', 2300)
-			//- 			.swiper-slide
-			//- 				+product-card-ui(6,'ЩПС С2 фракции', '0-20 мм', 2300)
-			//- 			.swiper-slide
-			//- 				+product-card-ui(7,'ЩПС С2 фракции', '0-20 мм', 2300)
-			//- 			.swiper-slide
-			//- 				+product-card-ui(8,'ЩПС С2 фракции', '0-20 мм', 2300)
+				.mySwiper.swiper
+				
+					.swiper-wrapper
+						.swiper-slide
+							+product-card-ui(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+						.swiper-slide
+							+product-card-ui(6,'ЩПС С2 фракции', '0-20 мм', 2300)
+						.swiper-slide
+							+product-card-ui(7,'ЩПС С2 фракции', '0-20 мм', 2300)
+						.swiper-slide
+							+product-card-ui(8,'ЩПС С2 фракции', '0-20 мм', 2300)
+						.swiper-slide
+							+product-card-ui(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+						.swiper-slide
+							+product-card-ui(6,'ЩПС С2 фракции', '0-20 мм', 2300)
+						.swiper-slide
+							+product-card-ui(7,'ЩПС С2 фракции', '0-20 мм', 2300)
+						.swiper-slide
+							+product-card-ui(8,'ЩПС С2 фракции', '0-20 мм', 2300)
 					
-			//- 		.mySwiper-pagination
+					.mySwiper-pagination
 
 			//DISCONT SLIDER
-			//- .discont
-			//- 	h2.txt-24 Акции
-			//- 	.discont-slider.swiper
-			//- 		.swiper-wrapper
-			//- 			.swiper-slide
-			//- 				.discont-card
-			//- 					.discont-card__body(style="background-image:url(../img/sale-card1.webp)")
-			//- 						.txt-20 ЭКСКАВАТОР ФРОНТАЛЬНЫЙ
-			//- 						p при заказе в паре с самосвалом
-			//- 						.discont-card__price 
-			//- 							span 2950 руб/ч
+			.discont
+				.header-group
+					h2.title-24 Акции
+					a(href="#!").flex-link Показать больше
+						span.arrow-right
+				.discont-slider.swiper
+					.swiper-wrapper
+						.swiper-slide
+							.discont-card
+								.discont-card__body(style="background-image:url(../img/sale-card1.webp)")
+									.txt-20 ЭКСКАВАТОР ФРОНТАЛЬНЫЙ
+									p при заказе в паре с самосвалом
+									.discont-card__price 
+										span 2950 руб/ч
 								
-			//- 					button.btn-grey оставить заявку
-			//- 			.swiper-slide
-			//- 				.discont-card
-			//- 					.discont-card__body(style="background-image:url(../img/sale-card2.webp)")
-			//- 						.txt-20 ДОРОЖНЫЙ ГРУНТОВОЙ КАТОК ВИБРАЦИОННЫЙ 12-14 ТОНН
-			//- 						p только этой осенью
-			//- 						.discont-card__price 
-			//- 							span 2950 руб/ч 
-			//- 							span.old-price  вместо 3300 руб/ч
+								button.btn-grey оставить заявку
+						.swiper-slide
+							.discont-card
+								.discont-card__body(style="background-image:url(../img/sale-card2.webp)")
+									.txt-20 ДОРОЖНЫЙ ГРУНТОВОЙ КАТОК ВИБРАЦИОННЫЙ 12-14 ТОНН
+									p только этой осенью
+									.discont-card__price 
+										span 2950 руб/ч 
+										span.old-price  вместо 3300 руб/ч
 								
-			//- 					button.btn-grey оставить заявку
+								button.btn-grey оставить заявку
 						
-			//- 			.swiper-slide
-			//- 				.discont-card
-			//- 					.discont-card__body(style="background-image:url(../img/sale-card1.webp)")
-			//- 						.txt-20 ЭКСКАВАТОР ФРОНТАЛЬНЫЙ
-			//- 						p при заказе в паре с самосвалом
-			//- 						.discont-card__price 
-			//- 							span 2950 руб/ч
+						.swiper-slide
+							.discont-card
+								.discont-card__body(style="background-image:url(../img/sale-card1.webp)")
+									.txt-20 ЭКСКАВАТОР ФРОНТАЛЬНЫЙ
+									p при заказе в паре с самосвалом
+									.discont-card__price 
+										span 2950 руб/ч
 								
-			//- 					button.btn-grey оставить заявку
+								button.btn-grey оставить заявку
 						
-			//- 			.swiper-slide
-			//- 				.discont-card
-			//- 					.discont-card__body(style="background-image:url(../img/sale-card1.webp)")
-			//- 						.txt-20 ЭКСКАВАТОР ФРОНТАЛЬНЫЙ
-			//- 						p при заказе в паре с самосвалом
-			//- 						.discont-card__price 
-			//- 							span 2950 руб/ч
+						.swiper-slide
+							.discont-card
+								.discont-card__body(style="background-image:url(../img/sale-card1.webp)")
+									.txt-20 ЭКСКАВАТОР ФРОНТАЛЬНЫЙ
+									p при заказе в паре с самосвалом
+									.discont-card__price 
+										span 2950 руб/ч
 								
-			//- 					button.btn-grey оставить заявку
-			//- 			.swiper-slide
-			//- 				.discont-card
-			//- 					.discont-card__body(style="background-image:url(../img/sale-card2.webp)")
-			//- 						.txt-20 ДОРОЖНЫЙ ГРУНТОВОЙ КАТОК ВИБРАЦИОННЫЙ 12-14 ТОНН
-			//- 						p только этой осенью
-			//- 						.discont-card__price 
-			//- 							span 2950 руб/ч 
-			//- 							span.old-price  вместо 3300 руб/ч
+								button.btn-grey оставить заявку
+						.swiper-slide
+							.discont-card
+								.discont-card__body(style="background-image:url(../img/sale-card2.webp)")
+									.txt-20 ДОРОЖНЫЙ ГРУНТОВОЙ КАТОК ВИБРАЦИОННЫЙ 12-14 ТОНН
+									p только этой осенью
+									.discont-card__price 
+										span 2950 руб/ч 
+										span.old-price  вместо 3300 руб/ч
 								
-			//- 					button.btn-grey оставить заявку
+								button.btn-grey оставить заявку
 					
-			//- 		.mySwiper-pagination
+					.mySwiper-pagination
 		
 		
 		//SIDEBAR
@@ -320,7 +324,7 @@ section.product-details
 				.detailed-card__body.bx-sh
 					.detailed-card-group
 						span.detailed-art.txt-12 Код: 105703
-						.detailed-title.txt-24 Речной мытый песок
+						.detailed-title.title-24 Речной мытый песок
 						.rating-block.flex
 							.rating-stars
 							span.txt-12 39 отзывов
