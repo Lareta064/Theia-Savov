@@ -61,11 +61,47 @@ html(lang="ru")
 								use(href='../img/sprite.svg#svg-arrow-right')
 				
 				hr
-				.header-group
-					h2.h3.white-txt Наши услуги 
-					a(href="#!").btn-outline Посмотреть больше услуг
+				div(style="background-color: #222; padding: 40px;")
+					.header-group
+						h2.h3.white-txt Наши услуги 
+						a(href="#!").btn-outline Посмотреть больше услуг
 				pre.
 					.header-group
 						h2.h3.white-txt Наши услуги 
 						a(href="#!").btn-outline Посмотреть больше услуг
-
+				hr
+				.rating-block
+					.rating-block.flex
+						.rating-stars
+						span.txt-12 39 отзывов
+				pre.
+					.rating-block
+						.rating-block.flex
+							.rating-stars
+							span.txt-12 39 отзывов
+				
+				br
+				.rating-stars
+				pre.
+					.rating-stars
+				hr
+				
+				.counter
+					button(type="button" disabled aria-label="Уменьшить количество").counter-minus -
+					input.counter-value(type="number" value="1000" min="0" )
+					button(type="button" aria-label="Увеличить количество" ).counter-plus +
+				pre.
+					.counter
+						button(type="button" disabled aria-label="Уменьшить количество").counter-minus -
+						input.counter-value(type="number" value="1000" min="0" )
+						button(type="button" aria-label="Увеличить количество" ).counter-plus +
+				hr
+				.price-block
+					.price-block__item
+						p от от 870 руб./м3
+						span.txt-12 за шт
+				pre.
+					.price-block
+						.price-block__item
+							p от от 870 руб./м3
+							span.txt-12 за шт

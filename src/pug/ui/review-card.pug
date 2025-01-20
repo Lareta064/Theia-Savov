@@ -1,0 +1,42 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		
+		link(rel='stylesheet' href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Карточка отзыва
+				.container-dashboard__content
+					.flex
+						.review-card
+							.rating-stars
+							.txt-24 ООО «СпецТех»
+							.txt-12 30 января 2024
+							p  ООО «СпецТех» выражает благодарность компании партнёру по бизнесу ООО «ТГС». Мы искренне ценим установившиеся между нашими организациями дружественные отношения, которые позволяют нам...
+						.review-card
+							.rating-stars
+							.txt-24 ООО «СпецТех»
+							.txt-12 30 января 2024
+							p  ООО «СпецТех» выражает благодарность компании партнёру по бизнесу ООО «ТГС». Мы искренне ценим установившиеся между нашими организациями дружественные отношения, которые позволяют нам...
+						.review-card
+							.rating-stars
+							.txt-24 ООО «СпецТех»
+							.txt-12 30 января 2024
+							p  ООО «СпецТех» выражает благодарность компании партнёру по бизнесу ООО «ТГС». Мы искренне ценим установившиеся между нашими организациями дружественные отношения, которые позволяют нам...
+					

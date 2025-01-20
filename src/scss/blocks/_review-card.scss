@@ -1,0 +1,17 @@
+@use "../base/var" as *;
+.review-card{
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 129%;
+	color: #222;
+	&>*+*{margin-top: 10px;}
+	.txt-24{font-family: $fs;}
+	p{
+		padding-top: 12px;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 5;
+		overflow: hidden;
+	}
+
+}
