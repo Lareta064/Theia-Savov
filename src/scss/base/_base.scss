@@ -225,3 +225,11 @@ section + .dark-bg{margin-top: 45px;}
 		flex-shrink: 0;
 	}
 }
+.content-grid__frame.gap-40{
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap:40px;
+}
+.header-block{
+	.h1,.h2,.h3{margin-bottom: 20px!important;}
+}

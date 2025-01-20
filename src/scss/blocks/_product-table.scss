@@ -12,16 +12,19 @@
 			width: 20%;
 			color: #222;font-size: 16px; 
 		}
-		.table-name a{
+		.table-name{
+			padding: 0;
+		}
+		.label-hide-chebx{padding: 8px 10px;}
+		.table-name span{
 			font-size: 16px;
 			letter-spacing: -0.02em;
 			text-transform: capitalize;
 			color: #222;
 			transition: .3s; 
-			&:hover{
-				color: $accent;
-			}
+			
 		}
+		.table-name:hover span,.hide-chebx:checked ~ span {color: $accent;}
 		.table-btn .btn{
 			height: 36px;
 			&:hover{

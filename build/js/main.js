@@ -131,6 +131,18 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       allowTouchMove: false,
     });
+    /*.review-swiper*/
+    const reviewSwiper = new Swiper('.review-swiper', {
+      slidesPerView: 3,
+      speed:1000,
+      spaceBetween:20,
+      pagination: {
+        el:".mySwiper-pagination",
+        clickable: true,
+      },
+
+    });
+    
     /*=====CUSTOM SELECT===== */
     if (window.NodeList && !NodeList.prototype.forEach) {
       NodeList.prototype.forEach = function (callback, thisArg) {
