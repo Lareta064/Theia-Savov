@@ -206,6 +206,7 @@ section + .dark-bg{margin-top: 45px;}
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap:20px;
+	
 }
 .three-columns{
 	&>*{grid-column: span 4;}

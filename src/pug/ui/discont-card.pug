@@ -1,0 +1,43 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Карточка Блога
+				.container-dashboard__content
+					.two-columns
+						.discont-card
+							.discont-card__body(style="background-image:url(../img/sale-card1.webp)")
+								.txt-20 ЭКСКАВАТОР ФРОНТАЛЬНЫЙ
+								p при заказе в паре с самосвалом
+								.discont-card__price 
+									span 2950 руб/ч
+							
+							button.btn-grey оставить заявку
+							
+						
+						.discont-card
+							.discont-card__body(style="background-image:url(../img/sale-card2.webp)")
+								.txt-20 ДОРОЖНЫЙ ГРУНТОВОЙ КАТОК ВИБРАЦИОННЫЙ 12-14 ТОНН
+								p только этой осенью
+								.discont-card__price 
+									span 2950 руб/ч 
+									span.old-price  вместо 3300 руб/ч
+							
+							button.btn-grey оставить заявку

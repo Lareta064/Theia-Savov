@@ -1,6 +1,6 @@
 @use "base/var" as *;
 
-.btn, .btn-outline, .btn-primary {
+.btn, .btn-outline, .btn-primary, .btn-grey {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -29,6 +29,16 @@
 	   border: 1px solid $accent;
 	   color: #fff;
 	}
+}
+.btn-grey{
+	height: 36px;
+	background-color: #f6f5f5;
+	padding-left: 16px;
+	padding-right: 16px;
+	font-weight: 600;
+	font-size: 16px;
+	color: #222;
+	&:hover{background-color: #fff;}
 }
 .btn.btn--accent{
 	color: $accent;
