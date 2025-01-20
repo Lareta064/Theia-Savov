@@ -185,7 +185,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     });
-    //======= INPUT TYPE="FILE"=====
+    // INPUT TYPE="FILE"
     const fileInputs = document.querySelectorAll(".fileUploadInput");
 
     if (fileInputs) {
@@ -225,8 +225,32 @@ document.addEventListener("DOMContentLoaded", function () {
         labelTxt.textContent = "Приложить карточку предприятия "; // Возвращаем текст по умолчанию
       }
     }
-    
-    /* =============== modal с атрибутом [data-modal] ===============*/ 
+    //DATAPICKER
+    document.querySelectorAll('.select-date').forEach((dateBlock) => {
+      // Находим внутри блока input для начальной и конечной дат
+      const startDateInput = dateBlock.querySelector('.start-date');
+      const endDateInput = dateBlock.querySelector('.end-date');
+
+      // Инициализируем Flatpickr для начальной даты
+      flatpickr(startDateInput, {
+        mode: "range", // Режим выбора диапазона
+        locale: flatpickr.l10ns.ru, // Русификация
+        dateFormat: "d.m.Y", // Формат даты
+        minDate: 'today', // Минимальная дата
+        onChange: function(selectedDates) {
+        if (selectedDates.length === 2) {
+          // Устанавливаем выбранные даты в соответствующие инпуты
+          startDateInput.value = flatpickr.formatDate(selectedDates[0], "d.m.Y");
+          endDateInput.value = flatpickr.formatDate(selectedDates[1], "d.m.Y");
+        } else if (selectedDates.length === 1) {
+          // Если выбрана только одна дата, очищаем конечную дату
+          startDateInput.value = flatpickr.formatDate(selectedDates[0], "d.m.Y");
+          endDateInput.value = "";
+        }
+        }
+      });
+    });
+    // modal с атрибутом [data-modal]
     const modalOpen = document.querySelectorAll('[data-btn]');
     const modalFrames = document.querySelectorAll('[data-modal]');
     if( modalFrames.length > 0){
