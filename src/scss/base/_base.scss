@@ -113,7 +113,7 @@ section + .dark-bg{margin-top: 45px;}
 	section + .dark-bg{margin-top: 30px;}
    .dark-bg + section{padding-top: 60px;}
 }
-.container, .container-narrow{
+.container, .container-narrow, .container-grid{
 	width: min(1610px, 100%);
 	padding-inline:30px;
 	margin-inline: auto;
@@ -213,4 +213,15 @@ section + .dark-bg{margin-top: 45px;}
 }
 .four-columns{
 	&>*{grid-column: span 3;}
+}
+.container-grid{
+	display: flex;
+	column-gap:20px;
+	.content-grid__frame{
+		flex-grow: 1;
+	}
+	.aside{
+		width: 410px;
+		flex-shrink: 0;
+	}
 }
