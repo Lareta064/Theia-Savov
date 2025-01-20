@@ -1,1 +1,40 @@
 @use "../base/var" as *;
+.benefits-list.three-columns{
+	column-gap:0;
+}
+.benefit-item{
+	column-gap:20px;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 1.22;
+	border-bottom: 1px solid rgba(34, 34, 34, 0.1);
+	border-left: 0;
+	border-right:0;
+	color: #222;
+	padding: 25px 40px;
+	.flex-center{
+		width: 30px;
+		height: 30px;
+		flex-shrink: 0;
+	}
+}
+.benefit-item:nth-child(3n +2){
+	position: relative;
+	&:after, &:before{
+		content:'';
+		position: absolute;
+		top: 20px;
+		bottom: 20px;
+		width: 1px;
+		background-color: rgba(34, 34, 34, 0.1);
+		left: 0;
+	    
+	}
+	&:before{
+		left: auto;
+		right:0;
+	}
+	
+}
+.benefit-item:nth-child(3n +1){padding-left: 0;}
+.benefit-item:nth-last-child(-n +3){border-bottom: 0;}

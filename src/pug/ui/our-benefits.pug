@@ -1,0 +1,51 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Карточка категории
+				.container-dashboard__content
+					.benefits-list.three-columns
+						.benefit-item
+							.flex-center
+								img(src="../img/benefits/icon5.webp", srcset="../img/benefits/icon5@2x.webp 2x" alt="icon" width="28" height="28")
+							p Есть пропуска:<br>ТТК, СК, МКАД
+						
+						.benefit-item
+							.flex-center
+								img(src="../img/benefits/icon6.webp", srcset="../img/benefits/icon6@2x.webp 2x" alt="icon" width="28" height="28")
+							p На рынке <br>c 2006 года
+
+						.benefit-item
+							.flex-center
+								img(src="../img/benefits/icon7.webp", srcset="../img/benefits/icon7@2x.webp 2x" alt="icon" width="28" height="28")
+							p Любой удобный<br> способ оплаты
+						
+						.benefit-item
+							.flex-center
+								img(src="../img/benefits/icon8.webp", srcset="../img/benefits/icon8@2x.webp 2x" alt="icon" width="28" height="28")
+							p Без недогруза
+						.benefit-item
+							.flex-center
+								img(src="../img/benefits/icon9.webp", srcset="../img/benefits/icon9@2x.webp 2x" alt="icon" width="28" height="28")
+							p Работаем напрямую<br>с производителями
+						.benefit-item
+							.flex-center
+								img(src="../img/benefits/icon10.webp", srcset="../img/benefits/icon10@2x.webp 2x" alt="icon" width="28" height="28")
+							p Собственный<br> автопарк
