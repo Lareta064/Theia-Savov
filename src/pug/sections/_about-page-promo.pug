@@ -1,0 +1,166 @@
+// PROMO
+section.promo.promo--center(style="background: url(./img/about-promo.webp)")
+	.container
+		.promo-top
+			.breadcrumbs
+				+breadcrumbs('Блог')
+			+city-block
+
+		.promo-content
+			h1.h1
+				img(src="./img/logo-big.svg", width="1150" height="211" alt="alt")
+			.promo-txt.center-txt.white-txt
+				p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно-монтажных работ в промышленном и гражданском строительстве
+				p #[strong Работаем собственными силами, обеспечиваем высокое качество строительств]
+
+//==== statistic-block ====
+section.statistic
+	.container
+		.statistic-block.grid-border
+			.grid-border__item
+				.statistic-item
+					.accent-txt 10 лет
+					p На рынке
+			.grid-border__item
+				.statistic-item
+					.accent-txt 350+
+					p Сотрудников
+			.grid-border__item
+				.statistic-item
+					.accent-txt 30+
+					p Объектов возведено
+			.grid-border__item
+				.statistic-item
+					.accent-txt 246%
+					p Увеличение оборота за год
+// GEO
+section.geo
+	.container
+		.geo-map
+			svg.svg-map
+				use(href='./img/map.svg#svg-map')
+
+			.geo-map__stp Санкт Петербург 
+			.geo-map__msk Москва
+		
+		// RIGHT COLUMN		
+		.geo-content
+			h2.h2 География
+			p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно монтажных работ в промышленном и гражданском строительстве 
+			p Работаем собственными силами, обеспечиваем высокое качество строительств
+			a(href="#!").btn Узнать подробнее
+// CATEGORIES
+section.categories
+	.container
+		h2.h2 Основная специализация 
+		.category-cards.grid-wrapper
+			+assort-card('Строительное оборудование, строительные материалы', 1)
+			+assort-card('Аренда спец техники, аренда дорожной техники', 2)
+			+assort-card('Оборудование для строительной техники', 3)
+			+assort-card('Ремонт помещений, строительные работы, загородные работы.', 4)
+section.building-materials
+	.container.gap-60
+		.description-block
+			.description-block__text
+				h2.h2 Отделочные и строй материалы 
+				p Возьмите любую спецтехнику в аренду в СПБ на срок от 3-х смен и получите скидку 5%. Торопитесь, срок действия акции ограничен!
+				.hide-sm
+					a(href="#!").btn Перейти в каталог
+			.description-block__img
+				img.wh-100(src="./img/block0_bg.webp", srcset="./img/block0_bg@2x.webp 2x", width="864" height="402" alt="img" loading="lazy")
+			.visible-sm
+				a(href="#!").btn Перейти в каталог
+		
+		.description-block
+			.description-block__img
+				img.wh-100(src="./img/block1_bg.webp", srcset="./img/block1_bg@2x.webp 2x", width="864" height="402" alt="img" loading="lazy")
+			
+			.description-block__text
+				h2.h2 Аренда спецтехники
+				p Возьмите любую спецтехнику в аренду в СПБ на срок от 3-х смен и получите скидку 5%. Торопитесь, срок действия акции ограничен!
+				a(href="#!").btn Перейти в каталог
+		
+		.description-block
+			.description-block__text
+				h2.h2 Оборудование
+				p Возьмите любую спецтехнику в аренду в СПБ на срок от 3-х смен и получите скидку 5%. Торопитесь, срок действия акции ограничен!
+				a(href="#!").btn Перейти в каталог
+			.description-block__img
+				img.wh-100(src="./img/block2_bg.webp", srcset="./img/block2_bg@2x.webp 2x", width="864" height="402" alt="img" loading="lazy")
+		
+		.description-block
+			.description-block__img
+				img.wh-100(src="./img/block2_bg.webp", srcset="./img/block2_bg@2x.webp 2x", width="864" height="402" alt="img" loading="lazy")
+			.description-block__text
+				h2.h2 Оборудование
+				p Возьмите любую спецтехнику в аренду в СПБ на срок от 3-х смен и получите скидку 5%. Торопитесь, срок действия акции ограничен!
+				a(href="#!").btn Перейти в каталог
+
+section.portfolio
+	.container
+		.header-group
+			h2.h2 Реализованые проэкты 
+			a(href="#!").flex-link Показать больше
+				span.arrow-right
+
+//DISCONT
+section.discont
+	.container
+		.header-group
+			h2.h2 Акции
+			a(href="#!").flex-link Показать больше
+				span.arrow-right
+		.discont-slider.swiper
+			.swiper-wrapper
+				.swiper-slide
+					.discont-card
+						.discont-card__body(style="background-image:url(../img/sale-card1.webp)")
+							.txt-20 ЭКСКАВАТОР ФРОНТАЛЬНЫЙ
+							p при заказе в паре с самосвалом
+							.discont-card__price 
+								span 2950 руб/ч
+						
+						button.btn-grey оставить заявку
+				.swiper-slide
+					.discont-card
+						.discont-card__body(style="background-image:url(../img/sale-card2.webp)")
+							.txt-20 ДОРОЖНЫЙ ГРУНТОВОЙ КАТОК ВИБРАЦИОННЫЙ 12-14 ТОНН
+							p только этой осенью
+							.discont-card__price 
+								span 2950 руб/ч 
+								span.old-price  вместо 3300 руб/ч
+						
+						button.btn-grey оставить заявку
+				
+				.swiper-slide
+					.discont-card
+						.discont-card__body(style="background-image:url(../img/sale-card1.webp)")
+							.txt-20 ЭКСКАВАТОР ФРОНТАЛЬНЫЙ
+							p при заказе в паре с самосвалом
+							.discont-card__price 
+								span 2950 руб/ч
+						
+						button.btn-grey оставить заявку
+				
+				.swiper-slide
+					.discont-card
+						.discont-card__body(style="background-image:url(../img/sale-card1.webp)")
+							.txt-20 ЭКСКАВАТОР ФРОНТАЛЬНЫЙ
+							p при заказе в паре с самосвалом
+							.discont-card__price 
+								span 2950 руб/ч
+						
+						button.btn-grey оставить заявку
+				.swiper-slide
+					.discont-card
+						.discont-card__body(style="background-image:url(../img/sale-card2.webp)")
+							.txt-20 ДОРОЖНЫЙ ГРУНТОВОЙ КАТОК ВИБРАЦИОННЫЙ 12-14 ТОНН
+							p только этой осенью
+							.discont-card__price 
+								span 2950 руб/ч 
+								span.old-price  вместо 3300 руб/ч
+						
+						button.btn-grey оставить заявку
+			
+			.mySwiper-pagination
+			

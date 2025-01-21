@@ -1,138 +1,152 @@
 section.basket
 	.container-grid
-		.content-grid__frame.gap-40.bx-sh
-			.basket-group__header.flex
-				.title-24 Корзина
-				button.remove-btn.flex-link
-					span.remove-icon
-					| Удалить все
-			.basket-content
-				//ГРУППА Строй материалы
-				.basket-group
+		.content-grid__frame.gap-40
+			.bx-sh.gap-40
+				.basket-header
+					.title-24 Корзина
 					.basket-group__header.flex
-						.txt-16 Строй материалы
+						.txt-16 2 категории
 						button.remove-btn.flex-link
 							span.remove-icon
-							| Удалить категорию
-					
-					//CARD-ROW
-					.basket-card
-						.basket-card__status
-							label.label-hide-chebx
-								input.hide-chebx(type="checkbox" name="prod_status")
-								span.basket-card__status-type
-						
-						.basket-card__img
-							img.wh-100(src="../img/products/prod1.webp", srcset="../img/products/prod1@2x.webp 2x", alt="img" loading="lazy")
-						
-						.basket-card__desk
-							.txt-20 Название товара
-							ul.txt-12
-								li Модуль крупности: 2.0-2.5
-								li Коэфф. фильтрации: до 12 м 
-								li Насыпная плотность: 1.6
-								li Содержание глины: ≤ 0,25%
-								
-						.basket-card__col
-							.basket-card__options
-								
-								+counter-light
-								span.txt-12 от 870 руб./м3
-								.txt-12
-							.basket-card__amount 130 200 руб
-						
-						.basket-card__remove
-							button.remove-btn
+							| Удалить все
+				.basket-content
+					//ГРУППА Строй материалы
+					.basket-group
+						.basket-group__header.flex
+							.txt-16 Строй материалы
+							button.remove-btn.flex-link
 								span.remove-icon
-					//CARD-ROW
-					.basket-card
-						.basket-card__status
-							label.label-hide-chebx
-								input.hide-chebx(type="checkbox" name="prod_status")
-								span.basket-card__status-type
+								| Удалить категорию
 						
-						.basket-card__img
-							img.wh-100(src="../img/products/prod1.webp", srcset="../img/products/prod1@2x.webp 2x", alt="img" loading="lazy")
-						
-						.basket-card__desk
-							.txt-20 Название товара
-							ul.txt-12
-								li Модуль крупности: 2.0-2.5
-								li Коэфф. фильтрации: до 12 м 
-								li Насыпная плотность: 1.6
-								li Содержание глины: ≤ 0,25%
-						.basket-card__col
-							.basket-card__options
-								+counter-light
-								span.txt-12 от 870 руб./м3
-								.txt-12
-							.basket-card__amount 130 200 руб
-						.basket-card__remove
-							button.remove-product
+						//CARD-ROW
+						.basket-card
+							.basket-card__status
+								label.label-hide-chebx
+									input.hide-chebx(type="checkbox" name="prod_status")
+									span.basket-card__status-type
+							
+							.basket-card__img
+								img.wh-100(src="../img/products/prod1.webp", srcset="../img/products/prod1@2x.webp 2x", alt="img" loading="lazy")
+							
+							.basket-card__desk
+								.txt-20 Название товара
+								ul.txt-12
+									li Модуль крупности: 2.0-2.5
+									li Коэфф. фильтрации: до 12 м 
+									li Насыпная плотность: 1.6
+									li Содержание глины: ≤ 0,25%
+									
+							.basket-card__col
+								.basket-card__options
+									
+									+counter-light
+									span.txt-12 от 870 руб./м3
+									.txt-12
+								.basket-card__amount 130 200 руб
+							
+							.basket-card__remove
+								button.remove-btn
+									span.remove-icon
+						//CARD-ROW
+						.basket-card
+							.basket-card__status
+								label.label-hide-chebx
+									input.hide-chebx(type="checkbox" name="prod_status")
+									span.basket-card__status-type
+							
+							.basket-card__img
+								img.wh-100(src="../img/products/prod1.webp", srcset="../img/products/prod1@2x.webp 2x", alt="img" loading="lazy")
+							
+							.basket-card__desk
+								.txt-20 Название товара
+								ul.txt-12
+									li Модуль крупности: 2.0-2.5
+									li Коэфф. фильтрации: до 12 м 
+									li Насыпная плотность: 1.6
+									li Содержание глины: ≤ 0,25%
+							.basket-card__col
+								.basket-card__options
+									+counter-light
+									span.txt-12 от 870 руб./м3
+									.txt-12
+								.basket-card__amount 130 200 руб
+							.basket-card__remove
+								button.remove-product
+									span.remove-icon
+					//ГРУППА АРЕНДА
+					.basket-group
+						.basket-group__header.flex
+							.txt-16 Строй материалы
+							button.remove-btn.flex-link
 								span.remove-icon
-				//ГРУППА АРЕНДА
-				.basket-group
-					.basket-group__header.flex
-						.txt-16 Строй материалы
-						button.remove-btn.flex-link
-							span.remove-icon
-							| Удалить категорию
-					
-					//CARD-ROW
-					.basket-card
-						.basket-card__status
-							label.label-hide-chebx
-								input.hide-chebx(type="checkbox" name="prod_status")
-								span.basket-card__status-type
+								| Удалить категорию
 						
-						.basket-card__img
-							img.wh-100(src="../img/products/prod1.webp", srcset="../img/products/prod1@2x.webp 2x", alt="img" loading="lazy")
-						
-						.basket-card__desk
-							.txt-20 Название товара
-							ul.txt-12
-								li Модуль крупности: 2.0-2.5
-								li Коэфф. фильтрации: до 12 м 
-								li Насыпная плотность: 1.6
-								li Содержание глины: ≤ 0,25%
-						.basket-card__col
-							.basket-card__options
-								.basket-card__data 06.05.25 - 12.05.25
-								+counter-light
-								span.txt-12 от 870 руб./м3
-								.txt-12
-							.basket-card__amount 130 200 руб
-						.basket-card__remove
-							button.remove-btn
-								span.remove-icon
-					//CARD-ROW
-					.basket-card
-						.basket-card__status
-							label.label-hide-chebx
-								input.hide-chebx(type="checkbox" name="prod_status")
-								span.basket-card__status-type
-						
-						.basket-card__img
-							img.wh-100(src="../img/products/prod1.webp", srcset="../img/products/prod1@2x.webp 2x", alt="img" loading="lazy")
-						
-						.basket-card__desk
-							.txt-20 Название товара
-							ul.txt-12
-								li Модуль крупности: 2.0-2.5
-								li Коэфф. фильтрации: до 12 м 
-								li Насыпная плотность: 1.6
-								li Содержание глины: ≤ 0,25%
-						.basket-card__col
-							.basket-card__options
-								.basket-card__data 06.05.25 - 12.05.25
-								+counter-light
-								span.txt-12 от 870 руб./м3
-								.txt-12
-							.basket-card__amount 130 200 руб
-						.basket-card__remove
-							button.remove-product
-								span.remove-icon
+						//CARD-ROW
+						.basket-card
+							.basket-card__status
+								label.label-hide-chebx
+									input.hide-chebx(type="checkbox" name="prod_status")
+									span.basket-card__status-type
+							
+							.basket-card__img
+								img.wh-100(src="../img/products/prod1.webp", srcset="../img/products/prod1@2x.webp 2x", alt="img" loading="lazy")
+							
+							.basket-card__desk
+								.txt-20 Название товара
+								ul.txt-12
+									li Модуль крупности: 2.0-2.5
+									li Коэфф. фильтрации: до 12 м 
+									li Насыпная плотность: 1.6
+									li Содержание глины: ≤ 0,25%
+							.basket-card__col
+								.basket-card__options
+									.basket-card__data 06.05.25 - 12.05.25
+									+counter-light
+									span.txt-12 от 870 руб./м3
+									.txt-12
+								.basket-card__amount 130 200 руб
+							.basket-card__remove
+								button.remove-btn
+									span.remove-icon
+						//CARD-ROW
+						.basket-card
+							.basket-card__status
+								label.label-hide-chebx
+									input.hide-chebx(type="checkbox" name="prod_status")
+									span.basket-card__status-type
+							
+							.basket-card__img
+								img.wh-100(src="../img/products/prod1.webp", srcset="../img/products/prod1@2x.webp 2x", alt="img" loading="lazy")
+							
+							.basket-card__desk
+								.txt-20 Название товара
+								ul.txt-12
+									li Модуль крупности: 2.0-2.5
+									li Коэфф. фильтрации: до 12 м 
+									li Насыпная плотность: 1.6
+									li Содержание глины: ≤ 0,25%
+							.basket-card__col
+								.basket-card__options
+									.basket-card__data 06.05.25 - 12.05.25
+									+counter-light
+									span.txt-12 от 870 руб./м3
+									.txt-12
+								.basket-card__amount 130 200 руб
+							.basket-card__remove
+								button.remove-product
+									span.remove-icon
 
+			//DESCRIP TEXT
+			.information-article
+				h2.title-24 Как происходит доставка 
+				p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно-монтажных работ в промышленном и гражданском строительстве 
+				p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно-монтажных работ в промышленном и гражданском строительстве 
+			//DESCRIP TEXT
+			.information-article
+				h2.title-24 Как происходит оплата
+				p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно-монтажных работ в промышленном и гражданском строительстве 
+				p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно-монтажных работ в промышленном и гражданском строительстве 
+			
 			//CARDS SLIDER
 			.article-slider
 				.header-group
@@ -223,48 +237,25 @@ section.basket
 			
 		//SIDEBAR
 		sidebar.aside
-			.detailed-card
-				.detailed-card__body.bx-sh
+			.order-card.detailed-card.bx-sh
+				.detailed-card__body
 					.detailed-card-group
-						span.detailed-art.txt-12 Код: 105703
-						.detailed-title.title-24 Речной мытый песок
-						.rating-block.flex
-							.rating-stars
-							span.txt-12 39 отзывов
+						.order-num.txt-12 Заказ: 105703
+						.detailed-title.txt-24 Всего в корзине
+						ul.detailed-list
+							li
+								span.list__name Строй материалы 
+								p.list__val 130 000 руб
+							li
+								span.list__name Аренда
+								p.list__val 500 200 руб
+							li
+								span.list__name Оборудование 
+								p.list__val 30 200 руб
 					
-					.price-block
-						.price-block__item
-							p от от 870 руб./м3
-							span.txt-12 за шт
-						.price-block__item
-							p от 700 руб./тн
-							span.txt-12 В розницу
-					
-					.detailed-card-group
-						.counter
-							button(type="button" disabled aria-label="Уменьшить количество").counter-minus -
-							input.counter-value(type="number" value="1000" min="0" )
-							button(type="button" aria-label="Увеличить количество" ).counter-plus +
-		
-						.detailed-total
-							span.txt-12 Стоимость
-							p.amount 700 000 руб
-					
-					
-					button.btn-primary В корзину
-					button.btn Рассчитать стоимость
-				
-				.detailed-card__footer.bx-sh
-					ul.dotted-list
-						li
-							p.list__name Наличие
-							span.line-bwn
-							p.list__val Много
-						li
-							p.list__name Доставка
-							span.line-bwn
-							p.list__val 24/7
-						li
-							p.list__name Способ получения
-							span.line-bwn
-							p.list__val Самовывоз, Доставка
+						.order-list-total
+							span Всего: 
+							p.amount 206 200 руб*
+					.center-txt *Цена указана без учета доставки
+					button.btn-primary Оформить заказ
+					p.agree-txt.center-txt Согласен с обработкой моих персональных данных в соответствии с #[a(href="#!") политикой конфиденциальности]. 

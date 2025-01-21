@@ -80,7 +80,7 @@ h1, h2,h3{font-weight: 400;}
 		font-size: 16px;
 	}
 }
-.white-txt{color: white;}
+.white-txt, .white-txt *{color: white!important;}
 .bold-txt{font-weight: 700;}
 .center-txt{text-align: center;}
 .flex-link{

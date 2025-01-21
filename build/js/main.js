@@ -165,13 +165,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
      /*discont-slider*/
      const discontSwiper = new Swiper(' .discont-slider', {
-      slidesPerView: 'auto',
+      slidesPerView: 2,
       speed:1000,
       spaceBetween:20,
       pagination: {
         el:".mySwiper-pagination",
         clickable: true,
       },
+      breackpoints:{
+        1439:{
+          slidesPerView: 'auto',
+        }
+      }
 
     });
    

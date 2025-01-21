@@ -70,3 +70,23 @@
 		background: linear-gradient(337deg, rgba(0, 0, 0, 0) 0%, rgba(20, 17, 14, 0.55) 38.85%, #241f1a 100%);
 	}
 }
+.promo.promo--center{
+	.promo-content{
+		max-width: 100%;
+		width: 100%;
+		text-align: center;
+		.promo-txt{
+			max-width: 690px;
+			margin-left: auto;
+			margin-right: auto;
+			
+			p+p{margin-top: 40px;}
+		}
+		.h1{
+			display: flex;
+			justify-content: center;
+			margin-bottom: 110px;
+			
+		}
+	}
+}
