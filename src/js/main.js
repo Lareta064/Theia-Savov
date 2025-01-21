@@ -686,22 +686,22 @@ document.addEventListener("DOMContentLoaded", () => {
       updateMinusButtonState(); // Обновляем состояние кнопки
     });
   });
-   //BASKET CARDS
-   const basketCards = document.querySelectorAll('.basket-card');
-   if(basketCards.length > 0){
-    console.log(basketCards);
-     basketCards.forEach((card)=>{
-        const basketCardStatus = card.querySelector('.basket-card__status');
+    //BASKET CARDS
+    const basketCards = document.querySelectorAll('.basket-card');
+    if(basketCards.length > 0){
+     
+      basketCards.forEach((card)=>{
+        const basketCardStatus = card.querySelector('.label-hide-chebx');
         basketCardStatus.addEventListener('click', ()=>{
-          const statusImput = basketCardStatus.querySelector('.hide-chbx');
-          if(statusImput.checked){
-            card.classList.add('basket-card--disable');
-          }else{
-            card.classList.remove('basket-card--disable');
-          }
+        const statusImput = basketCardStatus.querySelector('input');
+        if(statusImput.checked){
+          card.classList.add('basket-card--disable');
+        }else{
+          card.classList.remove('basket-card--disable');
+        }
         })
-     })
-   }
+      })
+    }
 
 });
  

@@ -1,0 +1,269 @@
+section.basket
+	.container-grid
+		.content-grid__frame.gap-40.bx-sh
+			.basket-group__header.flex
+				.title-24 Корзина
+				button.remove-btn.flex-link
+					span.remove-icon
+					| Удалить все
+			.basket-content
+				//ГРУППА Строй материалы
+				.basket-group
+					.basket-group__header.flex
+						.txt-16 Строй материалы
+						button.remove-btn.flex-link
+							span.remove-icon
+							| Удалить категорию
+					
+					//CARD-ROW
+					.basket-card
+						.basket-card__status
+							label.label-hide-chebx
+								input.hide-chebx(type="checkbox" name="prod_status")
+								span.basket-card__status-type
+						
+						.basket-card__img
+							img.wh-100(src="../img/products/prod1.webp", srcset="../img/products/prod1@2x.webp 2x", alt="img" loading="lazy")
+						
+						.basket-card__desk
+							.txt-20 Название товара
+							ul.txt-12
+								li Модуль крупности: 2.0-2.5
+								li Коэфф. фильтрации: до 12 м 
+								li Насыпная плотность: 1.6
+								li Содержание глины: ≤ 0,25%
+								
+						.basket-card__options
+							.basket-card__data 06.05.25 - 12.05.25
+							+counter-light
+							span.txt-12 от 870 руб./м3
+							.txt-12
+						.basket-card__amount 130 200 руб
+						.basket-card__remove
+							button.remove-btn
+								span.remove-icon
+					//CARD-ROW
+					.basket-card
+						.basket-card__status
+							label.label-hide-chebx
+								input.hide-chebx(type="checkbox" name="prod_status")
+								span.basket-card__status-type
+						
+						.basket-card__img
+							img.wh-100(src="../img/products/prod1.webp", srcset="../img/products/prod1@2x.webp 2x", alt="img" loading="lazy")
+						
+						.basket-card__desk
+							.txt-20 Название товара
+							ul.txt-12
+								li Модуль крупности: 2.0-2.5
+								li Коэфф. фильтрации: до 12 м 
+								li Насыпная плотность: 1.6
+								li Содержание глины: ≤ 0,25%
+								
+						.basket-card__options
+							.basket-card__data 06.05.25 - 12.05.25
+							+counter-light
+							span.txt-12 от 870 руб./м3
+							.txt-12
+						.basket-card__amount 130 200 руб
+						.basket-card__remove
+							button.remove-product
+								span.remove-icon
+				//ГРУППА АРЕНДА
+				.basket-group
+					.basket-group__header.flex
+						.txt-16 Строй материалы
+						button.remove-btn.flex-link
+							span.remove-icon
+							| Удалить категорию
+					
+					//CARD-ROW
+					.basket-card
+						.basket-card__status
+							label.label-hide-chebx
+								input.hide-chebx(type="checkbox" name="prod_status")
+								span.basket-card__status-type
+						
+						.basket-card__img
+							img.wh-100(src="../img/products/prod1.webp", srcset="../img/products/prod1@2x.webp 2x", alt="img" loading="lazy")
+						
+						.basket-card__desk
+							.txt-20 Название товара
+							ul.txt-12
+								li Модуль крупности: 2.0-2.5
+								li Коэфф. фильтрации: до 12 м 
+								li Насыпная плотность: 1.6
+								li Содержание глины: ≤ 0,25%
+								
+						.basket-card__options
+							.basket-card__data 06.05.25 - 12.05.25
+							+counter-light
+							span.txt-12 от 870 руб./м3
+							.txt-12
+						.basket-card__amount 130 200 руб
+						.basket-card__remove
+							button.remove-btn
+								span.remove-icon
+					//CARD-ROW
+					.basket-card
+						.basket-card__status
+							label.label-hide-chebx
+								input.hide-chebx(type="checkbox" name="prod_status")
+								span.basket-card__status-type
+						
+						.basket-card__img
+							img.wh-100(src="../img/products/prod1.webp", srcset="../img/products/prod1@2x.webp 2x", alt="img" loading="lazy")
+						
+						.basket-card__desk
+							.txt-20 Название товара
+							ul.txt-12
+								li Модуль крупности: 2.0-2.5
+								li Коэфф. фильтрации: до 12 м 
+								li Насыпная плотность: 1.6
+								li Содержание глины: ≤ 0,25%
+								
+						.basket-card__options
+							.basket-card__data 06.05.25 - 12.05.25
+							+counter-light
+							span.txt-12 от 870 руб./м3
+							.txt-12
+						.basket-card__amount 130 200 руб
+						.basket-card__remove
+							button.remove-product
+								span.remove-icon
+
+			//CARDS SLIDER
+			.article-slider
+				.header-group
+					p.title-24 Товары которые вам могут понравиться 
+					a(href="#!").flex-link Показать больше
+						span.arrow-right
+				
+				.reccomend-products.swiper
+					.swiper-wrapper
+						.swiper-slide
+							+product-card-ui(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+						.swiper-slide
+							+product-card-ui(6,'ЩПС С2 фракции', '0-20 мм', 2300)
+						.swiper-slide
+							+product-card-ui(7,'ЩПС С2 фракции', '0-20 мм', 2300)
+						.swiper-slide
+							+product-card-ui(8,'ЩПС С2 фракции', '0-20 мм', 2300)
+						.swiper-slide
+							+product-card-ui(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+						.swiper-slide
+							+product-card-ui(6,'ЩПС С2 фракции', '0-20 мм', 2300)
+						.swiper-slide
+							+product-card-ui(7,'ЩПС С2 фракции', '0-20 мм', 2300)
+						.swiper-slide
+							+product-card-ui(8,'ЩПС С2 фракции', '0-20 мм', 2300)
+					
+					.mySwiper-pagination
+
+			//DISCONT SLIDER
+			.discont
+				.header-group
+					h2.title-24 Акции
+					a(href="#!").flex-link Показать больше
+						span.arrow-right
+				.discont-slider.swiper
+					.swiper-wrapper
+						.swiper-slide
+							.discont-card
+								.discont-card__body(style="background-image:url(../img/sale-card1.webp)")
+									.txt-20 ЭКСКАВАТОР ФРОНТАЛЬНЫЙ
+									p при заказе в паре с самосвалом
+									.discont-card__price 
+										span 2950 руб/ч
+								
+								button.btn-grey оставить заявку
+						.swiper-slide
+							.discont-card
+								.discont-card__body(style="background-image:url(../img/sale-card2.webp)")
+									.txt-20 ДОРОЖНЫЙ ГРУНТОВОЙ КАТОК ВИБРАЦИОННЫЙ 12-14 ТОНН
+									p только этой осенью
+									.discont-card__price 
+										span 2950 руб/ч 
+										span.old-price  вместо 3300 руб/ч
+								
+								button.btn-grey оставить заявку
+						
+						.swiper-slide
+							.discont-card
+								.discont-card__body(style="background-image:url(../img/sale-card1.webp)")
+									.txt-20 ЭКСКАВАТОР ФРОНТАЛЬНЫЙ
+									p при заказе в паре с самосвалом
+									.discont-card__price 
+										span 2950 руб/ч
+								
+								button.btn-grey оставить заявку
+						
+						.swiper-slide
+							.discont-card
+								.discont-card__body(style="background-image:url(../img/sale-card1.webp)")
+									.txt-20 ЭКСКАВАТОР ФРОНТАЛЬНЫЙ
+									p при заказе в паре с самосвалом
+									.discont-card__price 
+										span 2950 руб/ч
+								
+								button.btn-grey оставить заявку
+						.swiper-slide
+							.discont-card
+								.discont-card__body(style="background-image:url(../img/sale-card2.webp)")
+									.txt-20 ДОРОЖНЫЙ ГРУНТОВОЙ КАТОК ВИБРАЦИОННЫЙ 12-14 ТОНН
+									p только этой осенью
+									.discont-card__price 
+										span 2950 руб/ч 
+										span.old-price  вместо 3300 руб/ч
+								
+								button.btn-grey оставить заявку
+					
+					.mySwiper-pagination
+			
+		//SIDEBAR
+		sidebar.aside
+			.detailed-card
+				.detailed-card__body.bx-sh
+					.detailed-card-group
+						span.detailed-art.txt-12 Код: 105703
+						.detailed-title.title-24 Речной мытый песок
+						.rating-block.flex
+							.rating-stars
+							span.txt-12 39 отзывов
+					
+					.price-block
+						.price-block__item
+							p от от 870 руб./м3
+							span.txt-12 за шт
+						.price-block__item
+							p от 700 руб./тн
+							span.txt-12 В розницу
+					
+					.detailed-card-group
+						.counter
+							button(type="button" disabled aria-label="Уменьшить количество").counter-minus -
+							input.counter-value(type="number" value="1000" min="0" )
+							button(type="button" aria-label="Увеличить количество" ).counter-plus +
+		
+						.detailed-total
+							span.txt-12 Стоимость
+							p.amount 700 000 руб
+					
+					
+					button.btn-primary В корзину
+					button.btn Рассчитать стоимость
+				
+				.detailed-card__footer.bx-sh
+					ul.dotted-list
+						li
+							p.list__name Наличие
+							span.line-bwn
+							p.list__val Много
+						li
+							p.list__name Доставка
+							span.line-bwn
+							p.list__val 24/7
+						li
+							p.list__name Способ получения
+							span.line-bwn
+							p.list__val Самовывоз, Доставка
