@@ -34,6 +34,9 @@
 		border: 0;
 		border-radius: 0;
 		background-color: #f6f5f5;
+		@media (max-width: 1919px) {
+			font-size: 16px;
+		}
 	}
 	input[type="number"]::-webkit-inner-spin-button,
 	input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }

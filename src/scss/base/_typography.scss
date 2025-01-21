@@ -228,3 +228,8 @@ h1, h2,h3{font-weight: 400;}
 .detailed-list li+li{
 	border-top: 1px solid #ccc;
 }
+.information-article{
+	@media (max-width: 1919px) {
+		font-size: 16px;
+	}
+}

@@ -33,6 +33,8 @@
 		.table-name:hover span,.hide-chebx:checked ~ span {color: $accent;}
 		.table-btn .btn{
 			height: 36px;
+			font-family: $ff;
+			font-weight: 400;
 			&:hover{
 				color: white;
 				background-color: $accent;
