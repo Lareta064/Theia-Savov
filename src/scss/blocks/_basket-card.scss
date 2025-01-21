@@ -92,3 +92,25 @@
 }
 .basket-card__options,.basket-card__amount{padding-right: 39px; padding-top: 25px;}
 .basket-card__remove{ padding-top: 25px;}
+
+/*.basket-group*/
+.basket-group{
+	padding-block:20px;
+    border-top: 1px solid #e9e9e9;
+}
+.basket-group__header{
+	justify-content: space-between;
+}
+.basket-group>*+*{margin-top: 20px;}
+.remove-btn.flex-link{
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.25;
+	letter-spacing: -0.02em;
+	color: #2b2a29;
+	column-gap:5px;
+	.remove-icon{
+		width:16px;
+		height:16px;
+	}
+}
