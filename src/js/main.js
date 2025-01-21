@@ -109,6 +109,27 @@ document.addEventListener("DOMContentLoaded", function () {
       },
 
     });
+   
+    const reccomendProducts = new Swiper('.reccomend-products', {
+      slidesPerView: 4,
+      speed:1000,
+      spaceBetween:20,
+      pagination: {
+        el:".mySwiper-pagination",
+        clickable: true,
+      },
+      breakpoints:{
+        1200:{
+          slidesPerView: 3,
+          spaceBetween:20,
+        },
+        1699:{
+          slidesPerView: 4,
+          spaceBetween:20,
+        }
+      }
+
+    });
     /*service-cards main page */
     const serviceCards = new Swiper('.service-cards', {
       slidesPerView: 'auto',
@@ -144,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
      /*discont-slider*/
      const discontSwiper = new Swiper(' .discont-slider', {
-      slidesPerView: 2,
+      slidesPerView: 'auto',
       speed:1000,
       spaceBetween:20,
       pagination: {
@@ -607,7 +628,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", handleResize);
   handleResize();
 });
-
+//стики шапка + счетчик
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".header"); // 
   let lastScrollTop = 0; // Переменная для хранения предыдущей позиции скролла
