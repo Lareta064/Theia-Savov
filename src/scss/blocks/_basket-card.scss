@@ -3,6 +3,7 @@
 .basket-card{
 	display: flex;
 	column-gap: 20px;
+	padding-right: 12px;
 	label{display: block;}
 	&__status{
 		width: 24px;
@@ -25,6 +26,7 @@
 	align-items: center;
 }
 .basket-card.basket-card--disable{opacity: .4;}
+.basket-card.basket-card--disable .remove-btn{pointer-events: none;}
 .basket-card.basket-card--disable .basket-card__status-type{
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect x='0.166016' y='7' width='16' height='2' fill='%232E2D2A' /%3e%3crect x='7.16602' y='16' width='16' height='2' transform='rotate(-90 7.16602 16)' fill='%23E9E9E' /%3e%3c/svg%3e");
 	
@@ -90,7 +92,10 @@
 	text-align: center;
 	color: #2e2d2a;
 }
-.basket-card__options,.basket-card__amount{padding-right: 39px; padding-top: 25px;}
+.basket-card__options,.basket-card__amount{
+	padding-right: 39px; padding-top: 25px;
+	width: 20%;
+}
 .basket-card__remove{ padding-top: 25px;}
 
 /*.basket-group*/
