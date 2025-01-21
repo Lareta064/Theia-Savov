@@ -135,7 +135,7 @@ mixin promo-dark(img)
 mixin counter
 	.counter
 		button(type="button" disabled aria-label="Уменьшить количество").counter-minus
-		span.counter-value 1000
+		span.counter-value 2
 		button(type="button" aria-label="Увеличить количество" ).counter-plus
 mixin counter-light
 	.counter.counter--light
@@ -144,7 +144,7 @@ mixin counter-light
 		button(type="button" aria-label="Увеличить количество" ).counter-plus
 
 mixin counter-small
-	.counter-small
+	.counter.counter-small
 		button(type="button" disabled aria-label="Уменьшить количество").counter-minus
 		span.counter-value 0
 		button(type="button" aria-label="Увеличить количество" ).counter-plus

@@ -87,7 +87,6 @@ html(lang="ru")
 										.form-item.select-date-end
 											input.end-date(type='text' name="endtDay" value="26.01.2025")
 									+counter-small
-									
 								.detailed-total
 									span.txt-12 Стоимость
 									p.amount 70 000 руб *
@@ -168,36 +167,45 @@ html(lang="ru")
 				});
 			});
 		script.
-		
 			// Находим все элементы счетчика
 			const counters = document.querySelectorAll('.counter');
-		
+
 			// Перебираем каждый блок счетчика
 			counters.forEach((counter) => {
 				const minusButton = counter.querySelector('.counter-minus'); // Кнопка уменьшения
 				const plusButton = counter.querySelector('.counter-plus'); // Кнопка увеличения
-				const input = counter.querySelector('.counter-value'); // Поле ввода
-			
+				const counterValue = counter.querySelector('.counter-value'); // Текущее значение (span)
+
+				// Инициализируем значение (из текста span)
+				let currentValue = parseInt(counterValue.textContent, 10) || 0;
+
+				// Обновляем состояние кнопки уменьшения
+				const updateMinusButtonState = () => {
+					if (currentValue <= 0) {
+					minusButton.setAttribute('disabled', 'disabled');
+					} else {
+					minusButton.removeAttribute('disabled');
+					}
+				};
+
+				// Устанавливаем начальное состояние кнопки
+				updateMinusButtonState();
+
 				// Обработчик клика на кнопку уменьшения
 				minusButton.addEventListener('click', () => {
-					let currentValue = parseInt(input.value, 10) || 0; // Получаем текущее значение
-					if (currentValue > parseInt(input.min, 10)) {
-					input.value = currentValue - 1; // Уменьшаем значение
+					if (currentValue > 0) {
+					currentValue -= 1; // Уменьшаем значение
+					counterValue.textContent = currentValue; // Обновляем текст в span
+					updateMinusButtonState(); // Обновляем состояние кнопки
 					}
 				});
-			
+
 				// Обработчик клика на кнопку увеличения
 				plusButton.addEventListener('click', () => {
-					let currentValue = parseInt(input.value, 10) || 0; // Получаем текущее значение
-					input.value = currentValue + 1; // Увеличиваем значение
-				});
-			
-				// Ограничение на ввод в поле (для соблюдения min)
-				input.addEventListener('input', () => {
-					let currentValue = parseInt(input.value, 10) || 0;
-					if (currentValue < parseInt(input.min, 10)) {
-						input.value = input.min; // Если меньше min, сбрасываем
-					}
+					
+					currentValue += 1; // Увеличиваем значение
+					counterValue.textContent = currentValue; // Обновляем текст в span
+					updateMinusButtonState(); // Обновляем состояние кнопки
 				});
 			});
-			
+
