@@ -28,7 +28,7 @@ html(lang="ru")
 								span.basket-card__status-type
 						
 						.basket-card__img
-							img(src="./img/products/prod1.webp", srcset="./img/products/prod1@2x.webp 2x", alt="img" loading="lazy")
+							img.wh-100(src="../img/products/prod1.webp", srcset="../img/products/prod1@2x.webp 2x", alt="img" loading="lazy")
 						
 						.basket-card__desk
 							.txt-20 Название товара
@@ -40,5 +40,10 @@ html(lang="ru")
 								
 						.basket-card__options
 							.basket-card__data 06.05.25 - 12.05.25
-						.basket-card__amount
+							+counter-light
+							span.txt-12 от 870 руб./м3
+							.txt-12
+						.basket-card__amount 130 200 руб
 						.basket-card__remove
+							button.remove-product
+								span.remove-icon
