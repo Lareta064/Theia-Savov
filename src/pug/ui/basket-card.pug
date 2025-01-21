@@ -1,0 +1,48 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Карточка Корзины
+				.container-dashboard__content
+					.basket-card
+						.basket-card__status
+							label.label-hide-chebx
+								input.hide-chebx(type="checkbox" name="prod_status")
+								span.basket-card__status-type
+						
+						.basket-card__img
+							img(src="./img/products/prod1.webp", srcset="./img/products/prod1@2x.webp 2x", alt="img" loading="lazy")
+						
+						.basket-card__desk
+							.txt-20 Название товара
+							ul.txt-12
+								li Модуль крупности: 2.0-2.5
+								li Коэфф. фильтрации: до 12 м 
+								li Насыпная плотность: 1.6
+								li Содержание глины: ≤ 0,25%
+								
+						.basket-card__options
+							.basket-card__data  
+								#[span.date-start 06.05.25] -
+								#[span.date-end 12.05.25]
+							
+						
+						.basket-card__amount
+						.basket-card__remove

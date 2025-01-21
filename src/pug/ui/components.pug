@@ -88,13 +88,24 @@ html(lang="ru")
 				
 				.counter
 					button(type="button" disabled aria-label="Уменьшить количество").counter-minus -
-					input.counter-value(type="number" value="1000" min="0" )
+					span.counter-value
 					button(type="button" aria-label="Увеличить количество" ).counter-plus +
 				pre.
 					.counter
 						button(type="button" disabled aria-label="Уменьшить количество").counter-minus -
+						span.counter-value
+						button(type="button" aria-label="Увеличить количество" ).counter-plus +
+				
+				.counter.counter--light
+					button(type="button" disabled aria-label="Уменьшить количество").counter-minus -
+					input.counter-value(type="number" value="1000" min="0" )
+					button(type="button" aria-label="Увеличить количество" ).counter-plus +
+				pre.
+					.counter.counter--light
+						button(type="button" disabled aria-label="Уменьшить количество").counter-minus -
 						input.counter-value(type="number" value="1000" min="0" )
 						button(type="button" aria-label="Увеличить количество" ).counter-plus +
+				
 				hr
 				.price-block
 					.price-block__item
