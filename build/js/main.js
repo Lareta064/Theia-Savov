@@ -686,7 +686,22 @@ document.addEventListener("DOMContentLoaded", () => {
       updateMinusButtonState(); // Обновляем состояние кнопки
     });
   });
-
+   //BASKET CARDS
+   const basketCards = document.querySelectorAll('.basket-card');
+   if(basketCards.length > 0){
+    console.log(basketCards);
+     basketCards.forEach((card)=>{
+        const basketCardStatus = card.querySelector('.basket-card__status');
+        basketCardStatus.addEventListener('click', ()=>{
+          const statusImput = basketCardStatus.querySelector('.hide-chbx');
+          if(statusImput.checked){
+            card.classList.add('basket-card--disable');
+          }else{
+            card.classList.remove('basket-card--disable');
+          }
+        })
+     })
+   }
 
 });
  

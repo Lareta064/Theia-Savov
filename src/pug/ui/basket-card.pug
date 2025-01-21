@@ -47,3 +47,22 @@ html(lang="ru")
 						.basket-card__remove
 							button.remove-product
 								span.remove-icon
+
+			script.
+				//BASKET CARDS
+				const basketCards = document.querySelectorAll('.basket-card');
+				if(basketCards.length > 0){
+					console.log(basketCards);
+					basketCards.forEach((card)=>{
+						const basketCardStatus = card.querySelector('.label-hide-chebx');
+						basketCardStatus.addEventListener('click', ()=>{
+							console.log('click');
+						const statusImput = basketCardStatus.querySelector('input');
+						if(statusImput.checked){
+							card.classList.add('basket-card--disable');
+						}else{
+							card.classList.remove('basket-card--disable');
+						}
+						})
+					})
+				}

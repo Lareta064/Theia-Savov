@@ -15,15 +15,19 @@
 	display: block;
 	border-radius: 50%;
 	border:1px solid #E9E9E9;
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='512' height='512' fill='%23E9E9E' enable-background='new 0 0 512 512' viewBox='0 0 512 512' id='minus'%3e%3cpath d='M485.883,264.293h-460c-4.971,0-9-4.029-9-9s4.029-9,9-9h460c4.971,0,9,4.029,9,9S490.854,264.293,485.883,264.293z'%3e%3c/path%3e%3c/svg%3e");
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect x='0.166016' y='7' width='16' height='2' fill='%232E2D2A' /%3e%3crect x='7.16602' y='16' width='16' height='2' transform='rotate(-90 7.16602 16)' fill='%232E2D2A' /%3e%3c/svg%3e");
 	background-size:16px 16px;
 }
-input[type="checkbox"]:checked + span{
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect x='0.166016' y='7' width='16' height='2' fill='%232E2D2A' /%3e%3crect x='7.16602' y='16' width='16' height='2' transform='rotate(-90 7.16602 16)' fill='%23E9E9E' /%3e%3c/svg%3e");
-}
+
+
 .basket-card__status{
 	display: flex;
 	align-items: center;
+}
+.basket-card.basket-card--disable{opacity: .4;}
+.basket-card.basket-card--disable .basket-card__status-type{
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect x='0.166016' y='7' width='16' height='2' fill='%232E2D2A' /%3e%3crect x='7.16602' y='16' width='16' height='2' transform='rotate(-90 7.16602 16)' fill='%23E9E9E' /%3e%3c/svg%3e");
+	
 }
 .basket-card__status,.basket-card__img,.basket-card__options,.basket-card__amount,.basket-card__remove{flex-shrink: 0;}
 .basket-card__img{
