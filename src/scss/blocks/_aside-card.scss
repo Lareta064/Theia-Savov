@@ -3,6 +3,7 @@
 	display: flex;
 	background: #f6f5f5;
 	width: fit-content;
+	align-items: center;
 	border-radius: 8px;
 	overflow: hidden;
 	button{
@@ -15,19 +16,21 @@
 		background: #f6f5f5;
 		border-radius: 8px;
 		font-size: 28px;
+		flex-shrink:0;
 		&[disabled], &.disabled{color:#d9d9d9;}
 	}
-	input.counter-value{
+	.counter-value{
 		font-weight: 600;
 		font-size: 20px;
 		height: 36px;
 		color: #222;
 		text-align: center;
-		width: 80px;
-		
+		width:fit-content;
+		line-height: 36px;
+		min-width: 50px;
 		padding-left: 5px;
 		padding-right: 5px;
-		min-width: 50px;
+		flex-grow: 1;
 		border: 0;
 		border-radius: 0;
 		background: #f6f5f5;
@@ -39,8 +42,8 @@
 }
 .counter.counter--light{
 	background: #fff;
-	button, input.counter-value{background: #fff;width: ;}
-	button{width: 30px; }
+	button, .counter-value{background: #fff; line-height: 30px; height: 30px;}
+	button{width: 30px;}
 }
 .detailed-card{
 	&>*+*{margin-top: 20px;}

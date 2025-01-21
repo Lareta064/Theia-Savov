@@ -132,4 +132,13 @@ mixin promo-dark(img)
 					p Возьмите любую спецтехнику в аренду в СПБ на срок от 3-х смен и получите скидку 5%. Торопитесь, срок действия акции ограничен!
 				a(href="#!").btn.btn--white Рассчитать стоимость
 
-
+mixin counter
+	.counter
+		button(type="button" disabled aria-label="Уменьшить количество").counter-minus -
+		span.counter-value 1000
+		button(type="button" aria-label="Увеличить количество" ).counter-plus +
+mixin counter-light
+	.counter.counter--light
+		button(type="button" disabled aria-label="Уменьшить количество").counter-minus -
+		span.counter-value 0
+		button(type="button" aria-label="Увеличить количество" ).counter-plus +
