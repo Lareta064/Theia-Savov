@@ -1,7 +1,7 @@
 @use "../base/var" as *;
 .counter, .counter-small{
 	display: flex;
-	background: #f6f5f5;
+	background-color: #f6f5f5;
 	width: fit-content;
 	align-items: center;
 	border-radius: 8px;
@@ -13,7 +13,7 @@
 		justify-content: center;
 		align-items: center;
 		flex-shrink: 0;
-		background: #f6f5f5;
+		background-color: #f6f5f5;
 		border-radius: 8px;
 		font-size: 28px;
 		flex-shrink:0;
@@ -33,7 +33,7 @@
 		flex-grow: 1;
 		border: 0;
 		border-radius: 0;
-		background: #f6f5f5;
+		background-color: #f6f5f5;
 	}
 	input[type="number"]::-webkit-inner-spin-button,
 	input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
@@ -53,14 +53,14 @@
 	}
 }
 .counter-small{
-	background: #fff;
+	background-color: #fff;
 	border-radius: 0;
-	button, .counter-value{font-size: 16px; height: 20px; width: 20px;background: #fff}
+	button, .counter-value{font-size: 16px; height: 20px; width: 20px;background-color: #fff}
 	.counter-value{min-width: 30px; line-height:20px;}
 }
 .counter.counter--light{
-	background: #fff;
-	button, .counter-value{background: #fff; line-height: 30px; height: 30px;}
+	background-color: #fff;
+	button, .counter-value{background-color: #fff; line-height: 30px; height: 30px;}
 	button{width: 30px;}
 }
 .detailed-card{
