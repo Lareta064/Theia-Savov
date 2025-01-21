@@ -40,17 +40,11 @@ html(lang="ru")
 								.price-block__item
 									p от 700 руб./тн
 									span.txt-12 В розницу
-							
 							.detailed-card-group
-								.counter
-									button(type="button" disabled aria-label="Уменьшить количество").counter-minus -
-									input.counter-value(type="number" value="1000" min="0" )
-									button(type="button" aria-label="Увеличить количество" ).counter-plus +
-				
+								+counter
 								.detailed-total
 									span.txt-12 Стоимость
 									p.amount 700 000 руб
-							
 							
 							button.btn-primary В корзину
 							button.btn Рассчитать стоимость
@@ -85,18 +79,15 @@ html(lang="ru")
 										span.txt-12 за шт
 							
 							.detailed-card-group
-								.select-date.select-date--light
-									.form-item.select-date-start
-										input.start-date(type='text' name="startDay" value="22.01.2025")
-									span -
-									.form-item.select-date-end
-										input.end-date(type='text' name="endtDay" value="26.01.2025")
-								
-								.counter.counter-small
-									button(type="button" disabled aria-label="Уменьшить количество").counter-minus -
-									input.counter-value(type="number" value="1000" min="0")
-									button(type="button" aria-label="Увеличить количество").counter-plus +
-				
+								.detailed-card__row.flex
+									.select-date.select-date--light
+										.form-item.select-date-start
+											input.start-date(type='text' name="startDay" value="22.01.2025")
+										span -
+										.form-item.select-date-end
+											input.end-date(type='text' name="endtDay" value="26.01.2025")
+									+counter-small
+									
 								.detailed-total
 									span.txt-12 Стоимость
 									p.amount 70 000 руб *

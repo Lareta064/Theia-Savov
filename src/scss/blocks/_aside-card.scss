@@ -1,5 +1,5 @@
 @use "../base/var" as *;
-.counter{
+.counter, .counter-small{
 	display: flex;
 	background: #f6f5f5;
 	width: fit-content;
@@ -38,7 +38,25 @@
 	input[type="number"]::-webkit-inner-spin-button,
 	input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
     input[type="number"] { -moz-appearance: textfield; }
-	
+	.counter-plus, .counter-minus{
+		background-size:16px 16px;
+		background-repeat: no-repeat;
+		background-position: center;;
+	}
+	.counter-plus{
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect x='0.166016' y='7' width='16' height='2' fill='%232E2D2A' /%3e%3crect x='7.16602' y='16' width='16' height='2' transform='rotate(-90 7.16602 16)' fill='%232E2D2A' /%3e%3c/svg%3e");
+		
+	}
+	.counter-minus{
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='512' height='512' enable-background='new 0 0 512 512' viewBox='0 0 512 512' id='minus'%3e%3cpath d='M485.883,264.293h-460c-4.971,0-9-4.029-9-9s4.029-9,9-9h460c4.971,0,9,4.029,9,9S490.854,264.293,485.883,264.293z'%3e%3c/path%3e%3c/svg%3e ");
+		background-size:16px 16px;
+	}
+}
+.counter-small{
+	background: #fff;
+	border-radius: 0;
+	button, .counter-value{font-size: 16px; height: 20px; width: 20px;background: #fff}
+	.counter-value{min-width: 30px; line-height:20px;}
 }
 .counter.counter--light{
 	background: #fff;
@@ -60,6 +78,11 @@
 		font-size: 24px;
 		letter-spacing: -0.02em;
 		color: #222;
+	}
+	&__row.flex{
+		justify-content: space-between; column-gap:20px;
+		
+		
 	}
 	.order-list-total{
 		display: flex;

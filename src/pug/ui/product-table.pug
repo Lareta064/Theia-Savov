@@ -42,10 +42,7 @@ html(lang="ru")
 									td.table-price 320 руб/м3
 									td 320 руб/м3
 									td.table-count
-										.counter
-											button(type="button" disabled aria-label="Уменьшить количество").counter-minus -
-											input.counter-value(type="number" value="1000" min="0")
-											button(type="button" aria-label="Увеличить количество").counter-plus +
+										+counter
 									td.table-btn 
 										a(href="#!").btn Заказать
 								
@@ -58,11 +55,8 @@ html(lang="ru")
 									td.table-price 320 руб/м3
 									td 320 руб/м3
 									td.table-count
-										.counter
-											button(type="button" disabled aria-label="Уменьшить количество").counter-minus -
-											input.counter-value(type="number" value="1000" min="0")
-											button(type="button" aria-label="Увеличить количество").counter-plus +
-									td.table-btn 
+										+counter
+									td.table-btn
 										a(href="#!").btn Заказать
 									
 		
