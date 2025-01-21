@@ -23,11 +23,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     /*Add class for footer prev siblings */
-    const pageFooter = document.querySelector('footer.footer');
-    const previousElement = pageFooter.previousElementSibling;
-      if (previousElement) {
-        previousElement.classList.add('pb-90');
-    }
+    // const pageFooter = document.querySelector('footer.footer');
+    // const previousElement = pageFooter.previousElementSibling;
+    //   if (previousElement) {
+    //     previousElement.classList.add('pb-90');
+    // }
 
     /*Sliders in tabs */
     const tabBlockSwiper = document.querySelectorAll(".tabs-block.myswiper-container");
@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
      /*discont-slider*/
-     const discontSwiper = new Swiper(' .discont-slider', {
+     const discontSwiper = new Swiper('.discont-slider', {
       slidesPerView: 2,
       speed:1000,
       spaceBetween:20,
@@ -177,7 +177,22 @@ document.addEventListener("DOMContentLoaded", function () {
           slidesPerView: 'auto',
         }
       }
-
+    });
+    /*.portfolio-slider*/
+    const portfolioSwiper = new Swiper('.portfolio-slider', {
+        slidesPerView: 2,
+        speed:1000,
+        spaceBetween:20,
+        pagination: {
+          el:".mySwiper-pagination",
+          clickable: true,
+        },
+        breackpoints:{
+          1439:{
+            slidesPerView: 'auto',
+          }
+        }
+  
     });
    
     /*=====CUSTOM SELECT===== */
