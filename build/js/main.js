@@ -163,6 +163,26 @@ document.addEventListener("DOMContentLoaded", function () {
       },
 
     });
+    /*.review-swiper*/
+    const reviewSwiperLarge = new Swiper('.review .review-swiper', {
+      slidesPerView: 4,
+      speed:1000,
+      spaceBetween:20,
+      pagination: {
+        el:".mySwiper-pagination",
+        clickable: true,
+      },
+    breackpoints:{
+        1200:{
+          slidesPerView: 3,
+          spaceBetween:20,
+        },
+        1440:{
+          slidesPerView: 4,
+          spaceBetween:20,
+        }
+      }
+    });
      /*discont-slider*/
      const discontSwiper = new Swiper('.discont-slider', {
       slidesPerView: 2,

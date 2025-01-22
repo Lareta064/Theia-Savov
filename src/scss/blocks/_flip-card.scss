@@ -101,11 +101,12 @@
 		flex-shrink: 0;
 		display: flex;
 		flex-direction: column;
-		&>*{width: 100%;}
+		
 		backface-visibility: hidden;
 	    transition: all .3s ease;
 		border-radius: 10px;
 		background-color: #fff;
+		&>*{width: 100%;}
 		.flip-card__img{
 			width: 100%;
 			aspect-ratio:372/233;
@@ -141,13 +142,10 @@
 		row-gap:15px;
 		text-align: center;
 		&>*{width: 100%;}
-
 		li+li{margin-top: 2px;}
-
 	}
 	
  	&__back {
-
 		background-color: #fff;
 	   flex-shrink: 0;
 	   width: 100%;
@@ -165,8 +163,6 @@
 		margin-top: auto;
 		&>*{width: 100%;}
 		&>*+*{margin-top:20px;}
-		
-		
 	}
 	  .detailed-total{
 		text-align: center;

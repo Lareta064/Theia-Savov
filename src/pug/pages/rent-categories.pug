@@ -5,7 +5,22 @@ block content
 	main.main
 		include ../sections/_rent-categories-promo
 		include ../sections/_rent-categories-content
-		include ../sections/_sales
+		include ../sections/_equipment
+		section.our-experiance
+			.container
+				.description-block
+					.description-block__text
+						h2.h2 Опыт, отвественность, компетентность - наши отличительные черты
+						p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно-монтажных работ в промышленном и гражданском строительстве
+						p Работаем собственными силами, обеспечиваем высокое качество строительств
+					.description-block__img
+						img.wh-100(src="./img/block5_bg.webp", srcset="./img/block5_bg@2x.webp 2x", width="864" height="402" alt="img" loading="lazy")
+		
+		include ../sections/_geo
+		section.review
+			.container
+				include ../sections/_review-swiper
+		
 	include ../sections/_footer
 block variables
 	

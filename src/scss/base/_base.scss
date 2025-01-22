@@ -108,7 +108,7 @@ section{
 	}
 }
 section + .dark-bg{margin-top: 45px;}
-.dark-bg + .dark-bg{margin-top: 0;}
+.promo-dark +.dark-bg, .dark-bg + .dark-bg{margin-top: 0;}
 .dark-bg + section{padding-top: 90px;}
 @media (max-width: 1023px) {
 	section + .dark-bg{margin-top: 30px;}

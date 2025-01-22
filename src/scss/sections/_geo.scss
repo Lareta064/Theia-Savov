@@ -6,7 +6,7 @@
 	width: 100%;
 	aspect-ratio: 12 / 5;
 	@media (max-width: 1919px) {
-		aspect-ratio: 55/33;
+		aspect-ratio: 5/3;
 	}
 	
 	.container{
@@ -16,7 +16,7 @@
 		position: absolute;
 		width: 100%;
 		max-width: 1650px;
-		aspect-ratio: 55/33;
+		aspect-ratio: 5/3;
 		top: 0;
 		left: 0;
 		z-index: 1;
