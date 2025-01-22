@@ -1,0 +1,12 @@
+.portfolio-content .tabs-body.active {
+	column-gap:20px;
+	row-gap:40px;	
+	@media(min-width:1920px){
+	column-gap:40px;
+	row-gap:50px;
+	}
+	
+}
+.portfolio-content .promo-content{
+	max-width: 860px;
+}

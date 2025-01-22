@@ -108,6 +108,7 @@ section{
 	}
 }
 section + .dark-bg{margin-top: 45px;}
+.dark-bg + .dark-bg{margin-top: 0;}
 .dark-bg + section{padding-top: 90px;}
 @media (max-width: 1023px) {
 	section + .dark-bg{margin-top: 30px;}
@@ -171,7 +172,7 @@ section + .dark-bg{margin-top: 45px;}
 	margin-bottom: 50px;
 	justify-content: space-between;
 	column-gap:20px;
-   .title-24{margin-bottom: 0;}
+	.h2, .title-24, .h3, .h1{margin-bottom: 0;}
 	
 }
 .assort-card, .product-card, .product-card__desk,.geo-content {

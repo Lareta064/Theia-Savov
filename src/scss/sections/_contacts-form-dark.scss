@@ -6,6 +6,13 @@
 	overflow: hidden;
 	padding-top: 80px;
 	padding-bottom: 80px;
+	&:after{
+		content:'';
+		position: absolute;
+		inset:0;
+		background-color: #1b1b1b;
+		background: linear-gradient(230deg, rgba(0, 0, 0, 0) 0%, #1b1b1b 100%);
+	}
 	
 	&-content{
 		position: relative;

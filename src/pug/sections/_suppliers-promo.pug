@@ -1,0 +1,148 @@
+// PROMO
+section.promo.promo-dark(style="background: url(./img/suppliers-promo.webp)")
+	.container
+		.promo-top
+			.breadcrumbs
+				+breadcrumbs('Поставщикам')
+			+city-block
+
+		.promo-content
+			h1.h1 Стать нашим поставщиком 
+				
+			.promo-txt
+				p Мы строим объекты любой сложности под ключ, гарантируя качество, соблюдение сроков и бюджета. Наша команда профессионалов обеспечит полный цикл работ – от проектирования до ввода в эксплуатацию, с учетом всех ваших пожеланий.
+			a(href="#!").btn.btn--white Позвонить нам 
+
+
+section.building-materials
+	.container.gap-60
+		.description-block
+			.description-block__text
+				h2.h2 Отделочные и строй материалы 
+				p Возьмите любую спецтехнику в аренду в СПБ на срок от 3-х смен и получите скидку 5%. Торопитесь, срок действия акции ограничен!
+				.hide-sm
+					a(href="#!").btn Перейти в каталог
+			.description-block__img
+				img.wh-100(src="./img/block0_bg.webp", srcset="./img/block0_bg@2x.webp 2x", width="864" height="402" alt="img" loading="lazy")
+			.visible-sm
+				a(href="#!").btn Перейти в каталог
+		
+		.description-block
+			.description-block__img
+				img.wh-100(src="./img/block1_bg.webp", srcset="./img/block1_bg@2x.webp 2x", width="864" height="402" alt="img" loading="lazy")
+			
+			.description-block__text
+				h2.h2 Аренда спецтехники
+				p Возьмите любую спецтехнику в аренду в СПБ на срок от 3-х смен и получите скидку 5%. Торопитесь, срок действия акции ограничен!
+				a(href="#!").btn Перейти в каталог
+		
+		.description-block
+			.description-block__text
+				h2.h2 Оборудование
+				p Возьмите любую спецтехнику в аренду в СПБ на срок от 3-х смен и получите скидку 5%. Торопитесь, срок действия акции ограничен!
+				a(href="#!").btn Перейти в каталог
+			.description-block__img
+				img.wh-100(src="./img/block2_bg.webp", srcset="./img/block2_bg@2x.webp 2x", width="864" height="402" alt="img" loading="lazy")
+
+
+section.portfolio
+	.container
+		.header-group
+			h2.h2 Реализованые проэкты 
+			a(href="#!").flex-link Показать больше
+				span.arrow-right
+
+		.portfolio-slider.swiper
+			.swiper-wrapper
+				.swiper-slide
+					.portfolio-card
+						.portfolio-card__img
+							img(src="./img/portfolio/project1.webp", srcset = "./img/portfolio/project1@2x.webp 2x" width="768"  alt="img" height="359" loading="lazy")
+						
+						.portfolio-card__title Частные дома, коттеджи и виллы.
+						p Строим комфортные дома из различных материалов (кирпич, дерево, монолит) по типовым и индивидуальным проектам, учитывая ваши индивидуальные предпочтения по планировке, стилю и используемым технологиям.
+				
+				.swiper-slide
+					.portfolio-card
+						.portfolio-card__img
+							img(src="./img/portfolio/project2.webp", srcset="./img/portfolio/project2@2x.webp 2x", width="768" height="359" alt="img" loading="lazy")
+						.portfolio-card__txt
+							.portfolio-card__title Частные дома, коттеджи и виллы.
+							p Строим комфортные дома из различных материалов (кирпич, дерево, монолит) по типовым и индивидуальным проектам, учитывая ваши индивидуальные предпочтения по планировке, стилю и используемым технологиям.
+				.swiper-slide
+					.portfolio-card
+						.portfolio-card__img
+							img(src="./img/portfolio/project1.webp", srcset="./img/portfolio/project1@2x.webp 2x", width="768" height="359" alt="img" loading="lazy")
+						.portfolio-card__txt
+							.portfolio-card__title Частные дома, коттеджи и виллы.
+							p Строим комфортные дома из различных материалов (кирпич, дерево, монолит) по типовым и индивидуальным проектам, учитывая ваши индивидуальные предпочтения по планировке, стилю и используемым технологиям.
+				
+				.swiper-slide
+					.portfolio-card
+						.portfolio-card__img
+							img(src="./img/portfolio/project2.webp", srcset="./img/portfolio/project2@2x.webp 2x", width="768" height="359" alt="img" loading="lazy")
+						.portfolio-card__txt
+							.portfolio-card__title Частные дома, коттеджи и виллы.
+							p Строим комфортные дома из различных материалов (кирпич, дерево, монолит) по типовым и индивидуальным проектам, учитывая ваши индивидуальные предпочтения по планировке, стилю и используемым технологиям.
+			.mySwiper-pagination
+//DISCONT
+section.discont
+	.container
+		.header-group
+			h2.h2 Акции
+			a(href="#!").flex-link Показать больше
+				span.arrow-right
+		.discont-slider.swiper
+			.swiper-wrapper
+				.swiper-slide
+					.discont-card
+						.discont-card__body(style="background-image:url(../img/sale-card1.webp)")
+							.txt-20 ЭКСКАВАТОР ФРОНТАЛЬНЫЙ
+							p при заказе в паре с самосвалом
+							.discont-card__price 
+								span 2950 руб/ч
+						
+						button.btn-grey оставить заявку
+				.swiper-slide
+					.discont-card
+						.discont-card__body(style="background-image:url(../img/sale-card2.webp)")
+							.txt-20 ДОРОЖНЫЙ ГРУНТОВОЙ КАТОК ВИБРАЦИОННЫЙ 12-14 ТОНН
+							p только этой осенью
+							.discont-card__price 
+								span 2950 руб/ч 
+								span.old-price  вместо 3300 руб/ч
+						
+						button.btn-grey оставить заявку
+				
+				.swiper-slide
+					.discont-card
+						.discont-card__body(style="background-image:url(../img/sale-card1.webp)")
+							.txt-20 ЭКСКАВАТОР ФРОНТАЛЬНЫЙ
+							p при заказе в паре с самосвалом
+							.discont-card__price 
+								span 2950 руб/ч
+						
+						button.btn-grey оставить заявку
+				
+				.swiper-slide
+					.discont-card
+						.discont-card__body(style="background-image:url(../img/sale-card1.webp)")
+							.txt-20 ЭКСКАВАТОР ФРОНТАЛЬНЫЙ
+							p при заказе в паре с самосвалом
+							.discont-card__price 
+								span 2950 руб/ч
+						
+						button.btn-grey оставить заявку
+				.swiper-slide
+					.discont-card
+						.discont-card__body(style="background-image:url(../img/sale-card2.webp)")
+							.txt-20 ДОРОЖНЫЙ ГРУНТОВОЙ КАТОК ВИБРАЦИОННЫЙ 12-14 ТОНН
+							p только этой осенью
+							.discont-card__price 
+								span 2950 руб/ч 
+								span.old-price  вместо 3300 руб/ч
+						
+						button.btn-grey оставить заявку
+			
+			.mySwiper-pagination
+			

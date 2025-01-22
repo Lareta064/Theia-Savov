@@ -1,0 +1,30 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header
+	
+	main.inner-main
+		include ../sections/_suppliers-promo
+		//- include ../sections/_suppliers-content
+		include ../sections/_our-service.pug
+		include ../sections/_pros.pug
+		section.form-section.dark-bg(style="background-image: url(./img/suppliers-form.webp)")
+			.container
+				.form-section-content
+					h2.h3.white-txt Стать нашим<br>поставщиком 
+					form.contacts-form.form-dark
+						.form-item
+							input(type="text" name="name" placeholder="Имя")
+						.form-item
+							input(type="text" name="phone" placeholder="E-mail")
+						.form-item
+							input(type="text" name="email"  placeholder="E-mail")
+						.form-item
+							textarea( name="message" placeholder="Ваш вопрос *")
+						.form-item.form-btn
+							button(type="submit").btn.btn--white ОТПРАВИТЬ
+		
+	include ../sections/_footer
+	
+block variables	
+	-var title = "Поставщикам";

@@ -1,0 +1,45 @@
+section.portfolio-content
+	.container
+		.tabs-block.tabs-block--grid
+			.tabs-nav.tabs-nav--center
+				a.tabs-nav__item.active(href="#!" data-tab="all") Все
+				a.tabs-nav__item(href="#!" data-tab="tab_2") Частные дома, коттеджи и виллы
+				a.tabs-nav__item(href="#!" data-tab="tab_3") Коммерческие объекты 
+				a.tabs-nav__item(href="#!" data-tab="tab_4") Склады и логистические центры
+				a.tabs-nav__item(href="#!" data-tab="tab_5") Медицинские и образовательные учреждения
+				a.tabs-nav__item(href="#!" data-tab="tab_6") Дороги, транспортные узлы и инженерные коммуникации 
+				a.tabs-nav__item(href="#!" data-tab="tab_7") Благоустройство территорий
+				
+			// SINGLE  TAB CONTENT
+			#all.tabs-body.active
+				+portfolio-card(3,'Частный сектор', 'коттедж','Дом в Ленинградской обрасти 840 м2')
+				+portfolio-card(4, 'Коммерческие объекты', 'рестораны','Бузуланово — 436 м')
+				+portfolio-card(5, 'Коммерческие объекты', 'офисы','Бузуланово — 436 м')
+				+portfolio-card(6, 'Коммерческие объекты', 'рестораны','Бузуланово — 436 м')
+				+portfolio-card(7,'Частный сектор', 'коттедж','Дом в Ленинградской обрасти 840 м2')
+				+portfolio-card(8,'Частный сектор', 'коттедж','Дом в Ленинградской обрасти 840 м2')
+				+portfolio-card(3,'Частный сектор', 'коттедж','Дом в Ленинградской обрасти 840 м2')
+				+portfolio-card(5,'Частный сектор', 'коттедж','Дом в Ленинградской обрасти 840 м2')
+				
+			#tab_2.tabs-body
+				+portfolio-card(3,'Частный сектор', 'коттедж','Дом в Ленинградской обрасти 840 м2')
+				+portfolio-card(4, 'Коммерческие объекты', 'рестораны','Бузуланово — 436 м')
+				+portfolio-card(5, 'Коммерческие объекты', 'офисы','Бузуланово — 436 м')
+				+portfolio-card(6, 'Коммерческие объекты', 'рестораны','Бузуланово — 436 м')
+
+		// pagination 
+		nav.pagination
+			// это кнопка НАЗАД изначально скрыта, добавлена, что бы показать ее код 
+				<a class="pagination-item pagination-prev" href="#"> 
+					<svg class="svg-arrow-left">
+						<use href="./img/sprite.svg#svg-arrow-left"></use>
+					</svg>Назад
+				</a>
+
+			a(href="#").pagination-item 1
+			a(href="#").pagination-item 2
+			a(href="#").pagination-item 3
+			a(href="#").pagination-item 4
+			a(href="#").pagination-item.pagination-next Вперед
+				svg.svg-arrow-right
+					use(href='./img/sprite.svg#svg-arrow-right')
