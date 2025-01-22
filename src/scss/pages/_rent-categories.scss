@@ -3,4 +3,7 @@
 	grid-template-columns: repeat(12, 1fr);
 	gap:20px;
 	&>*{grid-column: span 3;}
+	@media (max-width: 1279px) {
+		&>*{grid-column: span 4;}
+	}
 }
