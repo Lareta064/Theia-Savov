@@ -1,0 +1,143 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		
+		link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css')
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+		style.
+			.swiper {
+				width: 100%;
+				height: 100%;
+			}
+
+			.swiper-slide {
+				text-align: center;
+				font-size: 18px;
+				background: #fff;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.swiper-slide img {
+				display: block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+
+			.swiper-slide {
+				background-size: cover;
+				background-position: center;
+			}
+
+			.mySwiper22 {
+				height: 100%;
+				width: 80%;
+			}
+
+			.mySwiper1 {
+				height: 100%;
+				width:20%;
+				box-sizing: border-box;
+				padding: 10px 0;
+			}
+
+			.mySwiper1 .swiper-slide {
+				height: auto;
+				opacity: 0.4;
+			}
+
+			.mySwiper1 .swiper-slide-thumb-active {
+				opacity: 1;
+			}
+
+			.swiper-slide img {
+				display: block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+ 
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Фоторама
+				.container-dashboard__content
+					.fotorama
+						.swiper.mySwiper1(thumbsslider)
+							.swiper-wrapper
+								.swiper-slide
+									img(src='https://swiperjs.com/demos/images/nature-1.jpg')
+								.swiper-slide
+									img(src='https://swiperjs.com/demos/images/nature-2.jpg')
+								.swiper-slide
+									img(src='https://swiperjs.com/demos/images/nature-3.jpg')
+								.swiper-slide
+									img(src='https://swiperjs.com/demos/images/nature-4.jpg')
+								.swiper-slide
+									img(src='https://swiperjs.com/demos/images/nature-5.jpg')
+								.swiper-slide
+									img(src='https://swiperjs.com/demos/images/nature-6.jpg')
+									
+						
+						.swiper.mySwiper22
+						
+							.swiper-wrapper
+								.swiper-slide
+									img(src='https://swiperjs.com/demos/images/nature-1.jpg')
+								.swiper-slide
+									img(src='https://swiperjs.com/demos/images/nature-2.jpg')
+								.swiper-slide
+									img(src='https://swiperjs.com/demos/images/nature-3.jpg')
+								.swiper-slide
+									img(src='https://swiperjs.com/demos/images/nature-4.jpg')
+								.swiper-slide
+									img(src='https://swiperjs.com/demos/images/nature-5.jpg')
+								.swiper-slide
+									img(src='https://swiperjs.com/demos/images/nature-6.jpg')
+								
+								
+							.swiper-button-next
+							.swiper-button-prev
+						
+			
+			
+			
+			//  Swiper JS 
+			script(src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js')
+			//  Initialize Swiper 
+			script.
+				
+				var swiper1 = new Swiper(".mySwiper1", {
+					spaceBetween: 10,
+					slidesPerView: 4,
+					direction: "vertical", // Вертикальный режим
+					freeMode: true,
+					watchSlidesProgress: true,
+					});
+					var swiper2 = new Swiper(".mySwiper22", {
+					spaceBetween: 10,
+					navigation: {
+						nextEl: ".swiper-button-next",
+						prevEl: ".swiper-button-prev",
+					},
+					thumbs: {
+						swiper: swiper1,
+					},
+					});
+				
