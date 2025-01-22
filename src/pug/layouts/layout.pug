@@ -5,7 +5,7 @@ doctype html
 html(lang="ru")
 	head
 		meta(charset="UTF-8")
-		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(name='viewport' content='width=1200')
 		meta(http-equiv="X-UA-Compatible", content="ie=edge")
 		//=======убрать перевод цифр в номер телефона на ios  и safari ======
 		meta(name="format-detection" content="telephone=no")
@@ -30,6 +30,23 @@ html(lang="ru")
 		block content
 
 		include ../blocks/_modal
+		// POPUP CALLBACK
+		.modal-frame(data-modal="callback-form")
+			.modal-frame-content
+				h3.h3 Обратный звонок
+				
+				form.contacts-form
+					.form-item
+						input(type="text" name="name" placeholder="Имя")
+					.form-item
+						input(type="text" name="phone" placeholder="Телефон")
+					.form-item
+						input(type="text" name="email"  placeholder="E-mail")
+					.form-item
+						textarea( name="message" placeholder="Ваш вопрос *")
+					.form-item.form-btn
+						button(type="submit").btn.btn--white ОТПРАВИТЬ
+					p.agree-txt.center-txt Согласен с обработкой моих персональных данных в соответствии с #[a(href="#!") политикой конфиденциальности].<br> Поля, отмеченные *, являются обязательными для заполнения
 		//script(src="./libs/jquery/jquery-3.0.0.min.js")
 		//script(src="./libs/jquery.lazy.min.js")
 		//Swiper

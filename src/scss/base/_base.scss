@@ -148,6 +148,10 @@ section + .dark-bg{margin-top: 45px;}
 .mt-20{margin-top: 20px;}
 .pt-0{padding-top: 0!important;}
 .pb-90{padding-bottom: 90px!important;}
+.gap-15{
+	&>*{margin-bottom: 15px;}
+	.form-item.form-btn{margin-top: 30px;}
+}
 .img-contain, .img-cover{
 	width: 100%;
 	height: 100%;

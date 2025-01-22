@@ -1,0 +1,29 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header
+	main.main
+		+promo-dark('rent-promo', 'Аренда', 'Арендовать спецтехнику в один клик ')(class="promo--gradient")
+		include ../sections/_rent-content
+		include ../sections/_equipment
+	include ../sections/_footer
+	// POPUP
+	.modal-frame.visible(data-modal="callback-form")
+		.modal-frame-content
+			h3.h3 Обратный звонок
+			
+			form.contacts-form.gap-15.callback-form
+				.form-item
+					input(type="text" name="name" placeholder="Имя")
+				.form-item
+					input(type="text" name="phone" placeholder="Телефон")
+				
+				.form-item
+					textarea( name="message" placeholder="Ваш вопрос *")
+				.form-item.form-btn
+					button(type="submit").btn-primary ОТПРАВИТЬ
+				p.agree-txt.center-txt Согласен с обработкой моих персональных данных в соответствии с #[a(href="#!") политикой конфиденциальности].<br> Поля, отмеченные *, являются обязательными для заполнения
+
+block variables		
+	
+	-var title = "Аренда";

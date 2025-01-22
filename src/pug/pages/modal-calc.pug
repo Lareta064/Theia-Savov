@@ -1,0 +1,78 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header
+	main.main
+		+promo-dark('rent-promo', 'Аренда', 'Арендовать спецтехнику в один клик ')(class="promo--gradient")
+		include ../sections/_rent-content
+		include ../sections/_equipment
+	include ../sections/_footer
+	// POPUP
+	.modal-frame.visible(data-modal="calc-order")
+		.modal-frame-content
+			h3.h3 Заказать спецтехнику
+			form.order-form
+				// выбранный товар + выбор дополнительный товара
+				.select-products-form
+					//один товар + даты
+					.add-product-group.flex
+						.form-dropdown.dropdown
+							button.dropdown__button(type="button") Речной песок
+							
+							.dropdown__list
+								ul
+									li.dropdown__list-item(data-value="select") Выбрать
+									li.dropdown__list-item(data-value="Речной песок") Речной песок
+									li.dropdown__list-item(data-value="Щебень") Щебень
+									li.dropdown__list-item(data-value="Продукт 1") Продукт 1
+									li.dropdown__list-item(data-value="Продукт 2") Продукт 2
+									li.dropdown__list-item(data-value="Продукт 3") Продукт 3
+									li.dropdown__list-item(data-value="Продукт 4") Продукт 4
+						
+							// в этот скрытый инпут в качестве value  выводится значение из data-value из.dropdown__list-item 
+							input.dropdown__input-hidden(type="text", name="select_product")
+						//диапазон дат
+						.select-date
+							.form-item
+								input.start-date(type='text' name="startDay" placeholder="c")
+							.form-item
+								input.end-date(type='text' name="endtDay" placeholder="по")
+					
+					// кнопка выбрать еще
+					button.add-product.add-product-btn
+						span.button-icon
+							svg.svg-plus
+								use(href='../img/sprite.svg#svg-plus')
+						| Добавить еще товар
+
+				//USER DATA
+				.form-item
+					input(type="text" placeholder="Адрес *" value="Достоевского 4")
+				.form-row
+					.form-item
+						input(type="text" placeholder="Имя *" value="Миша")
+					.form-item
+						input(type="text" placeholder="Фамилия *" value="Петров")
+				.form-item
+					input(type="text" placeholder="Email *" value="апри@gmail.com")
+				.form-item
+					input(type="text" placeholder="Телефон *" value="8 (911) 219 98 67")
+				.form-item
+					input(type="text" placeholder="Компания")
+				.form-item
+					textarea(placeholder="Примечания")
+				//==== инпут загрузки файла с компьютера====
+				.fileUpload-group
+					label.fileUpload-label
+						input.form-input.fileUploadInput(type="file")
+						span.form-input-add +
+						span.form-input-clear &ndash;
+						span.fileUpload-name Приложить карточку предприятия 
+
+				//КНОПКА ОТПРАВИТЬ
+				button.btn-primary(type="submit") Заказать
+				p.agree-txt.center-txt Согласен с обработкой моих персональных данных в соответствии с #[a(href="#!") политикой конфиденциальности].<br> Поля, отмеченные *, являются обязательными для заполнения
+
+block variables		
+	
+	-var title = "Аренда";

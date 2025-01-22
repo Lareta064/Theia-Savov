@@ -1,0 +1,34 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		
+		link(rel='stylesheet' href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Карточка категории Аренды
+				.container-dashboard__content
+					a(href="#!").mini-card
+						.mini-card__img
+							img.img-contain(src="../img/mini-cards/mini1.webp",srcset="./img/mini-cards/mini1@2x.webp 2x" alt="img" width="96" height="96")
+						.mini-card__txt
+							.title-20 Автовышки
+							p от 10 500 руб
+					pre.
+						+mini-card(img, title, txt)
+		

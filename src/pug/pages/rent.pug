@@ -3,10 +3,10 @@ extends ../layouts/layout.pug
 block content
 	include ../sections/_header
 	main.main
-		+promo-dark('promo', 'Аренда', 'Арендовать спецтехнику в один клик ')(class="promo--gradient")
+		+promo-dark('rent-promo', 'Аренда', 'Арендовать спецтехнику в один клик ')(class="promo--gradient")
 		include ../sections/_rent-content
-		include ../sections/_sales
+		include ../sections/_equipment
 	include ../sections/_footer
 block variables		
 	
-	-var title = "Щебень";
+	-var title = "Аренда";

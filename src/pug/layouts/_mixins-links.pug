@@ -236,4 +236,13 @@ mixin flipCard(img=1)
 						span.txt-12 *Цена указана без учета доставки 
 				.detailed-card__footer
 					button.btn-primary Арендавать прямо сейчас 
-					button.btn Добавить корзину 
+					button.btn Добавить корзину
+
+mixin mini-card(img, title, txt)
+	a(href="#!").mini-card
+		.mini-card__img
+			img.img-contain(src="./img/mini-cards/mini"+ img +".webp",srcset="./img/mini-cards/mini"+ img+"@2x.webp 2x" alt="img" width="96" height="96")
+		.mini-card__txt
+			.title-20 #{title}
+			p от #{txt} руб
+
