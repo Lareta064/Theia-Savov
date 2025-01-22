@@ -1,0 +1,12 @@
+.rent-assort{
+	.tabs-block .tabs-body.active{
+		display: flex;
+		flex-wrap: wrap;
+		gap:20px;
+		&>*{
+			
+			flex-shrink: 0;
+		}
+		
+	}
+}

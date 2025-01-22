@@ -2,7 +2,7 @@
 mixin assort-card(txt, img)
 	a(href="#!").assort-card
 		p !{txt}
-		img(src="./img/category/cat"+ img +".webp", srcset="./img/category/cat"+ img +"@2x.webp 2x" alt="img" width="312" height="165" loading="lazy")
+		img.img-contain(src="./img/category/cat"+ img +".webp", srcset="./img/category/cat"+ img +"@2x.webp 2x" alt="img" width="312" height="165" loading="lazy")
 mixin assort-card-ui(txt, img)
 	a(href="#!").assort-card
 		p !{txt}
@@ -11,7 +11,7 @@ mixin assort-card-ui(txt, img)
 mixin category-card(img, title, ...items)
 	.category-card
 		.category-card__img
-			img(src="../img/category/cat"+ img +".webp", srcset="../img/category/cat"+ img +"@2x.webp 2x" alt="img" width="763" height="321" loading="lazy")
+			img.img-contain(src="../img/category/cat"+ img +".webp", srcset="../img/category/cat"+ img +"@2x.webp 2x" alt="img" width="763" height="321" loading="lazy")
 		.category-card__body
 			.category-card__title !{title}
 			nav.category-card__links
@@ -144,18 +144,18 @@ mixin building-card(img, title, txt)
 			a(href="single-blog.html").btn Подать заявку
 				
 				
-mixin promo-dark(img)
+mixin promo-dark(img, title, btnTxt)
 	.promo-dark.promo.promo-slim(style="background-image: url(./img/"+ img+".webp)")&attributes(attributes)
 		.container
 			.promo-top
 				.breadcrumbs
-					+breadcrumbs('каталог', 'Отделочные и строй материалы', 'Щебень')
+					+breadcrumbs('каталог', 'Отделочные и строй материалы', ''+ title)
 				+city-block
 			.promo-content
-				h1.h1 Щебень
+				h1.h1 !{title}
 				.promo-txt
 					p Возьмите любую спецтехнику в аренду в СПБ на срок от 3-х смен и получите скидку 5%. Торопитесь, срок действия акции ограничен!
-				a(href="#!").btn.btn--white Рассчитать стоимость
+				a(href="#!").btn.btn--white #{btnTxt}
 
 mixin counter
 	.counter
@@ -175,13 +175,13 @@ mixin counter-small
 		button(type="button" aria-label="Увеличить количество" ).counter-plus
 
 
-mixin flipCard
+mixin flipCard(img=1)
 	//SINGLE CARD
 	.flip-card
 		//CARD FRONT
 		.flip-card__front
 			.flip-card__img
-				img.img-contain(src="../img/products/prod1.webp", srcset="../img/products/prod1@2x.webp 2x" width="372" height="233" alt="img" loading="lazy")
+				img.img-contain(src="../img/products/prod"+img+".webp", srcset="../img/products/prod"+img+"@2x.webp 2x" width="372" height="233" alt="img" loading="lazy")
 			.flip-card__desk
 				.flip-card__title 
 					.title-20 Гусеничный экскаватор<br>
