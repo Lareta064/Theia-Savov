@@ -1,0 +1,96 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		
+		link(rel='stylesheet' href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+		
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Карточка Аренды
+				.container-dashboard__content
+					
+					.flip-card
+						.flip-card__front
+							.flip-card__img
+								img.img-contain(src="../img/products/prod1.webp", srcset="../img/products/prod1@2x.webp 2x" width="372" height="233" alt="img" loading="lazy")
+							.flip-card__desk
+								.flip-card__title 
+									.title-20 Гусеничный экскаватор<br>
+										| #[span Hyundai R 210LC-7]
+									span.availabel В наличии
+								ul.txt-12
+									li Мощность двигателя: 107 кВт
+									li Вес: 21700 кг
+									li Глубина копания: 6740 MM
+									li Глубина копания: 6740 MM
+									li Глубина копания: 6740 MM
+								
+								.price-block
+									.price-block__item 
+										p от 18000 руб. / смена
+							.flip-card__btn
+								button.btn.flip-card-btn Арендовать
+						
+						.flip-card__back
+							.detailed-card
+								.detailed-card-group
+									span.detailed-art.txt-12 Код: 105703
+									.detailed-title.txt-24 Гусеничный экскаватор Hyundai R 210LC-7
+									.rating-block.flex
+										.rating-stars
+										span.txt-12 39 отзывов
+									span.availabel В наличии
+									ul.txt-12
+										li Мощность двигателя: 107 кВт
+										li Вес: 21700 кг
+										li Глубина копания: 6740 мм
+										li Глубина копания: 6740 мм
+										li Глубина копания: 6740 мм
+									
+									.price-block
+										.price-block__item
+											p от 15 870 руб./смена
+								
+								.detailed-card-group
+									.detailed-card__row.flex
+										.select-date.select-date--light
+											.form-item.select-date-start
+												input.start-date(type='text' name="startDay" value="22.01.2025")
+											span -
+											.form-item.select-date-end
+												input.end-date(type='text' name="endtDay" value="26.01.2025")
+										+counter-small
+									.detailed-total
+										span.txt-12 Стоимость
+										p.amount 70 000 руб *
+										span.txt-12 *Цена указана без учета доставки 
+								.detailed-card__footer
+									button.btn-primary Арендавать прямо сейчас 
+									button.btn Добавить корзину 
+
+			script.
+				const flipCards = document.querySelectorAll('.flip-card');
+				if(flipCards.length>0){
+					 flipCards.forEach((card)=>{
+						const cardFlipBtn = card.querySelector('.flip-card-btn');
+						cardFlipBtn.addEventListener('click', ()=>{
+							card.classList.add('flip-active');
+						})
+					 })
+				}
+					
