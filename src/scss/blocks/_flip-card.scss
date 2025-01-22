@@ -1,15 +1,108 @@
+// .flip-card{
+// 	width: 372px;
+// 	position: relative;
+// 	// min-height: 25em;
+// 	perspective: 150em;
+	
+	
+	
+// 	&__front {
+// 		box-shadow: 0 0 22px 0 rgba(154, 152, 152, 0.1);
+// 		backface-visibility: hidden;
+// 	    transition: all .6s ease;
+// 		border-radius: 10px;
+// 		background-color: #fff;
+// 		.flip-card__img{
+// 			width: 100%;
+// 			aspect-ratio:372/233;
+// 			flex-shrink: 0;
+// 			background-color: #EDEDED;
+// 			display: flex;
+// 			justify-content: center;
+// 			align-items: center;
+// 		}
+// 		.price-block__item{text-align: center; font-size: 20px;}
+// 		.flip-card__btn{
+// 			padding: 0 20px 25px;
+// 			text-align: center;
+// 			display: flex;
+// 			justify-content: center;
+// 		}
+// 	}
+// 	&__title{
+// 		text-align: center;
+// 		.availabel{text-align: center;}
+// 	}
+// 	&__desk{
+// 		padding: 25px 20px;
+// 		display: flex;
+// 		flex-direction: column;
+// 		row-gap:15px;
+// 		text-align: center;
+// 		&>*{width: 100%;}
+
+// 		li+li{margin-top: 2px;}
+
+// 	}
+	
+//  &__back {
+// 	  position: absolute;
+// 	  inset:0;
+// 	  backface-visibility: hidden;
+// 	  transition: all .6s ease;
+// 	  box-shadow: 0 0 22px 0 rgba(154, 152, 152, 0.1);
+// 	  padding:20px;
+// 	  li+li{margin-top: 2px;}
+// 	  .detailed-card{
+// 		display: flex;
+// 		flex-direction: column;
+// 		&>*{width: 100%;}
+// 	  }
+// 	  .detailed-card__footer{
+// 		padding-top:15px;
+// 		margin-top: auto;
+// 		&>*{width: 100%;}
+// 		&>*+*{margin-top:20px;}
+// 	}
+// 	  .detailed-total{
+// 		text-align: center;
+// 	  }
+// 	}
+	
+// 	&__front {
+// 	  background-color: #FFF; 
+// 	}
+	
+// 	&__back {
+	  
+// 	  transform: rotateY(180deg);
+// 	}
+// 	&.flip-active &__front {
+// 	  transform: rotateY(-180deg);
+// 	}
+	
+// 	&.flip-active &__back {
+// 	  transform: rotate(0);
+// 	}
+//   }
+
+/*FLIP #2*/
 .flip-card{
 	width: 372px;
 	position: relative;
+	overflow: hidden;
 	// min-height: 25em;
-	perspective: 150em;
-	
+	// perspective: 150em;
+	box-shadow: 0 0 22px 0 rgba(154, 152, 152, 0.1);
+	display: flex;
 	
 	
 	&__front {
-		box-shadow: 0 0 22px 0 rgba(154, 152, 152, 0.1);
+		width: 372px;
+		flex-shrink: 0;
+		// box-shadow: 0 0 22px 0 rgba(154, 152, 152, 0.1);
 		backface-visibility: hidden;
-	    transition: all .6s ease;
+	    transition: all .3s ease;
 		border-radius: 10px;
 		background-color: #fff;
 		.flip-card__img{
@@ -45,12 +138,14 @@
 
 	}
 	
- &__back {
-	  position: absolute;
-	  inset:0;
-	  backface-visibility: hidden;
-	  transition: all .6s ease;
-	  box-shadow: 0 0 22px 0 rgba(154, 152, 152, 0.1);
+ 	&__back {
+	//   position: absolute;
+	//   inset:0;
+	//   backface-visibility: hidden;
+	flex-shrink: 0;
+	width: 372px;
+	  transition: all .3s ease;
+	//   box-shadow: 0 0 22px 0 rgba(154, 152, 152, 0.1);
 	  padding:20px;
 	  li+li{margin-top: 2px;}
 	  .detailed-card{
@@ -75,18 +170,17 @@
 	
 	&__back {
 	  
-	  transform: rotateY(180deg);
+	// transform: translateX(372px);
 	}
 	&.flip-active &__front {
-	  transform: rotateY(-180deg);
+		transform: translateX(-372px);
 	}
 	
 	&.flip-active &__back {
-	  transform: rotate(0);
+		transform: translateX(-372px);
 	}
-	
-	
   }
+/**/
   .availabel{
 	display: block;
 	font-weight: 700;

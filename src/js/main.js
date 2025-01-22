@@ -706,7 +706,18 @@ document.addEventListener("DOMContentLoaded", () => {
       updateMinusButtonState(); // Обновляем состояние кнопки
     });
   });
-    //BASKET CARDS
+   
+    /*FLIP CARD */
+    const flipCards = document.querySelectorAll('.flip-card');
+      if(flipCards.length>0){
+        flipCards.forEach((card)=>{
+          const cardFlipBtn = card.querySelector('.flip-card-btn');
+          cardFlipBtn.addEventListener('click', ()=>{
+            card.classList.add('flip-active');
+          })
+        });
+      }
+  //BASKET CARDS
     const basketCards = document.querySelectorAll('.basket-card');
     if(basketCards.length > 0){
      
