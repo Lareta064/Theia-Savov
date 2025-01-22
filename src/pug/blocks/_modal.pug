@@ -4,7 +4,7 @@
 		h3.h3 Заказать спецтехнику
 		form.order-form
 			// выбранный товар + выбор дополнительный товара
-			#selectProductForm.select-products-form
+			.select-products-form
 				//один товар + даты
 				.add-product-group.flex
 					.form-dropdown.dropdown
@@ -30,7 +30,7 @@
 							input.end-date(type='text' name="endtDay" placeholder="по")
 				
 				// кнопка выбрать еще
-				button#add-product.add-product-btn
+				button.add-product.add-product-btn
 					span.button-icon
 						svg.svg-plus
 							use(href='../img/sprite.svg#svg-plus')

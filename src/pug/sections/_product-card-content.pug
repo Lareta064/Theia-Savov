@@ -283,7 +283,8 @@ section.product-details
 				h2.title-24.center-txt Расчитать стоимость 
 				form.order-form
 					// выбранный товар + выбор дополнительный товара
-					#selectProductForm.select-products-form
+					
+					.select-products-form
 						//один товар + даты
 						.add-product-group.flex
 							.form-dropdown.dropdown
@@ -309,7 +310,7 @@ section.product-details
 									input.end-date(type='text' name="endtDay" placeholder="по")
 						
 						// кнопка выбрать еще
-						button#add-product.add-product-btn
+						button.add-product.add-product-btn
 							span.button-icon
 								svg.svg-plus
 									use(href='../img/sprite.svg#svg-plus')
@@ -345,7 +346,7 @@ section.product-details
 		
 		
 		//SIDEBAR
-		sidebar.aside
+		.aside
 			.detailed-card
 				.detailed-card__body.bx-sh
 					.detailed-card-group
