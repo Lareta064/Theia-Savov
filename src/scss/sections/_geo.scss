@@ -1,12 +1,14 @@
 @use "../base/var" as *;
 .geo{
 	overflow: hidden;
-	padding-top: 230px;
-	padding-bottom: 150px;
+	padding-top: 0;
+	padding-bottom: 0;
 	width: 100%;
 	aspect-ratio: 12 / 5;
-	@media (max-width: 1919px) {
+	max-height: 690px;
+	@media (max-width: 1599px) {
 		aspect-ratio: 5/3;
+		max-height: 500px;
 	}
 	
 	.container{
@@ -20,7 +22,7 @@
 		top: 0;
 		left: 0;
 		z-index: 1;
-		transform: translate(0, -36%);
+		transform: translate(0, -18%);
 		.svg-map{
 			display: block;
 			width: 100%;
@@ -58,12 +60,7 @@
 		left: 20%;
 	}
 }
-.geo +.blog{
-	margin-top: -140px;
-	@media (max-width: 1919px) {
-		margin-top: -23%;
-	}
-}
+.geo + *{margin-top: -60px;}
 .geo-content{
 	width: 50%;
 	margin-left: auto;
@@ -72,10 +69,14 @@
 	padding-right: 100px;
 	position: relative;
 	z-index: 2;
+	padding-left: 60px;
+	padding-top: 100px;
+	padding-bottom: 60px;
+	background-color: #fff;
 	.h2{margin-bottom: 0;}
 	@media (max-width: 1699px) {
 		row-gap:25px;
-		padding-left: 0;
+		// padding-left: 0;
 	    padding-right: 40px;
 	}
 }
