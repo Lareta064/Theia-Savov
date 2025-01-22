@@ -10,6 +10,9 @@
 		z-index: 5;
 		p, p span, .city-selection__btn button {color:white;}
 	}
+	@media (max-width: 1439px) {
+		.city-selection{top: 10px;}
+	}
 }
 .promo-slider{
 	display: flex;

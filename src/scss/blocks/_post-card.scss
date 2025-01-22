@@ -14,6 +14,9 @@
 		flex-grow: 1;
 	}
 	&__body{padding-top: 32px;}
+	.flex{
+		justify-content: space-between;
+	}
 	.breadcrumbs{
 		margin-bottom: 20px;
 		font-size: 14px;
