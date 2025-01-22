@@ -1,99 +1,146 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-		<!--====убрать синий цвет у ссылок в сафари ========-->
-		<meta name="format-detection" content="telephone=no"/>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"/>
-		<link rel="stylesheet" href="../css/main.css"/>
-		<title>UI-KIT</title>
-	</head>
-	<body class="body-dashboard">
-		<div class="ui-panel">
-			<div class="ui-panel-block">
-				<div class="ui-panel-block__part"><a class="back-index" href="http://localhost:3000/">На Главную</a>
-					<h3>Базовые компоненты</h3>
-					<ul>
-						<li><a href="colors.html">Цветовая схема</a></li>
-						<li><a href="typography.html">Типографика</a></li>
-						<li><a href="icons.html">Иконки</a></li>
-						<li><a href="buttons.html">Кнопки</a></li>
-						<li><a href="forms.html">Формы</a></li>
-						<li><a href="breadcrumbs.html">Хлебные крошки</a></li>
-						<li><a href="components.html">Компоненты</a></li>
-					</ul>
-				</div>
-				<div class="ui-panel-block__part">
-					<h3>Карточки</h3>
-					<ul>
-						<li><a href="assort-card.html">Карточка Категории</a></li>
-						<li><a href="product-card.html">Карточка Продукта</a></li>
-						<li><a href="post-card.html">Карточка Блога	</a></li>
-						<li><a href="aside-card.html">Детальная карточка sidebar</a></li>
-						<li><a href="review-card.html">Карточка отзыва</a></li>
-						<li><a href="discont-card.html">Карточка Акции</a></li>
-						<li><a href="basket-card.html">Карточка Корзины</a></li>
-					</ul>
-				</div>
-				<div class="ui-panel-block__part">
-					<h3>Блоки</h3>
-					<ul>
-						<li><a href="text-image.html">Текст + картинка</a></li>
-						<li><a href="product-slider.html">Слайдер товаров</a></li>
-						<li><a href="swiper-tabs.html">Слайдер в табах</a></li>
-						<li><a href="tabs.html">Табы</a></li>
-					</ul>
-				</div>
-				<div class="ui-panel-block__part">
-					<h3>Секции</h3>
-					<ul>
-						<li><a href="promo.html">PROMO секции</a></li>
-						<li><a href="our-benefits.html">Наши преимущества</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="container-dashboard">
-			<h2>Форма</h2>
-			<div class="container-dashboard__content">
-				<div class="select-date">
-					<div class="form-item">
-						<input class="start-date" type="text" name="startDay"/>
-					</div>
-					<div class="form-item">
-						<input class="end-date" type="text" name="endtDay"/>
-					</div>
-				</div><br/>
-				<div class="select-products-form">
-					<div class="add-product-group flex">
-						<div class="form-dropdown dropdown">
-							<button class="dropdown__button" type="button">Выбрать</button>
-							<div class="dropdown__list">
-								<ul>
-									<li class="dropdown__list-item" data-value="Речной песок">Речной песок</li>
-									<li class="dropdown__list-item" data-value="Пример заполнения 2">Пример заполнения 2</li>
-									<li class="dropdown__list-item" data-value="Пример заполнения 3">Пример заполнения 3</li>
-									<li class="dropdown__list-item" data-value="Пример заполнения 4">Пример заполнения 4</li>
-								</ul>
-							</div>
-						</div>
-						<div class="select-date">
-							<div class="form-item">
-								<input class="start-date" type="text" name="startDay"/>
-							</div>
-							<div class="form-item">
-								<input class="end-date" type="text" name="endtDay"/>
-							</div>
-						</div>
-					</div>
-					<button class="add-product add-product-btn"><span class="button-icon">
-							<svg class="svg-plus">
-								<use href="../img/sprite.svg#svg-plus"></use>
-							</svg></span>Добавить еще товар</button>
-				</div>
-				<script>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!--====убрать синий цвет у ссылок в сафари ========-->
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <title>UI-KIT</title>
+</head>
+
+<body class="body-dashboard">
+  <div class="ui-panel">
+    <div class="ui-panel-block">
+      <div class="ui-panel-block__part">
+        <a class="back-index" href="http://localhost:3000/">На Главную</a>
+        <h3>Базовые компоненты</h3>
+        <ul>
+          <li>
+            <a href="colors.html">Цветовая схема</a>
+          </li>
+          <li>
+            <a href="typography.html">Типографика</a>
+          </li>
+          <li>
+            <a href="icons.html">Иконки</a>
+          </li>
+          <li>
+            <a href="buttons.html">Кнопки</a>
+          </li>
+          <li>
+            <a href="forms.html">Формы</a>
+          </li>
+          <li>
+            <a href="breadcrumbs.html">Хлебные крошки</a>
+          </li>
+          <li>
+            <a href="components.html">Компоненты</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ui-panel-block__part">
+        <h3>Карточки</h3>
+        <ul>
+          <li>
+            <a href="assort-card.html">Карточка Категории</a>
+          </li>
+          <li>
+            <a href="product-card.html">Карточка Продукта</a>
+          </li>
+          <li>
+            <a href="post-card.html">Карточка Блога </a>
+          </li>
+          <li>
+            <a href="aside-card.html">Детальная карточка sidebar</a>
+          </li>
+          <li>
+            <a href="review-card.html">Карточка отзыва</a>
+          </li>
+          <li>
+            <a href="discont-card.html">Карточка Акции</a>
+          </li>
+          <li>
+            <a href="basket-card.html">Карточка Корзины</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ui-panel-block__part">
+        <h3>Блоки</h3>
+        <ul>
+          <li>
+            <a href="text-image.html">Текст + картинка</a>
+          </li>
+          <li>
+            <a href="product-slider.html">Слайдер товаров</a>
+          </li>
+          <li>
+            <a href="swiper-tabs.html">Слайдер в табах</a>
+          </li>
+          <li>
+            <a href="tabs.html">Табы</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ui-panel-block__part">
+        <h3>Секции</h3>
+        <ul>
+          <li>
+            <a href="promo.html">PROMO секции</a>
+          </li>
+          <li>
+            <a href="our-benefits.html">Наши преимущества</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container-dashboard">
+    <h2>Форма</h2>
+    <div class="container-dashboard__content">
+      <div class="select-date">
+        <div class="form-item">
+          <input class="start-date" type="text" name="startDay" />
+        </div>
+        <div class="form-item">
+          <input class="end-date" type="text" name="endtDay" />
+        </div>
+      </div>
+      <br />
+      <div class="select-products-form">
+        <div class="add-product-group flex">
+          <div class="form-dropdown dropdown">
+            <button class="dropdown__button" type="button">Выбрать</button>
+            <div class="dropdown__list">
+              <ul>
+                <li class="dropdown__list-item" data-value="Речной песок">Речной песок</li>
+                <li class="dropdown__list-item" data-value="Пример заполнения 2">Пример заполнения 2</li>
+                <li class="dropdown__list-item" data-value="Пример заполнения 3">Пример заполнения 3</li>
+                <li class="dropdown__list-item" data-value="Пример заполнения 4">Пример заполнения 4</li>
+              </ul>
+            </div>
+          </div>
+          <div class="select-date">
+            <div class="form-item">
+              <input class="start-date" type="text" name="startDay" />
+            </div>
+            <div class="form-item">
+              <input class="end-date" type="text" name="endtDay" />
+            </div>
+          </div>
+        </div>
+        <button class="add-product add-product-btn">
+          <span class="button-icon">
+            <svg class="svg-plus">
+              <use href="../img/sprite.svg#svg-plus"></use>
+            </svg>
+          </span>Добавить еще товар
+        </button>
+      </div>
+      <script>
 					 const newProductHTML = `
 						<div class="add-product-group flex">
 							<div class="form-dropdown dropdown">
@@ -133,85 +180,90 @@
 						// Вставляем перед кнопкой
 						container.insertBefore(newBlock.firstChild, addButton);
 						});
-				</script><br/>
-				<div class="form-item">
-					<input type="text" placeholder="Адрес *"/>
-				</div>
-				<pre>.form-item
+				</script>
+      <br />
+      <div class="form-item">
+        <input type="text" placeholder="Адрес *" />
+      </div>
+      <pre>.form-item
 	input(type="search" placeholder="Адрес *")</pre>
-				<hr/>
-				<div class="form-item">
-					<textarea placeholder="Примечание"></textarea>
-				</div>
-				<pre>.form-item
-	textarea(placeholder="Примечание")</pre><br/>
-				<div class="form-row">
-					<div class="form-item">
-						<input type="tel" placeholder="Телефон *"/>
-					</div>
-					<div class="form-item">
-						<input type="email" placeholder="Email *"/>
-					</div>
-				</div>
-				<p class="agree-txt">Подписываясь на рассылку, вы соглашаетесь с <a href="#!">условиями оферты</a> и <a href="#!">политикой конфиденциальности</a></p>
-				<pre>.form-row
+      <hr />
+      <div class="form-item">
+        <textarea placeholder="Примечание"></textarea>
+      </div>
+      <pre>.form-item
+	textarea(placeholder="Примечание")</pre>
+      <br />
+      <div class="form-row">
+        <div class="form-item">
+          <input type="tel" placeholder="Телефон *" />
+        </div>
+        <div class="form-item">
+          <input type="email" placeholder="Email *" />
+        </div>
+      </div>
+      <p class="agree-txt">Подписываясь на рассылку, вы соглашаетесь с <a href="#!">условиями оферты</a> и <a href="#!">политикой конфиденциальности</a>
+      </p>
+      <pre>.form-row
 	.form-item
 		input(type="tel" placeholder="Телефон *")
 	.form-item
 		input(type="email" placeholder="Email *")
 p.agree-txt Подписываясь на рассылку, вы соглашаетесь с <a href="#!">условиями оферты</a> и <a href="#!">политикой конфиденциальности</a>
 </pre>
-				<hr/>
-				<div class="form-item">
-					<input class="light-border" type="text"/>
-					<button class="btn-send"><img src="../img/send.svg" alt="send"/></button>
-				</div>
-				<pre>.form-item
+      <hr />
+      <div class="form-item">
+        <input class="light-border" type="text" />
+        <button class="btn-send">
+          <img src="../img/send.svg" alt="send" />
+        </button>
+      </div>
+      <pre>.form-item
 	input.light-border(type="text")
 	button.btn-send
 		img(src="../img/send.svg", alt="send")</pre>
-				<hr/>
-				<div class="form-item">
-					<div class="dropdown">
-						<button class="dropdown__button" type="button">Речной песок</button>
-						<div class="dropdown__list">
-							<ul>
-								<li class="dropdown__list-item" data-value="Речной песок">Речной песок</li>
-								<li class="dropdown__list-item" data-value="Пример заполнения 2">Пример заполнения 2</li>
-								<li class="dropdown__list-item" data-value="Пример заполнения 3">Пример заполнения 3</li>
-								<li class="dropdown__list-item" data-value="Пример заполнения 4">Пример заполнения 4</li>
-							</ul>
-						</div>
-						<!--==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===-->
-						<input class="dropdown__input-hidden" type="text" name="undefined"/>
-					</div>
-				</div>
-				<pre>+select("Речной песок", 'product_name')</pre>
-			</div>
-			<div style="background: #1c1c1c; padding:30px">
-				<form class="form form-dark">
-					<div class="form-item">
-						<input type="text" placeholder="Адрес *"/>
-					</div>
-				</form>
-				<pre>form.form.form-dark
+      <hr />
+      <div class="form-item">
+        <div class="dropdown">
+          <button class="dropdown__button" type="button">Речной песок</button>
+          <div class="dropdown__list">
+            <ul>
+              <li class="dropdown__list-item" data-value="Речной песок">Речной песок</li>
+              <li class="dropdown__list-item" data-value="Пример заполнения 2">Пример заполнения 2</li>
+              <li class="dropdown__list-item" data-value="Пример заполнения 3">Пример заполнения 3</li>
+              <li class="dropdown__list-item" data-value="Пример заполнения 4">Пример заполнения 4</li>
+            </ul>
+          </div>
+          <!--==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===-->
+          <input class="dropdown__input-hidden" type="text" name="undefined" />
+        </div>
+      </div>
+      <pre>+select("Речной песок", 'product_name')</pre>
+    </div>
+    <div style="background: #1c1c1c; padding:30px">
+      <form class="form form-dark">
+        <div class="form-item">
+          <input type="text" placeholder="Адрес *" />
+        </div>
+      </form>
+      <pre>form.form.form-dark
 	.form-item
 		input(type="text" placeholder="Адрес *")
 </pre>
-				<div class="form-item search-form-group">
-					<input type="search" placeholder="Поиск"/>
-					<button class="btn search-btn" type="submit">
-						<svg class="svg-search">
-							<use href="../img/sprite.svg#svg-search"></use>
-						</svg>
-					</button>
-				</div>
-				<hr/>
-			</div>
-		</div>
-		<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-		<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js"></script>
-		<script>
+      <div class="form-item search-form-group">
+        <input type="search" placeholder="Поиск" />
+        <button class="btn search-btn" type="submit">
+          <svg class="svg-search">
+            <use href="../img/sprite.svg#svg-search"></use>
+          </svg>
+        </button>
+      </div>
+      <hr />
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js"></script>
+  <script>
 			document.querySelectorAll('.select-date').forEach((dateBlock) => {
 				// Находим внутри блока input для начальной и конечной дат
 				const startDateInput = dateBlock.querySelector('.start-date');
@@ -238,7 +290,7 @@ p.agree-txt Подписываясь на рассылку, вы соглаша�
 			});
 			
 		</script>
-		<script>
+  <script>
 			/*=====CUSTOM SELECT===== */
 			if (window.NodeList && !NodeList.prototype.forEach) {
 				NodeList.prototype.forEach = function (callback, thisArg) {
@@ -292,5 +344,6 @@ p.agree-txt Подписываясь на рассылку, вы соглаша�
 				});
 			});
 		</script>
-	</body>
+</body>
+
 </html>

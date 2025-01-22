@@ -1,0 +1,13 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header
+	
+	main.inner-main
+		include ../sections/_portfolio-page-promo
+		include ../sections/_building-page-content
+		include ../sections/_sales
+	include ../sections/_footer
+	
+block variables	
+	-var title = "Строительство";

@@ -4,6 +4,12 @@
 	height: 800px;
 	padding-top: 20px;
 	padding-bottom: 100px;
+	&:after{
+		content:'';
+		position: absolute;
+		inset:0;
+		background: linear-gradient(337deg, rgba(0, 0, 0, 0) 0%, rgba(20, 17, 14, 0.55) 38.85%, #241f1a 100%);
+	}
 	&.promo--inner{
 		height: auto; padding-bottom:0px;
 		.promo-content{width: 100%; max-width:100%;}
@@ -63,12 +69,7 @@
 }
 .promo.promo-slim{
 	height: 511px;
-	&:after{
-		content:'';
-		position: absolute;
-		inset:0;
-		background: linear-gradient(337deg, rgba(0, 0, 0, 0) 0%, rgba(20, 17, 14, 0.55) 38.85%, #241f1a 100%);
-	}
+	
 }
 .promo.promo--about{
 	height: 780px;
