@@ -8,7 +8,12 @@
 		flex-shrink: 0;
 		width: 57%;
 		aspect-ratio: 144/67;
+		height: 411px;
 		img{border-radius: 10px;}
+		@media (max-width: 1649px) {
+			width: 53%;
+			height: 271px;
+		}
 	}
 	
 }

@@ -15,6 +15,9 @@
 		font-size: 24px;
 		letter-spacing: -0.02em;
 		color: #222;
+		@media (max-width: 1439px) {
+			font-size: 20px;
+		}
 	}
 	&__row.flex{
 		justify-content: space-between; column-gap:20px;

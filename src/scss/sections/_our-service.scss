@@ -22,6 +22,10 @@
 		border-radius: 10px;
 		overflow: hidden;
 		aspect-ratio:3 / 2;
+		height: 400px;
+		@media (max-width: 1649px) {
+		   height: calc((250 / 12)*1vw);
+		}
 	}
 	&__title{
 		font-weight: 400;
@@ -29,15 +33,27 @@
 		line-height: 1.19;
 		font-family: $fs;
 		color: white;
+		@media (max-width: 1439px) {
+			font-size: 26px;
+		 }
 		
 	}
-	p{flex-grow: 1; font-size: 20px;}
+	p{flex-grow: 1; font-size: 20px;
+		@media (max-width: 1439px) {
+			font-size: 16px;
+		 }
+	}
 	&__footer{
 		display: flex;
 		column-gap:20px;
 		.btn-outline{
 			padding-left: 30px;
 			padding-right: 30px;
+			@media (max-width: 1439px) {
+				padding-left: 10px;
+			   padding-right: 10px;
+			   font-size: 16px;;
+			 }
 		}
 	}
 	
@@ -55,4 +71,7 @@
 }
 .service-cards .swiper-slide{
 	width: 600px!important;
+	@media (max-width: 1649px) {
+		width: 500px!important;
+	 }
 }

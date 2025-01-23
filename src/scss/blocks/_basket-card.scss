@@ -70,8 +70,9 @@
 	display: flex;
 	width: 40%;
 	@media (max-width: 1439px) {
-		width: 23%;
+		width: 27%;
 		flex-direction: column;
+		padding-top: 10px;
 		&>*{width: 100%;}
 		.basket-card__amount{padding-top: 20px;}
 	}

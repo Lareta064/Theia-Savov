@@ -11,7 +11,7 @@ mixin assort-card-ui(txt, img)
 mixin category-card(img, title, ...items)
 	.category-card
 		.category-card__img
-			img.img-contain(src="../img/category/cat"+ img +".webp", srcset="../img/category/cat"+ img +"@2x.webp 2x" alt="img" width="763" height="321" loading="lazy")
+			img.img-contain(src="./img/category/cat"+ img +".webp", srcset="./img/category/cat"+ img +"@2x.webp 2x" alt="img" width="763" height="321" loading="lazy")
 		.category-card__body
 			.category-card__title !{title}
 			nav.category-card__links
@@ -64,7 +64,7 @@ mixin serv-card(img, title, txt)
 	.serv-card
 		.serv-card__img
 			img.wh-100(src="./img/services/serv"+ img +".webp", srcset="./img/services/serv"+ img +"@2x.webp 2x"  loading="lazy" width="600" height="399" alt="img")
-		.serv-card__title #{title}
+		.serv-card__title !{title}
 		p !{txt}
 		.serv-card__footer
 			a(href="#!").btn-outline Посмотреть проэкты

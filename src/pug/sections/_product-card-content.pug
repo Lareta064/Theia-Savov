@@ -361,11 +361,7 @@ section.product-details
 							span.txt-12 В розницу
 					
 					.detailed-card-group
-						.counter
-							button(type="button" disabled aria-label="Уменьшить количество").counter-minus -
-							input.counter-value(type="number" value="1000" min="0" )
-							button(type="button" aria-label="Увеличить количество" ).counter-plus +
-		
+						+counter
 						.detailed-total
 							span.txt-12 Стоимость
 							p.amount 700 000 руб
