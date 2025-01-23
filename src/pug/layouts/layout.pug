@@ -5,12 +5,15 @@ doctype html
 html(lang="ru")
 	head
 		meta(charset="UTF-8")
-		meta(name='viewport' content='width=1200')
+		//- meta(name='viewport' content='width=1200')
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible", content="ie=edge")
 		//=======убрать перевод цифр в номер телефона на ios  и safari ======
 		meta(name="format-detection" content="telephone=no")
 		//===custom scrollbar plugin ===
 		//- link(rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css")
+		//fancybox
+		link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css')
 		//Datapicker
 		link(rel='stylesheet' href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css")
 		//Swiper
@@ -57,5 +60,7 @@ html(lang="ru")
 		
 		//===custom scrollbar plugin ===
 		//- script(src='https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js')
+		//fancy
+		script(src='https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js')
 		//=============== custom scripts ===================
 		script(src="./js/main.js")

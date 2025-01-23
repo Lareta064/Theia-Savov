@@ -1,51 +1,11 @@
 section.product-details
 	.container-grid
 		.content-grid__frame.gap-40
-			.fotorama
-				.swiper.mySwiperThumb(thumbsslider)
-					.swiper-wrapper
-						.swiper-slide
-							img(src='./img/fotorama/fotorama1-t.webp' srcset='./img/fotorama/fotorama1-t@2x.webp' width="193" height="130" alt="img")
-						.swiper-slide
-							img(src='./img/fotorama/fotorama2-t.webp' srcset='./img/fotorama/fotorama2-t@2x.webp' width="193" height="130" alt="img")
-						.swiper-slide
-							img(src='./img/fotorama/fotorama3-t.webp' srcset='./img/fotorama/fotorama3-t@2x.webp' width="193" height="130" alt="img")
-						.swiper-slide
-							img(src='./img/fotorama/fotorama1-t.webp' srcset='./img/fotorama/fotorama1-t@2x.webp' width="193" height="130" alt="img")
-						.swiper-slide
-							img(src='./img/fotorama/fotorama2-t.webp' srcset='./img/fotorama/fotorama2-t@2x.webp' width="193" height="130" alt="img")
-						.swiper-slide
-							img(src='./img/fotorama/fotorama3-t.webp' srcset='./img/fotorama/fotorama3-t@2x.webp' width="193" height="130" alt="img")
-					//NAV ARROWS
-					//- .mySwiperThumb-next
-					//- 	span.arrow-left
-					//- .mySwiperThumb-prev
-					//- 	span.arrow-right
-				
-				.swiper.mySwiperFotorama
-				
-					.swiper-wrapper
-						.swiper-slide
-							img(src='./img/fotorama/fotorama-1.webp' srcset="./img/fotorama/fotorama-1@2x.webp" width="900" height="470" alt="img")
-						.swiper-slide
-							img(src='./img/fotorama/fotorama-2.webp' srcset="./img/fotorama/fotorama-2@2x.webp" width="900" height="470" alt="img")
-						.swiper-slide
-							img(src='./img/fotorama/fotorama-3.webp' srcset="./img/fotorama/fotorama-3@2x.webp" width="900" height="470" alt="img")
-						.swiper-slide
-							img(src='./img/fotorama/fotorama-1.webp' srcset="./img/fotorama/fotorama-1@2x.webp" width="900" height="470" alt="img")
-						.swiper-slide
-							img(src='./img/fotorama/fotorama-2.webp' srcset="./img/fotorama/fotorama-2@2x.webp" width="900" height="470" alt="img")
-						.swiper-slide
-							img(src='./img/fotorama/fotorama-3.webp' srcset="./img/fotorama/fotorama-3@2x.webp" width="900" height="470" alt="img")
+			.product-preview.two-columns
+				.product-preview__img
+					img.img-contain(src="./img/products/prod5.webp", srcset="./img/products/prod5@2x.webp 2x" alt="img" width="551" height="343")
 			
-			
-			.specifications.two-columns
-				.specifications__desk
-					.title-24 О производителе 
-					p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно-монтажных работ в промышленном и гражданском строительстве
-					p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно-монтажных работ в промышленном и гражданском строительстве
-				
-				.specifications__list
+				.product-preview__info
 					.specifications__list-block
 						p.specifications__list-title Характеристики
 						ul.dotted-list
@@ -65,10 +25,58 @@ section.product-details
 								p.list__name Содержание глины
 								span.line-bwn
 								p.list__val ≤ 0,25%
-					
-					.specifications__list-block
-						p.specifications__list-title Характеристики
+							
+						
+						p.specifications__list-title Применение
 						p Изготовление высокопрочного бетона, ЖБИ, ЖБК, тротуарной плитки и кладочного раствора, а также стекла и кирпича.
+						a(href="#!").flex-link.txt-16 Посмотреть все виды речного песка 
+							span.arrow-right
+			//TABS
+			.specifications.specifications-tabs.tabs-block
+				.tabs-nav
+					a.tabs-nav__item.active(href="#!" data-tab="tab_1") ОПИСАНИЕ
+					a.tabs-nav__item(href="#!" data-tab="tab_2") Доставка
+					a.tabs-nav__item(href="#!" data-tab="tab_3") Документы 
+				
+				#tab_1.tabs-body.active
+					.specifications__desk
+						.title-24 Речной песок 
+						p Песок - один из самых востребованных строительных материалов. Используется для приготовления строительных растворов, сухих строительных смесей, а также в качестве выравнивающего основания.
+						p Подходит как для внутренних, так и для наружных работ. Применяется в строительстве и отделочных работах, возведении дорог и ландшафтном обустройстве. Продается в мешках весом 30 кг. Произведен в России.
+						p
+							strong Внимание! Товар весом более 1 тонны. необходимо перемещать минимум двумя людьми или с помощью механизированного оборудования. 
+				
+				#tab_2.tabs-body
+					.specifications__desk
+						.title-24 Доставка 
+						p Песок - один из самых востребованных строительных материалов. Используется для приготовления строительных растворов, сухих строительных смесей, а также в качестве выравнивающего основания.
+						p Подходит как для внутренних, так и для наружных работ. Применяется в строительстве и отделочных работах, возведении дорог и ландшафтном обустройстве. Продается в мешках весом 30 кг. Произведен в России.
+						p
+							strong Внимание! Товар весом более 1 тонны. необходимо перемещать минимум двумя людьми или с помощью механизированного оборудования. 
+				
+				#tab_3.tabs-body
+					.specifications__desk
+						.title-24 Документы
+						p Песок - один из самых востребованных строительных материалов. Используется для приготовления строительных растворов, сухих строительных смесей, а также в качестве выравнивающего основания.	
+						//DOCUMENTS
+						.documents-wrapper
+							a(href="./img/docs/doc.webp" data-fancybox="gallery").document-item
+								img(src="./img/docs/doc-thumb.webp", alt="img" width="159" height="220")
+							a(href="./img/docs/doc.webp" data-fancybox="gallery").document-item
+								img(src="./img/docs/doc-thumb.webp", alt="img" width="159" height="220")
+							a(href="./img/docs/doc.webp" data-fancybox="gallery").document-item
+								img(src="./img/docs/doc-thumb.webp", alt="img" width="159" height="220")
+							a(href="./img/docs/doc.webp" data-fancybox="gallery").document-item
+								img(src="./img/docs/doc-thumb.webp", alt="img" width="159" height="220")
+			
+			
+			
+			//DESCRIP TEXT
+			.information-article
+				h2.title-24 О компании 
+				p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно-монтажных работ в промышленном и гражданском строительстве 
+				p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно-монтажных работ в промышленном и гражданском строительстве 
+			
 			include ../sections/_review-swiper
 			
 			
@@ -232,33 +240,26 @@ section.product-details
 				.detailed-card__body.bx-sh
 					.detailed-card-group
 						span.detailed-art.txt-12 Код: 105703
-						.detailed-title.txt-24 Гусеничный экскаватор Hyundai R 210LC-7
+						.detailed-title.txt-24 Речной мытый песок
 						.rating-block.flex
 							.rating-stars
 							span.txt-12 39 отзывов
 					
-						.price-block
-							.price-block__item
-								p от 15 870 руб./смена
-								span.txt-12 за шт
-					
+					.price-block
+						.price-block__item
+							p от от 870 руб./м3
+							span.txt-12 за шт
+						.price-block__item
+							p от 700 руб./тн
+							span.txt-12 В розницу
 					.detailed-card-group
-						.detailed-card__row.flex
-							.select-date.select-date--light
-								.form-item.select-date-start
-									input.start-date(type='text' name="startDay" value="22.01.2025")
-								span -
-								.form-item.select-date-end
-									input.end-date(type='text' name="endtDay" value="26.01.2025")
-							+counter-small
+						+counter
 						.detailed-total
 							span.txt-12 Стоимость
-							p.amount 70 000 руб *
-							span.txt-12 *Цена указана без учета доставки 
-					
+							p.amount 700 000 руб
 					
 					button.btn-primary В корзину
-					
+					button.btn Рассчитать стоимость
 				
 				.detailed-card__footer.bx-sh
 					ul.dotted-list

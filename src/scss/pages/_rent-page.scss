@@ -1,3 +1,5 @@
+
+@use "../base/var" as *;
 .rent-assort{
 	.tabs-block .tabs-body.active{
 		display: flex;
@@ -9,4 +11,28 @@
 		}
 		
 	}
+}
+
+.documents-wrapper{
+	display: flex;
+	flex-wrap: wrap-reverse;
+	gap:20px 10px;
+	.document-item{
+		width: 159px;
+		height: 220px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img{
+		width: 159px;
+		height: 220px;
+		object-fit: contain;
+		}
+	}
+}
+.product-preview__img{
+	background-color: #EDEDED;
+	border-radius: 10px;
+	aspect-ratio:551/350;
+	overflow: hidden;
 }

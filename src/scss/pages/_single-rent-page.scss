@@ -1,3 +1,4 @@
+@use "../base/var" as *;
 .specifications{
 	font-size: 16px;
 	column-gap: 20px;
@@ -25,4 +26,38 @@
 	flex-direction: column;
 	row-gap:20px;
 	&>*{width: 100%; margin-bottom: 0;}
+	@media (max-width: 1439px) {
+		row-gap:10px;
+	}
+}
+.specifications-tabs.tabs-block{
+	.tabs-nav{
+		width: 100%;
+		
+		column-gap: 10px;
+	}
+	.tabs-nav__item{
+		flex:1;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-bottom: 2px solid #222;
+		&.active{
+			border-bottom: 2px solid $accent;
+		}
+	}
+	.tabs-body.active{
+		display: block;
+	}
+}
+.specifications-characteristics.two-columns{
+	row-gap:40px;
+	img{
+		aspect-ratio:551/372;
+		object-fit: contain;
+	}
+}
+.specifications p,.specifications__list-block .dotted-list li, .specifications__list-block p{
+	font-size: 16px;
 }

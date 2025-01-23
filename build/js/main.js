@@ -817,5 +817,10 @@ document.addEventListener("DOMContentLoaded", () => {
           swiper:  mySwiperThumb,
         },
       });
+
+      // Fancybox
+      Fancybox.bind("[data-fancybox]", {
+       
+      });
 });
  
