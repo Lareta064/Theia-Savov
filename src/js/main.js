@@ -729,14 +729,57 @@ document.addEventListener("DOMContentLoaded", () => {
    
     /*FLIP CARD */
     const flipCards = document.querySelectorAll('.flip-card');
-      if(flipCards.length>0){
-        flipCards.forEach((card)=>{
-          const cardFlipBtn = card.querySelector('.flip-card-btn');
-          cardFlipBtn.addEventListener('click', ()=>{
+
+				if (flipCards.length > 0) {
+          flipCards.forEach((card) => {
+            const cardFlipBtn = card.querySelector('.flip-card-btn');
+            const flipCardBack = card.querySelector('.flip-card__back');
+            const startDateInput = card.querySelector('.start-date');
+
+            // Добавляем класс flip-active при наведении на кнопку
+            cardFlipBtn.addEventListener('mouseenter', () => {
             card.classList.add('flip-active');
-          })
-        });
-      }
+            });
+
+            // Удаляем класс flip-active при уходе с flip-card__back
+            if (flipCardBack) {
+            flipCardBack.addEventListener('mouseenter', () => {
+              card.classList.add('flip-active');
+            });
+
+            flipCardBack.addEventListener('mouseleave', (event) => {
+              // Проверяем, не ушла ли мышь в flatpickr-calendar
+              const flatpickrCalendar = document.querySelector('.flatpickr-calendar');
+              if (
+              flatpickrCalendar &&
+              flatpickrCalendar.contains(event.relatedTarget)
+              ) {
+              return; // Если мышь ушла в flatpickr-calendar, не удаляем flip-active
+              }
+              card.classList.remove('flip-active');
+            });
+            }
+
+            // Добавляем класс flip-active при клике на start-date
+            if (startDateInput) {
+            startDateInput.addEventListener('click', () => {
+              card.classList.add('flip-active');
+            });
+            }
+
+            // Добавляем обработчик на flatpickr-calendar
+            document.addEventListener('mouseenter', (event) => {
+            const flatpickrCalendar = document.querySelector('.flatpickr-calendar');
+            if (
+              flatpickrCalendar &&
+              flatpickrCalendar.contains(event.target) &&
+              card.contains(flatpickrCalendar) // Убедимся, что это календарь текущей карточки
+            ) {
+              card.classList.add('flip-active');
+            }
+            });
+          });
+				}
   //BASKET CARDS
     const basketCards = document.querySelectorAll('.basket-card');
     if(basketCards.length > 0){
