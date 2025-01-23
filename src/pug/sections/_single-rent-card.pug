@@ -1,0 +1,264 @@
+section.product-details
+	.container-grid
+		.content-grid__frame.gap-40
+			.fotorama
+				.swiper.mySwiperThumb(thumbsslider)
+					.swiper-wrapper
+						.swiper-slide
+							img(src='https://swiperjs.com/demos/images/nature-1.jpg' width="193" height="130" alt="img")
+						.swiper-slide
+							img(src='https://swiperjs.com/demos/images/nature-2.jpg' width="193" height="130" alt="img")
+						.swiper-slide
+							img(src='https://swiperjs.com/demos/images/nature-3.jpg' width="193" height="130" alt="img")
+						.swiper-slide
+							img(src='https://swiperjs.com/demos/images/nature-4.jpg' width="193" height="130" alt="img")
+						.swiper-slide
+							img(src='https://swiperjs.com/demos/images/nature-5.jpg' width="193" height="130" alt="img")
+						.swiper-slide
+							img(src='https://swiperjs.com/demos/images/nature-6.jpg' width="193" height="130" alt="img")
+					
+					.mySwiperThumb-next
+						span &larr;
+					.mySwiperThumb-prev
+						span &rarr;
+				
+				.swiper.mySwiperFotorama
+				
+					.swiper-wrapper
+						.swiper-slide
+							img(src='https://swiperjs.com/demos/images/nature-1.jpg' width="900" height="470" alt="img")
+						.swiper-slide
+							img(src='https://swiperjs.com/demos/images/nature-2.jpg' width="900" height="470" alt="img")
+						.swiper-slide
+							img(src='https://swiperjs.com/demos/images/nature-3.jpg' width="900" height="470" alt="img")
+						.swiper-slide
+							img(src='https://swiperjs.com/demos/images/nature-4.jpg' width="900" height="470" alt="img")
+						.swiper-slide
+							img(src='https://swiperjs.com/demos/images/nature-5.jpg' width="900" height="470" alt="img")
+						.swiper-slide
+							img(src='https://swiperjs.com/demos/images/nature-6.jpg' width="900" height="470" alt="img")
+			
+			include _our-benefits
+
+			//DESCRIP TEXT
+			.information-article
+				h2.title-24 О компании
+				p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно-монтажных работ в промышленном и гражданском строительстве 
+				p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно-монтажных работ в промышленном и гражданском строительстве 
+			//DESCRIP TEXT
+			.information-article
+				h2.title-24 Как происходит доставка 
+				p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно-монтажных работ в промышленном и гражданском строительстве 
+				p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно-монтажных работ в промышленном и гражданском строительстве 
+		
+			//REVIEW SWIPER
+			.review
+				.header-group
+					h2.title-24 Отзывы
+					a(href="#!").flex-link Смотреть подробнее
+						span.arrow-right
+		
+				include _review-swiper
+			
+			//CARDS SLIDER
+			.article-slider
+				.header-group
+					p.title-24 Товары которые вам могут понравиться 
+					a(href="#!").flex-link Показать больше
+						span.arrow-right
+				
+				.reccomend-products.swiper
+					.swiper-wrapper
+						.swiper-slide
+							+product-card-ui(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+						.swiper-slide
+							+product-card-ui(6,'ЩПС С2 фракции', '0-20 мм', 2300)
+						.swiper-slide
+							+product-card-ui(7,'ЩПС С2 фракции', '0-20 мм', 2300)
+						.swiper-slide
+							+product-card-ui(8,'ЩПС С2 фракции', '0-20 мм', 2300)
+						.swiper-slide
+							+product-card-ui(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+						.swiper-slide
+							+product-card-ui(6,'ЩПС С2 фракции', '0-20 мм', 2300)
+						.swiper-slide
+							+product-card-ui(7,'ЩПС С2 фракции', '0-20 мм', 2300)
+						.swiper-slide
+							+product-card-ui(8,'ЩПС С2 фракции', '0-20 мм', 2300)
+					
+					.mySwiper-pagination
+
+			//DISCONT SLIDER
+			.discont
+				.header-group
+					h2.title-24 Акции
+					a(href="#!").flex-link Показать больше
+						span.arrow-right
+				.discont-slider.swiper
+					.swiper-wrapper
+						.swiper-slide
+							.discont-card
+								.discont-card__body(style="background-image:url(./img/sale-card1.webp)")
+									.txt-20 ЭКСКАВАТОР ФРОНТАЛЬНЫЙ
+									p при заказе в паре с самосвалом
+									.discont-card__price 
+										span 2950 руб/ч
+								
+								button.btn-grey оставить заявку
+						.swiper-slide
+							.discont-card
+								.discont-card__body(style="background-image:url(./img/sale-card2.webp)")
+									.txt-20 ДОРОЖНЫЙ ГРУНТОВОЙ КАТОК ВИБРАЦИОННЫЙ 12-14 ТОНН
+									p только этой осенью
+									.discont-card__price 
+										span 2950 руб/ч 
+										span.old-price  вместо 3300 руб/ч
+								
+								button.btn-grey оставить заявку
+						
+						.swiper-slide
+							.discont-card
+								.discont-card__body(style="background-image:url(./img/sale-card1.webp)")
+									.txt-20 ЭКСКАВАТОР ФРОНТАЛЬНЫЙ
+									p при заказе в паре с самосвалом
+									.discont-card__price 
+										span 2950 руб/ч
+								
+								button.btn-grey оставить заявку
+						
+						.swiper-slide
+							.discont-card
+								.discont-card__body(style="background-image:url(./img/sale-card1.webp)")
+									.txt-20 ЭКСКАВАТОР ФРОНТАЛЬНЫЙ
+									p при заказе в паре с самосвалом
+									.discont-card__price 
+										span 2950 руб/ч
+								
+								button.btn-grey оставить заявку
+						.swiper-slide
+							.discont-card
+								.discont-card__body(style="background-image:url(./img/sale-card2.webp)")
+									.txt-20 ДОРОЖНЫЙ ГРУНТОВОЙ КАТОК ВИБРАЦИОННЫЙ 12-14 ТОНН
+									p только этой осенью
+									.discont-card__price 
+										span 2950 руб/ч 
+										span.old-price  вместо 3300 руб/ч
+								
+								button.btn-grey оставить заявку
+					
+					.mySwiper-pagination
+			//PAGE ORDER FORM
+			.page-order-form
+				h2.title-24.center-txt Расчитать стоимость 
+				form.order-form
+					// выбранный товар + выбор дополнительный товара
+					
+					.select-products-form
+						//один товар + даты
+						.add-product-group.flex
+							.form-dropdown.dropdown
+								button.dropdown__button(type="button") Речной песок
+								
+								.dropdown__list
+									ul
+										li.dropdown__list-item(data-value="select") Выбрать
+										li.dropdown__list-item(data-value="Речной песок") Речной песок
+										li.dropdown__list-item(data-value="Щебень") Щебень
+										li.dropdown__list-item(data-value="Продукт 1") Продукт 1
+										li.dropdown__list-item(data-value="Продукт 2") Продукт 2
+										li.dropdown__list-item(data-value="Продукт 3") Продукт 3
+										li.dropdown__list-item(data-value="Продукт 4") Продукт 4
+							
+								// в этот скрытый инпут в качестве value  выводится значение из data-value из.dropdown__list-item 
+								input.dropdown__input-hidden(type="text", name="select_product")
+							//диапазон дат
+							.select-date
+								.form-item
+									input.start-date(type='text' name="startDay" placeholder="c")
+								.form-item
+									input.end-date(type='text' name="endtDay" placeholder="по")
+						
+						// кнопка выбрать еще
+						button.add-product.add-product-btn
+							span.button-icon
+								svg.svg-plus
+									use(href='../img/sprite.svg#svg-plus')
+							| Добавить еще товар
+
+					//USER DATA
+					.form-item
+						input(type="text" placeholder="Адрес *")
+					.form-row
+						.form-item
+							input(type="text" placeholder="Имя *")
+						.form-item
+							input(type="text" placeholder="Фамилия *")
+					.form-item
+						input(type="text" placeholder="Email *")
+					.form-item
+						input(type="text" placeholder="Телефон *")
+					.form-item
+						input(type="text" placeholder="Компания")
+					.form-item
+						textarea(placeholder="Примечания")
+					//==== инпут загрузки файла с компьютера====
+					.fileUpload-group
+						label.fileUpload-label
+							input.form-input.fileUploadInput(type="file")
+							span.form-input-add +
+							span.form-input-clear &ndash;
+							span.fileUpload-name Приложить карточку предприятия 
+
+					//КНОПКА ОТПРАВИТЬ
+					button.btn-primary(type="submit") Рассчитать стоимость 
+					p.agree-txt.center-txt Согласен с обработкой моих персональных данных в соответствии с #[a(href="#!") политикой конфиденциальности].<br> Поля, отмеченные *, являются обязательными для заполнения
+		
+		
+		//SIDEBAR
+		.aside
+			.detailed-card
+				.detailed-card__body.bx-sh
+					.detailed-card-group
+						span.detailed-art.txt-12 Код: 105703
+						.detailed-title.txt-24 Гусеничный экскаватор Hyundai R 210LC-7
+						.rating-block.flex
+							.rating-stars
+							span.txt-12 39 отзывов
+					
+						.price-block
+							.price-block__item
+								p от 15 870 руб./смена
+								span.txt-12 за шт
+					
+					.detailed-card-group
+						.detailed-card__row.flex
+							.select-date.select-date--light
+								.form-item.select-date-start
+									input.start-date(type='text' name="startDay" value="22.01.2025")
+								span -
+								.form-item.select-date-end
+									input.end-date(type='text' name="endtDay" value="26.01.2025")
+							+counter-small
+						.detailed-total
+							span.txt-12 Стоимость
+							p.amount 70 000 руб *
+							span.txt-12 *Цена указана без учета доставки 
+					
+					
+					button.btn-primary В корзину
+					
+				
+				.detailed-card__footer.bx-sh
+					ul.dotted-list
+						li
+							p.list__name Наличие
+							span.line-bwn
+							p.list__val Много
+						li
+							p.list__name Доставка
+							span.line-bwn
+							p.list__val 24/7
+						li
+							p.list__name Способ получения
+							span.line-bwn
+							p.list__val Самовывоз, Доставка

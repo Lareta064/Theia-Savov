@@ -86,7 +86,11 @@ html(lang="ru")
 									img(src='https://swiperjs.com/demos/images/nature-5.jpg' width="193" height="130" alt="img")
 								.swiper-slide
 									img(src='https://swiperjs.com/demos/images/nature-6.jpg' width="193" height="130" alt="img")
-									
+							
+							.mySwiperThumb-next
+								span &larr;
+							.mySwiperThumb-prev
+								span &rarr;
 						
 						.swiper.mySwiperFotorama
 						
@@ -103,11 +107,6 @@ html(lang="ru")
 									img(src='https://swiperjs.com/demos/images/nature-5.jpg' width="900" height="470" alt="img")
 								.swiper-slide
 									img(src='https://swiperjs.com/demos/images/nature-6.jpg' width="900" height="470" alt="img")
-								
-								
-							.swiper-button-next
-							.swiper-button-prev
-						
 			
 			
 			
@@ -116,23 +115,24 @@ html(lang="ru")
 			//  Initialize Swiper 
 			script.
 				
-				var mySwiperThumb = new Swiper(".mySwiperThumb", {
+				let mySwiperThumb = new Swiper(".mySwiperThumb", {
 					spaceBetween: 20,
 					
 					slidesPerView: 'auto',
 					direction: "vertical", // Вертикальный режим
 					freeMode: true,
 					watchSlidesProgress: true,
-					});
-					var mySwiperFotorama = new Swiper(".mySwiperFotorama", {
-					spaceBetween: 10,
-					speed: 800,
 					navigation: {
 						nextEl: ".swiper-button-next",
 						prevEl: ".swiper-button-prev",
 					},
+					});
+					var mySwiperFotorama = new Swiper(".mySwiperFotorama", {
+					spaceBetween: 10,
+					speed: 800,
+					
 					thumbs: {
 						swiper:  mySwiperThumb,
 					},
-					});
+				});
 				

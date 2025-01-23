@@ -2,4 +2,49 @@
 	display: flex;
 	column-gap: 20px;;
 	height: 470px;
+	.swiper-slide {
+				
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.swiper-slide img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+
+	.mySwiperFotorama {
+		height: 100%;
+		background-color: #EDEDED;
+		border-radius: 10px;
+		width: calc(100% - 193px - 20px);
+	}
+
+	.mySwiperThumb {
+		height: 100%;
+		width:193px;
+		box-sizing: border-box;
+	}
+
+	.mySwiperThumb .swiper-slide {
+		height: 130px!important;
+		img{
+			border-radius: 10px;
+			}
+	}
+
+	.mySwiperThumb .swiper-slide-thumb-active {
+		opacity: 1;
+	}
+
+	.swiper-slide img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 }

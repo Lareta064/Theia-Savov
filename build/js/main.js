@@ -780,22 +780,41 @@ document.addEventListener("DOMContentLoaded", () => {
             });
           });
 				}
-  //BASKET CARDS
-    const basketCards = document.querySelectorAll('.basket-card');
-    if(basketCards.length > 0){
-     
-      basketCards.forEach((card)=>{
-        const basketCardStatus = card.querySelector('.label-hide-chebx');
-        basketCardStatus.addEventListener('click', ()=>{
-        const statusImput = basketCardStatus.querySelector('input');
-        if(statusImput.checked){
-          card.classList.add('basket-card--disable');
-        }else{
-          card.classList.remove('basket-card--disable');
-        }
+    //BASKET CARDS
+      const basketCards = document.querySelectorAll('.basket-card');
+      if(basketCards.length > 0){
+      
+        basketCards.forEach((card)=>{
+          const basketCardStatus = card.querySelector('.label-hide-chebx');
+          basketCardStatus.addEventListener('click', ()=>{
+          const statusImput = basketCardStatus.querySelector('input');
+          if(statusImput.checked){
+            card.classList.add('basket-card--disable');
+          }else{
+            card.classList.remove('basket-card--disable');
+          }
+          })
         })
-      })
-    }
-
+      }
+      //FOTORAMA
+      let mySwiperThumb = new Swiper(".mySwiperThumb", {
+        spaceBetween: 20,
+        
+        slidesPerView: 'auto',
+        direction: "vertical", // Вертикальный режим
+        freeMode: true,
+        watchSlidesProgress: true,
+        });
+        var mySwiperFotorama = new Swiper(".mySwiperFotorama", {
+        spaceBetween: 10,
+        speed: 800,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+          swiper:  mySwiperThumb,
+        },
+      });
 });
  
