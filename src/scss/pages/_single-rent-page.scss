@@ -1,0 +1,21 @@
+.specifications{
+	font-size: 16px;
+	column-gap: 20px;
+	&__list-title{
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 1.2;
+		text-transform: capitalize;
+		color: #222;
+	}
+}
+.specifications__desk{
+	flex: 1;
+	padding-right: 44px;
+}
+.specifications__list, .specifications__desk, .specifications__list-block{
+	display: flex;
+	flex-direction: column;
+	row-gap:20px;
+	&>*{width: 100%; margin-bottom: 0;}
+}

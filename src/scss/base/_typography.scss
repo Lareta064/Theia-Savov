@@ -101,7 +101,10 @@ h1, h2,h3{font-weight: 400;}
 		
 	}
 }
-
+.flex-link.txt-16{
+	font-size: 16px;
+	.arrow-right, .arrow-left{width: 29px;}
+}
 .dark-bg{
 	background-color: $dark;
 	padding-block: 50px;

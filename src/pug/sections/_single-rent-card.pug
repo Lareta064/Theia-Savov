@@ -38,27 +38,39 @@ section.product-details
 						.swiper-slide
 							img(src='https://swiperjs.com/demos/images/nature-6.jpg' width="900" height="470" alt="img")
 			
-			include _our-benefits
-
-			//DESCRIP TEXT
-			.information-article
-				h2.title-24 О компании
-				p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно-монтажных работ в промышленном и гражданском строительстве 
-				p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно-монтажных работ в промышленном и гражданском строительстве 
-			//DESCRIP TEXT
-			.information-article
-				h2.title-24 Как происходит доставка 
-				p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно-монтажных работ в промышленном и гражданском строительстве 
-				p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно-монтажных работ в промышленном и гражданском строительстве 
-		
-			//REVIEW SWIPER
-			.review
-				.header-group
-					h2.title-24 Отзывы
-					a(href="#!").flex-link Смотреть подробнее
-						span.arrow-right
-		
-				include _review-swiper
+			
+			.specifications.two-columns
+				.specifications__desk
+					.title-24 О производителе 
+					p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно-монтажных работ в промышленном и гражданском строительстве
+					p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно-монтажных работ в промышленном и гражданском строительстве
+				
+				.specifications__list
+					.specifications__list-block
+						p.specifications__list-title Характеристики
+						ul.dotted-list
+							li
+								p.list__name Модуль крупности
+								span.line-bwn
+								p.list__val 2.0-2.5
+							li
+								p.list__name Коэфф. фильтрации
+								span.line-bwn
+								p.list__val до 12 м
+							li
+								p.list__name Насыпная плотность
+								span.line-bwn
+								p.list__val 1.6
+							li
+								p.list__name Содержание глины
+								span.line-bwn
+								p.list__val ≤ 0,25%
+					
+					.specifications__list-block
+						p.specifications__list-title Характеристики
+						p Изготовление высокопрочного бетона, ЖБИ, ЖБК, тротуарной плитки и кладочного раствора, а также стекла и кирпича.
+			include ../sections/_review-swiper
+			
 			
 			//CARDS SLIDER
 			.article-slider
@@ -174,9 +186,9 @@ section.product-details
 							//диапазон дат
 							.select-date
 								.form-item
-									input.start-date(type='text' name="startDay" placeholder="c")
+									input.start-date(type='text' name="startDay" )
 								.form-item
-									input.end-date(type='text' name="endtDay" placeholder="по")
+									input.end-date(type='text' name="endtDay" )
 						
 						// кнопка выбрать еще
 						button.add-product.add-product-btn
