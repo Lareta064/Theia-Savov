@@ -5,11 +5,12 @@
 	overflow: hidden;
 	&__img{
 		width: 100%;
-		height: 321px;
+		// height: 321px;
+		padding: 20px;
 		flex-shrink: 0;
 		overflow: hidden;
-		
 		background-color: #EDEDED;
+		aspect-ratio: 551 / 321;
 	}
 	&__body{
 		padding: 25px 40px;
