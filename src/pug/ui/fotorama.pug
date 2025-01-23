@@ -15,15 +15,10 @@ html(lang="ru")
 		link(rel="stylesheet", href="../css/main.css")
 		title UI-KIT
 		style.
-			.swiper {
-				width: 100%;
-				height: 100%;
-			}
-
+			
+			
 			.swiper-slide {
-				text-align: center;
-				font-size: 18px;
-				background: #fff;
+				
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -37,29 +32,27 @@ html(lang="ru")
 			}
 
 
-			.swiper-slide {
-				background-size: cover;
-				background-position: center;
+			.mySwiperFotorama {
+				height: 100%;
+				background-color: #EDEDED;
+				border-radius: 10px;
+				width: calc(100% - 193px - 20px);
 			}
 
-			.mySwiper22 {
+			.mySwiperThumb {
 				height: 100%;
-				width: 80%;
-			}
-
-			.mySwiper1 {
-				height: 100%;
-				width:20%;
+				width:193px;
 				box-sizing: border-box;
-				padding: 10px 0;
 			}
 
-			.mySwiper1 .swiper-slide {
-				height: auto;
-				opacity: 0.4;
+			.mySwiperThumb .swiper-slide {
+				height: 130px!important;
+				img{
+					border-radius: 10px;
+					}
 			}
 
-			.mySwiper1 .swiper-slide-thumb-active {
+			.mySwiperThumb .swiper-slide-thumb-active {
 				opacity: 1;
 			}
 
@@ -79,37 +72,37 @@ html(lang="ru")
 				h2 Фоторама
 				.container-dashboard__content
 					.fotorama
-						.swiper.mySwiper1(thumbsslider)
+						.swiper.mySwiperThumb(thumbsslider)
 							.swiper-wrapper
 								.swiper-slide
-									img(src='https://swiperjs.com/demos/images/nature-1.jpg')
+									img(src='https://swiperjs.com/demos/images/nature-1.jpg' width="193" height="130" alt="img")
 								.swiper-slide
-									img(src='https://swiperjs.com/demos/images/nature-2.jpg')
+									img(src='https://swiperjs.com/demos/images/nature-2.jpg' width="193" height="130" alt="img")
 								.swiper-slide
-									img(src='https://swiperjs.com/demos/images/nature-3.jpg')
+									img(src='https://swiperjs.com/demos/images/nature-3.jpg' width="193" height="130" alt="img")
 								.swiper-slide
-									img(src='https://swiperjs.com/demos/images/nature-4.jpg')
+									img(src='https://swiperjs.com/demos/images/nature-4.jpg' width="193" height="130" alt="img")
 								.swiper-slide
-									img(src='https://swiperjs.com/demos/images/nature-5.jpg')
+									img(src='https://swiperjs.com/demos/images/nature-5.jpg' width="193" height="130" alt="img")
 								.swiper-slide
-									img(src='https://swiperjs.com/demos/images/nature-6.jpg')
+									img(src='https://swiperjs.com/demos/images/nature-6.jpg' width="193" height="130" alt="img")
 									
 						
-						.swiper.mySwiper22
+						.swiper.mySwiperFotorama
 						
 							.swiper-wrapper
 								.swiper-slide
-									img(src='https://swiperjs.com/demos/images/nature-1.jpg')
+									img(src='https://swiperjs.com/demos/images/nature-1.jpg' width="900" height="470" alt="img")
 								.swiper-slide
-									img(src='https://swiperjs.com/demos/images/nature-2.jpg')
+									img(src='https://swiperjs.com/demos/images/nature-2.jpg' width="900" height="470" alt="img")
 								.swiper-slide
-									img(src='https://swiperjs.com/demos/images/nature-3.jpg')
+									img(src='https://swiperjs.com/demos/images/nature-3.jpg' width="900" height="470" alt="img")
 								.swiper-slide
-									img(src='https://swiperjs.com/demos/images/nature-4.jpg')
+									img(src='https://swiperjs.com/demos/images/nature-4.jpg' width="900" height="470" alt="img")
 								.swiper-slide
-									img(src='https://swiperjs.com/demos/images/nature-5.jpg')
+									img(src='https://swiperjs.com/demos/images/nature-5.jpg' width="900" height="470" alt="img")
 								.swiper-slide
-									img(src='https://swiperjs.com/demos/images/nature-6.jpg')
+									img(src='https://swiperjs.com/demos/images/nature-6.jpg' width="900" height="470" alt="img")
 								
 								
 							.swiper-button-next
@@ -123,21 +116,23 @@ html(lang="ru")
 			//  Initialize Swiper 
 			script.
 				
-				var swiper1 = new Swiper(".mySwiper1", {
-					spaceBetween: 10,
-					slidesPerView: 4,
+				var mySwiperThumb = new Swiper(".mySwiperThumb", {
+					spaceBetween: 20,
+					
+					slidesPerView: 'auto',
 					direction: "vertical", // Вертикальный режим
 					freeMode: true,
 					watchSlidesProgress: true,
 					});
-					var swiper2 = new Swiper(".mySwiper22", {
+					var mySwiperFotorama = new Swiper(".mySwiperFotorama", {
 					spaceBetween: 10,
+					speed: 800,
 					navigation: {
 						nextEl: ".swiper-button-next",
 						prevEl: ".swiper-button-prev",
 					},
 					thumbs: {
-						swiper: swiper1,
+						swiper:  mySwiperThumb,
 					},
 					});
 				
