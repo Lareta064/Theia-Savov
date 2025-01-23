@@ -116,11 +116,17 @@ section + .dark-bg{margin-top: 45px;}
    .dark-bg + section{padding-top: 60px;}
 }
 .container, .container-narrow, .container-grid{
-	width: min(1610px, 100%);
-	padding-inline:30px;
+	width: min(1650px, 100%);
+	padding-inline:50px;
 	margin-inline: auto;
+	
+}
+.header .container{
+	@media (max-width: 1649px) {
+		padding-inline:30px;
+	}
 	@media (max-width: 1279px) {
-		padding-inline:20px;
+		padding-inline:16px;
 	}
 }
 .container-narrow{
