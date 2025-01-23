@@ -804,14 +804,15 @@ document.addEventListener("DOMContentLoaded", () => {
         direction: "vertical", // Вертикальный режим
         freeMode: true,
         watchSlidesProgress: true,
+        navigation: {
+          nextEl: ".mySwiperThumb-next",
+          prevEl: ".mySwiperThumb-prev",
+        },
         });
         var mySwiperFotorama = new Swiper(".mySwiperFotorama", {
         spaceBetween: 10,
         speed: 800,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
+       
         thumbs: {
           swiper:  mySwiperThumb,
         },
