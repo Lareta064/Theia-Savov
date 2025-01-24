@@ -17,4 +17,7 @@
 		line-height:1.1;
 		svg{width: 34px; color: inherit;}
 	}
+	@media (max-width: 1199px) {
+		&-item{font-size: 17px;}
+	}
 }

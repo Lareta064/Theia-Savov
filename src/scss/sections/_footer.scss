@@ -79,8 +79,8 @@
 	}
 }
 @media (max-width: 1199px){
-	
-	
+	.promo .promo-txt p{display: none;}
+	.promo .promo-txt p:first-of-type{display: block; font-size: 16px;}
 	.footer-content{
 		flex-wrap: wrap;
 	}

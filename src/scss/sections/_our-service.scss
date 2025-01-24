@@ -33,14 +33,20 @@
 		line-height: 1.19;
 		font-family: $fs;
 		color: white;
-		@media (max-width: 1439px) {
+		@media (max-width: 1649px) {
 			font-size: 26px;
+		 }
+		 @media (max-width: 1439px) {
+			font-size: 22px;
 		 }
 		
 	}
 	p{flex-grow: 1; font-size: 20px;
-		@media (max-width: 1439px) {
+		@media (max-width: 1649px) {
 			font-size: 16px;
+		 }
+		@media (max-width: 1439px) {
+			font-size: 14px;
 		 }
 	}
 	&__footer{
@@ -52,7 +58,7 @@
 			@media (max-width: 1439px) {
 				padding-left: 10px;
 			   padding-right: 10px;
-			   font-size: 16px;;
+			   font-size: 15px;;
 			 }
 		}
 	}
@@ -73,5 +79,8 @@
 	width: 600px!important;
 	@media (max-width: 1649px) {
 		width: 500px!important;
+	 }
+	 @media (max-width: 1439px) {
+		width: 400px!important;
 	 }
 }

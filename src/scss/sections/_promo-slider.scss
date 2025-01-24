@@ -282,7 +282,7 @@
 }
 
 @media (max-width: 1199px) {
-	.promo{display: none!important;}
+	.promo.promo--animate{display: none!important;}
 	.promo-mobile{display: block;}
 	.promo-mobile .promo-card{width: 100%;}
 	.promo-slide__buttons{
