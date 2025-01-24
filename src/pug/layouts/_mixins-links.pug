@@ -2,7 +2,7 @@
 mixin assort-card(txt, img)
 	a(href="#!").assort-card
 		p !{txt}
-		img.img-contain(src="./img/category/cat"+ img +".webp", srcset="./img/category/cat"+ img +"@2x.webp 2x" alt="img" width="312" height="165" loading="lazy")
+		img(src="./img/category/cat"+ img +".webp", srcset="./img/category/cat"+ img +"@2x.webp 2x" alt="img" width="312" height="165" loading="lazy")
 mixin assort-card-ui(txt, img)
 	a(href="#!").assort-card
 		p !{txt}
@@ -121,7 +121,7 @@ mixin post-card
 mixin portfolio-card(img, br1, br2, title)
 	.post-card
 		.post-card__img
-			img.img-contain(src="./img/portfolio/project"+ img +".webp", srcset="./img/portfolio/project"+ img +"@2x.webp 2x" alt="img" width="490" height="314" loading="lazy")
+			img.img-cover(src="./img/portfolio/project"+ img +".webp", srcset="./img/portfolio/project"+ img +"@2x.webp 2x" alt="img" width="490" height="314" loading="lazy")
 		.post-card__body
 			.breadcrumbs
 				a(href="#!") #{br1}
@@ -159,18 +159,18 @@ mixin promo-dark(img, title, btnTxt)
 mixin counter
 	.counter
 		button(type="button" disabled aria-label="Уменьшить количество").counter-minus
-		span.counter-value 2
+		span.counter-value(contenteditable="true") 2
 		button(type="button" aria-label="Увеличить количество" ).counter-plus
 mixin counter-light
 	.counter.counter--light
 		button(type="button" disabled aria-label="Уменьшить количество").counter-minus
-		span.counter-value 0
+		span.counter-value(contenteditable="true") 0
 		button(type="button" aria-label="Увеличить количество" ).counter-plus
 
 mixin counter-small
 	.counter.counter-small
 		button(type="button" disabled aria-label="Уменьшить количество").counter-minus
-		span.counter-value 0
+		span.counter-value(contenteditable="true") 0
 		button(type="button" aria-label="Увеличить количество" ).counter-plus
 
 

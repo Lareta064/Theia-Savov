@@ -242,6 +242,12 @@ section + .dark-bg{margin-top: 45px;}
 			width: 380px;
 		}
 	}
+	@media (max-width: 1023px) {
+	flex-direction: column-reverse;
+	row-gap:40px;
+	.aside{width: 100%;}
+	.content-grid__frame{width: 100%;}
+	}
 }
 
 .header-block{

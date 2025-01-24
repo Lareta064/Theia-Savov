@@ -107,7 +107,16 @@ document.addEventListener("DOMContentLoaded", function () {
         el:".mySwiper-pagination",
         clickable: true,
       },
-
+      breakpoints:{
+        768:{
+          slidesPerView: 3,
+          spaceBetween:16,
+        },
+        1024:{
+          slidesPerView: 4,
+          spaceBetween:20,
+        },
+      }
     });
    
     const reccomendProducts = new Swiper('.reccomend-products', {
@@ -119,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
         clickable: true,
       },
       breakpoints:{
-        1200:{
+        768:{
           slidesPerView: 3,
           spaceBetween:20,
         },
@@ -160,12 +169,12 @@ document.addEventListener("DOMContentLoaded", function () {
       pagination: {
         el:".mySwiper-pagination",
         clickable: true,
-      },
+      }
 
     });
     /*.review-swiper*/
     const reviewSwiperLarge = new Swiper('.review .review-swiper', {
-      slidesPerView: 4,
+      slidesPerView: 3,
       speed:1000,
       spaceBetween:20,
       pagination: {
@@ -173,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
         clickable: true,
       },
     breackpoints:{
-        1200:{
+        768:{
           slidesPerView: 3,
           spaceBetween:20,
         },

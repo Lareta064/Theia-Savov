@@ -112,6 +112,9 @@ h1, h2,h3{font-weight: 400;}
 		color: $accent!important;
 		
 	}
+	@media (max-width: 1439px) {
+		font-size: 16px;
+	}
 }
 .flex-link.txt-16{
 	font-size: 16px;
@@ -186,7 +189,13 @@ h1, h2,h3{font-weight: 400;}
 		}
 
 	   }
-	
+	@media (max-width: 1199px) {
+	    row-gap:20px;
+		h1, h2, h3{font-size: 28px;}
+			
+		
+		p, ol li, ul li{font-size: 16px;}
+	}
 	}
 .dark-list{
 	border-radius: 10px;
