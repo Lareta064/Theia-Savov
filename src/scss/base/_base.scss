@@ -119,7 +119,9 @@ section + .dark-bg{margin-top: 45px;}
 	width: min(1650px, 100%);
 	padding-inline:50px;
 	margin-inline: auto;
-	
+	@media (max-width: 1024px) {
+		padding-inline:30px;
+	}
 }
 .header .container{
 	@media (max-width: 1649px) {
