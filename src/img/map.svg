@@ -1,6 +1,6 @@
-<svg style="width:0; height:0; visibility: hidden;" xmlns="http://www.w3.org/2000/svg">
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
 		
-			<filter id="filter0_d_356_2279" x="0" y="0" width="1649.52" height="990" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+	<filter id="filter0_d_356_2279" x="0" y="0" width="1649.52" height="990" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
 			<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
 			<feOffset dx="1" dy="1"/>
@@ -9,7 +9,7 @@
 			<feColorMatrix type="matrix" values="0 0 0 0 0.790186 0 0 0 0 0.790186 0 0 0 0 0.790186 0 0 0 0.37 0"/>
 			<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_356_2279"/>
 			<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_356_2279" result="shape"/>
-			</filter>
+	</filter>
 		
 	<symbol id="svg-map" viewBox="0 0 1650 990">
 		<g filter="url(#filter0_d_356_2279)">

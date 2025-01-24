@@ -15,6 +15,9 @@
 	&__body{
 		padding: 25px 40px;
 		text-align: center;
+		@media (max-width: 1439px) {
+			padding: 16px 8px;
+		}
 	}
 	&__title{
 		font-weight: 700;
@@ -24,6 +27,9 @@
 		text-align: center;
 		color: #1c1c1c;
 		margin-bottom: 30px;
+		@media (max-width: 1439px) {
+			font-size: 24px;
+		}
 	}
 	&__img, &__links{
 		display: flex;
@@ -46,6 +52,9 @@
 		transition: .3s; 
 		&:hover{
 			color: $accent;
+		}
+		@media (max-width: 1439px) {
+			font-size: 17px;
 		}
 	}
 }
