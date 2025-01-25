@@ -62,13 +62,19 @@ document.addEventListener("DOMContentLoaded", function () {
                   },
                   1024:{
                     spaceBetween:20,
-                    slidesPerView: 4,
+                    slidesPerView: 3,
                   },
                   1280:{
                     spaceBetween:40,
+                    slidesPerView: 3,
+                  
+                  },
+                  1650:{
+                    spaceBetween:40,
                     slidesPerView: 4,
                   
-                  }
+                  },
+
               
               }
 						});
@@ -112,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
           slidesPerView: 3,
           spaceBetween:16,
         },
-        1024:{
+        1650:{
           slidesPerView: 4,
           spaceBetween:20,
         },
@@ -420,13 +426,13 @@ document.addEventListener("DOMContentLoaded", () => {
             // После завершения анимации убираем fading-out
             setTimeout(() => {
               currentContent.classList.remove("fading-out");
-            }, 500); // Время совпадает с transition: opacity 0.5s
-          }, 500);
+            }, 600); // Время совпадает с transition: opacity 0.5s
+          }, 600);
         });
   
         // Обновляем индекс
         currentIndex = (currentIndex + 1) % 3; // Учитываем 3 варианта содержимого
-      }, 5000);
+      }, 10000);
     };
   
     // Функция для инициализации Swiper
@@ -608,6 +614,13 @@ document.addEventListener("DOMContentLoaded", () => {
               clearActiveClasses();
           }
       });
+      menuWrapper.addEventListener("click", (e) => {
+        
+        if(e.target == e.currentTarget){
+          menuWrapper.classList.remove("active");
+           clearActiveClasses();
+        }       
+      });
   }
 
   // Логика для больших экранов
@@ -627,7 +640,14 @@ document.addEventListener("DOMContentLoaded", () => {
               clearActiveClasses();
           }, 300);
       });
-
+      menuWrapper.addEventListener("click", (e) => {
+        
+        if(e.target == e.currentTarget){
+          menuWrapper.classList.remove("active");
+          bodyEl.classList.remove('lock');
+           clearTimeout(hoverTimeout);
+        }       
+      });
       menuWrapper.addEventListener("mouseenter", () => {
           clearTimeout(hoverTimeout);
       });
@@ -737,58 +757,70 @@ document.addEventListener("DOMContentLoaded", () => {
   });
    
     /*FLIP CARD */
+    // const flipCards = document.querySelectorAll('.flip-card');
+
+		// 		if (flipCards.length > 0) {
+    //       flipCards.forEach((card) => {
+    //         const cardFlipBtn = card.querySelector('.flip-card-btn');
+    //         const flipCardBack = card.querySelector('.flip-card__back');
+    //         const startDateInput = card.querySelector('.start-date');
+
+    //         // Добавляем класс flip-active при наведении на кнопку
+    //         cardFlipBtn.addEventListener('mouseenter', () => {
+    //         card.classList.add('flip-active');
+    //         });
+
+    //         // Удаляем класс flip-active при уходе с flip-card__back
+    //         if (flipCardBack) {
+    //         flipCardBack.addEventListener('mouseenter', () => {
+    //           card.classList.add('flip-active');
+    //         });
+
+    //         flipCardBack.addEventListener('mouseleave', (event) => {
+    //           // Проверяем, не ушла ли мышь в flatpickr-calendar
+    //           const flatpickrCalendar = document.querySelector('.flatpickr-calendar');
+    //           if (
+    //           flatpickrCalendar &&
+    //           flatpickrCalendar.contains(event.relatedTarget)
+    //           ) {
+    //           return; // Если мышь ушла в flatpickr-calendar, не удаляем flip-active
+    //           }
+    //           card.classList.remove('flip-active');
+    //         });
+    //         }
+
+    //         // Добавляем класс flip-active при клике на start-date
+    //         if (startDateInput) {
+    //         startDateInput.addEventListener('click', () => {
+    //           card.classList.add('flip-active');
+    //         });
+    //         }
+
+    //         // Добавляем обработчик на flatpickr-calendar
+    //         document.addEventListener('mouseenter', (event) => {
+    //         const flatpickrCalendar = document.querySelector('.flatpickr-calendar');
+    //         if (
+    //           flatpickrCalendar &&
+    //           flatpickrCalendar.contains(event.target) &&
+    //           card.contains(flatpickrCalendar) // Убедимся, что это календарь текущей карточки
+    //         ) {
+    //           card.classList.add('flip-active');
+    //         }
+    //         });
+    //       });
+		// 		}
+    /*FLIP CARD */
     const flipCards = document.querySelectorAll('.flip-card');
-
-				if (flipCards.length > 0) {
-          flipCards.forEach((card) => {
-            const cardFlipBtn = card.querySelector('.flip-card-btn');
-            const flipCardBack = card.querySelector('.flip-card__back');
-            const startDateInput = card.querySelector('.start-date');
-
-            // Добавляем класс flip-active при наведении на кнопку
-            cardFlipBtn.addEventListener('mouseenter', () => {
+      if(flipCards.length>0){
+        flipCards.forEach((card)=>{
+          const cardFlipBtn = card.querySelector('.flip-card-btn');
+          cardFlipBtn.addEventListener('click', ()=>{
             card.classList.add('flip-active');
-            });
-
-            // Удаляем класс flip-active при уходе с flip-card__back
-            if (flipCardBack) {
-            flipCardBack.addEventListener('mouseenter', () => {
-              card.classList.add('flip-active');
-            });
-
-            flipCardBack.addEventListener('mouseleave', (event) => {
-              // Проверяем, не ушла ли мышь в flatpickr-calendar
-              const flatpickrCalendar = document.querySelector('.flatpickr-calendar');
-              if (
-              flatpickrCalendar &&
-              flatpickrCalendar.contains(event.relatedTarget)
-              ) {
-              return; // Если мышь ушла в flatpickr-calendar, не удаляем flip-active
-              }
-              card.classList.remove('flip-active');
-            });
-            }
-
-            // Добавляем класс flip-active при клике на start-date
-            if (startDateInput) {
-            startDateInput.addEventListener('click', () => {
-              card.classList.add('flip-active');
-            });
-            }
-
-            // Добавляем обработчик на flatpickr-calendar
-            document.addEventListener('mouseenter', (event) => {
-            const flatpickrCalendar = document.querySelector('.flatpickr-calendar');
-            if (
-              flatpickrCalendar &&
-              flatpickrCalendar.contains(event.target) &&
-              card.contains(flatpickrCalendar) // Убедимся, что это календарь текущей карточки
-            ) {
-              card.classList.add('flip-active');
-            }
-            });
           });
-				}
+
+        });
+        
+      }
     //BASKET CARDS
       const basketCards = document.querySelectorAll('.basket-card');
       if(basketCards.length > 0){
@@ -805,6 +837,7 @@ document.addEventListener("DOMContentLoaded", () => {
           })
         })
       }
+      console.log('********************* TOP KEK *****************')
       //FOTORAMA
       let mySwiperThumb = new Swiper(".mySwiperThumb", {
         spaceBetween: 20,

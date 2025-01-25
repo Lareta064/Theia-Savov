@@ -20,6 +20,7 @@
 	width: 100%;
 	height: calc(100vh - 100px);
 	min-height: 960px;
+	max-height: 960px;
 	.h1{
 		position: relative;
 		z-index: 3;
@@ -36,15 +37,17 @@
 		inset: 0;
 		opacity: 0;
 		z-index: 1;
-		transition: opacity 0.5s ease;
+		transition: opacity .6s ease;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		padding-top: 15vh;
-		padding-bottom: 22vh;
-		
+		padding-bottom: 15vh;
+		@media (max-width: 1999px) {
+			padding-bottom: 22vh;
+		}
 	  }
-	  
+	  .btn, .btn-outline{padding-left: 20px; padding-right: 20px;}
 	  .promo-slide-content.active {
 		z-index: 3; /* Поверх всех */
 		opacity: 1; /* Полностью видим */
@@ -122,7 +125,7 @@
 		width: 50%;
 		background:#1c1c1c;
 		.promo-slide-content{
-			padding-left: calc((100vw - 1550px) /2);
+			padding-left: calc((100vw - 1650px) /2);
 		}
 		.promo-slide-content.active .promo-slide__progress span {
 			width: 100%;
@@ -166,13 +169,14 @@
 	height: 2px;
 	background-color: #f5f5f5;
 	margin-bottom: 10px;
+	flex-shrink:0;
 	span{
 		position: absolute;
 		top: 0;
 		bottom: 0;
 		left: 0;
 	    width: 0;
-		transition: 5s; 
+		transition: 10s; 
 		display: block;
 		z-index: 2;
 		background-color: $accent;
@@ -192,7 +196,7 @@
 		.promo-slide-content {padding-block:10vh 14vh}
 		.promo-slide__info{
 			max-width: 525px;
-			.txt-24{font-size: 20px;}
+			.txt-24{font-size: 18px;}
 		}
 		.promo-slide__buttons{
 			column-gap:16px;
@@ -210,17 +214,19 @@
 		
 		.promo-slide__info{
 			max-width: 480px;
-			.txt-24{font-size: 18px;}
+			.txt-24{font-size: 16px;}
 		}
 	}
 }
+
+
 @media (max-width: 1364px) {
 	.promo-slider{
 		
 		.promo-slide-content {padding-block:8vh 12vh}
 		.promo-slide__info{
 			max-width: 440px;
-			.txt-24{font-size: 18px;}
+			.txt-24{font-size: 16px;}
 			 .h1{font-size: 56px ;}
 		}
 		.promo-slide__buttons{

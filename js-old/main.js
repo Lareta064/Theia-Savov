@@ -62,19 +62,13 @@ document.addEventListener("DOMContentLoaded", function () {
                   },
                   1024:{
                     spaceBetween:20,
-                    slidesPerView: 3,
+                    slidesPerView: 4,
                   },
                   1280:{
                     spaceBetween:40,
-                    slidesPerView: 3,
-                  
-                  },
-                  1650:{
-                    spaceBetween:40,
                     slidesPerView: 4,
                   
-                  },
-
+                  }
               
               }
 						});
@@ -113,16 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
         el:".mySwiper-pagination",
         clickable: true,
       },
-      breakpoints:{
-        768:{
-          slidesPerView: 3,
-          spaceBetween:16,
-        },
-        1650:{
-          slidesPerView: 4,
-          spaceBetween:20,
-        },
-      }
+
     });
    
     const reccomendProducts = new Swiper('.reccomend-products', {
@@ -134,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
         clickable: true,
       },
       breakpoints:{
-        768:{
+        1200:{
           slidesPerView: 3,
           spaceBetween:20,
         },
@@ -175,28 +160,8 @@ document.addEventListener("DOMContentLoaded", function () {
       pagination: {
         el:".mySwiper-pagination",
         clickable: true,
-      }
-
-    });
-    /*.review-swiper*/
-    const reviewSwiperLarge = new Swiper('.review .review-swiper', {
-      slidesPerView: 3,
-      speed:1000,
-      spaceBetween:20,
-      pagination: {
-        el:".mySwiper-pagination",
-        clickable: true,
       },
-    breackpoints:{
-        768:{
-          slidesPerView: 3,
-          spaceBetween:20,
-        },
-        1440:{
-          slidesPerView: 4,
-          spaceBetween:20,
-        }
-      }
+
     });
      /*discont-slider*/
      const discontSwiper = new Swiper('.discont-slider', {
@@ -426,13 +391,13 @@ document.addEventListener("DOMContentLoaded", () => {
             // После завершения анимации убираем fading-out
             setTimeout(() => {
               currentContent.classList.remove("fading-out");
-            }, 600); // Время совпадает с transition: opacity 0.5s
-          }, 600);
+            }, 500); // Время совпадает с transition: opacity 0.5s
+          }, 500);
         });
   
         // Обновляем индекс
         currentIndex = (currentIndex + 1) % 3; // Учитываем 3 варианта содержимого
-      }, 10000);
+      }, 5000);
     };
   
     // Функция для инициализации Swiper
@@ -614,13 +579,6 @@ document.addEventListener("DOMContentLoaded", () => {
               clearActiveClasses();
           }
       });
-      menuWrapper.addEventListener("click", (e) => {
-        
-        if(e.target == e.currentTarget){
-          menuWrapper.classList.remove("active");
-           clearActiveClasses();
-        }       
-      });
   }
 
   // Логика для больших экранов
@@ -640,14 +598,7 @@ document.addEventListener("DOMContentLoaded", () => {
               clearActiveClasses();
           }, 300);
       });
-      menuWrapper.addEventListener("click", (e) => {
-        
-        if(e.target == e.currentTarget){
-          menuWrapper.classList.remove("active");
-          bodyEl.classList.remove('lock');
-           clearTimeout(hoverTimeout);
-        }       
-      });
+
       menuWrapper.addEventListener("mouseenter", () => {
           clearTimeout(hoverTimeout);
       });
@@ -757,112 +708,31 @@ document.addEventListener("DOMContentLoaded", () => {
   });
    
     /*FLIP CARD */
-    // const flipCards = document.querySelectorAll('.flip-card');
-
-		// 		if (flipCards.length > 0) {
-    //       flipCards.forEach((card) => {
-    //         const cardFlipBtn = card.querySelector('.flip-card-btn');
-    //         const flipCardBack = card.querySelector('.flip-card__back');
-    //         const startDateInput = card.querySelector('.start-date');
-
-    //         // Добавляем класс flip-active при наведении на кнопку
-    //         cardFlipBtn.addEventListener('mouseenter', () => {
-    //         card.classList.add('flip-active');
-    //         });
-
-    //         // Удаляем класс flip-active при уходе с flip-card__back
-    //         if (flipCardBack) {
-    //         flipCardBack.addEventListener('mouseenter', () => {
-    //           card.classList.add('flip-active');
-    //         });
-
-    //         flipCardBack.addEventListener('mouseleave', (event) => {
-    //           // Проверяем, не ушла ли мышь в flatpickr-calendar
-    //           const flatpickrCalendar = document.querySelector('.flatpickr-calendar');
-    //           if (
-    //           flatpickrCalendar &&
-    //           flatpickrCalendar.contains(event.relatedTarget)
-    //           ) {
-    //           return; // Если мышь ушла в flatpickr-calendar, не удаляем flip-active
-    //           }
-    //           card.classList.remove('flip-active');
-    //         });
-    //         }
-
-    //         // Добавляем класс flip-active при клике на start-date
-    //         if (startDateInput) {
-    //         startDateInput.addEventListener('click', () => {
-    //           card.classList.add('flip-active');
-    //         });
-    //         }
-
-    //         // Добавляем обработчик на flatpickr-calendar
-    //         document.addEventListener('mouseenter', (event) => {
-    //         const flatpickrCalendar = document.querySelector('.flatpickr-calendar');
-    //         if (
-    //           flatpickrCalendar &&
-    //           flatpickrCalendar.contains(event.target) &&
-    //           card.contains(flatpickrCalendar) // Убедимся, что это календарь текущей карточки
-    //         ) {
-    //           card.classList.add('flip-active');
-    //         }
-    //         });
-    //       });
-		// 		}
-    /*FLIP CARD */
     const flipCards = document.querySelectorAll('.flip-card');
       if(flipCards.length>0){
         flipCards.forEach((card)=>{
           const cardFlipBtn = card.querySelector('.flip-card-btn');
           cardFlipBtn.addEventListener('click', ()=>{
             card.classList.add('flip-active');
-          });
-
-        });
-        
-      }
-    //BASKET CARDS
-      const basketCards = document.querySelectorAll('.basket-card');
-      if(basketCards.length > 0){
-      
-        basketCards.forEach((card)=>{
-          const basketCardStatus = card.querySelector('.label-hide-chebx');
-          basketCardStatus.addEventListener('click', ()=>{
-          const statusImput = basketCardStatus.querySelector('input');
-          if(statusImput.checked){
-            card.classList.add('basket-card--disable');
-          }else{
-            card.classList.remove('basket-card--disable');
-          }
           })
-        })
-      }
-      console.log('********************* TOP KEK *****************')
-      //FOTORAMA
-      let mySwiperThumb = new Swiper(".mySwiperThumb", {
-        spaceBetween: 20,
-        
-        slidesPerView: 'auto',
-        direction: "vertical", // Вертикальный режим
-        freeMode: true,
-        watchSlidesProgress: true,
-        navigation: {
-          nextEl: ".mySwiperThumb-next",
-          prevEl: ".mySwiperThumb-prev",
-        },
         });
-        var mySwiperFotorama = new Swiper(".mySwiperFotorama", {
-        spaceBetween: 10,
-        speed: 800,
-       
-        thumbs: {
-          swiper:  mySwiperThumb,
-        },
-      });
+      }
+  //BASKET CARDS
+    const basketCards = document.querySelectorAll('.basket-card');
+    if(basketCards.length > 0){
+     
+      basketCards.forEach((card)=>{
+        const basketCardStatus = card.querySelector('.label-hide-chebx');
+        basketCardStatus.addEventListener('click', ()=>{
+        const statusImput = basketCardStatus.querySelector('input');
+        if(statusImput.checked){
+          card.classList.add('basket-card--disable');
+        }else{
+          card.classList.remove('basket-card--disable');
+        }
+        })
+      })
+    }
 
-      // Fancybox
-      Fancybox.bind("[data-fancybox]", {
-       
-      });
 });
  
