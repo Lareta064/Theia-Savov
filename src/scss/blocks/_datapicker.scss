@@ -134,7 +134,7 @@
 	column-gap:16px;
 	font-weight: 400;
 	font-size: 16px;
-	line-height: 125%;
+	line-height: 1.25;
 	letter-spacing: -0.02em;
 	color: #222;
 	transition: .3s; 
@@ -167,9 +167,12 @@
 	.form-item input{
 		background: white;
        border-color: white;
-	   width: 93px;
+	   width: 110px;
 	   padding: 5px;
 	   padding-right: 5px;
-	   &.start-date{padding-left: 7px; padding-right: 3px;  width: 108px; padding-left: 21px;}
+	   &.start-date{padding-left: 7px; padding-right: 3px;  width: 110px; padding-left: 21px;}
+		@media (max-width: 1439px) {
+		font-size: 15px;
+		}
 	}
 }

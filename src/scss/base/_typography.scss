@@ -7,7 +7,7 @@ h1, h2,h3{font-weight: 400;}
 	letter-spacing: -0.02em;
 	color: #f5f5f5;
 	@media (max-width: 1699px) {
-		font-size: 60px;
+		font-size: 50px;
 	}
 	@media (max-width: 1199px) {
 		font-size: 40px;
@@ -22,8 +22,14 @@ h1, h2,h3{font-weight: 400;}
 	font-size: 50px;
 	margin-bottom: 1em;
 	line-height: 100%;
-	@media (max-width: 1439px) {
+	@media (max-width: 1649px) {
 		font-size: 42px;
+	}
+	@media (max-width: 1439px) {
+		font-size: 38px;
+	}
+	@media (max-width: 1199px) {
+		font-size: 32px;
 	}
 	
 }
@@ -106,6 +112,9 @@ h1, h2,h3{font-weight: 400;}
 		color: $accent!important;
 		
 	}
+	@media (max-width: 1439px) {
+		font-size: 16px;
+	}
 }
 .flex-link.txt-16{
 	font-size: 16px;
@@ -180,7 +189,13 @@ h1, h2,h3{font-weight: 400;}
 		}
 
 	   }
-	
+	@media (max-width: 1199px) {
+	    row-gap:20px;
+		h1, h2, h3{font-size: 28px;}
+			
+		
+		p, ol li, ul li{font-size: 16px;}
+	}
 	}
 .dark-list{
 	border-radius: 10px;

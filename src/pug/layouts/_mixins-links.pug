@@ -2,7 +2,7 @@
 mixin assort-card(txt, img)
 	a(href="#!").assort-card
 		p !{txt}
-		img.img-contain(src="./img/category/cat"+ img +".webp", srcset="./img/category/cat"+ img +"@2x.webp 2x" alt="img" width="312" height="165" loading="lazy")
+		img(src="./img/category/cat"+ img +".webp", srcset="./img/category/cat"+ img +"@2x.webp 2x" alt="img" width="312" height="165" loading="lazy")
 mixin assort-card-ui(txt, img)
 	a(href="#!").assort-card
 		p !{txt}
@@ -11,7 +11,7 @@ mixin assort-card-ui(txt, img)
 mixin category-card(img, title, ...items)
 	.category-card
 		.category-card__img
-			img.img-contain(src="../img/category/cat"+ img +".webp", srcset="../img/category/cat"+ img +"@2x.webp 2x" alt="img" width="763" height="321" loading="lazy")
+			img.img-contain(src="./img/category/cat"+ img +".webp", srcset="./img/category/cat"+ img +"@2x.webp 2x" alt="img" width="763" height="321" loading="lazy")
 		.category-card__body
 			.category-card__title !{title}
 			nav.category-card__links
@@ -64,7 +64,7 @@ mixin serv-card(img, title, txt)
 	.serv-card
 		.serv-card__img
 			img.wh-100(src="./img/services/serv"+ img +".webp", srcset="./img/services/serv"+ img +"@2x.webp 2x"  loading="lazy" width="600" height="399" alt="img")
-		.serv-card__title #{title}
+		.serv-card__title !{title}
 		p !{txt}
 		.serv-card__footer
 			a(href="#!").btn-outline Посмотреть проэкты
@@ -108,21 +108,20 @@ mixin select2(plh="Пример заполнения", inpName = 'input_name', l
 mixin post-card
 	.post-card
 		.post-card__img
-			img.img-contain(src="./img/blog/post.webp", srcset="./img/blog/post@2x.webp 2x" alt="img" width="490" height="314" loading="lazy")
+			img.img-cover(src="./img/blog/post.webp", srcset="./img/blog/post@2x.webp 2x" alt="img" width="490" height="314" loading="lazy")
 		.post-card__body
 			.breadcrumbs
 				a(href="#!") крыши
 				a(href="#!") стройка
 			.post-card__title Щебень для кровли
 			p  #[a(href="#!") Щебень] на кровле – один из вариантов балласта, который используется для пригруза гидроизоляции плоской кровли. В балластной системе щебень считается самым доступным, эффективным и недорогим материалом для крепления и завершающего слоя кровельного пирога.
-			a(href="single-blog.html").flex-link Читать статью 
-				svg.svg-arrow-right
-					use(href='./img/sprite.svg#svg-arrow-right')
+			a(href="single-blog.html").flex-link.txt-16 Читать статью 
+				span.arrow-right
 
 mixin portfolio-card(img, br1, br2, title)
 	.post-card
 		.post-card__img
-			img.img-contain(src="./img/portfolio/project"+ img +".webp", srcset="./img/portfolio/project"+ img +"@2x.webp 2x" alt="img" width="490" height="314" loading="lazy")
+			img.img-cover(src="./img/portfolio/project"+ img +".webp", srcset="./img/portfolio/project"+ img +"@2x.webp 2x" alt="img" width="490" height="314" loading="lazy")
 		.post-card__body
 			.breadcrumbs
 				a(href="#!") #{br1}
@@ -160,18 +159,18 @@ mixin promo-dark(img, title, btnTxt)
 mixin counter
 	.counter
 		button(type="button" disabled aria-label="Уменьшить количество").counter-minus
-		span.counter-value 2
+		span.counter-value(contenteditable="true") 2
 		button(type="button" aria-label="Увеличить количество" ).counter-plus
 mixin counter-light
 	.counter.counter--light
 		button(type="button" disabled aria-label="Уменьшить количество").counter-minus
-		span.counter-value 0
+		span.counter-value(contenteditable="true") 0
 		button(type="button" aria-label="Увеличить количество" ).counter-plus
 
 mixin counter-small
 	.counter.counter-small
 		button(type="button" disabled aria-label="Уменьшить количество").counter-minus
-		span.counter-value 0
+		span.counter-value(contenteditable="true") 0
 		button(type="button" aria-label="Увеличить количество" ).counter-plus
 
 
@@ -181,7 +180,7 @@ mixin flipCard(img=1)
 		//CARD FRONT
 		.flip-card__front
 			.flip-card__img
-				img.img-contain(src="../img/products/prod"+img+".webp", srcset="../img/products/prod"+img+"@2x.webp 2x" width="372" height="233" alt="img" loading="lazy")
+				img.img-contain(src="./img/products/prod"+img+".webp", srcset="./img/products/prod"+img+"@2x.webp 2x" width="372" height="233" alt="img" loading="lazy")
 			.flip-card__desk
 				.flip-card__title 
 					.title-20 Гусеничный экскаватор<br>

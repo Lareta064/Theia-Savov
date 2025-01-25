@@ -5,10 +5,10 @@
 	padding-bottom: 0;
 	width: 100%;
 	aspect-ratio: 12 / 5;
-	max-height: 690px;
-	@media (max-width: 1599px) {
+	height: 690px;
+	@media (max-width: 1649px) {
 		aspect-ratio: 5/3;
-		max-height: 500px;
+		height: 500px;
 	}
 	
 	.container{
@@ -18,11 +18,15 @@
 		position: absolute;
 		width: 100%;
 		max-width: 1650px;
+		height: 990px;
 		aspect-ratio: 5/3;
 		top: 0;
 		left: 0;
 		z-index: 1;
 		transform: translate(0, -18%);
+		@media (max-width: 1649px) {
+			height: calc((720/12)*1vw)
+		}
 		.svg-map{
 			display: block;
 			width: 100%;
