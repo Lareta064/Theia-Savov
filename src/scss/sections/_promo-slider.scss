@@ -5,13 +5,13 @@
 	.container{z-index: 4;}
 	.city-selection{
 		position: absolute;
-		right: 0;
+		right: 25px;
 		top: 20px;
 		z-index: 5;
 		p, p span, .city-selection__btn button {color:white;}
 	}
 	@media (max-width: 1439px) {
-		.city-selection{top: 10px;}
+		.city-selection{top: 0;}
 	}
 }
 .promo-slider{
@@ -112,6 +112,9 @@
 		color: rgba(255, 255, 255, 0.75);
 		transition: .3s; 
 			&:hover{color: $accent;}
+			@media (max-width: 1364px) {
+				font-size: 14px;
+			}
 		}
 	}
 	
@@ -210,7 +213,7 @@
 }
 @media (max-width: 1439px) {
 	.promo-slider{
-		height: 600px;
+		height: 560px;
 		
 		.promo-slide__info{
 			max-width: 480px;
@@ -223,11 +226,11 @@
 @media (max-width: 1364px) {
 	.promo-slider{
 		
-		.promo-slide-content {padding-block:8vh 12vh}
+		.promo-slide-content {padding-block:8vh 6vh}
 		.promo-slide__info{
 			max-width: 440px;
 			.txt-24{font-size: 16px;}
-			 .h1{font-size: 56px ;}
+			 .h1{font-size: 48px ;}
 		}
 		.promo-slide__buttons{
 			column-gap:10px;
@@ -236,8 +239,13 @@
 			.btn, .btn-outline{font-size: 14px;}
 		}
 		.promo-slide--first  .promo-slide-content{
-			padding-left: 30px;
+			padding-left: 80px;
 		}
+	}
+}
+@media (max-width: 1199px) {
+	.promo-slider .promo-slide--first  .promo-slide-content{
+		padding-left: 30px;
 	}
 }
 .promo-mobile{

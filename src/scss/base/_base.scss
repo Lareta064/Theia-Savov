@@ -116,8 +116,8 @@ section + .dark-bg{margin-top: 45px;}
    .dark-bg + section{padding-top: 60px;}
 }
 .container, .container-narrow, .container-grid{
-	width: min(1650px, 100%);
-	padding-inline:50px;
+	width: min(1710px, 100%);
+	padding-inline:80px;
 	margin-inline: auto;
 	@media (max-width: 1024px) {
 		padding-inline:30px;
