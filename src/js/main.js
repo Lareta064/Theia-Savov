@@ -402,38 +402,38 @@ document.addEventListener("DOMContentLoaded", () => {
     let promoMobileSlider = null; // Переменная для Swiper
   
     // Функция для запуска кастомного слайдера
-    const initCustomSlider = () => {
-      const slides = document.querySelectorAll(".promo-slide");
-      let currentIndex = 0;
+    // const initCustomSlider = () => {
+    //   const slides = document.querySelectorAll(".promo-slide");
+    //   let currentIndex = 0;
   
-      promoCustomSliderInterval = setInterval(() => {
-        slides.forEach((slide) => {
-          const contents = slide.querySelectorAll(".promo-slide-content");
+    //   promoCustomSliderInterval = setInterval(() => {
+    //     slides.forEach((slide) => {
+    //       const contents = slide.querySelectorAll(".promo-slide-content");
   
-          // Получаем текущий активный и следующий контент
-          const currentContent = contents[currentIndex];
-          const nextIndex = (currentIndex + 1) % contents.length;
-          const nextContent = contents[nextIndex];
+    //       // Получаем текущий активный и следующий контент
+    //       const currentContent = contents[currentIndex];
+    //       const nextIndex = (currentIndex + 1) % contents.length;
+    //       const nextContent = contents[nextIndex];
   
-          // Устанавливаем следующий контент поверх текущего
-          nextContent.classList.add("active");
+    //       // Устанавливаем следующий контент поверх текущего
+    //       nextContent.classList.add("active");
   
-          // Убираем текущий контент с задержкой
-          setTimeout(() => {
-            currentContent.classList.remove("active");
-            currentContent.classList.add("fading-out");
+    //       // Убираем текущий контент с задержкой
+    //       setTimeout(() => {
+    //         currentContent.classList.remove("active");
+    //         currentContent.classList.add("fading-out");
   
-            // После завершения анимации убираем fading-out
-            setTimeout(() => {
-              currentContent.classList.remove("fading-out");
-            }, 600); // Время совпадает с transition: opacity 0.5s
-          }, 600);
-        });
+    //         // После завершения анимации убираем fading-out
+    //         setTimeout(() => {
+    //           currentContent.classList.remove("fading-out");
+    //         }, 600); // Время совпадает с transition: opacity 0.5s
+    //       }, 600);
+    //     });
   
-        // Обновляем индекс
-        currentIndex = (currentIndex + 1) % 3; // Учитываем 3 варианта содержимого
-      }, 10000);
-    };
+    //     // Обновляем индекс
+    //     currentIndex = (currentIndex + 1) % 3; // Учитываем 3 варианта содержимого
+    //   }, 10000);
+    // };
   
     // Функция для инициализации Swiper
     const initSwiper = () => {

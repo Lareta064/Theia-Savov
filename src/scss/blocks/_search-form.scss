@@ -8,7 +8,9 @@
 	right: 0;
 	display: none;
 	z-index: 5;
-	// position: absolute;
+	@media (max-width: 1700px) {
+		top: 64px;
+	}
 	
 	
 	&.active{display: block;}

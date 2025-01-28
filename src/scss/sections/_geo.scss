@@ -54,6 +54,12 @@
 			background-color: #1c1c1c;
 			flex-shrink: 0;
 		}
+		@media (max-width: 1700px) {
+			font-size: 26px;
+		}
+		@media (max-width: 1439px) {
+			font-size: 20px;
+		}
 	}
 	&-map__msk{
 		top: 41%;

@@ -9,6 +9,9 @@
 	position: relative;
 	overflow: hidden;
 	height: 372px;
+	@media (max-width: 1439px) {
+		height: 320px;
+	}
 	&:after{
 		content:'';
 		position: absolute;
@@ -43,6 +46,12 @@
 		position: relative;
 		z-index: 2;
 		transition: .3s; 
+		@media (max-width: 1439px) {
+			font-size: 18px;
+		}
+		@media (max-width: 1364px) {
+			font-size: 16px;
+		}
 	}
 	&__date{
 		font-size: 11px;

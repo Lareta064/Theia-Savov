@@ -32,7 +32,7 @@ body {
 		font-size: 16px;
 	}
 }
-.lock{overflow: hidden; @media(min-width:1200px){padding-right:17px;}}
+.lock{overflow: hidden; }
 main, footer{background-color: #fff;}
 a,
 a:hover {
@@ -117,20 +117,20 @@ section + .dark-bg{margin-top: 45px;}
 }
 .container, .container-narrow, .container-grid{
 	width: min(1710px, 100%);
-	padding-inline:80px;
+	padding-inline:100px;
 	margin-inline: auto;
 	@media (max-width: 1024px) {
 		padding-inline:30px;
 	}
 }
-.header .container{
-	@media (max-width: 1649px) {
-		padding-inline:30px;
-	}
-	@media (max-width: 1279px) {
-		padding-inline:16px;
-	}
-}
+// .header .container{
+// 	@media (max-width: 1649px) {
+// 		padding-inline:30px;
+// 	}
+// 	@media (max-width: 1279px) {
+// 		padding-inline:16px;
+// 	}
+// }
 .container-narrow{
 	width: min(1182px, 100%);
 	
