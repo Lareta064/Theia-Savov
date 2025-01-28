@@ -2,6 +2,7 @@
 .promo.promo--animate{
 	height: auto;
 	padding-top: 0;
+	padding-bottom: 15px;
 	.container{z-index: 4;}
 	.city-selection{
 		position: absolute;
@@ -207,7 +208,7 @@
 			margin-bottom: 40px;
 		}
 		.promo-slide--first  .promo-slide-content{
-			padding-left: 30px;
+			padding-left: 6vw;
 		}
 	}
 }
