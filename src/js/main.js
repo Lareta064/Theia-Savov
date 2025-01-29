@@ -149,8 +149,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const serviceCards = new Swiper('.service-cards', {
       slidesPerView: 'auto',
       speed:1000,
-      spaceBetween:20,
-      grabCursor: true,
+      spaceBetween:30,
+      
+      
      
     });
 
@@ -255,7 +256,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
       dropDownListItems.forEach(function (listItem) {
-        console.log(dropDownInput);
+        
         listItem.addEventListener('click', function (e) {
           e.stopPropagation();
           dropDownBtn.innerText = this.innerText;
@@ -401,39 +402,39 @@ document.addEventListener("DOMContentLoaded", () => {
     let promoCustomSliderInterval = null; // Переменная для интервала кастомного слайдера
     let promoMobileSlider = null; // Переменная для Swiper
   
-    // Функция для запуска кастомного слайдера
-    // const initCustomSlider = () => {
-    //   const slides = document.querySelectorAll(".promo-slide");
-    //   let currentIndex = 0;
+    //Функция для запуска кастомного слайдера
+    const initCustomSlider = () => {
+      const slides = document.querySelectorAll(".promo-slide");
+      let currentIndex = 0;
   
-    //   promoCustomSliderInterval = setInterval(() => {
-    //     slides.forEach((slide) => {
-    //       const contents = slide.querySelectorAll(".promo-slide-content");
+      promoCustomSliderInterval = setInterval(() => {
+        slides.forEach((slide) => {
+          const contents = slide.querySelectorAll(".promo-slide-content");
   
-    //       // Получаем текущий активный и следующий контент
-    //       const currentContent = contents[currentIndex];
-    //       const nextIndex = (currentIndex + 1) % contents.length;
-    //       const nextContent = contents[nextIndex];
+          // Получаем текущий активный и следующий контент
+          const currentContent = contents[currentIndex];
+          const nextIndex = (currentIndex + 1) % contents.length;
+          const nextContent = contents[nextIndex];
   
-    //       // Устанавливаем следующий контент поверх текущего
-    //       nextContent.classList.add("active");
+          // Устанавливаем следующий контент поверх текущего
+          nextContent.classList.add("active");
   
-    //       // Убираем текущий контент с задержкой
-    //       setTimeout(() => {
-    //         currentContent.classList.remove("active");
-    //         currentContent.classList.add("fading-out");
+          // Убираем текущий контент с задержкой
+          setTimeout(() => {
+            currentContent.classList.remove("active");
+            currentContent.classList.add("fading-out");
   
-    //         // После завершения анимации убираем fading-out
-    //         setTimeout(() => {
-    //           currentContent.classList.remove("fading-out");
-    //         }, 600); // Время совпадает с transition: opacity 0.5s
-    //       }, 600);
-    //     });
+            // После завершения анимации убираем fading-out
+            setTimeout(() => {
+              currentContent.classList.remove("fading-out");
+            }, 600); // Время совпадает с transition: opacity 0.5s
+          }, 600);
+        });
   
-    //     // Обновляем индекс
-    //     currentIndex = (currentIndex + 1) % 3; // Учитываем 3 варианта содержимого
-    //   }, 10000);
-    // };
+        // Обновляем индекс
+        currentIndex = (currentIndex + 1) % 3; // Учитываем 3 варианта содержимого
+      }, 10000);
+    };
   
     // Функция для инициализации Swiper
     const initSwiper = () => {
@@ -837,7 +838,7 @@ document.addEventListener("DOMContentLoaded", () => {
           })
         })
       }
-      console.log('********************* TOP KEK *****************')
+    
       //FOTORAMA
       let mySwiperThumb = new Swiper(".mySwiperThumb", {
         spaceBetween: 20,

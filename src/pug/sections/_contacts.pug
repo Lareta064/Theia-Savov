@@ -1,0 +1,95 @@
+main.main
+	section.contacts-content
+		.container
+			.promo-top
+				.breadcrumbs
+					+breadcrumbs('Контакты')
+				+city-block
+			.contacts-content__row
+				.contacts-content__col
+					h1.h2 КОНТАКТЫ<br>И ОФИС
+					p.medium-18 Ответим на звонок ежедневно с 9:00 до 21:00<br>(Москва - GTM+3)
+					.contacts-group.contacts-group--column
+						.contacts-group__time
+							.txt-24 время работы
+							p Пн-Вс: 10:00 - 18:00
+						.contacts-group__city
+							.txt-24 Москва
+							address Россия, 192562, г.Москва, ул. Верейская д.17
+						.contacts-group__city
+							.txt-24 Санкт-Петербург
+							address Россия, 192562, Москва, улица Самовой,&nbsp;5 
+						
+						.contacts-group__links
+							.txt-24 Контакты
+							a(href="tel:88005001372").flex-link.phone-link 8 (800) 500-1372
+							a(href="mailto:info@theia.ru").flex-link.email-link info@theia.ru
+				//MAP
+				.contacts-map
+					script(type='text/javascript' charset='utf-8' async src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Adfbb47f2544c8c07e6029fa5b7cbc512aa91c4d5eb94b7abcfff847b9fce9af2&width=100%25&height=100%&lang=ru_RU&scroll=true')
+
+			//КОНТАКТЫ + РЕКВИЗИТЫ
+			.department-contacts
+				//КОНТАКТЫ ОТДЕЛОВ
+				.contacts-group
+					.contacts-group__links
+						.title-20 Отдел Стройматериалов 
+						a(href="tel:88005001372").flex-link.phone-link 8 (800) 500-1372
+							span (Отдел продаж)
+						a(href="tel:88005001372").flex-link.phone-link 8 (800) 500-1372
+							span (Отдел продаж)
+						a(href="mailto:info@theia.ru").flex-link.email-link info@theia.ru
+
+					.contacts-group__links
+						.title-20 Отдел аренды
+						a(href="tel:88005001372").flex-link.phone-link 8 (800) 500-1372
+							span (Отдел продаж)
+						a(href="tel:88005001372").flex-link.phone-link 8 (800) 500-1372
+							span (Отдел продаж)
+						a(href="mailto:info@theia.ru").flex-link.email-link info@theia.ru
+
+					.contacts-group__links
+						.title-20 Отдел строй Оборудования
+						a(href="tel:88005001372").flex-link.phone-link 8 (800) 500-1372
+							span (Отдел продаж)
+						a(href="tel:88005001372").flex-link.phone-link 8 (800) 500-1372
+							span (Отдел продаж)
+						a(href="mailto:info@theia.ru").flex-link.email-link info@theia.ru
+
+					.contacts-group__links
+						.title-20 Отдел стройтельства
+						a(href="tel:88005001372").flex-link.phone-link 8 (800) 500-1372
+							span (Отдел продаж)
+						a(href="tel:88005001372").flex-link.phone-link 8 (800) 500-1372
+							span (Отдел продаж)
+						a(href="mailto:info@theia.ru").flex-link.email-link info@theia.ru
+				//РЕКВИЗИТЫ
+				.bank-details
+					span.icon-info
+					ul
+						li ИНН: 5257207221
+						li КПП: 525701001
+						li ОГРН: 1225200008670 
+						li Расчетный счет: 40702810490500001889 
+						li Банк: ПАО "БАНК "САНКТ-ПЕТЕРБУРГ" 
+						li БИК: 044030790 
+						li Корр. счет: 30101810900000000790
+						
+	
+	section.form-section.dark-bg
+		.container
+			.form-section-content
+				h2.h3.white-txt Оставить заявку 
+				form.contacts-form.form-dark
+					.form-item
+						input(type="text" name="name" placeholder="Имя")
+					.form-item
+						input(type="text" name="phone" placeholder="Телефон")
+					.form-item
+						input(type="text" name="email"  placeholder="E-mail")
+					.form-item
+						textarea( name="message" placeholder="Ваш вопрос *")
+					.form-item.form-btn
+						button(type="submit").btn.btn--white ОТПРАВИТЬ
+			.logo-image
+				img(src="./img/logo-big.svg", width="1286" height="175" alt="img")

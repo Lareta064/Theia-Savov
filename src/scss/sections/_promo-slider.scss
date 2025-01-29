@@ -49,11 +49,15 @@
 		transition: opacity .6s ease;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
-		padding-top: 15vh;
-		padding-bottom: 15vh;
-		@media (max-width: 1999px) {
-			padding-bottom: 8vh;
+		// justify-content: space-between;
+		padding-block: 14vh 8vh;
+		
+		.h1{flex-shrink:0; margin-bottom: 35px;}
+		.txt-24{
+			height: 100px;flex-shrink:0;
+			@media (max-width: 1699px) {
+				height: 100px;
+			}
 		}
 	  }
 	  .btn, .btn-outline{padding-left: 20px; padding-right: 20px;}
@@ -88,7 +92,7 @@
 		position: relative;
 		z-index: 3;
 		width: 95%;
-		max-width: 580px;
+		max-width: 525px;
 		color: #f5f5f5;
 		height: 100%;
 		display: flex;
@@ -103,12 +107,14 @@
 	}
 	.promo-slide__num{
 		font-size: 40px;
-		margin-bottom: auto;
+		margin-bottom: 20px;
 	}
 	.promo-slide__buttons{
 		column-gap:20px;
 		margin-top: 88px;
 		margin-bottom: 52px;
+		.btn, .btn-primary{font-size: 17px;}
+		
 	}
 	.promo-slide__link{
 		min-height: 64px;
@@ -137,7 +143,7 @@
 		width: 50%;
 		background:#1c1c1c;
 		.promo-slide-content{
-			padding-left: calc((100vw - 1650px) /2);
+			padding-left: calc((100vw - 1510px) /2);
 		}
 		.promo-slide-content.active .promo-slide__progress span {
 			width: 100%;
@@ -182,6 +188,7 @@
 	background-color: #f5f5f5;
 	margin-bottom: 10px;
 	flex-shrink:0;
+	margin-top: auto;
 	span{
 		position: absolute;
 		top: 0;
@@ -205,15 +212,16 @@
 	.promo-slider{
 		height: 700px;
 		min-height: unset;
-		.promo-slide-content {padding-block:10vh 14vh}
+		.promo-slide-content {padding-block: 10vh 6vh}
 		.promo-slide__info{
-			max-width: 525px;
-			.txt-24{font-size: 18px;}
+			max-width: 495px;
+			.txt-24{font-size: 18px;height: 54px;}
+			
 		}
 		.promo-slide__buttons{
-			column-gap:16px;
-			margin-top: 80px;
-			margin-bottom: 40px;
+			column-gap:10px;
+			margin-top: 50px;
+			margin-bottom: 25px;
 		}
 		.promo-slide--first  .promo-slide-content{
 			padding-left: 6vw;
@@ -229,13 +237,14 @@
 			.txt-24{font-size: 16px;}
 		}
 	}
+	.promo-slide .promo-slide-content {padding-block: 8vh 4vh}
 }
 
 
 @media (max-width: 1364px) {
 	.promo-slider{
 		
-		.promo-slide-content {padding-block:8vh 6vh}
+		// .promo-slide-content {padding-block:8vh 6vh}
 		.promo-slide__info{
 			max-width: 440px;
 			.txt-24{font-size: 16px;}
