@@ -65,7 +65,7 @@
 	
 	&:hover { color: white;}
 	&:hover {
-		.btn-outline{color: $accent;}
+		.serv-card__title{color: $accent;}
 	}
 }
 .service-cards{
@@ -79,7 +79,5 @@
 	@media (max-width: 1649px) {
 		width: 500px!important;
 	 }
-	 @media (max-width: 1439px) {
-		width: 400px!important;
-	 }
+	
 }

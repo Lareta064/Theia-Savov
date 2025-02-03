@@ -17,7 +17,7 @@
 		display: flex;
 		align-items: center;
 		margin-right: auto;
-		@media (max-width: 1439px) {
+		@media (max-width: 1700px) {
 			&-group{
 				width: 100px;
 			}
@@ -37,11 +37,13 @@
 		line-height: 37px;
 		font-weight: 400;
 		font-size: 18px;
-		@media (max-width: 1439px) {
-			padding-left: 16px;
-			padding-right: 16px;
-			font-size: 16px;
-		}
+		// @media (max-width: 1439px) {
+		// 	padding-left: 13px;
+		// 	padding-right: 13px;
+		// 	font-size: 13px;
+		// }
+		
+		
 	}
 	.search-form-open, 
 	.cart-button{color: white;}
@@ -53,6 +55,10 @@
 		justify-content: center;
 		svg{color: inherit;}
 	}
+	.search-form-open{
+		font-weight: 400;
+		font-size: 16px;
+	}
 	.catalogy-menu-btn{
 		font-weight: 400;
 		font-size: 16px;
@@ -61,6 +67,10 @@
 		color: white;
 		padding-left: 10px;
 		padding-right: 10px;
+	}
+	@media (max-width:1700px) {
+		height: 64px;
+		&>.container{padding-block:10px;}
 	}
 	@media (max-width: 1199px) {
 		position: sticky;
@@ -135,4 +145,26 @@
 		to{top: 0;}
 	}
 
+}
+.header-content .callback-btn .svg-phone{
+	display: none;
+}
+@media (max-width: 1700px) {
+	.header-content .callback-btn{
+		width: 22px;
+		height: 22px;
+		border-radius: 5px;
+		padding: 0;
+		flex-shrink: 0;
+		margin-left: 16px;
+		span{display: none;}
+		.svg-phone{
+			display: block;
+			width: 14px;
+			height: 14px;
+			transition: .3s; 
+			color: #222;
+		}
+		&:hover svg{color: white;}
+	}
 }

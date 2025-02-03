@@ -64,9 +64,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     spaceBetween:20,
                     slidesPerView: 3,
                   },
-                  1280:{
+                  1200:{
                     spaceBetween:40,
-                    slidesPerView: 3,
+                    slidesPerView: 4,
                   
                   },
                   1650:{
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
           slidesPerView: 3,
           spaceBetween:16,
         },
-        1650:{
+        1199:{
           slidesPerView: 4,
           spaceBetween:20,
         },
@@ -149,8 +149,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const serviceCards = new Swiper('.service-cards', {
       slidesPerView: 'auto',
       speed:1000,
-      spaceBetween:20,
-      grabCursor: true,
+      spaceBetween:30,
+      
+      
      
     });
 
@@ -255,7 +256,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
       dropDownListItems.forEach(function (listItem) {
-        console.log(dropDownInput);
+        
         listItem.addEventListener('click', function (e) {
           e.stopPropagation();
           dropDownBtn.innerText = this.innerText;
@@ -401,7 +402,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let promoCustomSliderInterval = null; // Переменная для интервала кастомного слайдера
     let promoMobileSlider = null; // Переменная для Swiper
   
-    // Функция для запуска кастомного слайдера
+    //Функция для запуска кастомного слайдера
     const initCustomSlider = () => {
       const slides = document.querySelectorAll(".promo-slide");
       let currentIndex = 0;
@@ -837,7 +838,7 @@ document.addEventListener("DOMContentLoaded", () => {
           })
         })
       }
-      console.log('********************* TOP KEK *****************')
+    
       //FOTORAMA
       let mySwiperThumb = new Swiper(".mySwiperThumb", {
         spaceBetween: 20,

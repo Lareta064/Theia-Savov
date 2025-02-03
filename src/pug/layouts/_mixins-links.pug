@@ -22,7 +22,7 @@ mixin product-card(img, title, val, price)
 	.product-card
 		a(href="#!").product-card__body
 			.product-card__img
-				img.img-contain(src="./img/products/prod"+img+".webp", srcset="./img/products/prod"+img+"@2x.webp 2x" alt="img" loading="lazy")
+				img.img-cover(src="./img/products/prod"+img+".webp", srcset="./img/products/prod"+img+"@2x.webp 2x" alt="img" loading="lazy")
 			.product-card__desk
 				.product-card__title !{title} #[span !{val}]
 					
@@ -189,10 +189,7 @@ mixin flipCard(img=1)
 				ul.txt-12
 					li Мощность двигателя: 107 кВт
 					li Вес: 21700 кг
-					li Глубина копания: 6740 MM
-					li Глубина копания: 6740 MM
-					li Глубина копания: 6740 MM
-				
+					li Глубина копания: 6740 мм
 				.price-block
 					.price-block__item 
 						p от 18000 руб. / смена
@@ -213,9 +210,6 @@ mixin flipCard(img=1)
 						li Мощность двигателя: 107 кВт
 						li Вес: 21700 кг
 						li Глубина копания: 6740 мм
-						li Глубина копания: 6740 мм
-						li Глубина копания: 6740 мм
-					
 					.price-block
 						.price-block__item
 							p от 15 870 руб./смена

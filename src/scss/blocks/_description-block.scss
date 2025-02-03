@@ -19,6 +19,17 @@
 }
 .description-block__text>*+*{
 	margin-top: 40px;
+	@media (max-width: 1439px) {
+		margin-top:26px;
+	}
+
+}
+.description-block__text{
+	@media (max-width: 1439px) {
+		.h2{margin-bottom: 26px;}
+		p{font-size: 13.33px;}
+		
+	}
 }
 .description-block__text> p+p{margin-top: 12px;}
 .description-block__text> .h2+*{margin-top: 50px;}
@@ -34,6 +45,9 @@
 		font-family: $fs;
 	}
 	&>*+*{margin-top: 4px;}
+	@media (max-width: 1439px) {
+		.accent-txt {font-size: 2em;}
+	}
 	@media (max-width: 1199px) {
 		font-size:16px;
 		.accent-txt{font-size: 2em;}
