@@ -837,7 +837,7 @@ document.addEventListener("DOMContentLoaded", () => {
           })
         })
       }
-      console.log('********************* TOP KEK *****************')
+      
       //FOTORAMA
       let mySwiperThumb = new Swiper(".mySwiperThumb", {
         spaceBetween: 20,
