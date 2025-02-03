@@ -13,12 +13,8 @@
 	@media (max-width: 1439px) {padding-top: 60px;}
 }
 .contacts-group{
-	display: flex;
 	
-	&>*{
-		padding-left: 63px;
-		padding-right: 63px;
-		border-left:1px solid #ECECEC;
+	&>*{		
 		display: flex;
 		flex-direction: column; 
 		justify-content: center;
@@ -28,15 +24,139 @@
 		border-left:0;
 		white-space: nowrap;
 	}
+	.contacts-group__links{
+		a+a{margin-top: 16px;}
+		a{
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 1.25;
+			letter-spacing: -0.02em;
+			color: #1C1C1C;
+		}
+	}
 	.contacts-group__city{max-width:422px;}
 	.txt-24{text-transform: uppercase; line-height: 1;font-size: 23px;}
 	.txt-24 +*{margin-top: 24px; font-size: 16px; line-height: 1.25;
 		letter-spacing: -0.02em; color:$text;}
 	@media (max-width: 1439px) {
-		
-		&>*{padding-left: 50px;
-			padding-right: 50px;}
 		.txt-24 +*{margin-top: 16px;}
-		.txt-24{font-size: 18px;}
+		.txt-24{font-size: 15px;}
+		p, address{font-size: 13px;}
+		.txt-24 +*{margin-top: 16px; font-size: 13px;}
+	}
+}
+.contacts-grid{
+	.contacts-group{
+		display: flex;
+		flex-direction: row;
+		&>*{
+			padding-left: 63px;
+			padding-right: 63px;
+			border-left:1px solid #ECECEC;
+		}
+		@media (max-width: 1439px) {
+			&>*{padding-left: 50px;
+				padding-right: 50px;
+			}
+		}
+	}
+}
+.contacts-group__links{
+	.phone-link:before{
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3.86915 0.6875C3.57472 0.6875 3.28468 0.792969 3.04298 0.986328L3.00782 1.00391L2.99024 1.02148L1.23243 2.83203L1.25001 2.84961C0.707284 3.35059 0.540292 4.09985 0.7754 4.74805C0.777597 4.75244 0.773203 4.76123 0.7754 4.76562C1.25221 6.13013 2.47169 8.76465 4.85352 11.1465C7.24415 13.5371 9.91383 14.7083 11.2344 15.2246H11.252C11.9353 15.4531 12.6758 15.2905 13.2031 14.8379L14.9785 13.0625C15.4443 12.5967 15.4443 11.7881 14.9785 11.3223L12.6934 9.03711L12.6758 9.00195C12.21 8.53613 11.3838 8.53613 10.918 9.00195L9.79298 10.127C9.38648 9.9314 8.41749 9.43042 7.49024 8.54492C6.56959 7.66602 6.09937 6.65527 5.92579 6.25977L7.05079 5.13477C7.5232 4.66235 7.53199 3.87573 7.03321 3.41211L7.05079 3.39453L6.99806 3.3418L4.74806 1.02148L4.73048 1.00391L4.69532 0.986328C4.45362 0.792969 4.16358 0.6875 3.86915 0.6875ZM3.86915 1.8125C3.9109 1.8125 3.95265 1.83228 3.9922 1.86523L6.2422 4.16797L6.29493 4.2207C6.29054 4.21631 6.32789 4.27563 6.25977 4.34375L4.85352 5.75L4.58985 5.99609L4.7129 6.34766C4.7129 6.34766 5.3589 8.0769 6.71681 9.37109L6.83985 9.47656C8.14723 10.6697 9.68751 11.3223 9.68751 11.3223L10.0391 11.4805L11.709 9.81055C11.8057 9.71387 11.7881 9.71387 11.8848 9.81055L14.1875 12.1133C14.2842 12.21 14.2842 12.1748 14.1875 12.2715L12.4649 13.9941C12.2056 14.2161 11.9309 14.2622 11.6035 14.1523C10.3291 13.6514 7.85279 12.5637 5.64454 10.3555C3.41871 8.12964 2.25636 5.60498 1.83009 4.37891C1.74439 4.15039 1.80592 3.81201 2.00587 3.64062L2.04102 3.60547L3.7461 1.86523C3.78565 1.83228 3.8274 1.8125 3.86915 1.8125Z' fill='%23FD8C09' /%3e%3c/svg%3e");
+	}
+	.email-link:before{
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='9' viewBox='0 0 16 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.6875 0V9H15.3125V0H0.6875ZM3.11328 1H12.8867L8 3.89062L3.11328 1ZM1.8125 1.4375L7.68359 4.92188L8 5.09375L8.31641 4.92188L14.1875 1.4375V8H1.8125V1.4375Z' fill='%23FD8C09' /%3e%3c/svg%3e");
+	}
+}
+.contacts-group.contacts-group--column{
+	display: flex;
+	flex-direction: column;
+	padding-top: 20px;
+	row-gap:20px;
+}
+.contacts-content{
+	padding-top: 0;
+	.promo-top{
+		position: relative;
+		z-index: 2;
+	}
+}
+.contacts-content__row{
+	display: flex;
+	column-gap:90px;
+	width: calc(50% + 50vw - 20px);
+	overflow: hidden;
+	margin-top: -45px;
+	
+	.contacts-content__col{
+		width: 50%;
+		max-width: 540px;
+		flex-shrink: 0;
+		padding-top: 70px;
+		
+	}
+	.contacts-map{
+		flex-grow: 1;
+		display: flex;
+		filter: grayscale(1);
+		
+	}
+}
+
+.department-contacts{
+	padding-top: 60px;
+	grid-template-columns: 3fr 1fr;
+	.title-20{text-transform: uppercase;}
+	@media (max-width: 1700px) {
+		padding-top: 50px;
+	}
+	@media (max-width: 1199px) {
+		grid-template-columns: 1fr;
+		row-gap:40px;
+	}
+}
+.department-contacts, .department-contacts .contacts-group{
+	display: grid;column-gap:120px;
+	@media (max-width: 1700px) {
+		column-gap:80px;
+	}
+	@media (max-width: 1439px) {
+		
+		a, address, .title-20{font-size: 13px;}
+	}
+}
+.department-contacts .contacts-group{
+	grid-template-columns: repeat(2, 1fr);
+	row-gap:60px;
+	@media (max-width: 1700px) {
+		row-gap:40px;
+	}
+	@media (max-width: 1439px) {
+		.contacts-group__links a+a{margin-top: 10px;}
+		font-size: 13px;
+	}
+}
+.bank-details{
+	width: 450px;
+	display: flex;
+	column-gap: 20px;
+	font-size: 20px;
+	text-transform: uppercase;
+	color: #222;
+	li +li{margin-top: 16px;}
+	@media (max-width: 1439px) {font-size: 13px;}
+	@media (max-width: 1199px) {
+	.icon-info {display: none;}
+	}	
+		
+	
+}
+@media(max-width: 1199px) {
+	.contacts-content__row{
+		column-gap:60px;
+		.contacts-content__col{
+			max-width: 460px;
+		}
 	}
 }

@@ -16,9 +16,10 @@ header.header
 				svg.logo-group
 					use(href='./img/sprite.svg#logo-group')
 			//search-form-open button
-			button.flex-link.search-form-open#searchForm-open Поиск
+			button.flex-link.search-form-open#searchForm-open
 				svg.svg-search
 					use(href='./img/sprite.svg#svg-search')
+				| Поиск
 			button#catalogy-menu-open.catalogy-menu-btn Каталог
 			//header-nav
 			.header-nav
@@ -40,5 +41,9 @@ header.header
 				svg.svg-cart
 					use(href='./img/sprite.svg#svg-cart')
 			//Обратный звонок
-			button.btn.btn--white.callback-btn(data-btn="calc-order") Обратный звонок
+			button.btn.btn--white.callback-btn(data-btn="calc-order") 
+				span Обратный звонок
+				svg.svg-phone
+					use(href='./img/sprite.svg#svg-phone')
+				//- img(src="./img/phone-solid.svg", width="14" height="14" alt="icon")
 			

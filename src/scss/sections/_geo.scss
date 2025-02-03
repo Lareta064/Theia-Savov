@@ -24,6 +24,9 @@
 		left: 0;
 		z-index: 1;
 		transform: translate(0, -18%);
+		background-image: url('../img/map-bg.svg');
+		background-size: contain;
+		background-repeat: no-repeat;
 		@media (max-width: 1649px) {
 			height: calc((720/12)*1vw)
 		}
@@ -53,6 +56,12 @@
 			display: block;
 			background-color: #1c1c1c;
 			flex-shrink: 0;
+		}
+		@media (max-width: 1700px) {
+			font-size: 26px;
+		}
+		@media (max-width: 1439px) {
+			font-size: 20px;
 		}
 	}
 	&-map__msk{
