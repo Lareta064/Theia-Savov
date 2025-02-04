@@ -9,6 +9,15 @@ section.rent
 			.description-block__img
 				img.wh-100(src="./img/block1_bg.webp", srcset="./img/block1_bg@2x.webp 2x", width="864" height="402" alt="img" loading="lazy")
 		
+		//FOR MOB VERSION
+		.description-block-mobile(style="background-image: url(./img/block1_bg.webp)")
+			.description-block__text
+				h2.h2 Аренда<br>спецтехники
+				p Возьмите любую спецтехнику в аренду в СПБ на срок от 3-х смен и получите скидку 5%. Торопитесь, срок действия акции ограничен!
+				a(href="#!").btn-square
+					span.arrow-right
+		
+		
 		// TABS SLIDERS ===
 		.tabs-block.myswiper-container
 			.tabs-block-nav.flex
@@ -37,12 +46,7 @@ section.rent
 								+product-card(4,'ЩПС С2 фракции', '0-20 мм', 2300)
 							.swiper-slide
 								+product-card(5,'ЩПС С2 фракции', '0-20 мм', 2300)
-							.swiper-slide
-								+product-card(6,'ЩПС С2 фракции', '0-20 мм', 2300)
-							.swiper-slide
-								+product-card(7,'ЩПС С2 фракции', '0-20 мм', 2300)
-							.swiper-slide
-								+product-card(8,'ЩПС С2 фракции', '0-20 мм', 2300)
+							
 						.tabs-swiper-pagination
 				#tab_9.tabs-body
 					.tabs-swiper
@@ -57,12 +61,7 @@ section.rent
 								+product-card(4,'ЩПС С2 фракции', '0-20 мм', 2300)
 							.swiper-slide
 								+product-card(5,'ЩПС С2 фракции', '0-20 мм', 2300)
-							.swiper-slide
-								+product-card(6,'ЩПС С2 фракции', '0-20 мм', 2300)
-							.swiper-slide
-								+product-card(7,'ЩПС С2 фракции', '0-20 мм', 2300)
-							.swiper-slide
-								+product-card(8,'ЩПС С2 фракции', '0-20 мм', 2300)
+							
 						.tabs-swiper-pagination
 				#tab_10.tabs-body
 					.tabs-swiper
@@ -77,10 +76,5 @@ section.rent
 								+product-card(8,'ЩПС С2 фракции', '0-20 мм', 2300)
 							.swiper-slide
 								+product-card(4,'ЩПС С2 фракции', '0-20 мм', 2300)
-							.swiper-slide
-								+product-card(3,'ЩПС С2 фракции', '0-20 мм', 2300)
-							.swiper-slide
-								+product-card(2,'ЩПС С2 фракции', '0-20 мм', 2300)
-							.swiper-slide
-								+product-card(1,'ЩПС С2 фракции', '0-20 мм', 2300)
+							
 					.tabs-swiper-pagination

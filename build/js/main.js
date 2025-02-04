@@ -166,8 +166,10 @@ document.addEventListener("DOMContentLoaded", function () {
       slidesPerView: 'auto',
       speed:1000,
       spaceBetween:30,
-      
-      
+      pagination: {
+        el:".service-cards-pagination",
+        clickable: true,
+      }
      
     });
 

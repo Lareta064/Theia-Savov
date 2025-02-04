@@ -8,7 +8,22 @@
 	.container{position: relative;
 	}
 	.logo-image{transform: translateY(-50%);}
-	
+	.logo-image{
+		@media (max-width: 767px) {
+			top:unset;
+			bottom:-120px;
+			left: 50%;
+			transform: translate(-50%, 0);
+			width: 100%;
+			max-width: 400px;
+			object-fit: contain;
+			height: 87px;
+		}
+	}
+	@media (max-width: 767px) {
+	 min-height: unset;
+	 padding-bottom: 120px;
+	}
 }
 .sales-content{
 	max-width: 680px;
@@ -33,5 +48,6 @@
 	@media (max-width: 1449px) {
 		left: 45%;
 	}
+	
 	
 }

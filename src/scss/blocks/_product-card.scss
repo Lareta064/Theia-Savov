@@ -33,6 +33,9 @@
 		@media (max-width: 1364px) {
 			height: 170px;
 		}
+		@media (max-width: 767px) {
+			height: 130px;
+		}
 	}
 	&__desk{
 		padding: 25px;
@@ -40,7 +43,7 @@
 		background-color: #fff;
 		width: 100%;
 		display: flex;
-		row-gap:10px;
+		row-gap:10px;}
 		.btn{
 			@media (max-width: 1023px) {
 			  height: 32px;
@@ -50,7 +53,8 @@
 			  padding-right: 15px;
 
 			}
-		}
+			
+		
 	}
 	&__desk, &__body{
 		flex-grow:1;
@@ -78,8 +82,8 @@
 		padding-bottom: 15px;
 		&__desk{padding: 15px;}
 		&__title{
-			font-size: 13px;
+			font-size: 14px;
 			letter-spacing: -0.03em;}
-			&__price{font-size: 16px;}
+		&__price{font-size: 16px;}
 	}
 }

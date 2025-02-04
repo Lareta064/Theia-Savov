@@ -3,6 +3,14 @@
 	justify-content: space-between;
 	margin-bottom: 10px;
 	.swiper-nav,.tabs-nav{margin-bottom: 0;}
+	@media (max-width: 767px) {
+	overflow: hidden;
+	  overflow-x: auto;
+	  width: calc(50% + 50vw);
+	  scrollbar-width: none;
+	  &::-webkit-scrollbar{display: none;}
+	  .tabs-nav__item:last-child{padding-right: 20px;}
+	}
 	
 }
 .tabs-nav{
@@ -13,7 +21,10 @@
 	row-gap:6px;
 	width: fit-content;
 	margin-bottom: 30px;
-	
+	@media (max-width: 767px) {
+	  flex-wrap: nowrap;
+	 
+	}
 }
 
 .tabs-nav.tabs-nav--marker{
