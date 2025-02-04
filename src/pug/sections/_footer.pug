@@ -23,7 +23,7 @@ footer.footer
 					a(href="#!") Контакты
 				.footer-nav__col
 			
-			.footer-form
+			.footer-form-wrapper
 				h3.title-22 Subscribe
 				form.footer-form
 					.form-item
@@ -37,3 +37,34 @@ footer.footer
 			p.copyright &copy;2025 THEIA GROUP
 			a(href="").politic-link Политика приватности
 			p.brand-name DESIGN – SAVOV
+
+footer.footer-mobile
+	.footer-mobile__logo
+		a(href="index.html").logo
+			svg.logo-group
+				use(href='./img/sprite.svg#logo-group')
+	.footer-mobile__content
+		.container
+			.footer-contacts
+				a(href="tel:88005001372").flex-link.phone-link 8 (800) 500-1372
+				a(href="mailto:info@theia.ru").flex-link.email-link info@theia.ru
+			
+			.footer-mobile__nav
+				ul
+					li 
+						p.txt-12 О компании
+						p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно-монтажных работ в промышленном и гражданском строительстве
+					li
+						a(href="#!").txt-12 Меню
+					li
+						a(href="#!").txt-12 Контакты
+			.footer-form-wrapper
+				h3.title-22 Будьте в курсе последних новостей и акций
+				form.footer-form
+					.form-item
+						input(type="text" placeholder="Your Email")
+						button.btn-send(type="submit" )
+							img(src="./img/send.svg", alt="send")
+					
+					p.agree-txt  Подписываясь на рассылку, вы соглашаетесь с #[a(href="#!") условиями оферты] и #[a(href="#!") политикой конфиденциальности]
+				
