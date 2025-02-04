@@ -65,8 +65,13 @@
 	}
 	
 }
+.statistic-block.grid-border{
+	@media (max-width: 767px) {
+	column-gap:10px;
+	}
+}
 .statistic-block.grid-border > *{
-	@media (max-width: 767px) {grid-column: span 6;}
+	@media (max-width: 767px) {grid-column: span 6; }
 	&:before{display: none;}
 }
 

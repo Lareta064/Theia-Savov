@@ -6,20 +6,56 @@
 	.geo-map{
 		margin-top: -100px;
 		padding-left: 10px;
+		
 		@media (max-width: 1919px) {
 			margin-top:-6vw;
+		}
+		@media (max-width: 1023px) {
+			margin-top:-40px;
+		}
+		@media (max-width: 767px) {
+			margin-top:20px;
+		}
+		@media (max-width: 767px) {
+			width:calc(50% + 50vw);
+			img{
+				min-width: 700px;
+				max-width: 700px;
+				transform: translate(-5%, -10%);
+			}
 		}
 	}
 	.container{
 		position: relative;
 	}
+	@media (max-width: 1023px) {
+		padding-top: 25px;
+	}
+	@media (max-width: 767px) {
+		.visible-sm{
+			// width: 245px;
+			text-align: center;
+			position: relative;
+			z-index: 2;
+			transform: translateY(-120px);
+			.btn{width: 245px; 
+				font-size: 20px;
+			}
+			
+		}
+	}
+	@media (max-width: 574px) {
+		.visible-sm .btn{margin-inline:0;}
 }
 .geo + .blog{
 	margin-top: -150px; 
 	position: relative;
      z-index: 2;
-	 @media (max-width: 767px) {
+	 @media (max-width: 1023px) {
 		margin-top: 0; 
+	 }
+	 @media (max-width: 767px) {
+	 padding-top: 0;
 	 }
 
 }
@@ -42,10 +78,31 @@
 	.h2{margin-bottom: 0;}
 	@media (max-width: 1699px) {
 		row-gap:20px;
-		// padding-left: 0;
+		padding-top: 90px;
 	    padding-right: 40px;
 		p{
 			font-size: 15px;
 		}
+	}
+	@media (max-width: 1023px) {
+		top: 0;
+		bottom: auto;
+		right: auto;
+		position: relative;
+		width: 100%;
+		border-radius: 10px;
+		box-shadow: 0 0 22px 0 rgba(0, 0, 0, 0.2);
+         padding-left: 28px;
+		 padding-right: 28px;
+		 padding-top: 22px;
+		 padding-bottom: 40px;
+		 .hide-mobile{display: none;}
+	}
+}
+@media (max-width: 1023px) {
+	
+	.geo .container{
+		display: flex;
+		flex-direction: column-reverse;
 	}
 }

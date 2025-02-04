@@ -134,14 +134,7 @@
 	
 	.contacts-group > *:nth-child(3){padding-left: 0;}
 	.blog .tabs-body.active >*{grid-column: span 6}
-	.geo{aspect-ratio: unset;}
-	.geo .geo-map{display: none;}
-	.geo{height: auto;}
-	.geo .geo-content{
-		padding-left: 0;
-		padding-top: 60px;
-		width: 100%;
-	}
+	
 	.assort-card{
 		
 		font-size: 18px;
