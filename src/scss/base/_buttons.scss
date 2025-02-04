@@ -73,3 +73,13 @@
 		color:   $accent;
 	}
 }
+.btn-square{
+	padding: 8px;
+	width: 47px;
+	height: 47px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 8px;
+	background-color: #fff;
+}
