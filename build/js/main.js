@@ -48,73 +48,73 @@ document.addEventListener("DOMContentLoaded", function () {
     /*Sliders in tabs */
     const tabBlockSwiper = document.querySelectorAll(".tabs-block.myswiper-container");
 
-    tabBlockSwiper.forEach((block) => {
-        const tabsNav = block.querySelectorAll(".tabs-nav__item");
-        const tabsBody = block.querySelectorAll(".tabs-body");
-        const swiperInstances = {};
+tabBlockSwiper.forEach((block) => {
+    const tabsNav = block.querySelectorAll(".tabs-nav__item");
+    const tabsBody = block.querySelectorAll(".tabs-body");
+    const swiperInstances = {};
 
-        tabsBody.forEach((tabBody) => {
-            const swiperContainer = tabBody.querySelector(".tabs-swiper");
-            if (swiperContainer) {
-                const isSpecialSlider = swiperContainer.classList.contains("special-slider");
+    tabsBody.forEach((tabBody) => {
+        const swiperContainer = tabBody.querySelector(".tabs-swiper");
+        if (swiperContainer) {
+            const isSpecialSlider = swiperContainer.classList.contains("special-slider");
 
-                const swiper = new Swiper(swiperContainer, {
-                    slidesPerView: isSpecialSlider ? 4 : 4, // По умолчанию 4 слайда, но мобилка меняет настройки
-                    speed: 1000,
-                    spaceBetween: 40,
-                    navigation: {
-                        nextEl: block.querySelector(".tabs-swiper-next"),
-                        prevEl: block.querySelector(".tabs-swiper-prev"),
+            const swiper = new Swiper(swiperContainer, {
+                slidesPerView: isSpecialSlider ? 4 : 4, // По умолчанию 4 слайда, но мобилка меняет настройки
+                speed: 1000,
+                spaceBetween: 40,
+                navigation: {
+                    nextEl: block.querySelector(".tabs-swiper-next"),
+                    prevEl: block.querySelector(".tabs-swiper-prev"),
+                },
+                pagination: {
+                    el: tabBody.querySelector(".tabs-swiper-pagination"),
+                    clickable: true,
+                },
+                breakpoints: {
+                    320: {
+                        spaceBetween: 10,
+                        slidesPerView: isSpecialSlider ? 1 : 2, // ❗ Специальные слайдеры показывают 1 слайд
                     },
-                    pagination: {
-                        el: tabBody.querySelector(".tabs-swiper-pagination"),
-                        clickable: true,
+                    768: {
+                        spaceBetween: 20,
+                        slidesPerView: isSpecialSlider ? 2 : 3,
                     },
-                    breakpoints: {
-                        320: {
-                            spaceBetween: 10,
-                            slidesPerView: isSpecialSlider ? 1 : 2, // ❗ Специальные слайдеры показывают 1 слайд
-                        },
-                        768: {
-                            spaceBetween: 20,
-                            slidesPerView: isSpecialSlider ? 2 : 3,
-                        },
-                        1024: {
-                            spaceBetween: 20,
-                            slidesPerView: isSpecialSlider ? 2 : 3,
-                        },
-                        1200: {
-                            spaceBetween: 40,
-                            slidesPerView: 4,
-                        },
-                        1650: {
-                            spaceBetween: 40,
-                            slidesPerView: 4,
-                        },
+                    1024: {
+                        spaceBetween: 20,
+                        slidesPerView: isSpecialSlider ? 2 : 3,
                     },
-                });
+                    1200: {
+                        spaceBetween: 40,
+                        slidesPerView: 4,
+                    },
+                    1650: {
+                        spaceBetween: 40,
+                        slidesPerView: 4,
+                    },
+                },
+            });
 
-                swiperInstances[tabBody.id] = swiper;
+            swiperInstances[tabBody.id] = swiper;
+        }
+    });
+
+    tabsNav.forEach((tab) => {
+        tab.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetTabId = tab.dataset.tab;
+
+            tabsNav.forEach((item) => item.classList.remove("active"));
+            tabsBody.forEach((body) => body.classList.remove("active"));
+
+            tab.classList.add("active");
+            const targetBody = block.querySelector(`#${targetTabId}`);
+            if (targetBody) {
+                targetBody.classList.add("active");
+                swiperInstances[targetTabId]?.update();
             }
         });
-
-        tabsNav.forEach((tab) => {
-            tab.addEventListener("click", (e) => {
-                e.preventDefault();
-                const targetTabId = tab.dataset.tab;
-
-                tabsNav.forEach((item) => item.classList.remove("active"));
-                tabsBody.forEach((body) => body.classList.remove("active"));
-
-                tab.classList.add("active");
-                const targetBody = block.querySelector(`#${targetTabId}`);
-                if (targetBody) {
-                    targetBody.classList.add("active");
-                    swiperInstances[targetTabId]?.update();
-                }
-            });
-        });
     });
+});
     //  Обновляем `slidesPerView` при изменении экрана
     window.addEventListener("resize", () => {
         Object.values(swiperInstances).forEach((swiper) => {

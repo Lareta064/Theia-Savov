@@ -82,4 +82,8 @@
 	align-items: center;
 	border-radius: 8px;
 	background-color: #fff;
+	transition: .3s; 
+	&:hover{
+		opacity: .7;
+	}
 }

@@ -130,6 +130,7 @@ section + .dark-bg{margin-top: 45px;}
 	}
 	@media (max-width: 767px) {
 		max-width: 435px;
+		padding-inline:20px;
 	}
 }
 // .header .container{
@@ -144,6 +145,7 @@ section + .dark-bg{margin-top: 45px;}
 	width: min(1182px, 100%);
 	@media (max-width: 767px) {
 		max-width: 435px;
+		padding-inline:20px;
 	}
 	
 }
