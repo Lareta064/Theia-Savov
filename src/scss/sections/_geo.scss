@@ -14,8 +14,15 @@
 		position: relative;
 	}
 }
-.geo + .blog{margin-top: -150px; position: relative;
-z-index: 2;}
+.geo + .blog{
+	margin-top: -150px; 
+	position: relative;
+     z-index: 2;
+	 @media (max-width: 767px) {
+		margin-top: 0; 
+	 }
+
+}
 .geo-content{
 	width: 50%;
 	margin-left: auto;
