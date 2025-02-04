@@ -1,0 +1,42 @@
+/*MOBILE NAV*/
+.mobile-navigation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 14.5px 0;
+    z-index: 100;
+	box-shadow: 0 0 22px 0 rgba(0, 0, 0, 0.1);
+}
+
+.mobile-navigation ul {
+    display: flex;
+    justify-content: space-around; /* Равномерно распределяем пункты */
+    align-items: center; /* Выравниваем по центру */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.mobile-navigation li {
+    flex: 1; 
+    text-align: center;
+	
+}
+
+.mobile-navigation a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 100%; /* Делаем ссылку во всю ширину, чтобы кликать было удобно */
+}
+
+.mobile-navigation img,
+.mobile-navigation svg {
+    display: block;
+    width: auto;
+    height: 28px; /* Универсальный размер для всех иконок */
+}

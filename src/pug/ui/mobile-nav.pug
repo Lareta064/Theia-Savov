@@ -1,0 +1,49 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		
+		link(rel='stylesheet' href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Мобильное меню
+				.container-dashboard__content
+					//MOBILE MENU
+					.mobile-navigation#mob-nav
+						ul
+							li
+								a(href="#!")
+									img(src="./img/mob-menu/search.webp", srcset="./img/mob-menu/search@2x.webp 2x" width="21" height="21" alt="alt")
+							li
+								a(href="#!")
+									img(src="./img/mob-menu/catalogy.webp", srcset="./img/mob-menu/catalogy@2x.webp 2x" width="21" height="21" alt="alt")
+							li
+								a(href="#!")
+									img(src="./img/mob-menu/tools.webp", srcset="./img/mob-menu/tools@2x.webp 2x" width="28" height="28" alt="alt")
+							li
+								a(href="#!")
+									img(src="./img/mob-menu/user.webp", srcset="./img/mob-menu/user@2x.webp 2x" width="21" height="21" alt="alt")
+							li
+								a(href="#!")
+									img(src="./img/mob-menu/cart.webp", srcset="./img/mob-menu/cart@2x.webp 2x" width="21" height="21" alt="alt")
+						
+					pre.
+						include ../blocks/_mobile-menu.pug
+					button(type="button").btn-primary
+						span Оформить заказ
+						span 206 567 руб

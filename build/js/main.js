@@ -22,12 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    /*Add class for footer prev siblings */
-    // const pageFooter = document.querySelector('footer.footer');
-    // const previousElement = pageFooter.previousElementSibling;
-    //   if (previousElement) {
-    //     previousElement.classList.add('pb-90');
-    // }
+   
 
     /*Sliders in tabs */
     const tabBlockSwiper = document.querySelectorAll(".tabs-block.myswiper-container");
@@ -375,17 +370,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
     
-    /*==  закрыть модалки  frame-modal по клику на крестик ======*/
-    // if(modalFramesClose){
-    //   for(let item of modalFramesClose){
-    //     item.addEventListener('click', function(e){
-    //     e.preventDefault();
-    //     item.closest('[data-modal]').classList.remove('visible');
-    //     bodyEl.classList.remove('lock');
-    //     });
-    //   }
-    // }
-    
     /*=============== закрыть модалки по клику вне ===============*/
       for(let frame of modalFrames){
         frame.addEventListener('click', function(e){
@@ -624,62 +608,138 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 
-  // Логика для больших экранов
-  function setupLargeScreenLogic() {
-      console.log("Логика для больших экранов активна");
+  // // Логика для больших экранов
+  // function setupLargeScreenLogic() {
+  //     console.log("Логика для больших экранов активна");
 
-      menuButton.addEventListener("mouseenter", () => {
-          menuWrapper.classList.add("active");
-          bodyEl.classList.add('lock');
-          activateFirstMenuItem();
-      });
+  //     menuButton.addEventListener("mouseenter", () => {
+  //         menuWrapper.classList.add("active");
+  //         bodyEl.classList.add('lock');
+  //         activateFirstMenuItem();
+  //     });
 
-      menuWrapper.addEventListener("mouseleave", () => {
-          hoverTimeout = setTimeout(() => {
-              menuWrapper.classList.remove("active");
-              bodyEl.classList.remove('lock');
-              clearActiveClasses();
-          }, 300);
-      });
-      menuWrapper.addEventListener("click", (e) => {
+  //     menuWrapper.addEventListener("mouseleave", () => {
+  //         hoverTimeout = setTimeout(() => {
+  //             menuWrapper.classList.remove("active");
+  //             bodyEl.classList.remove('lock');
+  //             clearActiveClasses();
+  //         }, 300);
+  //     });
+  //     menuWrapper.addEventListener("click", (e) => {
         
-        if(e.target == e.currentTarget){
-          menuWrapper.classList.remove("active");
-          bodyEl.classList.remove('lock');
-           clearTimeout(hoverTimeout);
-        }       
-      });
-      menuWrapper.addEventListener("mouseenter", () => {
-          clearTimeout(hoverTimeout);
-      });
+  //       if(e.target == e.currentTarget){
+  //         menuWrapper.classList.remove("active");
+  //         bodyEl.classList.remove('lock');
+  //          clearTimeout(hoverTimeout);
+  //       }       
+  //     });
+  //     menuWrapper.addEventListener("mouseenter", () => {
+  //         clearTimeout(hoverTimeout);
+  //     });
 
-      mainItems.forEach((item) => {
-          item.addEventListener("mouseenter", () => {
-              const subdrop = item.getAttribute("data-drop");
-              const relatedSublist = document.querySelector(`[data-subdrop="${subdrop}"]`);
-              const relatedImage = document.querySelector(`[data-img="${subdrop}"]`);
+  //     mainItems.forEach((item) => {
+  //         item.addEventListener("mouseenter", () => {
+  //             const subdrop = item.getAttribute("data-drop");
+  //             const relatedSublist = document.querySelector(`[data-subdrop="${subdrop}"]`);
+  //             const relatedImage = document.querySelector(`[data-img="${subdrop}"]`);
 
-              clearActiveClasses();
+  //             clearActiveClasses();
 
-              item.classList.add("active");
-              if (relatedSublist) relatedSublist.classList.add("active");
-              if (relatedImage) relatedImage.classList.add("active");
-          });
-      });
+  //             item.classList.add("active");
+  //             if (relatedSublist) relatedSublist.classList.add("active");
+  //             if (relatedImage) relatedImage.classList.add("active");
+  //         });
+  //     });
 
-      subItems.forEach((item) => {
-          item.addEventListener("mouseenter", () => {
-              const subSubdrop = item.getAttribute("data-sub-subdrop");
-              const relatedSubSublist = document.querySelector(`[data-sublist="${subSubdrop}"]`);
+  //     subItems.forEach((item) => {
+  //         item.addEventListener("mouseenter", () => {
+  //             const subSubdrop = item.getAttribute("data-sub-subdrop");
+  //             const relatedSubSublist = document.querySelector(`[data-sublist="${subSubdrop}"]`);
 
-              subItems.forEach((subItem) => subItem.classList.remove("active"));
-              subSubLists.forEach((list) => list.classList.remove("active"));
+  //             subItems.forEach((subItem) => subItem.classList.remove("active"));
+  //             subSubLists.forEach((list) => list.classList.remove("active"));
 
-              item.classList.add("active");
-              if (relatedSubSublist) relatedSubSublist.classList.add("active");
-          });
-      });
-  }
+  //             item.classList.add("active");
+  //             if (relatedSubSublist) relatedSubSublist.classList.add("active");
+  //         });
+  //     });
+  // }
+  function setupLargeScreenLogic() {
+    console.log("Логика для больших экранов активна");
+
+    let hoverTimeout;
+
+    // Открываем меню при наведении на menuButton
+    menuButton.addEventListener("mouseenter", () => {
+        menuWrapper.classList.add("active");
+        bodyEl.classList.add('lock');
+        activateFirstMenuItem();
+    });
+
+    // Закрываем меню при уходе курсора с menuWrapper
+    menuWrapper.addEventListener("mouseleave", () => {
+        hoverTimeout = setTimeout(() => {
+            menuWrapper.classList.remove("active");
+            bodyEl.classList.remove('lock');
+            clearActiveClasses();
+        }, 300);
+    });
+
+    // Закрываем меню, если кликнули за его пределами
+    menuWrapper.addEventListener("click", (e) => {
+        if (e.target == e.currentTarget) {
+            menuWrapper.classList.remove("active");
+            bodyEl.classList.remove('lock');
+            clearTimeout(hoverTimeout);
+        }
+    });
+
+    // Убираем задержку закрытия, если вернулись в меню
+    menuWrapper.addEventListener("mouseenter", () => {
+        clearTimeout(hoverTimeout);
+    });
+
+    // 🛠 **Новый обработчик**: Закрытие при уходе курсора с `menuButton`
+    menuButton.addEventListener("mouseleave", (event) => {
+        let toElement = event.relatedTarget || event.toElement; // Элемент, на который ушёл курсор
+        if (!menuWrapper.contains(toElement)) {
+            hoverTimeout = setTimeout(() => {
+                menuWrapper.classList.remove("active");
+                bodyEl.classList.remove('lock');
+                clearActiveClasses();
+            }, 300);
+        }
+    });
+
+    // Наведение на пункт первого уровня
+    mainItems.forEach((item) => {
+        item.addEventListener("mouseenter", () => {
+            const subdrop = item.getAttribute("data-drop");
+            const relatedSublist = document.querySelector(`[data-subdrop="${subdrop}"]`);
+            const relatedImage = document.querySelector(`[data-img="${subdrop}"]`);
+
+            clearActiveClasses();
+
+            item.classList.add("active");
+            if (relatedSublist) relatedSublist.classList.add("active");
+            if (relatedImage) relatedImage.classList.add("active");
+        });
+    });
+
+    // Наведение на пункт второго уровня
+    subItems.forEach((item) => {
+        item.addEventListener("mouseenter", () => {
+            const subSubdrop = item.getAttribute("data-sub-subdrop");
+            const relatedSubSublist = document.querySelector(`[data-sublist="${subSubdrop}"]`);
+
+            subItems.forEach((subItem) => subItem.classList.remove("active"));
+            subSubLists.forEach((list) => list.classList.remove("active"));
+
+            item.classList.add("active");
+            if (relatedSubSublist) relatedSubSublist.classList.add("active");
+        });
+    });
+}
 
   // Переключение логики
   function handleResize() {

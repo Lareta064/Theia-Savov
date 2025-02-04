@@ -26,8 +26,6 @@
 
 
 
-
-
 @use "blocks/_description-block";
 @use "blocks/_swiper-slider";
 @use "blocks/_swiper-tabs";
@@ -72,16 +70,12 @@
 
 
 
-
-
-
-
 @use "sections/_footer";
 
 @use "sections/_promo-inner";
 
-
-
+/*MOBILE*/
+@use "mobile/_mob-nav";
 
 
 

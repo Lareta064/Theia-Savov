@@ -33,6 +33,12 @@
 }
 .description-block__text> p+p{margin-top: 12px;}
 .description-block__text> .h2+*{margin-top: 50px;}
+.statistic{
+	@media (max-width: 1439px) {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	}
+}
 .statistic-item{
 	text-align: center;
 	font-weight: 500;
