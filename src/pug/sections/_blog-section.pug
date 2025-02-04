@@ -2,7 +2,7 @@
 section.blog
 	.container
 		h2.h2 Блог
-		.blog-content.mb-20
+		.blog-content.mb-20.hide-sm
 			.tabs-block.tabs-block--grid
 				.tabs-nav
 					a.tabs-nav__item.active(href="#!" data-tab="all") Все
@@ -22,6 +22,46 @@ section.blog
 					+blog-card(2)
 					+blog-card(3)
 					+blog-card(4)
+		
+		
+		.blog-content-mobile.visible-sm
+			// TABS SLIDERS ===
+			.tabs-block.myswiper-container
+				.tabs-block-nav.flex
+					.tabs-nav
+						a.tabs-nav__item.active(href="#!" data-tab="all-mob") Все
+						a.tabs-nav__item(href="#!" data-tab="news-tab-mob") Новости
+						a.tabs-nav__item(href="#!" data-tab="project-tab") Проекты
+						a.tabs-nav__item(href="#!" data-tab="recomend-tab") советы 
+					
+				.swiper
+					#all-mob.tabs-body.active
+						.tabs-swiper
+							.swiper-wrapper
+								.swiper-slide
+									+blog-card(1)
+								.swiper-slide
+									+blog-card(2)
+								.swiper-slide
+									+blog-card(3)
+								.swiper-slide
+									+blog-card(4)
+								
+							.tabs-swiper-pagination
+					#news-tab-mob.tabs-body
+						.tabs-swiper
+							.swiper-wrapper
+								.swiper-wrapper
+								.swiper-slide
+									+blog-card(4)
+								.swiper-slide
+									+blog-card(2)
+								.swiper-slide
+									+blog-card(3)
+								.swiper-slide
+									+blog-card(1)
+								
+							.tabs-swiper-pagination
 		
 		include _dark-form-subscribe
 		

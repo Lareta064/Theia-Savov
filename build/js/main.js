@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 						swiperInstances[tabBody.id] = swiper;
 					}
-					});
+				});
 
 					
 					tabsNav.forEach((tab) => {
