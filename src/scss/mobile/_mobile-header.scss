@@ -1,6 +1,7 @@
 /*mobile-header*/
 .header-mobile{
 	background-color: #1C1C1C;
+	display: none;
 	.container{
 		display: flex;
 		height: 64px;
@@ -14,6 +15,9 @@
 			object-fit: contain;
 		}
 	
+	}
+	@media (max-width: 767px) {
+	display: block;
 	}
 }
 

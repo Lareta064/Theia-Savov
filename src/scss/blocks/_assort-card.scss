@@ -68,15 +68,9 @@
 	}
 	@media (max-width: 767px) {
 		padding: 12px;
-		font-size: 16px;
+		font-size: 10px;
 	}
-	@media (max-width: 499px) {
-		
-		grid-column: span 12;
-		font-size: 20px;
-		padding: 24px;
-		margin-inline: auto ;
-	}
+	
 }
 .category-cards{align-items: stretch;}
 
