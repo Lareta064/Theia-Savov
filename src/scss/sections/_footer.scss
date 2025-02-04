@@ -146,6 +146,7 @@
 	footer.footer{display: none;}
 }
 .footer-mobile{
+	display: none;
 	.footer-mobile__logo{
 		background-color: #fff;
 		display: flex;
@@ -257,5 +258,20 @@
 				color: white;
 			}
 		}
+	}
+	.footer-copyright{
+		color: white;
+		padding-top: 10px;
+		border-top: 1px solid #565656;
+		.flex{
+			padding-top: 20px;
+			padding-bottom: 20px;
+			color: #dadada;
+			justify-content: space-between;
+			column-gap: 10px;
+		}
+	}
+	@media (max-width: 767px) {
+	display: block;
 	}
 }
