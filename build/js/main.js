@@ -1,5 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
     const bodyEl = document.body;
+    const menuButton = document.querySelector('.menu-button');
+	  // const mobileMenu = document.querySelector('#mobile-menu');
+	  if(menuButton){
+
+        menuButton.addEventListener('click', ()=> {
+         
+          if( menuButton.classList.contains('active')){
+            menuButton.classList.remove('active');
+            // mobileMenu.classList.remove('active');
+            bodyEl.classList.remove('lock');
+            
+          }else{
+            menuButton.classList.add('active');
+            // mobileMenu.classList.add('active');
+            bodyEl.classList.add('lock');
+          }
+        });
+    }
+
+
+
     // header search form
     const searchFormOpen = document.querySelector('#searchForm-open');
     if(searchFormOpen){
@@ -426,9 +447,9 @@ document.addEventListener("DOMContentLoaded", () => {
         speed: 1000,
         spaceBetween: 20,
         loop: true,
-        autoplay:{
-            delay: 5000,
-        }
+        // autoplay:{
+        //     delay: 5000,
+        // }
       });
     };
   
