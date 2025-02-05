@@ -6,20 +6,12 @@
 	display: flex;
 	align-items: center;
 	.container{position: relative;
-	}
-	.logo-image{transform: translateY(-50%);}
-	.logo-image{
 		@media (max-width: 767px) {
-			top:unset;
-			bottom:-120px;
-			left: 50%;
-			transform: translate(-50%, 0);
-			width: 100%;
-			max-width: 400px;
-			object-fit: contain;
-			height: 87px;
+		position: static;
 		}
 	}
+	.logo-image{transform: translateY(-50%);}
+	
 	@media (max-width: 767px) {
 	 min-height: unset;
 	 padding-bottom: 120px;
@@ -50,4 +42,16 @@
 	}
 	
 	
+}
+.dark-bg .logo-image{
+	@media (max-width: 767px) {
+		top:unset;
+		bottom:40px;
+		left: 50%;
+		transform: translate(-50%, 0);
+		width: 100%;
+		max-width: 400px;
+		object-fit: contain;
+		height: 87px;
+	}
 }

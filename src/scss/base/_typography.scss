@@ -190,13 +190,17 @@ h1, h2,h3{font-weight: 400;}
 
 	   }
 	@media (max-width: 1199px) {
-	    row-gap:20px;
+	    row-gap:15px;
 		h1, h2, h3{font-size: 28px;}
-			
+		h2{margin-top: 23px;letter-spacing: -0.02em;}	
 		
 		p, ol li, ul li{font-size: 16px;}
 	}
+	@media (max-width: 767px) {
+		h1, h2, h3{font-size: 24px;}
+		p, ol li, ul li{font-size: 14px;}
 	}
+}
 .dark-list{
 	border-radius: 10px;
 	background-color: $dark;

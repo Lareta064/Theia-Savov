@@ -132,6 +132,10 @@ tabBlockSwiper.forEach((block) => {
         clickable: true,
       },
       breakpoints:{
+        320:{
+          slidesPerView: 2,
+          spaceBetween:16,
+        },
         768:{
           slidesPerView: 3,
           spaceBetween:16,
