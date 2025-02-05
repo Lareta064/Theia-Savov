@@ -19,6 +19,9 @@
 		inset:0;
 		img{
 			object-position: bottom;
+			@media (max-width: 767px) {
+				// object-position: center;
+			}
 			
 		}
 	}
@@ -34,10 +37,20 @@
 		.promo-top{margin-bottom: 40px;}
 		.promo-txt, .promo-content .h1{margin-bottom: 30px; }
 	}
+	@media (max-width: 767px) {
+		
+		.promo-conten__tags span{font-size: 14px;}
+		.promo-content .h1{margin-bottom: 20px; }
+	}
 }
 .promo-content{
-	.breadcrumbs{margin-bottom: 15px;}
-	.txt-20 {margin-bottom: 20px;}
+	.promo-content__tags{margin-bottom: 15px;}
+	.txt-20 {
+		margin-bottom: 20px;
+		@media (max-width: 767px) {
+		font-size: 14px;
+		}
+	}
 	.back-link .svg-arrow-left{width: 28px;}
 }
 .promo-txt {
@@ -46,6 +59,10 @@
 	@media (max-width: 1023px) {
 		width: 80%;
 	}
+	@media (max-width: 767px) {
+		font-size: 14px;
+	}
+	
 }
 .promo-txt p{
 	font-size: 18px;
@@ -53,6 +70,9 @@
     letter-spacing: -0.02em;
     color: #2b2a29;
 	margin-bottom: 10px;
+	@media (max-width: 767px) {
+		font-size: 14px;
+		}
 }
 .promo-txt, .promo-content .h1{margin-bottom: 40px;}
 .promo-top{
@@ -109,7 +129,8 @@
 	}
 }
 .promo.promo--gradient,
-.promo-dark.promo--gradient{
+.promo-dark.promo--gradient, 
+.promo.promo--gradient-gray{
 	position: relative;
 	
 	&:after{
@@ -119,4 +140,7 @@
 		background: linear-gradient(337deg, rgba(0, 0, 0, 0) 0%, rgba(20, 17, 14, 0.55) 38.85%, #241f1a 100%);
 	}
 	
+}
+.promo.promo--gradient-gray:after{
+	background: linear-gradient(53deg, rgba(190, 190, 190, 0) 0%, rgba(190, 190, 190, 0.7)  47.99%);
 }

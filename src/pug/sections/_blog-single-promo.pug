@@ -1,5 +1,5 @@
 // PROMO
-section.promo
+section.promo.promo--gradient-gray
 	.promo-bg-image
 		picture
 			source(srcset='./img/blog/blog-bg-mob.webp' media='(max-width: 767px)' width='767')
@@ -9,13 +9,12 @@ section.promo
 		.promo-top
 			.breadcrumbs
 				+breadcrumbs('Блог')
-			
 			+city-block
 
 		.promo-content
-			.breadcrumbs
-				a.bold-txt(href="#!") крыши
-				a.bold-txt(href="#!") стройка
+			.promo-content__tags
+				span.bold-txt(href="#!") крыши
+				span.bold-txt(href="#!") стройка
 			
 			.txt-20 7 минут на прочтение
 			h1.h1 Щебень для кровли
