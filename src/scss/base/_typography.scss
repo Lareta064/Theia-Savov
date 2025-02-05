@@ -237,6 +237,12 @@ h1, h2,h3{font-weight: 400;}
 	font-size: 18px;
 	line-height: 1.33;
 	color: #2e3033;
+	@media (max-width: 1199px) {
+		font-size: 16px;
+	}
+	@media (max-width: 767px) {
+		font-size: 15px;
+	}
 }
 .bx-sh{
 	padding: 20px;
