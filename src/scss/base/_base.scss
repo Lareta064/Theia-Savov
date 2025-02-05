@@ -149,10 +149,15 @@ section + .dark-bg{margin-top: 45px;}
 	}
 	
 }
-.visible-sm{
+.visible-sm,.flex-sm{
 	display: none!important;
 	@media (max-width: 767px) {
 		display: block!important;
+	}
+}
+.flex-sm{
+	@media (max-width: 767px) {
+		display: flex!important;
 	}
 }
 .hide-sm{
@@ -161,6 +166,7 @@ section + .dark-bg{margin-top: 45px;}
 		display: none!important;
 	}
 }
+
 .gap-60{
 	&>*+*{margin-top: 60px;}
 	@media (max-width: 1199px) {
