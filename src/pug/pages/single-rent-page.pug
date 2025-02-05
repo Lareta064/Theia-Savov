@@ -3,11 +3,18 @@ extends ../layouts/layout.pug
 block content
 	include ../sections/_header
 	main.main
+		.promo-mobile.visible-sm
+			.promo-mobile__bg(style="background-image:url(./img/rent-mobile-bg.webp)")
+				h1.title-20.txt-white ЭКСКАВАТОР ФРОНТАЛЬНЫЙ
+					span.txt-bold 2550 руб/ч
 		.container
 			.promo-top
 				.breadcrumbs
-					+breadcrumbs('Каталог','Аренда','Экскаватор')
+					+breadcrumbs('Каталог','Аренда','Экскаватор','Каталог','Аренда','Экскаватор','Каталог','Аренда','Экскаватор')
 				+city-block
+				
+
+			
 		
 		include ../sections/_single-rent-card
 		include ../sections/_sales
