@@ -110,13 +110,15 @@ tabBlockSwiper.forEach((block) => {
             }
         });
     });
-});
+
     //  Обновляем `slidesPerView` при изменении экрана
     window.addEventListener("resize", () => {
         Object.values(swiperInstances).forEach((swiper) => {
             swiper.update();
         });
     });
+
+});
 
      /*article swiper */
      const mySwiper = new Swiper('.mySwiper', {
@@ -152,6 +154,10 @@ tabBlockSwiper.forEach((block) => {
         clickable: true,
       },
       breakpoints:{
+        320:{
+          slidesPerView: 2,
+          spaceBetween:20,
+        },
         768:{
           slidesPerView: 3,
           spaceBetween:20,
@@ -927,22 +933,29 @@ document.addEventListener("DOMContentLoaded", () => {
       //FOTORAMA
       let mySwiperThumb = new Swiper(".mySwiperThumb", {
         spaceBetween: 20,
-        
-        slidesPerView: 'auto',
-        direction: "vertical", // Вертикальный режим
+        slidesPerView: "auto",
+        direction: "vertical", // По умолчанию вертикальный
         freeMode: true,
         watchSlidesProgress: true,
         navigation: {
           nextEl: ".mySwiperThumb-next",
           prevEl: ".mySwiperThumb-prev",
         },
-        });
-        var mySwiperFotorama = new Swiper(".mySwiperFotorama", {
+        breakpoints: {
+          768: {
+            direction: "vertical", // Вертикальный режим для больших экранов
+          },
+          0: {
+            direction: "horizontal", // Горизонтальный режим для экранов меньше 768px
+          },
+        },
+      });
+      
+      var mySwiperFotorama = new Swiper(".mySwiperFotorama", {
         spaceBetween: 10,
         speed: 800,
-       
         thumbs: {
-          swiper:  mySwiperThumb,
+          swiper: mySwiperThumb,
         },
       });
 
