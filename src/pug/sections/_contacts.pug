@@ -2,8 +2,7 @@ main.main
 	section.contacts-content
 		.container
 			.promo-top
-				.breadcrumbs
-					+breadcrumbs('Контакты')
+				+breadcrumbs('Контакты')
 				+city-block
 			.contacts-content__row
 				.contacts-content__col
@@ -90,6 +89,6 @@ main.main
 					.form-item
 						textarea( name="message" placeholder="Ваш вопрос *")
 					.form-item.form-btn
-						button(type="submit").btn.btn--white ОТПРАВИТЬ
+						button(type="submit").btn.btn--white.sm-100 ОТПРАВИТЬ
 			.logo-image
 				img(src="./img/logo-big.svg", width="1286" height="175" alt="img")

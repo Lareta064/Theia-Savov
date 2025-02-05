@@ -13,6 +13,12 @@
 		font-size: 14px;
 		&__list-title{font-size: 16px;}
 	}
+	
+}
+.specifications.two-columns{
+	@media (max-width: 1199px) {
+		grid-template-columns: 1fr;
+	   }
 }
 .specifications__desk{
 	flex: 1;
@@ -57,6 +63,7 @@
 		aspect-ratio:551/372;
 		object-fit: contain;
 	}
+	
 }
 .specifications p,.specifications__list-block .dotted-list li, .specifications__list-block p{
 	font-size: 16px;

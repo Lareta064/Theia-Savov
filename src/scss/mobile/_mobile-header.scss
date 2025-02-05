@@ -1,3 +1,4 @@
+@use "base/var" as *;
 /*mobile-header*/
 .header-mobile{
 	background-color: #1C1C1C;
@@ -86,4 +87,34 @@
 	-webkit-transform: rotate(-45deg);
 			transform: rotate(-45deg);
   }
-  
+  /**********************/
+
+.promo-mobile__banner{
+padding-top: 34px;
+padding-bottom: 34px;
+padding-left: 20px;
+padding-right: 20px;
+.title-20{
+	font-size: 20px;
+	font-family: $fs;
+}
+.title-20 .bold-txt{
+	display: inline-block;
+	margin-left: 16px;
+}
+}
+.promo-mobile-inner__row{
+	@media (max-width: 767px) {
+	padding-top: 10px;
+	.container{
+		max-width: 100%;
+	 }
+	 .promo-top{
+		width: calc(50% + 50vw);
+		overflow: hidden;
+		overflow-x: auto;
+		scrollbar-width: none;
+		&::-webkit-scrollbar{display: none;}
+	 }
+	}
+}

@@ -41,3 +41,10 @@
 	}
 }
 .promo-content__tags span, .post-card__tags span:hover{color: $text;}
+.breadcrumbs{
+	@media (max-width: 767px) {
+	  display: flex;
+	 
+	  &>*{white-space: nowrap;}
+	}
+}

@@ -147,8 +147,7 @@ mixin promo-dark(img, title, btnTxt)
 	.promo-dark.promo.promo-slim(style="background-image: url(./img/"+ img+".webp)")&attributes(attributes)
 		.container
 			.promo-top
-				.breadcrumbs
-					+breadcrumbs('каталог', 'Отделочные и строй материалы', ''+ title)
+				+breadcrumbs('каталог', 'Отделочные и строй материалы', ''+ title)
 				+city-block
 			.promo-content
 				h1.h1 !{title}

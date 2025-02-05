@@ -128,7 +128,8 @@
 		height: 40vw;
 	}
 }
-.promo.promo--gradient,
+
+.promo.promo--gradient, .promo-overlay,
 .promo-dark.promo--gradient, 
 .promo.promo--gradient-gray{
 	position: relative;
@@ -143,4 +144,11 @@
 }
 .promo.promo--gradient-gray:after{
 	background: linear-gradient(53deg, rgba(190, 190, 190, 0) 0%, rgba(190, 190, 190, 0.7)  47.99%);
+}
+.promo-overlay{
+	&>*{position: relative;
+	z-index:1; color: white;}
+}
+.promo-overlay:after{
+	background: linear-gradient(53deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5)  47.99%);
 }

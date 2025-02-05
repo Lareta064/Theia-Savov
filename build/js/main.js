@@ -19,8 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-
-
     // header search form
     const searchFormOpen = document.querySelector('#searchForm-open');
     if(searchFormOpen){
@@ -42,8 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-
-   
 
     /*Sliders in tabs */
     const tabBlockSwiper = document.querySelectorAll(".tabs-block.myswiper-container");

@@ -168,6 +168,11 @@ section + .dark-bg{margin-top: 45px;}
 		display: none!important;
 	}
 }
+.hide-xl{
+	@media (max-width: 1199px) {
+		display: none!important;
+	}
+}
 *.sm-100, .sm-100{
 	@media (max-width: 767px) {
 	 width: 100%!important;
