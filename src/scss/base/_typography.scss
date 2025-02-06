@@ -249,6 +249,9 @@ h1, h2,h3{font-weight: 400;}
 	box-shadow: 0 0 22px 0 rgba(154, 152, 152, 0.1);
     border-radius: 10px;
 	background-color: #fff;
+	@media (max-width: 767px) {
+		border-radius:8px;
+	}
 }
 .dotted-list, .detailed-list{
 	li{
@@ -270,7 +273,7 @@ h1, h2,h3{font-weight: 400;}
 		color: #222;
 		flex-shrink: 0;
 		@media (max-width: 424px) {
-		font-size: 14px;
+		font-size: 12px;
 		}
 	}
 	.list__val{font-weight: 700;}

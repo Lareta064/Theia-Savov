@@ -1,0 +1,52 @@
+@use "../base/var" as *;
+.specifications-acordion{
+	display: none;
+	@media (max-width: 1023px) {
+		display: block;
+	}
+}
+// .accordion__item {
+// 	margin: 5px auto;
+// }
+.accordion__item .accordion__title {
+	position: relative;
+	display: block;
+	padding-block:16px;
+	font-size: 16px;
+	letter-spacing: -0.02em;
+	text-transform: uppercase;
+	color: #1c1c1c;
+	-webkit-transition: background-color 0.2s;
+	transition: background-color 0.2s;
+    cursor: pointer;
+	border-bottom:  1px solid #1c1c1c;
+}
+.accordion__item .accordion__title:hover {
+	transition: all 0.5s ease-out;
+}
+
+.accordion__item .accordion__title .accordion__arrow {
+	position: absolute;
+	top: 18px; right: 10px;
+	display: inline-block;
+	vertical-align: middle;
+	width: 12px;
+	height: 12px;
+	text-align: center;
+	
+	-webkit-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+	.svg-carret{
+		width: 12px;
+	}
+}
+.accordion__item .accordion__rotate {
+	transform: rotate(-180deg);
+}
+.accordion__item .accordion__content {
+	padding-block: 16px;
+	
+	font-size: 16px;
+	display: none;
+	
+}

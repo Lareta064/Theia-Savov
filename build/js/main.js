@@ -44,81 +44,81 @@ document.addEventListener("DOMContentLoaded", function () {
     /*Sliders in tabs */
     const tabBlockSwiper = document.querySelectorAll(".tabs-block.myswiper-container");
 
-tabBlockSwiper.forEach((block) => {
-    const tabsNav = block.querySelectorAll(".tabs-nav__item");
-    const tabsBody = block.querySelectorAll(".tabs-body");
-    const swiperInstances = {};
+    tabBlockSwiper.forEach((block) => {
+        const tabsNav = block.querySelectorAll(".tabs-nav__item");
+        const tabsBody = block.querySelectorAll(".tabs-body");
+        const swiperInstances = {};
 
-    tabsBody.forEach((tabBody) => {
-        const swiperContainer = tabBody.querySelector(".tabs-swiper");
-        if (swiperContainer) {
-            const isSpecialSlider = swiperContainer.classList.contains("special-slider");
+        tabsBody.forEach((tabBody) => {
+            const swiperContainer = tabBody.querySelector(".tabs-swiper");
+            if (swiperContainer) {
+                const isSpecialSlider = swiperContainer.classList.contains("special-slider");
 
-            const swiper = new Swiper(swiperContainer, {
-                slidesPerView: isSpecialSlider ? 4 : 4, // По умолчанию 4 слайда, но мобилка меняет настройки
-                speed: 1000,
-                spaceBetween: 40,
-                navigation: {
-                    nextEl: block.querySelector(".tabs-swiper-next"),
-                    prevEl: block.querySelector(".tabs-swiper-prev"),
-                },
-                pagination: {
-                    el: tabBody.querySelector(".tabs-swiper-pagination"),
-                    clickable: true,
-                },
-                breakpoints: {
-                    320: {
-                        spaceBetween: 10,
-                        slidesPerView: isSpecialSlider ? 1 : 2, // ❗ Специальные слайдеры показывают 1 слайд
+                const swiper = new Swiper(swiperContainer, {
+                    slidesPerView: isSpecialSlider ? 4 : 4, // По умолчанию 4 слайда, но мобилка меняет настройки
+                    speed: 1000,
+                    spaceBetween: 40,
+                    navigation: {
+                        nextEl: block.querySelector(".tabs-swiper-next"),
+                        prevEl: block.querySelector(".tabs-swiper-prev"),
                     },
-                    768: {
-                        spaceBetween: 20,
-                        slidesPerView: isSpecialSlider ? 2 : 3,
+                    pagination: {
+                        el: tabBody.querySelector(".tabs-swiper-pagination"),
+                        clickable: true,
                     },
-                    1024: {
-                        spaceBetween: 20,
-                        slidesPerView: isSpecialSlider ? 2 : 3,
+                    breakpoints: {
+                        320: {
+                            spaceBetween: 10,
+                            slidesPerView: isSpecialSlider ? 1 : 2, // ❗ Специальные слайдеры показывают 1 слайд
+                        },
+                        768: {
+                            spaceBetween: 20,
+                            slidesPerView: isSpecialSlider ? 2 : 3,
+                        },
+                        1024: {
+                            spaceBetween: 20,
+                            slidesPerView: isSpecialSlider ? 2 : 3,
+                        },
+                        1200: {
+                            spaceBetween: 40,
+                            slidesPerView: 4,
+                        },
+                        1650: {
+                            spaceBetween: 40,
+                            slidesPerView: 4,
+                        },
                     },
-                    1200: {
-                        spaceBetween: 40,
-                        slidesPerView: 4,
-                    },
-                    1650: {
-                        spaceBetween: 40,
-                        slidesPerView: 4,
-                    },
-                },
-            });
+                });
 
-            swiperInstances[tabBody.id] = swiper;
-        }
-    });
-
-    tabsNav.forEach((tab) => {
-        tab.addEventListener("click", (e) => {
-            e.preventDefault();
-            const targetTabId = tab.dataset.tab;
-
-            tabsNav.forEach((item) => item.classList.remove("active"));
-            tabsBody.forEach((body) => body.classList.remove("active"));
-
-            tab.classList.add("active");
-            const targetBody = block.querySelector(`#${targetTabId}`);
-            if (targetBody) {
-                targetBody.classList.add("active");
-                swiperInstances[targetTabId]?.update();
+                swiperInstances[tabBody.id] = swiper;
             }
         });
-    });
 
-    //  Обновляем `slidesPerView` при изменении экрана
-    window.addEventListener("resize", () => {
-        Object.values(swiperInstances).forEach((swiper) => {
-            swiper.update();
+        tabsNav.forEach((tab) => {
+            tab.addEventListener("click", (e) => {
+                e.preventDefault();
+                const targetTabId = tab.dataset.tab;
+
+                tabsNav.forEach((item) => item.classList.remove("active"));
+                tabsBody.forEach((body) => body.classList.remove("active"));
+
+                tab.classList.add("active");
+                const targetBody = block.querySelector(`#${targetTabId}`);
+                if (targetBody) {
+                    targetBody.classList.add("active");
+                    swiperInstances[targetTabId]?.update();
+                }
+            });
         });
-    });
 
-});
+        //  Обновляем `slidesPerView` при изменении экрана
+        window.addEventListener("resize", () => {
+            Object.values(swiperInstances).forEach((swiper) => {
+                swiper.update();
+            });
+        });
+
+    });
 
      /*article swiper */
      const mySwiper = new Swiper('.mySwiper', {
@@ -132,7 +132,7 @@ tabBlockSwiper.forEach((block) => {
       breakpoints:{
         320:{
           slidesPerView: 2,
-          spaceBetween:16,
+          spaceBetween:15,
         },
         768:{
           slidesPerView: 3,
@@ -156,7 +156,7 @@ tabBlockSwiper.forEach((block) => {
       breakpoints:{
         320:{
           slidesPerView: 2,
-          spaceBetween:20,
+          spaceBetween:15,
         },
         768:{
           slidesPerView: 3,
@@ -847,60 +847,29 @@ document.addEventListener("DOMContentLoaded", () => {
       updateMinusButtonState(); // Обновляем состояние кнопки
     });
   });
+  //ACORDION
+  $(function() {
+	
+    //BEGIN
+    $(".accordion__title").on("click", function(e) {
+  
+      e.preventDefault();
+      var $this = $(this);
+  
+      if (!$this.hasClass("accordion-active")) {
+        $(".accordion__content").slideUp(400);
+        $(".accordion__title").removeClass("accordion-active");
+        $('.accordion__arrow').removeClass('accordion__rotate');
+      }
+  
+      $this.toggleClass("accordion-active");
+      $this.next().slideToggle();
+      $('.accordion__arrow',this).toggleClass('accordion__rotate');
+    });
+    //END
+    
+  });
    
-    /*FLIP CARD */
-    // const flipCards = document.querySelectorAll('.flip-card');
-
-		// 		if (flipCards.length > 0) {
-    //       flipCards.forEach((card) => {
-    //         const cardFlipBtn = card.querySelector('.flip-card-btn');
-    //         const flipCardBack = card.querySelector('.flip-card__back');
-    //         const startDateInput = card.querySelector('.start-date');
-
-    //         // Добавляем класс flip-active при наведении на кнопку
-    //         cardFlipBtn.addEventListener('mouseenter', () => {
-    //         card.classList.add('flip-active');
-    //         });
-
-    //         // Удаляем класс flip-active при уходе с flip-card__back
-    //         if (flipCardBack) {
-    //         flipCardBack.addEventListener('mouseenter', () => {
-    //           card.classList.add('flip-active');
-    //         });
-
-    //         flipCardBack.addEventListener('mouseleave', (event) => {
-    //           // Проверяем, не ушла ли мышь в flatpickr-calendar
-    //           const flatpickrCalendar = document.querySelector('.flatpickr-calendar');
-    //           if (
-    //           flatpickrCalendar &&
-    //           flatpickrCalendar.contains(event.relatedTarget)
-    //           ) {
-    //           return; // Если мышь ушла в flatpickr-calendar, не удаляем flip-active
-    //           }
-    //           card.classList.remove('flip-active');
-    //         });
-    //         }
-
-    //         // Добавляем класс flip-active при клике на start-date
-    //         if (startDateInput) {
-    //         startDateInput.addEventListener('click', () => {
-    //           card.classList.add('flip-active');
-    //         });
-    //         }
-
-    //         // Добавляем обработчик на flatpickr-calendar
-    //         document.addEventListener('mouseenter', (event) => {
-    //         const flatpickrCalendar = document.querySelector('.flatpickr-calendar');
-    //         if (
-    //           flatpickrCalendar &&
-    //           flatpickrCalendar.contains(event.target) &&
-    //           card.contains(flatpickrCalendar) // Убедимся, что это календарь текущей карточки
-    //         ) {
-    //           card.classList.add('flip-active');
-    //         }
-    //         });
-    //       });
-		// 		}
     /*FLIP CARD */
     const flipCards = document.querySelectorAll('.flip-card');
       if(flipCards.length>0){
@@ -947,6 +916,7 @@ document.addEventListener("DOMContentLoaded", () => {
           },
           0: {
             direction: "horizontal", // Горизонтальный режим для экранов меньше 768px
+            spaceBetween: 10,
           },
         },
       });
