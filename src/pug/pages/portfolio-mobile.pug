@@ -1,0 +1,13 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header
+	
+	main.inner-main
+		include ../sections/_portfolio-mobile-promo
+		include ../sections/_portfolio-mobile-content
+		include ../sections/_sales
+	include ../sections/_footer
+	
+block variables	
+	-var title = "Портфолио";

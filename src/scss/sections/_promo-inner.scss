@@ -83,10 +83,10 @@
 }
 
 .promo{
-	.h1, h2,h3, h4, p, ul, span {color: $text;}
+	.h1,.h2, .h2-fix, h2,h3, h4, p, ul, span {color: $text;}
 }
 .promo.promo-dark{
-	.breadcrumbs a, .h1, h2,h3, h4, p, ul, span{color: white;}
+	.breadcrumbs a, .h1, .h2, .h2-fix, h2,h3, h4, p, ul, span{color: white;}
 	.city-selection__btn button, .city-selection p{color: #f2f2f2;}
 	
 }

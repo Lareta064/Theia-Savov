@@ -1,5 +1,5 @@
 @use "base/var" as *;
-h1, h2,h3{font-weight: 400;}
+h1, h2,h3, .h2-fix{font-weight: 400;}
 .h1{
 	font-family:$fs;
 	font-size: 80px;
@@ -17,7 +17,7 @@ h1, h2,h3{font-weight: 400;}
 	}
 	
 }
-.h2{
+.h2, .h2-fix{
 	font-family:$fs;
 	font-size: 50px;
 	margin-bottom: 1em;
@@ -34,6 +34,11 @@ h1, h2,h3{font-weight: 400;}
 	@media (max-width: 767px) {
 		font-size: 24px;
 	}
+}
+.h2-fix{
+
+	font-size: 50px!important;
+
 }
 .h3{
 	font-family:$fs;
@@ -65,6 +70,12 @@ h1, h2,h3{font-weight: 400;}
 	@media (max-width: 1439px) {
 		font-size: 20px;
 	}
+}
+.title-24-fix{
+	font-size: 24px!important;
+	font-family: $fs;
+	font-weight: 400;
+	line-height:28.8px;letter-spacing:-0.36px
 }
 .title-20,.title-24{font-family: $fs; margin-bottom: 20px;}
 .title-20{

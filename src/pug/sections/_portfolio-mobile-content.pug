@@ -1,0 +1,29 @@
+section.portfolio-content
+	.container
+		.portfolio-content-grid
+			+portfolio-card-mobile(3,'Частный сектор', 'коттедж','Дом в Ленинградской обрасти 840 м2')
+			+portfolio-card-mobile(4, 'Коммерческие объекты', 'рестораны','Бузуланово — 436 м')
+			+portfolio-card-mobile(5, 'Коммерческие объекты', 'офисы','Бузуланово — 436 м')
+			+portfolio-card-mobile(6, 'Коммерческие объекты', 'рестораны','Бузуланово — 436 м')
+			+portfolio-card-mobile(7,'Частный сектор', 'коттедж','Дом в Ленинградской обрасти 840 м2')
+			+portfolio-card-mobile(8,'Частный сектор', 'коттедж','Дом в Ленинградской обрасти 840 м2')
+			+portfolio-card-mobile(3,'Частный сектор', 'коттедж','Дом в Ленинградской обрасти 840 м2')
+			+portfolio-card-mobile(5,'Частный сектор', 'коттедж','Дом в Ленинградской обрасти 840 м2')
+		
+
+		// pagination 
+		nav.pagination
+			// это кнопка НАЗАД изначально скрыта, добавлена, что бы показать ее код 
+				<a class="pagination-item pagination-prev" href="#"> 
+					<svg class="svg-arrow-left">
+						<use href="./img/sprite.svg#svg-arrow-left"></use>
+					</svg>Назад
+				</a>
+
+			a(href="#").pagination-item 1
+			a(href="#").pagination-item 2
+			a(href="#").pagination-item 3
+			a(href="#").pagination-item 4
+			a(href="#").pagination-item.pagination-next Вперед
+				svg.svg-arrow-right
+					use(href='./img/sprite.svg#svg-arrow-right')

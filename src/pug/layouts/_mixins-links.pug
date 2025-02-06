@@ -131,6 +131,19 @@ mixin portfolio-card(img, br1, br2, title)
 			a(href="single-blog.html").flex-link Читать статью 
 				svg.svg-arrow-right
 					use(href='./img/sprite.svg#svg-arrow-right')
+mixin portfolio-card-mobile(img, br1, br2, title)
+	.post-card
+		.post-card__img
+			img.img-cover(src="./img/portfolio/project"+ img +".webp", srcset="./img/portfolio/project"+ img +"@2x.webp 2x" alt="img" width="490" height="314" loading="lazy")
+		.post-card__body
+			.post-card__tags
+				span #{br1}
+				span #{br2}
+			.post-card__title !{title}
+			
+			a(href="single-blog.html").flex-link Читать статью 
+				svg.svg-arrow-right
+					use(href='./img/sprite.svg#svg-arrow-right')
 mixin building-card(img, title, txt)
 	.portfolio-card
 		.portfolio-card__img
