@@ -207,14 +207,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     /*.review-swiper*/
     const reviewSwiperLarge = new Swiper('.review .review-swiper', {
-      slidesPerView: 3,
+      slidesPerView: 2,
       speed:1000,
-      spaceBetween:20,
+      spaceBetween:10,
       pagination: {
         el:".mySwiper-pagination",
         clickable: true,
       },
     breackpoints:{
+      320:{
+        slidesPerView: 2,
+        spaceBetween:10,
+      },
         768:{
           slidesPerView: 3,
           spaceBetween:20,
