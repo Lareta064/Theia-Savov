@@ -1,6 +1,6 @@
 @use "base/var" as *;
 /*.breadcrumbs*/
-.breadcrumbs, .post-card__tags, .promo-content__tags{
+.breadcrumbs , .post-card__tags>, .promo-content__tags>, .portfolio-card> {
 	a, span{
 		display: inline-block;
 		font-size: 14px;
@@ -40,7 +40,7 @@
 		}
 	}
 }
-.promo-content__tags span, .post-card__tags span:hover{color: $text;}
+.portfolio-card>span, .promo-content__tags>span, .post-card__tags>span:hover{color: $text;}
 .breadcrumbs{
 	@media (max-width: 767px) {
 	  display: flex;
