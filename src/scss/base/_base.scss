@@ -190,9 +190,19 @@ section + .dark-bg{margin-top: 45px;}
 	@media (max-width: 1199px) {
 		&>*+*{margin-top: 40px;}
 	}
-	@media (max-width: 767px) {
-		&>*+*{margin-top: 20px;}
+	// @media (max-width: 767px) {
+	// 	&>*+*{margin-top: 20px;}
+	// }
+}
+.container.container--column{
+	display: flex;
+	flex-direction: column;
+	row-gap: 60px;
+	@media (max-width: 1199px) {
+	row-gap: 40px;
 	}
+	
+	
 }
 .mb-20{margin-bottom: 20px;}
 .mt-20{margin-top: 20px;}

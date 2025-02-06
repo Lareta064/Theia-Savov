@@ -10,11 +10,11 @@ section.promo.promo-dark.promo--gradient(style="background-image: url(./img/supp
 				
 			.promo-txt
 				p Мы строим объекты любой сложности под ключ, гарантируя качество, соблюдение сроков и бюджета. Наша команда профессионалов обеспечит полный цикл работ – от проектирования до ввода в эксплуатацию, с учетом всех ваших пожеланий.
-			a(href="#!").btn.btn--white Позвонить нам 
+			a(href="#!").btn.btn--white.sm-100 Позвонить нам 
 
 
 section.building-materials
-	.container.gap-60
+	.container.container--column
 		.description-block
 			.description-block__text
 				h2.h2 Отделочные и строй материалы 
@@ -43,8 +43,30 @@ section.building-materials
 			.description-block__img
 				img.wh-100(src="./img/block2_bg.webp", srcset="./img/block2_bg@2x.webp 2x", width="864" height="402" alt="img" loading="lazy")
 
-
-section.portfolio
+		//FOR MOB VERSION
+		.description-block-mobile(style="background-image: url(./img/block0_bg.webp)")
+			.description-block__text
+				h2.h2 Отделочные и строительные материалы 
+				p У нас вы можете приобрести любые строительные и отделочные материалы — от сыпучих смесей и щебня до плитки и декоративных покрытий, с быстрой доставкой прямо на ваш объект, независимо от объема заказа.
+				a(href="#!").btn-square
+					span.arrow-right
+		
+		//FOR MOB VERSION
+		.description-block-mobile(style="background-image: url(./img/block2_bg.webp)")
+			.description-block__text
+				h2.h2 Отделочные и строительные материалы 
+				p У нас вы можете приобрести любые строительные и отделочные материалы — от сыпучих смесей и щебня до плитки и декоративных покрытий, с быстрой доставкой прямо на ваш объект, независимо от объема заказа.
+				a(href="#!").btn-square
+					span.arrow-right
+		
+		//FOR MOB VERSION
+		.description-block-mobile(style="background-image: url(./img/block1_bg.webp)")
+			.description-block__text
+				h2.h2 Аренда<br>спецтехники
+				p Возьмите любую спецтехнику в аренду в СПБ на срок от 3-х смен и получите скидку 5%. Торопитесь, срок действия акции ограничен!
+				a(href="#!").btn-square
+					span.arrow-right
+section.portfolio.hide-lg
 	.container
 		.header-group
 			h2.h2 Реализованые проекты 
@@ -85,7 +107,7 @@ section.portfolio
 							p Строим комфортные дома из различных материалов (кирпич, дерево, монолит) по типовым и индивидуальным проектам, учитывая ваши индивидуальные предпочтения по планировке, стилю и используемым технологиям.
 			.mySwiper-pagination
 //DISCONT
-section.discont
+section.discont.hide-lg
 	.container
 		.header-group
 			h2.h2 Акции
