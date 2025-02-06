@@ -19,6 +19,9 @@
 		.btn{font-size:14px; padding-left: 10px;
 		padding-right: 10px;}
 	}
+	@media (max-width: 767px) {
+		.btn{flex: 1;}
+	}
 }
 }
 .portfolio-card__img{
@@ -52,6 +55,9 @@
 	row-gap:40px;
 	@media (max-width: 1199px) {
 		row-gap:30px;
+	}
+	@media (max-width: 767px) {
+	grid-template-columns: 1fr;
 	}
 }
 .portfolio-content .tabs-block .tabs-body.active {

@@ -1,0 +1,78 @@
+// quipment
+section.equipment
+	.container.gap-60
+		.description-block
+			.description-block__text
+				h2.h2 Оборудование
+				p Возьмите любую спецтехнику в аренду в СПБ на срок от 3-х смен и получите скидку 5%. Торопитесь, срок действия акции ограничен!
+				a(href="#!").btn Перейти в каталог
+			.description-block__img
+				img.wh-100(src="./img/block2_bg.webp", srcset="./img/block2_bg@2x.webp 2x", width="864" height="402" alt="img" loading="lazy")
+		
+		//FOR MOB VERSION
+		.description-block-mobile(style="background-image: url(./img/block2_bg.webp)")
+			.description-block__text
+				h2.h2 Отделочные и строительные материалы 
+				p У нас вы можете приобрести любые строительные и отделочные материалы — от сыпучих смесей и щебня до плитки и декоративных покрытий, с быстрой доставкой прямо на ваш объект, независимо от объема заказа.
+				a(href="#!").btn-square
+					span.arrow-right
+		
+		
+		// TABS SLIDERS 
+		.tabs-block.myswiper-container
+			.tabs-block-nav.flex
+				.tabs-nav
+					a.tabs-nav__item.active(href="#tab_15" data-tab="tab_15") Все
+					a.tabs-nav__item(href="#tab_16" data-tab="tab_16") Фронтальный погрузчик
+					a.tabs-nav__item(href="#tab_17" data-tab="tab_17") Погрузчик
+					a.tabs-nav__item(href="#tab_18" data-tab="tab_18") Экскаватор
+					
+				.swiper-nav
+					button.tabs-swiper-prev.arrow-left
+					button.tabs-swiper-next.arrow-right
+			.swiper.swiper-separate
+				#tab_15.tabs-body.active
+					.tabs-swiper
+						.swiper-wrapper
+							.swiper-slide
+								+product-card(9,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(10,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(11,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(8,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+							
+						.tabs-swiper-pagination
+				#tab_16.tabs-body
+					.tabs-swiper
+						.swiper-wrapper
+							.swiper-slide
+								+product-card(11,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(10,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(9,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(4,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+							
+						.tabs-swiper-pagination
+				#tab_17.tabs-body
+					.tabs-swiper
+						.swiper-wrapper
+							.swiper-slide
+								+product-card(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(6,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(7,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(8,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(4,'ЩПС С2 фракции', '0-20 мм', 2300)
+							
+					.tabs-swiper-pagination

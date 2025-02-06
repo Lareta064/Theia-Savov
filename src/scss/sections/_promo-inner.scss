@@ -1,7 +1,7 @@
 @use "../base/var" as *;
 .promo{
 	position: relative;
-	height: 800px;
+	// height: 800px;
 	padding-top: 10px;
 	padding-bottom: 100px;
 	
@@ -44,6 +44,7 @@
 	}
 }
 .promo-content{
+	max-width: 1050px;
 	.promo-content__tags{margin-bottom: 15px;}
 	.txt-20 {
 		margin-bottom: 20px;
@@ -51,6 +52,7 @@
 		font-size: 14px;
 		}
 	}
+	
 	.back-link .svg-arrow-left{width: 28px;}
 }
 .promo-txt {
