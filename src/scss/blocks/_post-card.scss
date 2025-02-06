@@ -25,22 +25,16 @@
 		font-size: 12px;
 		}
 	}
-	&__body{
-		padding-top: 32px;
-		@media (max-width: 1199px) {
-			padding-top: 20px;
-			p{margin-bottom: 24px;}
-		}
-	}
+	
 	.flex{
 		justify-content: space-between;
 	}
 	&__tags{
-		margin-bottom: 20px;
+		
 		font-size: 14px;
 		span{color: #191919;}
 		@media (max-width: 1199px) {
-			margin-bottom: 10px;
+			
 			font-size: 12px;
 		}
 	}
@@ -49,15 +43,15 @@
 		font-size: 32px;
 		line-height: 1.25;
 		font-family: $fs;
-		margin-bottom: 22px;
+		
 		@media (max-width: 1199px) {
 			font-size: 22px;
-			margin-bottom: 12px;
+			
 		}
 		
 	}
 	&__body p{
-		margin-bottom: 35px;
+		
 		line-height: 129%;
 		a{
 			text-decoration: underline;
@@ -67,16 +61,15 @@
 	}
 	.flex-link{
 		font-weight: 600;color: #191919;
-		margin:0!important;
+		margin-top:auto;
 		@media (max-width: 767px) {
 		font-size: 14px;
 		}
 	}
 	@media (max-width: 767px) {
 		&__body{
-			padding-top: 15px;
-			&>*{margin-bottom: 0;}
-			&>*+*{margin-top: 15px;}
+			
+			
 			p{
 				font-size: 12px;
 				color: rgba(34, 34, 34, 0.8);
@@ -93,6 +86,10 @@
 .post-card, .post-card__body{
 	display: flex;
 	flex-direction: column;
+	row-gap: 16px;
+	@media (max-width: 767px) {
+		row-gap: 10px;
+	}
 }
 .tabs-block.tabs-block--three  .tabs-body.active{
 	display: grid;
@@ -117,5 +114,8 @@
 		line-height: 1.48;
 		letter-spacing: 0.04em;
 		color: rgba(34, 34, 34, 0.7);
+	}
+	@media (max-width: 767px) {
+		column-gap: 20px;
 	}
 }
