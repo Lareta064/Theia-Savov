@@ -120,8 +120,10 @@ section + .dark-bg{margin-top: 45px;}
 }
 @media (max-width: 767px) {
 	section + .dark-bg{margin-top: 20px;}
-	main>*:last-child{padding-bottom: 170px;}
-	main>*.dark-bg:last-child{padding-bottom: 170px;}
+	main>*:last-child{padding-bottom: 70px;}
+	main>*:last-child.dark-bg {
+		padding-bottom: 170px;
+	  }
 }
 .container, .container-narrow, .container-grid{
 	width: min(1750px, 100%);

@@ -67,7 +67,12 @@
 .flex-link:hover> .arrow-right, .arrow-right:hover{
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='48' height='12' viewBox='0 0 48 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M48 6L38 0.226495L38 11.7735L48 6ZM39 5L1.99002e-07 4.99999L-1.99002e-07 6.99999L39 7L39 5Z' fill='%23FD8C09' /%3e%3c/svg%3e");
 }
-
+.flex-link .arrow-right, .flex-link .arrow-left{
+	@media (max-width: 767px) {
+	width: 38px;
+	height: 8px;
+	}
+}
 .phone-link, .email-link{
 	position: relative;
 	font-weight: 400;

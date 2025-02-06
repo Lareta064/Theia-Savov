@@ -128,9 +128,19 @@ mixin portfolio-card(img, br1, br2, title)
 				span #{br2}
 			.post-card__title !{title}
 			p Щебень на кровле – один из вариантов балласта, который используется для пригруза гидроизоляции плоской кровли. В балластной системе щебень считается самым доступным, эффективным и недорогим материалом для крепления и завершающего слоя кровельного пирога.
+			
 			a(href="single-blog.html").flex-link Читать статью 
 				svg.svg-arrow-right
 					use(href='./img/sprite.svg#svg-arrow-right')
+
+mixin fix-portfolio-card
+	.portfolio-card
+		.portfolio-card__img
+			img.img-contain(src="./img/portfolio/project"+ img +".webp", srcset = "./img/portfolio/project"+ img +"@2x.webp 2x" width="768"  alt="img" height="359" loading="lazy")
+		
+		.portfolio-card__title !{title}
+		p !{txt}
+
 mixin portfolio-card-mobile(img, br1, br2, title)
 	.post-card
 		.post-card__img
