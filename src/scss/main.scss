@@ -32,6 +32,8 @@
 @use "blocks/_tabs";
 @use "blocks/_city-block";
 @use "blocks/_pagination";
+@use "blocks/_acordion";
+
 
 @use "sections/_header";
 @use "blocks/_modal";
@@ -76,6 +78,7 @@
 
 /*MOBILE*/
 @use "mobile/_mob-nav";
+@use "mobile/_mobile-header";
 
 
 

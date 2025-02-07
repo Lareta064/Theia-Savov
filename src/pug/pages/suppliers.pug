@@ -6,8 +6,24 @@ block content
 	main.inner-main
 		include ../sections/_suppliers-promo
 		//- include ../sections/_suppliers-content
-		include ../sections/_our-service.pug
-		include ../sections/_pros.pug
+		//=== SERVICE===
+		section.our-service.dark-bg.hide-lg
+			.container
+				.header-group
+					h2.h3.white-txt Наши услуги 
+					a(href="#!").btn-outline Посмотреть больше услуг
+				.service-cards.swiper
+					.swiper-wrapper
+						.swiper-slide
+							+serv-card(1, 'Частные дома,<br>коттеджи и виллы.', 'Строим комфортные дома из различных материалов (кирпич, дерево, монолит) по типовым и индивидуальным проектам, учитывая ваши индивидуальные предпочтения по планировке, стилю и используемым технологиям.')
+						.swiper-slide
+							+serv-card(2, 'Коммерческие объекты (офисы, магазины, рестораны).', 'Проектируем и строим функциональные и эстетичные объекты, учитывая специфику вашего бизнеса.')
+						.swiper-slide
+							+serv-card(3, 'Дороги, транспортные узлы и инженерные коммуникации.', 'Выполняем полный комплекс работ по строительству и ремонту дорожной и инженерной инфраструктуры.')
+					
+					.service-cards-pagination
+				include ../sections/_pros.pug
+		
 		section.form-section.dark-bg(style="background-image: url(./img/suppliers-form.webp)")
 			.container
 				.form-section-content
@@ -22,7 +38,7 @@ block content
 						.form-item
 							textarea( name="message" placeholder="Ваш вопрос *")
 						.form-item.form-btn
-							button(type="submit").btn.btn--white ОТПРАВИТЬ
+							button(type="submit").btn.btn--white.sm-100 ОТПРАВИТЬ
 		
 	include ../sections/_footer
 	

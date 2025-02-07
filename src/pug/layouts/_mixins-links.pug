@@ -110,9 +110,9 @@ mixin post-card
 		.post-card__img
 			img.img-cover(src="./img/blog/post.webp", srcset="./img/blog/post@2x.webp 2x" alt="img" width="490" height="314" loading="lazy")
 		.post-card__body
-			.breadcrumbs
-				a(href="#!") крыши
-				a(href="#!") стройка
+			.post-card__tags
+				span крыши
+				span стройка
 			.post-card__title Щебень для кровли
 			p  #[a(href="#!") Щебень] на кровле – один из вариантов балласта, который используется для пригруза гидроизоляции плоской кровли. В балластной системе щебень считается самым доступным, эффективным и недорогим материалом для крепления и завершающего слоя кровельного пирога.
 			a(href="single-blog.html").flex-link.txt-16 Читать статью 
@@ -123,11 +123,34 @@ mixin portfolio-card(img, br1, br2, title)
 		.post-card__img
 			img.img-cover(src="./img/portfolio/project"+ img +".webp", srcset="./img/portfolio/project"+ img +"@2x.webp 2x" alt="img" width="490" height="314" loading="lazy")
 		.post-card__body
-			.breadcrumbs
-				a(href="#!") #{br1}
-				a(href="#!") #{br2}
+			.post-card__tags
+				span #{br1}
+				span #{br2}
 			.post-card__title !{title}
 			p Щебень на кровле – один из вариантов балласта, который используется для пригруза гидроизоляции плоской кровли. В балластной системе щебень считается самым доступным, эффективным и недорогим материалом для крепления и завершающего слоя кровельного пирога.
+			
+			a(href="single-blog.html").flex-link Читать статью 
+				svg.svg-arrow-right
+					use(href='./img/sprite.svg#svg-arrow-right')
+
+mixin fix-portfolio-card
+	.portfolio-card
+		.portfolio-card__img
+			img.img-contain(src="./img/portfolio/project"+ img +".webp", srcset = "./img/portfolio/project"+ img +"@2x.webp 2x" width="768"  alt="img" height="359" loading="lazy")
+		
+		.portfolio-card__title !{title}
+		p !{txt}
+
+mixin portfolio-card-mobile(img, br1, br2, title)
+	.post-card
+		.post-card__img
+			img.img-cover(src="./img/portfolio/project"+ img +".webp", srcset="./img/portfolio/project"+ img +"@2x.webp 2x" alt="img" width="490" height="314" loading="lazy")
+		.post-card__body
+			.post-card__tags
+				span #{br1}
+				span #{br2}
+			.post-card__title !{title}
+			
 			a(href="single-blog.html").flex-link Читать статью 
 				svg.svg-arrow-right
 					use(href='./img/sprite.svg#svg-arrow-right')
@@ -138,17 +161,18 @@ mixin building-card(img, title, txt)
 		
 		.portfolio-card__title !{title}
 		p !{txt}
-		.flex
-			a(href="single-blog.html").btn Посмотреть проекты
-			a(href="single-blog.html").btn Подать заявку
+		.portfolio-card__btns.flex
+			a(href="single-blog.html").btn 
+				span.hide-sm Посмотреть проекты
+				span.visible-sm Проекты
+			a(href="single-blog.html").btn.btn-transform Подать заявку
 				
 				
 mixin promo-dark(img, title, btnTxt)
 	.promo-dark.promo.promo-slim(style="background-image: url(./img/"+ img+".webp)")&attributes(attributes)
 		.container
 			.promo-top
-				.breadcrumbs
-					+breadcrumbs('каталог', 'Отделочные и строй материалы', ''+ title)
+				+breadcrumbs('каталог', 'Отделочные и строй материалы', ''+ title)
 				+city-block
 			.promo-content
 				h1.h1 !{title}

@@ -1,4 +1,7 @@
 @use "../base/var" as *;
 .product-details{
 	padding-top: 40px;
+	@media (max-width: 767px) {
+	padding-top: 16px;
+	}
 }

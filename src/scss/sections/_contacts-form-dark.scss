@@ -1,3 +1,4 @@
+@use "../base/var" as *;
 .form-section{
 	position: relative;
 	background-image: url('../img/form-bg.webp');
@@ -30,5 +31,16 @@
 		top: auto;
 		bottom: 80px;
 		left:53%;
+	}
+}
+.contacts-form.form-dark{
+	.btn--white{
+		@media (max-width: 767px) {
+		background-color: transparent;
+		border-color: currentColor;
+		color:white;
+		&:hover{color:$accent;}
+		
+		}
 	}
 }

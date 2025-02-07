@@ -23,4 +23,14 @@
 	@media (max-width: 1023px) {
 		font-size: 13px;
 	}
+	@media (max-width: 767px) {
+	grid-column:  span 12 !important;
+	border:0;
+	border-bottom: 1px solid white;
+	flex-direction: row;
+	align-items: center;
+	padding-left: 0;
+	padding-block:20px;
+	height: auto;
+	}
 }

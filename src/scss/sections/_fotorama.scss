@@ -28,12 +28,25 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;}
+		@media (max-width: 1279px) {
+			width: calc(100% - 80px - 20px);
+		}
+		@media (max-width: 767px) {
+		   width: 100%;
+		   height: 250px;
+		}
 	}
 
 	.mySwiperThumb {
 		height: 100%;
 		width:193px;
 		box-sizing: border-box;
+		@media (max-width: 1279px) {
+			width:80px;
+		}
+		@media (max-width: 767px) {
+		 width: 100%; height:80px;
+		}
 	}
 
 	.mySwiperThumb .swiper-slide {
@@ -41,6 +54,21 @@
 		img{
 			border-radius: 10px;
 			}
+		@media (max-width: 1279px) {
+			height: 80px!important;
+		}
+		@media (max-width: 767px) {
+		  width: 117px; height:80px;
+		}
+		&.swiper-slide-thumb-active{
+			position: relative;
+			&:after{
+				content:'';
+				position: absolute;
+				inset:0;
+				background-color: rgba(255,255,255, .6);
+			}
+		}
 	}
 
 	.mySwiperThumb .swiper-slide-thumb-active {
@@ -54,6 +82,11 @@
 			height: 102px!important;
 			
 		}
+	}
+	@media (max-width: 767px) {
+	flex-direction: column-reverse;
+	height: auto;
+	row-gap:10px;
 	}
 }
 .fotorama-wrapper{

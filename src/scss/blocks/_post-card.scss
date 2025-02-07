@@ -15,6 +15,9 @@
 		@media (max-width: 1023px) {
 			height: 135px;
 		}
+		@media (max-width: 767px) {
+			height: 195px;
+		}
 	}
 	&__body, &__body p{
 		flex-grow: 1;
@@ -22,22 +25,16 @@
 		font-size: 12px;
 		}
 	}
-	&__body{
-		padding-top: 32px;
-		@media (max-width: 1199px) {
-			padding-top: 20px;
-			p{margin-bottom: 24px;}
-		}
-	}
+	
 	.flex{
 		justify-content: space-between;
 	}
-	.breadcrumbs{
-		margin-bottom: 20px;
+	&__tags{
+		
 		font-size: 14px;
-		a{color: #191919;}
+		span{color: #191919;}
 		@media (max-width: 1199px) {
-			margin-bottom: 10px;
+			
 			font-size: 12px;
 		}
 	}
@@ -46,15 +43,27 @@
 		font-size: 32px;
 		line-height: 1.25;
 		font-family: $fs;
-		margin-bottom: 22px;
-		@media (max-width: 1199px) {
-			font-size: 22px;
-			margin-bottom: 12px;
-		}
+		
+	@media (max-width: 1699px) {
+		font-size: 26px;
+	}
+	@media (max-width: 1439px) {
+		font-size: 24px;
+	}
+	@media (max-width: 1199px) {
+		font-size: 22px;
+	}
+	@media (max-width: 1023px) {
+		font-size: 20px;
+	}
+	@media (max-width: 767px) {
+		font-size: 24px;
+		letter-spacing: -0.36px;
+	}
 		
 	}
 	&__body p{
-		margin-bottom: 35px;
+		
 		line-height: 129%;
 		a{
 			text-decoration: underline;
@@ -64,15 +73,19 @@
 	}
 	.flex-link{
 		font-weight: 600;color: #191919;
+		margin-top:auto;
+		@media (max-width: 767px) {
+		font-size: 14px;
+		}
 	}
 	@media (max-width: 767px) {
 		&__body{
-			padding-top: 15px;
-			&>*{margin-bottom: 0;}
-			&>*+*{margin-top: 15px;}
+			
+			
 			p{
 				font-size: 12px;
 				color: rgba(34, 34, 34, 0.8);
+				margin-bottom: 12px;
 			}
 		}
 		&__title{
@@ -85,6 +98,10 @@
 .post-card, .post-card__body{
 	display: flex;
 	flex-direction: column;
+	row-gap: 16px;
+	@media (max-width: 767px) {
+		row-gap: 15px;
+	}
 }
 .tabs-block.tabs-block--three  .tabs-body.active{
 	display: grid;
@@ -96,6 +113,10 @@
 		column-gap:20px;
 		row-gap:30px;
 	}
+	@media (max-width: 767px) {
+		&>*{grid-column: span 12;}
+	}
+
 }
 
 .blog-posts .tabs-nav{
@@ -105,5 +126,8 @@
 		line-height: 1.48;
 		letter-spacing: 0.04em;
 		color: rgba(34, 34, 34, 0.7);
+	}
+	@media (max-width: 767px) {
+		column-gap: 20px;
 	}
 }
