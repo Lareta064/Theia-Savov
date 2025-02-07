@@ -88,3 +88,9 @@
 		opacity: .7;
 	}
 }
+@media (max-width: 767px) {
+	.show-more-btn{
+		display: flex;
+		justify-content: center;
+	}
+}

@@ -23,7 +23,7 @@ section.promo
 					img(src="./img/category/cat-mobile3.webp",  srcset="./img/category/cat-mobile3@2x.webp"  width="92" height="80" alt="img")
 				.cat-card__title Эвакуаторы
 section.rent-assort.rent-assort--mobile
-	.container
+	.container.gap-60
 		.tabs-block
 			.tabs-nav.tabs-nav--center
 				a.tabs-nav__item.active(href="#!" data-tab="all") Все
@@ -47,3 +47,78 @@ section.rent-assort.rent-assort--mobile
 				+flipCard(3)
 				+flipCard(2)
 				+flipCard(4)
+
+		.show-more-btn
+			a(href="#!").btn Показать больше
+
+section.description-mobile
+	.container.gap-60
+		.description-block-mobile.description-block--column(style="background-image: url(./img/block0_bg.webp)")
+			.description-block__text
+				h2.h2 Отделочные и строительные материалы 
+				p У нас вы можете приобрести любые строительные и отделочные материалы — от сыпучих смесей и щебня до плитки и декоративных покрытий, с быстрой доставкой прямо на ваш объект, независимо от объема заказа.
+			a(href="#!").btn.btn--white Стать поставщиком
+		
+		// TABS SLIDERS
+		.tabs-block.myswiper-container
+			.tabs-block-nav.flex
+				.tabs-nav
+					a.tabs-nav__item.active(href="#!" data-tab="tab_1") Все
+					a.tabs-nav__item(href="#!" data-tab="tab_2") Песок 
+					a.tabs-nav__item(href="#!" data-tab="tab_3") щебень 
+					a.tabs-nav__item(href="#!" data-tab="tab_4") метал
+					a.tabs-nav__item(href="#!" data-tab="tab_5") Пластик 
+					a.tabs-nav__item(href="#!" data-tab="tab_6") метал
+					a.tabs-nav__item(href="#!" data-tab="tab_7") Бетоные смеси
+				.swiper-nav
+					button.tabs-swiper-prev.arrow-left
+					button.tabs-swiper-next.arrow-right
+			.swiper.swiper-separate
+				#tab_1.tabs-body.active
+					.tabs-swiper
+						.swiper-wrapper
+							.swiper-slide
+								+product-card(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(6,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(7,'ЩПС дробленной фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(8,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+							
+						.tabs-swiper-pagination
+
+		
+						
+				#tab_2.tabs-body
+					.tabs-swiper
+						.swiper-wrapper
+							.swiper-slide
+								+product-card(1,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(2,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(3,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(4,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+							
+						.tabs-swiper-pagination
+				#tab_3.tabs-body
+					.tabs-swiper
+						.swiper-wrapper
+							.swiper-slide
+								+product-card(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(6,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(7,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(8,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(4,'ЩПС С2 фракции', '0-20 мм', 2300)
+							
+					.tabs-swiper-pagination
