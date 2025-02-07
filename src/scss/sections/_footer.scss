@@ -97,9 +97,14 @@
 	.blog-card__title{font-size: 16px;}
 }
 
-@media (max-width: 1023px) {
+    @media (max-width: 1023px) {
 	.product-assort .tabs-block .tabs-body.active{
 		&>*{grid-column: span 4;}
+	}
+	@media (max-width: 767px) {
+		.product-assort .tabs-block .tabs-body.active{
+			&>*{grid-column: span 6;}
+		}
 	}
 	.contacts-grid{
 		flex-direction: column;

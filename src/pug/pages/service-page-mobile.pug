@@ -1,0 +1,12 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header
+	
+	main.inner-main
+		include ../sections/_service-page-mob-content
+		
+	include ../sections/_footer
+	
+block variables	
+	-var title = "Категории";

@@ -48,6 +48,13 @@
 .breadcrumbs{
 	@media (max-width: 767px) {
 	  display: flex;
+	  width: calc(50% + 50vw);
+	  overflow: hidden;
+	  overflow-x: auto;
+	  scrollbar-width: none;
+	  &::-webkit-scrollbar{
+		display: none;
+	  }
 	 
 	  &>*{white-space: nowrap;}
 	}

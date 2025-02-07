@@ -1,0 +1,206 @@
+section.promo.promo-dark.promo--gradient(style="background-image: url(./img/portfolio-promo.webp)")
+	.container
+		.promo-top
+			+breadcrumbs('Портфолио')
+			
+		.promo-content
+			h1.h1 Аренда<br>спецтехники
+				
+			.promo-txt
+				p У нас вы можете найти строй материалы, арендовать строительный транспорт, купить оборугование для транспорта и закать большой спект услуг. 
+			a(href="#!").btn.btn--white.sm-100 Арендовать в один клик 
+
+section.product-assort
+	.container
+		.tabs-block.tabs-block--grid
+			.tabs-nav.tabs-nav--center
+				a.tabs-nav__item.active(href="#!" data-tab="all") Все
+				a.tabs-nav__item(href="#!" data-tab="tab_2") Гранитный 
+				a.tabs-nav__item(href="#!" data-tab="tab_3") Известняковый
+				a.tabs-nav__item(href="#!" data-tab="tab_4") Базальтовый
+				a.tabs-nav__item(href="#!" data-tab="tab_5") Песчаник 
+				a.tabs-nav__item(href="#!" data-tab="tab_6") Шлаковый
+				a.tabs-nav__item(href="#!" data-tab="tab_7") Сланцевый
+				a.tabs-nav__item(href="#!" data-tab="tab_8") Керамзитовый  
+				a.tabs-nav__item(href="#!" data-tab="tab_9") Черный  
+				a.tabs-nav__item(href="#!" data-tab="tab_10") Вторичный  
+				a.tabs-nav__item(href="#!" data-tab="tab_11") Строительный 
+				a.tabs-nav__item(href="#!" data-tab="tab_12") стротельство
+			// SINGLE  TAB CONTENT
+			#all.tabs-body.active
+				+product-card(7,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+				+product-card(7,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+				+product-card(7,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+				+product-card(7,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+				+product-card(7,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+				+product-card(7,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+				+product-card(7,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+				+product-card(7,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+			#tab_2.tabs-body
+				+product-card(6,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+				+product-card(6,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+				+product-card(6,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+				+product-card(6,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+				
+
+section.description-mobile
+	.container.gap-60
+		.description-block-mobile.description-block--column(style="background-image: url(./img/block0_bg.webp)")
+			.description-block__text
+				h2.h2 Отделочные и строительные материалы 
+				p У нас вы можете приобрести любые строительные и отделочные материалы — от сыпучих смесей и щебня до плитки и декоративных покрытий, с быстрой доставкой прямо на ваш объект, независимо от объема заказа.
+			a(href="#!").btn.btn--white Стать поставщиком
+		
+		// TABS SLIDERS
+		.tabs-block.myswiper-container
+			.tabs-block-nav.flex
+				.tabs-nav
+					a.tabs-nav__item.active(href="#!" data-tab="tab_1") Все
+					a.tabs-nav__item(href="#!" data-tab="tab_2") Песок 
+					a.tabs-nav__item(href="#!" data-tab="tab_3") щебень 
+					a.tabs-nav__item(href="#!" data-tab="tab_4") метал
+					a.tabs-nav__item(href="#!" data-tab="tab_5") Пластик 
+					a.tabs-nav__item(href="#!" data-tab="tab_6") метал
+					a.tabs-nav__item(href="#!" data-tab="tab_7") Бетоные смеси
+				.swiper-nav
+					button.tabs-swiper-prev.arrow-left
+					button.tabs-swiper-next.arrow-right
+			.swiper.swiper-separate
+				#tab_1.tabs-body.active
+					.tabs-swiper
+						.swiper-wrapper
+							.swiper-slide
+								+product-card(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(6,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(7,'ЩПС дробленной фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(8,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+							
+						.tabs-swiper-pagination
+
+						
+				#tab_2.tabs-body
+					.tabs-swiper
+						.swiper-wrapper
+							.swiper-slide
+								+product-card(1,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(2,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(3,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(4,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+							
+						.tabs-swiper-pagination
+				#tab_3.tabs-body
+					.tabs-swiper
+						.swiper-wrapper
+							.swiper-slide
+								+product-card(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(6,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(7,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(8,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(4,'ЩПС С2 фракции', '0-20 мм', 2300)
+							
+					.tabs-swiper-pagination
+
+section.about
+	.container
+		//FOR MOB VERSION
+		.description-block-mobile(style="background-image: url(./img/block7_bg.webp)")
+			.description-block__text
+				h2.h2 О компании
+				p Наша компания предлагает широкий спектр услуг - продажу строительного оборудования и материалов, аренду спецтехники и выполнение строительных работ под ключ.
+				p #[strong Работаем собственными силами, обеспечиваем высокое качество строительств.]
+
+//==== statistic-block ====
+section.statistic
+	.container
+		.statistic-block.grid-border
+			.grid-border__item
+				.statistic-item
+					.accent-txt 10 лет
+					p На рынке
+			.grid-border__item
+				.statistic-item
+					.accent-txt 350+
+					p Сотрудников
+			.grid-border__item
+				.statistic-item
+					.accent-txt 30+
+					p Объектов возведено
+			.grid-border__item
+				.statistic-item
+					.accent-txt 246%
+					p Увеличение оборота за год
+
+// GEO
+section.geo
+	.container
+		.geo-map
+			
+			img(src="./img/map.svg",  width="1500" height="860" alt="map")
+			.flex-sm
+				a(href="#!").btn Узнать подробнее
+		// RIGHT COLUMN
+		.geo-content
+			h2.h2 География
+			
+			p.hide-mobile Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно монтажных работ в промышленном и гражданском строительстве 
+			
+			p Работаем собственными силами, обеспечиваем высокое качество строительств
+			.hide-sm
+				a(href="#!").btn Узнать подробнее
+
+//REVIEW
+section.review
+	.container
+		.header-group
+			h2.title-24 Отзывы
+			a(href="#!").flex-link.txt-16 Смотреть подробнее
+				span.arrow-right
+
+		.swiper.review-swiper
+			.swiper-wrapper
+				.swiper-slide
+					.review-card
+						.rating-stars
+						.txt-24 ООО «СпецТех»
+						.txt-12 30 января 2024
+						p  ООО «СпецТех» выражает благодарность компании партнёру по бизнесу ООО «ТГС». Мы искренне ценим установившиеся между нашими организациями дружественные отношения, которые позволяют нам...
+				.swiper-slide
+					.review-card
+						.rating-stars
+						.txt-24 ООО «СпецТех»
+						.txt-12 30 января 2024
+						p  ООО «СпецТех» выражает благодарность компании партнёру по бизнесу ООО «ТГС». Мы искренне ценим установившиеся между нашими организациями дружественные отношения, которые позволяют нам...
+				.swiper-slide
+					.review-card
+						.rating-stars
+						.txt-24 ООО «СпецТех»
+						.txt-12 30 января 2024
+						p  ООО «СпецТех» выражает благодарность компании партнёру по бизнесу ООО «ТГС». Мы искренне ценим установившиеся между нашими организациями дружественные отношения, которые позволяют нам...
+				.swiper-slide
+					.review-card
+						.rating-stars
+						.txt-24 ООО «СпецТех»
+						.txt-12 30 января 2024
+						p  ООО «СпецТех» выражает благодарность компании партнёру по бизнесу ООО «ТГС». Мы искренне ценим установившиеся между нашими организациями дружественные отношения, которые позволяют нам...
+				.swiper-slide
+					.review-card
+						.rating-stars
+						.txt-24 ООО «СпецТех»
+						.txt-12 30 января 2024
+						p  ООО «СпецТех» выражает благодарность компании партнёру по бизнесу ООО «ТГС». Мы искренне ценим установившиеся между нашими организациями дружественные отношения, которые позволяют нам...
+			//slider pagibation
+			.mySwiper-pagination
