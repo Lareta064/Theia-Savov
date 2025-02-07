@@ -46,6 +46,7 @@
 	&__title{
 		text-align: center;
 		.availabel{text-align: center;}
+
 		
 	}
 	&__desk{
@@ -56,6 +57,9 @@
 		text-align: center;
 		&>*{width: 100%;}
 		li+li{margin-top: 2px;}
+		@media (max-width: 767px) {
+		padding: 16px;
+		}
 	}
 	
  	&__back {
@@ -89,6 +93,20 @@
 	&.flip-active &__back {
 		transform: translateX(-100%);
 	}
+	@media (max-width: 1499px) {
+		width: calc((100% - 60px) / 3);
+		
+	}
+	@media (max-width: 1279px) {
+	    .flip-card .detailed-card__row.flex input{width: 90px;font-size: 13px;}
+		.select-date.select-date--light .form-item input.start-date{width: 100px; padding-left: 16px;}
+	}
+	@media (max-width: 1199px) {
+		
+			width: calc((100% - 60px) /2);
+			
+		
+	}
   }
 /**/
   .availabel{
@@ -101,7 +119,7 @@
 }
 @media(max-width:1439px){
 	.flip-card{
-		.txt-24, .title-20, .amount{font-size: 15px;}
+		.txt-24, .title-20, .amount{font-size: 18px;}
 	}
 	.flip-card .detailed-card__footer{
 		&>*+*{margin-top:12px;}
@@ -110,8 +128,15 @@
 		.btn, .btn-primary{font-size: 14px;}
 	} 
 	.flip-card .detailed-card__row.flex {
-		flex-direction: column;
-		row-gap: 12px;
+		column-gap:10px;
+		input{width: 100px;}
 	}
 
+}
+@media (max-width: 767px) {
+	
+	.flip-card__title .title-20, .detailed-title.txt-24{font-size: 20px; margin-bottom: 8px; margin-top: 0!important;}
+	.flip-card__desk{row-gap:25px;}
+	.flip-card .detailed-art{display: none;}
+	.flip-card .rating-block {margin-top: 8px;}
 }

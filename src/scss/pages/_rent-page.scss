@@ -8,6 +8,9 @@
 		&>*{flex-shrink: 0;
 			@media (max-width: 1023px) {width: calc((100% - 20px)/2)}
 			@media (max-width: 1199px) {width: calc((100% - 40px)/3)}
+			@media (max-width: 767px) {
+			   width: 100%;
+			}
 
 		}
 		

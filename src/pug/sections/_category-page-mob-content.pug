@@ -5,11 +5,45 @@ section.promo
 			
 		.promo-content
 			h1.h1 Выбрать категорию:
-section.categories-list
-	.container
-
+		
 		.categories-list-row
+			//card
 			a(href="subcat-mobile.html").cat-card
 				.cat-card__img
-					img(src="./img/cat", alt="")
-				.cat-card__title
+					img(src="./img/category/cat-mobile1.webp",  srcset="./img/category/cat-mobile1@2x.webp"  width="92" height="80" alt="img")
+				.cat-card__title Коммунальная<br>техника
+			//card
+			a(href="subcat-mobile.html").cat-card
+				.cat-card__img
+					img(src="./img/category/cat-mobile2.webp",  srcset="./img/category/cat-mobile2@2x.webp"  width="92" height="80" alt="img")
+				.cat-card__title Коммунальная<br>техника
+			//card
+			a(href="subcat-mobile.html").cat-card
+				.cat-card__img
+					img(src="./img/category/cat-mobile3.webp",  srcset="./img/category/cat-mobile3@2x.webp"  width="92" height="80" alt="img")
+				.cat-card__title Эвакуаторы
+section.rent-assort.rent-assort--mobile
+	.container
+		.tabs-block
+			.tabs-nav.tabs-nav--center
+				a.tabs-nav__item.active(href="#!" data-tab="all") Все
+				a.tabs-nav__item(href="#!" data-tab="tab_2") Автовышки
+				a.tabs-nav__item(href="#!" data-tab="tab_3") Автокраны
+				a.tabs-nav__item(href="#!" data-tab="tab_4") Бортовые автомобили
+				a.tabs-nav__item(href="#!" data-tab="tab_5") Бульдозеры 
+				a.tabs-nav__item(href="#!" data-tab="tab_6") Длинномеры
+				a.tabs-nav__item(href="#!" data-tab="tab_7") Катки
+				
+			// SINGLE  TAB CONTENT
+			#all.tabs-body.active
+				+flipCard(4)
+				+flipCard(2)
+				+flipCard(3)
+				+flipCard
+
+
+			#tab_2.tabs-body
+				+flipCard
+				+flipCard(3)
+				+flipCard(2)
+				+flipCard(4)

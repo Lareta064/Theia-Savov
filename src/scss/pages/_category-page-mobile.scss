@@ -1,0 +1,38 @@
+@use "../base/var" as *;
+.categories-list{
+	overflow: hidden;
+}
+.categories-list-row{
+	display: flex;
+	width: calc(50% + 50vw);
+	overflow: hidden;
+	overflow-x: auto;
+	scrollbar-width: none;
+	&::-webkit-scrollbar{display: none;}
+	padding: 10px;
+	
+	column-gap:8px;
+	
+	
+}
+.cat-card{
+	padding: 14px 21px;
+	background-color: #fff;
+	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	row-gap:14px;
+	font-weight: 400;
+	font-size: 14px;
+	letter-spacing: -0.03em;
+	text-align: center;
+	color: #1c1c1c;
+	font-family: $fs;
+	text-align: center;
+	max-width: 134px;
+	flex-shrink: 0;
+	img{
+		width: 100%;height: 80px;object-fit: contain; object-position: center;
+	}
+}
