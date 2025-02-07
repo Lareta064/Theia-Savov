@@ -1,0 +1,176 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header
+	main.main
+		.container
+			.promo-top
+				.breadcrumbs
+					+breadcrumbs('Корзина')
+				
+		
+		
+		section.basket
+			.container
+				h1.title-24 Корзина
+				.basket-content
+					//ГРУППА Строй материалы
+					.basket-group
+						.basket-group__header.flex
+							.txt-16 Строй материалы
+							button.remove-btn.flex-link
+								span.remove-icon
+						//CARD-ROW
+						.basket-card
+							.basket-card__status
+								label.label-hide-chebx
+									input.hide-chebx(type="checkbox" name="prod_status")
+									span.basket-card__status-type
+							
+							.basket-card__img
+								img.wh-100(src="./img/products/prod1.webp", srcset="./img/products/prod1@2x.webp 2x", alt="img" loading="lazy")
+							
+							.basket-card__desk
+								.txt-20 Название товара
+								.specifications-acordion.accordion
+									.accordion__item
+										.accordion__title
+											.accordion__arrow
+												svg.svg-carret
+													use(href="../img/sprite.svg#svg-carret")
+											
+											span.accordion__title-text Характеристики
+										.accordion__content
+											ul.txt-12
+												li Модуль крупности: 2.0-2.5
+												li Коэфф. фильтрации: до 12 м 
+												li Насыпная плотность: 1.6
+												li Содержание глины: ≤ 0,25%
+								.basket-card__amount 130 200 руб	
+							
+							
+							
+							.basket-card__col
+								.basket-card__options
+									+counter-light
+									span.txt-12 от 870 руб./м3
+							.basket-card__remove
+								button.remove-btn
+									span.remove-icon
+						//CARD-ROW
+						.basket-card
+							.basket-card__status
+								label.label-hide-chebx
+									input.hide-chebx(type="checkbox" name="prod_status")
+									span.basket-card__status-type
+							
+							.basket-card__img
+								img.wh-100(src="./img/products/prod1.webp", srcset="./img/products/prod1@2x.webp 2x", alt="img" loading="lazy")
+							
+							.basket-card__desk
+								.txt-20 Название товара
+								.specifications-acordion.accordion
+									.accordion__item
+										.accordion__title
+											.accordion__arrow
+												svg.svg-carret
+													use(href="../img/sprite.svg#svg-carret")
+											
+											span.accordion__title-text Характеристики
+										.accordion__content
+											ul.txt-12
+												li Модуль крупности: 2.0-2.5
+												li Коэфф. фильтрации: до 12 м 
+												li Насыпная плотность: 1.6
+												li Содержание глины: ≤ 0,25%
+								.basket-card__amount 130 200 руб	
+							.basket-card__col
+								.basket-card__options
+									+counter-light
+									span.txt-12 от 870 руб./м3
+							.basket-card__remove
+								button.remove-btn
+									span.remove-icon
+					
+					//ГРУППА Строй материалы
+					.basket-group
+						.basket-group__header.flex
+							.txt-16 Строй материалы
+							button.remove-btn.flex-link
+								span.remove-icon
+						//CARD-ROW
+						.basket-card
+							.basket-card__status
+								label.label-hide-chebx
+									input.hide-chebx(type="checkbox" name="prod_status")
+									span.basket-card__status-type
+							
+							.basket-card__img
+								img.wh-100(src="./img/products/prod1.webp", srcset="./img/products/prod1@2x.webp 2x", alt="img" loading="lazy")
+							
+							.basket-card__desk
+								.txt-20 Название товара
+								.specifications-acordion.accordion
+									.accordion__item
+										.accordion__title
+											.accordion__arrow
+												svg.svg-carret
+													use(href="../img/sprite.svg#svg-carret")
+											
+											span.accordion__title-text Характеристики
+										.accordion__content
+											ul.txt-12
+												li Модуль крупности: 2.0-2.5
+												li Коэфф. фильтрации: до 12 м 
+												li Насыпная плотность: 1.6
+												li Содержание глины: ≤ 0,25%
+								.basket-card__amount 130 200 руб	
+							
+							
+							
+							.basket-card__col
+								.basket-card__options
+									+counter-light
+									span.txt-12 от 870 руб./м3
+							.basket-card__remove
+								button.remove-btn
+									span.remove-icon
+						//CARD-ROW
+						.basket-card
+							.basket-card__status
+								label.label-hide-chebx
+									input.hide-chebx(type="checkbox" name="prod_status")
+									span.basket-card__status-type
+							
+							.basket-card__img
+								img.wh-100(src="./img/products/prod1.webp", srcset="./img/products/prod1@2x.webp 2x", alt="img" loading="lazy")
+							
+							.basket-card__desk
+								.txt-20 Название товара
+								.specifications-acordion.accordion
+									.accordion__item
+										.accordion__title
+											.accordion__arrow
+												svg.svg-carret
+													use(href="../img/sprite.svg#svg-carret")
+											
+											span.accordion__title-text Характеристики
+										.accordion__content
+											ul.txt-12
+												li Модуль крупности: 2.0-2.5
+												li Коэфф. фильтрации: до 12 м 
+												li Насыпная плотность: 1.6
+												li Содержание глины: ≤ 0,25%
+								.basket-card__amount 130 200 руб	
+							.basket-card__col
+								.basket-card__options
+									+counter-light
+									span.txt-12 от 870 руб./м3
+							.basket-card__remove
+								button.remove-btn
+									span.remove-icon
+		include ../sections/_sales
+	include ../sections/_footer
+		
+block variables	
+	-var title = "Корзина";

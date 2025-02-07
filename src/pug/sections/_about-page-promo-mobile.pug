@@ -1,0 +1,248 @@
+// PROMO
+section.promo.promo--about(style="background-image: url(./img/about-promo.webp)")
+	.container
+		.promo-top
+			+breadcrumbs('О компании')
+			+city-block
+
+		.promo-content
+			h1.h1
+				| THEIA
+				img(src="./img/logo-big.svg", width="1550" height="211" alt="alt")
+			.promo-txt.center-txt.white-txt
+				p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно-монтажных работ в промышленном и гражданском строительстве
+				p.txt-bold Работаем собственными силами, обеспечиваем высокое качество строительств
+
+//==== statistic-block ====
+section.statistic
+	.container
+		.statistic-block.grid-border
+			.grid-border__item
+				.statistic-item
+					.accent-txt 10 лет
+					p На рынке
+			.grid-border__item
+				.statistic-item
+					.accent-txt 350+
+					p Сотрудников
+			.grid-border__item
+				.statistic-item
+					.accent-txt 30+
+					p Объектов возведено
+			.grid-border__item
+				.statistic-item
+					.accent-txt 246%
+					p Увеличение оборота за год
+// GEO
+section.geo
+	.container
+		.geo-map
+			img(src="./img/map.svg",  width="1500" height="860" alt="map")
+			.flex-sm
+				a(href="#!").btn Узнать подробнее
+		// RIGHT COLUMN
+		.geo-content
+			h2.h2 География
+			
+			p.hide-mobile Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно монтажных работ в промышленном и гражданском строительстве 
+			
+			p Работаем собственными силами, обеспечиваем высокое качество строительств
+			.hide-sm
+				a(href="#!").btn Узнать подробнее
+// CATEGORIES
+section.categories
+	.container
+		h2.h2 Основная специализация 
+		.category-cards.grid-wrapper
+			+assort-card('Строительное оборудование, строительные материалы', 1)
+			+assort-card('Аренда спец техники, аренда дорожной техники', 2)
+			+assort-card('Оборудование для строительной техники', 3)
+			+assort-card('Ремонт помещений, строительные работы, загородные работы.', 4)
+section.building-materials
+	.container.gap-60
+		//FOR MOB VERSION
+		.description-block-mobile(style="background-image: url(./img/block0_bg.webp)")
+			.description-block__text
+				h2.h2 Отделочные и строительные материалы 
+				p У нас вы можете приобрести любые строительные и отделочные материалы — от сыпучих смесей и щебня до плитки и декоративных покрытий, с быстрой доставкой прямо на ваш объект, независимо от объема заказа.
+				a(href="#!").btn-square
+					span.arrow-right
+		// TABS SLIDERS ===
+		.tabs-block.myswiper-container
+			.tabs-block-nav.flex
+				.tabs-nav
+					a.tabs-nav__item.active(href="#!" data-tab="tab_8") Все
+					a.tabs-nav__item(href="#!" data-tab="tab_9") Песок 
+					a.tabs-nav__item(href="#!" data-tab="tab_10") щебень 
+					a.tabs-nav__item(href="#!" data-tab="tab_11") метал
+					a.tabs-nav__item(href="#!" data-tab="tab_12") Пластик 
+					a.tabs-nav__item(href="#!" data-tab="tab_13") метал
+					a.tabs-nav__item(href="#!" data-tab="tab_14") Бетоные смеси
+				.swiper-nav
+					button.tabs-swiper-prev.arrow-left
+					button.tabs-swiper-next.arrow-right
+			.swiper.swiper-separate
+				#tab_8.tabs-body.active
+					.tabs-swiper
+						.swiper-wrapper
+							.swiper-slide
+								+product-card(1,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(2,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(3,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(4,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+							
+						.tabs-swiper-pagination
+		
+section.rent
+	.container.gap-60
+		//FOR MOB VERSION
+		.description-block-mobile(style="background-image: url(./img/block1_bg.webp)")
+			.description-block__text
+				h2.h2 Аренда<br>спецтехники
+				p Возьмите любую спецтехнику в аренду в СПБ на срок от 3-х смен и получите скидку 5%. Торопитесь, срок действия акции ограничен!
+				a(href="#!").btn-square
+					span.arrow-right
+		// TABS SLIDERS
+		.tabs-block.myswiper-container
+			.tabs-block-nav.flex
+				.tabs-nav
+					a.tabs-nav__item.active(href="#!" data-tab="tab_1") Все
+					a.tabs-nav__item(href="#!" data-tab="tab_2") Песок 
+					a.tabs-nav__item(href="#!" data-tab="tab_3") щебень 
+					a.tabs-nav__item(href="#!" data-tab="tab_4") метал
+					a.tabs-nav__item(href="#!" data-tab="tab_5") Пластик 
+					a.tabs-nav__item(href="#!" data-tab="tab_6") метал
+					a.tabs-nav__item(href="#!" data-tab="tab_7") Бетоные смеси
+				.swiper-nav
+					button.tabs-swiper-prev.arrow-left
+					button.tabs-swiper-next.arrow-right
+			.swiper.swiper-separate
+				#tab_1.tabs-body.active
+					.tabs-swiper
+						.swiper-wrapper
+							.swiper-slide
+								+product-card(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(6,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(7,'ЩПС дробленной фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(8,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+							
+						.tabs-swiper-pagination
+
+		
+						
+				#tab_2.tabs-body
+					.tabs-swiper
+						.swiper-wrapper
+							.swiper-slide
+								+product-card(1,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(2,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(3,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(4,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+							
+						.tabs-swiper-pagination
+section.equipment
+	.container.gap-60
+		//FOR MOB VERSION
+		.description-block-mobile(style="background-image: url(./img/block2_bg.webp)")
+			.description-block__text
+				h2.h2 Отделочные и строительные материалы 
+				p У нас вы можете приобрести любые строительные и отделочные материалы — от сыпучих смесей и щебня до плитки и декоративных покрытий, с быстрой доставкой прямо на ваш объект, независимо от объема заказа.
+				a(href="#!").btn-square
+					span.arrow-right
+		// TABS SLIDERS 
+		.tabs-block.myswiper-container
+			.tabs-block-nav.flex
+				.tabs-nav
+					a.tabs-nav__item.active(href="#tab_15" data-tab="tab_15") Все
+					a.tabs-nav__item(href="#tab_16" data-tab="tab_16") Фронтальный погрузчик
+					a.tabs-nav__item(href="#tab_17" data-tab="tab_17") Погрузчик
+					a.tabs-nav__item(href="#tab_18" data-tab="tab_18") Экскаватор
+					
+				.swiper-nav
+					button.tabs-swiper-prev.arrow-left
+					button.tabs-swiper-next.arrow-right
+			.swiper.swiper-separate
+				#tab_15.tabs-body.active
+					.tabs-swiper
+						.swiper-wrapper
+							.swiper-slide
+								+product-card(9,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(10,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(11,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(8,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+							
+						.tabs-swiper-pagination
+				#tab_16.tabs-body
+					.tabs-swiper
+						.swiper-wrapper
+							.swiper-slide
+								+product-card(11,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(10,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(9,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(4,'ЩПС С2 фракции', '0-20 мм', 2300)
+							.swiper-slide
+								+product-card(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+
+section.portfolio
+	.container
+		.header-group
+			h2.h2 Проекты
+			a(href="#!").flex-link Показать больше
+				span.arrow-right
+
+		.portfolio-slider.swiper
+			.swiper-wrapper
+				.swiper-slide
+					a(href="#!").portfolio-card
+						.portfolio-card__img
+							img(src="./img/portfolio/project1.webp", srcset = "./img/portfolio/project1@2x.webp 2x" width="768"  alt="img" height="359" loading="lazy")
+						
+						.portfolio-card__title Частные дома, коттеджи и виллы.
+						p Строим комфортные дома из различных материалов (кирпич, дерево, монолит) по типовым и индивидуальным проектам, учитывая ваши индивидуальные предпочтения по планировке, стилю и используемым технологиям.
+				
+				.swiper-slide
+					a(href="#!").portfolio-card
+						.portfolio-card__img
+							img(src="./img/portfolio/project2.webp", srcset="./img/portfolio/project2@2x.webp 2x", width="768" height="359" alt="img" loading="lazy")
+						.portfolio-card__txt
+							.portfolio-card__title Частные дома, коттеджи и виллы.
+							p Строим комфортные дома из различных материалов (кирпич, дерево, монолит) по типовым и индивидуальным проектам, учитывая ваши индивидуальные предпочтения по планировке, стилю и используемым технологиям.
+				.swiper-slide
+					a(href="#!").portfolio-card
+						.portfolio-card__img
+							img(src="./img/portfolio/project1.webp", srcset="./img/portfolio/project1@2x.webp 2x", width="768" height="359" alt="img" loading="lazy")
+						.portfolio-card__txt
+							.portfolio-card__title Частные дома, коттеджи и виллы.
+							p Строим комфортные дома из различных материалов (кирпич, дерево, монолит) по типовым и индивидуальным проектам, учитывая ваши индивидуальные предпочтения по планировке, стилю и используемым технологиям.
+				
+				.swiper-slide
+					a(href="#!").portfolio-card
+						.portfolio-card__img
+							img(src="./img/portfolio/project2.webp", srcset="./img/portfolio/project2@2x.webp 2x", width="768" height="359" alt="img" loading="lazy")
+						.portfolio-card__txt
+							.portfolio-card__title Частные дома, коттеджи и виллы.
+							p Строим комфортные дома из различных материалов (кирпич, дерево, монолит) по типовым и индивидуальным проектам, учитывая ваши индивидуальные предпочтения по планировке, стилю и используемым технологиям.
+			.mySwiper-pagination
