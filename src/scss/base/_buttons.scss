@@ -36,6 +36,7 @@
 	   color: #fff;
 	}
 }
+
 .btn-grey{
 	height: 36px;
 	background-color: #f6f5f5;
@@ -71,5 +72,19 @@
 		
 		background-color: #fff;
 		color:   $accent;
+	}
+}
+.btn-square{
+	padding: 8px;
+	width: 47px;
+	height: 47px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 8px;
+	background-color: #fff;
+	transition: .3s; 
+	&:hover{
+		opacity: .7;
 	}
 }

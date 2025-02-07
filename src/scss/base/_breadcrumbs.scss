@@ -1,7 +1,7 @@
 @use "base/var" as *;
 /*.breadcrumbs*/
-.breadcrumbs{
-	a{
+.breadcrumbs , .post-card__tags>, .promo-content__tags>, .portfolio-card> {
+	a, span{
 		display: inline-block;
 		font-size: 14px;
 		line-height: 1.43;
@@ -14,21 +14,22 @@
 		&:last-child{
 			padding-right: 0;
 			cursor: default;
-			// &:hover{color: #838494!important;}
+		
 
 		}
+	
 	 .svg-logo{
 		width: 68px;
 		height: 10px;
 		color: inherit!important;}
 		@media (max-width: 1279px) {
-		font-size: 10px;
-		.svg-logo{width: 48px;}
+		font-size: 12px;
+		.svg-logo{width: 61px; height:10px;}
 		}
 		
 	}
 	
-	a+a{
+	a+a, span+span{
 		padding-left: 8px;
 		padding-right: 8px;
 		position: relative;
@@ -38,5 +39,16 @@
 			left: -1px;
 			top: 0px;
 		}
+		@media (max-width: 767px) {
+			letter-spacing: 0.05em;
+		}
+	}
+}
+.portfolio-card>span, .promo-content__tags>span, .post-card__tags>span:hover{color: $text;}
+.breadcrumbs{
+	@media (max-width: 767px) {
+	  display: flex;
+	 
+	  &>*{white-space: nowrap;}
 	}
 }

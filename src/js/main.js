@@ -1,5 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
     const bodyEl = document.body;
+    const menuButton = document.querySelector('.menu-button');
+	  // const mobileMenu = document.querySelector('#mobile-menu');
+	  if(menuButton){
+
+        menuButton.addEventListener('click', ()=> {
+         
+          if( menuButton.classList.contains('active')){
+            menuButton.classList.remove('active');
+            // mobileMenu.classList.remove('active');
+            bodyEl.classList.remove('lock');
+            
+          }else{
+            menuButton.classList.add('active');
+            // mobileMenu.classList.add('active');
+            bodyEl.classList.add('lock');
+          }
+        });
+    }
+
     // header search form
     const searchFormOpen = document.querySelector('#searchForm-open');
     if(searchFormOpen){
@@ -22,82 +41,84 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-   
-
     /*Sliders in tabs */
     const tabBlockSwiper = document.querySelectorAll(".tabs-block.myswiper-container");
 
-				tabBlockSwiper.forEach((block) => {
-					const tabsNav = block.querySelectorAll(".tabs-nav__item");
-					const tabsBody = block.querySelectorAll(".tabs-body");
-					const swiperInstances = {};
-					tabsBody.forEach((tabBody) => {
-					const swiperContainer = tabBody.querySelector(".tabs-swiper");
-					if (swiperContainer) {
-						const swiper = new Swiper(swiperContainer, {
-              slidesPerView: 4,
-              speed:1000,
-              spaceBetween:40,
-              navigation: {
-                nextEl: block.querySelector(".tabs-swiper-next"),
-                prevEl: block.querySelector(".tabs-swiper-prev"),
-              },
-              pagination: {
-                el: tabBody.querySelector(".tabs-swiper-pagination"),
-                clickable: true,
-              },
-              breakpoints:{
-                  320:{
-                    spaceBetween:10,
-                    slidesPerView: 2,
-                },
-                  768:{
-                      spaceBetween:20,
-                      slidesPerView: 3,
-                  },
-                  1024:{
-                    spaceBetween:20,
-                    slidesPerView: 3,
-                  },
-                  1200:{
-                    spaceBetween:40,
-                    slidesPerView: 4,
-                  
-                  },
-                  1650:{
-                    spaceBetween:40,
-                    slidesPerView: 4,
-                  
-                  },
+    tabBlockSwiper.forEach((block) => {
+        const tabsNav = block.querySelectorAll(".tabs-nav__item");
+        const tabsBody = block.querySelectorAll(".tabs-body");
+        const swiperInstances = {};
 
-              
-              }
-						});
+        tabsBody.forEach((tabBody) => {
+            const swiperContainer = tabBody.querySelector(".tabs-swiper");
+            if (swiperContainer) {
+                const isSpecialSlider = swiperContainer.classList.contains("special-slider");
 
-						swiperInstances[tabBody.id] = swiper;
-					}
-					});
+                const swiper = new Swiper(swiperContainer, {
+                    slidesPerView: isSpecialSlider ? 4 : 4, // По умолчанию 4 слайда, но мобилка меняет настройки
+                    speed: 1000,
+                    spaceBetween: 40,
+                    navigation: {
+                        nextEl: block.querySelector(".tabs-swiper-next"),
+                        prevEl: block.querySelector(".tabs-swiper-prev"),
+                    },
+                    pagination: {
+                        el: tabBody.querySelector(".tabs-swiper-pagination"),
+                        clickable: true,
+                    },
+                    breakpoints: {
+                        320: {
+                            spaceBetween: 10,
+                            slidesPerView: isSpecialSlider ? 1 : 2, // ❗ Специальные слайдеры показывают 1 слайд
+                        },
+                        768: {
+                            spaceBetween: 20,
+                            slidesPerView: isSpecialSlider ? 2 : 3,
+                        },
+                        1024: {
+                            spaceBetween: 20,
+                            slidesPerView: isSpecialSlider ? 2 : 3,
+                        },
+                        1200: {
+                            spaceBetween: 40,
+                            slidesPerView: 4,
+                        },
+                        1650: {
+                            spaceBetween: 40,
+                            slidesPerView: 4,
+                        },
+                    },
+                });
 
-					
-					tabsNav.forEach((tab) => {
-					tab.addEventListener("click", (e) => {
-						e.preventDefault();
-						const targetTabId = tab.dataset.tab;
+                swiperInstances[tabBody.id] = swiper;
+            }
+        });
 
-						// Убираем активный класс со всех табов и контента
-						tabsNav.forEach((item) => item.classList.remove("active"));
-						tabsBody.forEach((body) => body.classList.remove("active"));
+        tabsNav.forEach((tab) => {
+            tab.addEventListener("click", (e) => {
+                e.preventDefault();
+                const targetTabId = tab.dataset.tab;
 
-					
-						tab.classList.add("active");
-						const targetBody = block.querySelector(`#${targetTabId}`);
-						if (targetBody) {
-						targetBody.classList.add("active");
-						swiperInstances[targetTabId]?.update(); 
-						}
-					});
-			});
-		});
+                tabsNav.forEach((item) => item.classList.remove("active"));
+                tabsBody.forEach((body) => body.classList.remove("active"));
+
+                tab.classList.add("active");
+                const targetBody = block.querySelector(`#${targetTabId}`);
+                if (targetBody) {
+                    targetBody.classList.add("active");
+                    swiperInstances[targetTabId]?.update();
+                }
+            });
+        });
+
+        //  Обновляем `slidesPerView` при изменении экрана
+        window.addEventListener("resize", () => {
+            Object.values(swiperInstances).forEach((swiper) => {
+                swiper.update();
+            });
+        });
+
+    });
 
      /*article swiper */
      const mySwiper = new Swiper('.mySwiper', {
@@ -109,6 +130,10 @@ document.addEventListener("DOMContentLoaded", function () {
         clickable: true,
       },
       breakpoints:{
+        320:{
+          slidesPerView: 2,
+          spaceBetween:15,
+        },
         768:{
           slidesPerView: 3,
           spaceBetween:16,
@@ -129,6 +154,10 @@ document.addEventListener("DOMContentLoaded", function () {
         clickable: true,
       },
       breakpoints:{
+        320:{
+          slidesPerView: 2,
+          spaceBetween:15,
+        },
         768:{
           slidesPerView: 3,
           spaceBetween:20,
@@ -145,8 +174,10 @@ document.addEventListener("DOMContentLoaded", function () {
       slidesPerView: 'auto',
       speed:1000,
       spaceBetween:30,
-      
-      
+      pagination: {
+        el:".service-cards-pagination",
+        clickable: true,
+      }
      
     });
 
@@ -176,14 +207,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     /*.review-swiper*/
     const reviewSwiperLarge = new Swiper('.review .review-swiper', {
-      slidesPerView: 3,
+      slidesPerView: 2,
       speed:1000,
-      spaceBetween:20,
+      spaceBetween:10,
       pagination: {
         el:".mySwiper-pagination",
         clickable: true,
       },
     breackpoints:{
+      320:{
+        slidesPerView: 2,
+        spaceBetween:10,
+      },
         768:{
           slidesPerView: 3,
           spaceBetween:20,
@@ -426,9 +461,9 @@ document.addEventListener("DOMContentLoaded", () => {
         speed: 1000,
         spaceBetween: 20,
         loop: true,
-        autoplay:{
-            delay: 5000,
-        }
+        // autoplay:{
+        //     delay: 5000,
+        // }
       });
     };
   
@@ -816,60 +851,29 @@ document.addEventListener("DOMContentLoaded", () => {
       updateMinusButtonState(); // Обновляем состояние кнопки
     });
   });
+  //ACORDION
+  $(function() {
+	
+    //BEGIN
+    $(".accordion__title").on("click", function(e) {
+  
+      e.preventDefault();
+      var $this = $(this);
+  
+      if (!$this.hasClass("accordion-active")) {
+        $(".accordion__content").slideUp(400);
+        $(".accordion__title").removeClass("accordion-active");
+        $('.accordion__arrow').removeClass('accordion__rotate');
+      }
+  
+      $this.toggleClass("accordion-active");
+      $this.next().slideToggle();
+      $('.accordion__arrow',this).toggleClass('accordion__rotate');
+    });
+    //END
+    
+  });
    
-    /*FLIP CARD */
-    // const flipCards = document.querySelectorAll('.flip-card');
-
-		// 		if (flipCards.length > 0) {
-    //       flipCards.forEach((card) => {
-    //         const cardFlipBtn = card.querySelector('.flip-card-btn');
-    //         const flipCardBack = card.querySelector('.flip-card__back');
-    //         const startDateInput = card.querySelector('.start-date');
-
-    //         // Добавляем класс flip-active при наведении на кнопку
-    //         cardFlipBtn.addEventListener('mouseenter', () => {
-    //         card.classList.add('flip-active');
-    //         });
-
-    //         // Удаляем класс flip-active при уходе с flip-card__back
-    //         if (flipCardBack) {
-    //         flipCardBack.addEventListener('mouseenter', () => {
-    //           card.classList.add('flip-active');
-    //         });
-
-    //         flipCardBack.addEventListener('mouseleave', (event) => {
-    //           // Проверяем, не ушла ли мышь в flatpickr-calendar
-    //           const flatpickrCalendar = document.querySelector('.flatpickr-calendar');
-    //           if (
-    //           flatpickrCalendar &&
-    //           flatpickrCalendar.contains(event.relatedTarget)
-    //           ) {
-    //           return; // Если мышь ушла в flatpickr-calendar, не удаляем flip-active
-    //           }
-    //           card.classList.remove('flip-active');
-    //         });
-    //         }
-
-    //         // Добавляем класс flip-active при клике на start-date
-    //         if (startDateInput) {
-    //         startDateInput.addEventListener('click', () => {
-    //           card.classList.add('flip-active');
-    //         });
-    //         }
-
-    //         // Добавляем обработчик на flatpickr-calendar
-    //         document.addEventListener('mouseenter', (event) => {
-    //         const flatpickrCalendar = document.querySelector('.flatpickr-calendar');
-    //         if (
-    //           flatpickrCalendar &&
-    //           flatpickrCalendar.contains(event.target) &&
-    //           card.contains(flatpickrCalendar) // Убедимся, что это календарь текущей карточки
-    //         ) {
-    //           card.classList.add('flip-active');
-    //         }
-    //         });
-    //       });
-		// 		}
     /*FLIP CARD */
     const flipCards = document.querySelectorAll('.flip-card');
       if(flipCards.length>0){
@@ -902,22 +906,30 @@ document.addEventListener("DOMContentLoaded", () => {
       //FOTORAMA
       let mySwiperThumb = new Swiper(".mySwiperThumb", {
         spaceBetween: 20,
-        
-        slidesPerView: 'auto',
-        direction: "vertical", // Вертикальный режим
+        slidesPerView: "auto",
+        direction: "vertical", // По умолчанию вертикальный
         freeMode: true,
         watchSlidesProgress: true,
         navigation: {
           nextEl: ".mySwiperThumb-next",
           prevEl: ".mySwiperThumb-prev",
         },
-        });
-        var mySwiperFotorama = new Swiper(".mySwiperFotorama", {
+        breakpoints: {
+          768: {
+            direction: "vertical", // Вертикальный режим для больших экранов
+          },
+          0: {
+            direction: "horizontal", // Горизонтальный режим для экранов меньше 768px
+            spaceBetween: 10,
+          },
+        },
+      });
+      
+      var mySwiperFotorama = new Swiper(".mySwiperFotorama", {
         spaceBetween: 10,
         speed: 800,
-       
         thumbs: {
-          swiper:  mySwiperThumb,
+          swiper: mySwiperThumb,
         },
       });
 

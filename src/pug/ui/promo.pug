@@ -27,14 +27,13 @@ html(lang="ru")
 							img.wh-100(src='../img/blog/blog-bg.webp'  alt='img')
 					.container
 						.promo-top
-							.breadcrumbs
-								+breadcrumbs('Блог')
+							+breadcrumbs('Блог')
 							+city-block
 
 						.promo-content
-							.breadcrumbs
-								a.bold-txt(href="#!") крыши
-								a.bold-txt(href="#!") стройка
+							.promo-content__tags
+								span.bold-txt(href="#!") крыши
+								span.bold-txt(href="#!") стройка
 							
 							.txt-20 7 минут на прочтение
 							h1.h1 Щебень для кровли
@@ -42,7 +41,7 @@ html(lang="ru")
 								p #[a(href="#!") Щебень] на кровле – один из вариантов балласта, который используется для пригруза гидроизоляции плоской кровли.
 								p В балластной системе щебень считается самым доступным, эффективным и недорогим материалом для крепления и завершающего слоя кровельного пирога.
 								p Так как мы сами производим и поставляем щебень, расскажем, какой из его видов и фракций берут чаще, и как происходит процесс отсыпки.
-							a(href="#!").btn.btn--white Читать статью
+							a(href="#!").btn.btn--white.sm-100 Читать статью
 				hr
 				
 				hr
@@ -51,8 +50,7 @@ html(lang="ru")
 				.promo-dark.promo(style="background-image: url(../img/blog/blog-bg.webp)")
 					.container
 						.promo-top
-							.breadcrumbs
-								+breadcrumbs('каталог', 'Отделочные и строй материалы', 'Щебень')
+							+breadcrumbs('каталог', 'Отделочные и строй материалы', 'Щебень')
 							+city-block
 						.promo-content
 							h1.h1 Щебень
@@ -63,8 +61,7 @@ html(lang="ru")
 				section.promo.promo--inner
 					.container
 						.promo-top
-							.breadcrumbs
-								+breadcrumbs('Каталог')
+							+breadcrumbs('Каталог')
 							+city-block
 
 						.promo-content.center-txt

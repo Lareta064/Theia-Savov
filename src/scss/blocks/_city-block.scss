@@ -30,7 +30,12 @@
 		column-gap:16px;
 		p{font-size: 14px;}
 	}
+	
 }
 
-
+.promo-top .city-selection , .promo-mobile .city-selection{
+	@media (max-width: 1023px) {
+	display: none;
+	}
+}
 

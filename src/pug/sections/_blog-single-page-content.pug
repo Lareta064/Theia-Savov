@@ -41,8 +41,9 @@ section.article-slider
 	.container-narrow
 		.header-group
 			p.txt-24 Товары которые были в статье
-			a(href="#!").flex-link Показать больше
-				span.arrow-right
+			.hide-sm
+				a(href="#!").flex-link Показать больше
+					span.arrow-right
 
 		
 		.mySwiper.swiper
@@ -57,11 +58,10 @@ section.article-slider
 					+product-card-ui(8,'ЩПС С2 фракции', '0-20 мм', 2300)
 				.swiper-slide
 					+product-card-ui(5,'ЩПС С2 фракции', '0-20 мм', 2300)
-				.swiper-slide
-					+product-card-ui(6,'ЩПС С2 фракции', '0-20 мм', 2300)
-				.swiper-slide
-					+product-card-ui(7,'ЩПС С2 фракции', '0-20 мм', 2300)
-				.swiper-slide
-					+product-card-ui(8,'ЩПС С2 фракции', '0-20 мм', 2300)
+				
 			
 			.mySwiper-pagination
+		//for mobile-link
+		.flex-sm.mt-20
+			a(href="#!").flex-link Показать больше
+					span.arrow-right
