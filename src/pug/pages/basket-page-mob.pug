@@ -1,15 +1,15 @@
 extends ../layouts/layout.pug
 
 block content
-	include ../sections/_header
+	include ../sections/_burger-menu
+	include ../sections/_header-mob
 	main.main
 		.container
 			.promo-top
 				+breadcrumbs('Корзина')
-		
+			h1.title-24-fix Корзина
 		section.basket.mb-100
 			.container
-				h1.title-24-fix Корзина
 				.basket-content
 					//ГРУППА Строй материалы
 					.basket-group
