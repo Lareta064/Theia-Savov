@@ -198,9 +198,9 @@ document.addEventListener("DOMContentLoaded", function () {
         el:".mySwiper-pagination",
         clickable: true,
       },
-    breackpoints:{
+    breakpoints:{
       320:{
-        slidesPerView: 2,
+        slidesPerView: 1,
         spaceBetween:10,
       },
         768:{
@@ -222,7 +222,7 @@ document.addEventListener("DOMContentLoaded", function () {
         el:".mySwiper-pagination",
         clickable: true,
       },
-      breackpoints:{
+      breakpoints:{
         1439:{
           slidesPerView: 'auto',
         }

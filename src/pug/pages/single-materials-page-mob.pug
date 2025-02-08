@@ -8,7 +8,7 @@ block content
 			.promo-top
 				+breadcrumbs('Каталог','Аренда','Экскаватор')
 		section.product-details
-			.container
+			.container.gap-20
 				.product-preview__img
 					img.img-contain(src="./img/products/prod5.webp", srcset="./img/products/prod5@2x.webp 2x" alt="img" width="372" height="343")
 			
@@ -23,7 +23,7 @@ block content
 						
 						.price-block
 							.price-block__item
-								p от от 870 руб./м3
+								p от 870 руб./м3
 								span.txt-12 за шт
 							.price-block__item
 								p от 700 руб./тн
@@ -132,17 +132,14 @@ block content
 						.accordion__content
 							.specifications__desk
 								.title-24 Документы
-									p Песок - один из самых востребованных строительных материалов. Используется для приготовления строительных растворов, сухих строительных смесей, а также в качестве выравнивающего основания.
-									//DOCUMENTS
-									.documents-wrapper
-										a(href="./img/docs/doc.webp" data-fancybox="gallery").document-item
-											img(src="./img/docs/doc-thumb.webp", alt="img" width="159" height="220")
-										a(href="./img/docs/doc.webp" data-fancybox="gallery").document-item
-											img(src="./img/docs/doc-thumb.webp", alt="img" width="159" height="220")
-										a(href="./img/docs/doc.webp" data-fancybox="gallery").document-item
-											img(src="./img/docs/doc-thumb.webp", alt="img" width="159" height="220")
-										a(href="./img/docs/doc.webp" data-fancybox="gallery").document-item
-											img(src="./img/docs/doc-thumb.webp", alt="img" width="159" height="220")
+								.documents-wrapper
+									a(href="./img/docs/doc.webp" data-fancybox="gallery").document-item
+										img(src="./img/docs/doc-thumb.webp", alt="img" width="115" height="159")
+									a(href="./img/docs/doc.webp" data-fancybox="gallery").document-item
+										img(src="./img/docs/doc-thumb.webp", alt="img" width="115" height="159")
+									a(href="./img/docs/doc.webp" data-fancybox="gallery").document-item
+										img(src="./img/docs/doc-thumb.webp", alt="img" width="115" height="159")
+										
 					//О компании
 					.accordion__item
 						.accordion__title
@@ -181,15 +178,14 @@ block content
 							+product-card-ui(8,'ЩПС С2 фракции', '0-20 мм', 2300)
 						.swiper-slide
 							+product-card-ui(5,'ЩПС С2 фракции', '0-20 мм', 2300)
-						.swiper-slide
-							+product-card-ui(6,'ЩПС С2 фракции', '0-20 мм', 2300)
-						.swiper-slide
-							+product-card-ui(7,'ЩПС С2 фракции', '0-20 мм', 2300)
-						.swiper-slide
-							+product-card-ui(8,'ЩПС С2 фракции', '0-20 мм', 2300)
+						
 					
 					.mySwiper-pagination
-		
+	//fixed-button
+	.float-bottom-btn
+		a(href="basket-order-mobile.html").btn-primary.flex-justify 
+			span Оформить заказ
+			span 206 567 руб
 	include ../sections/_footer
 		
 block variables	

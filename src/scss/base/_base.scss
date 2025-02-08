@@ -194,6 +194,10 @@ section + .dark-bg{margin-top: 45px;}
 	// 	&>*+*{margin-top: 20px;}
 	// }
 }
+.gap-20{
+	&>*+*{margin-top: 20px;}
+}
+
 .container.container--column{
 	display: flex;
 	flex-direction: column;
