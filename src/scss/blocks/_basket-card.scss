@@ -267,7 +267,7 @@
 	.basket-group > * + * {
 		margin-top: 0;
 	}
-	.float-order-btn{
+	.float-bottom-btn{
 		display: flex;
 		justify-content: center;
 		box-shadow: 0 0 22px 0 rgba(0, 0, 0, 0.1);
@@ -278,13 +278,15 @@
 		position: fixed;
 		left: 0;
 		right: 0;
-		bottom: 57px;
+		z-index: 10;
+		bottom: 57px;margin-bottom: 0;
 		.btn-primary {
-			justify-content: space-between;
+			
 			width: 100%;
+			
 		}
 	}
-	.basket .order-card.detailed-card{padding-top: 40px;}
+	
 	.basket .order-card .detailed-card__body{row-gap: 0;}
 	.order-card-acordion{
 		.accordion__title{

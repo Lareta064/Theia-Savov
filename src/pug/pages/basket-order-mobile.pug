@@ -6,9 +6,51 @@ block content
 		.container
 			.promo-top
 				+breadcrumbs('Корзина', 'оформить заказ')
-				
 		
-		
-		section.basket-order
+		section.basket-order.mb-100
 			.container
-				h1.title-24 Оформление
+				h1.title-24-fix Оформление
+				form.basket-form.gap-15(action="" method="method")
+					.form-item
+						input(type="text" name="address" placeholder="Адрес*")
+					.form-item
+						input(type="text" name="name" placeholder="Имя Фамилия*")
+					.form-item
+						input(type="email" name="email" placeholder="Email")
+					.form-item
+						input(type="text" name="phone" placeholder="Телефон")
+					.form-item
+						textarea.short-textarea( name="message" placeholder="Примечание")
+					.float-bottom-btn.form-btn
+						button(type="submit").btn-primary Оформить заказ
+				
+				//ИТОГ
+				.order-card.detailed-card.mt-40
+					.detailed-card__body
+						.order-num.txt-12 Заказ: 105703
+						.accordion.order-card-acordion
+							.accordion__item
+								.accordion__title
+									.accordion__arrow
+										svg.svg-carret
+											use(href="../img/sprite.svg#svg-carret")
+									
+									span.accordion__title-text.detailed-title.txt-24 Всего в корзине
+								.accordion__content
+									ul.detailed-list
+										li
+											span.list__name Строй материалы 
+											p.list__val 130 000 руб
+										li
+											span.list__name Аренда
+											p.list__val 500 200 руб
+										li
+											span.list__name Оборудование 
+											p.list__val 30 200 руб
+						
+						.order-list-total
+							span Всего: 
+							p.amount 206 200 руб*
+				
+						.center-txt *Цена указана без учета доставки
+					

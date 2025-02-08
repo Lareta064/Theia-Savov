@@ -207,6 +207,7 @@ section + .dark-bg{margin-top: 45px;}
 .mb-20{margin-bottom: 20px;}
 .mt-20{margin-top: 20px;}
 .mt-40{margin-top: 40px!important;}
+.mb-100{margin-bottom: 100px;}
 .pt-0{padding-top: 0!important;}
 .pb-90{padding-bottom: 90px!important;}
 .gap-15{
@@ -233,6 +234,7 @@ section + .dark-bg{margin-top: 45px;}
 .flex-center, .product-card,  .product-card__desk, .pagination,  .btn-send{
 	justify-content: center;
 }
+.flex-justify {justify-content: space-between;}
 .header-group{
 	margin-bottom: 50px;
 	justify-content: space-between;
