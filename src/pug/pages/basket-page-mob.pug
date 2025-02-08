@@ -5,8 +5,7 @@ block content
 	main.main
 		.container
 			.promo-top
-				.breadcrumbs
-					+breadcrumbs('Корзина')
+				+breadcrumbs('Корзина')
 				
 		
 		
@@ -19,7 +18,9 @@ block content
 						.basket-group__header.flex
 							.txt-16 Строй материалы
 							button.remove-btn.flex-link
-								span.remove-icon
+								svg.svg-cross
+									use(href='./img/sprite.svg#svg-cross')
+									
 						//CARD-ROW
 						.basket-card
 							.basket-card__status
@@ -31,7 +32,7 @@ block content
 								img.wh-100(src="./img/products/prod1.webp", srcset="./img/products/prod1@2x.webp 2x", alt="img" loading="lazy")
 							
 							.basket-card__desk
-								.txt-20 Название товара
+								.txt-20 Гусеничный экскаватор Hyundai R 210LC-7
 								.specifications-acordion.accordion
 									.accordion__item
 										.accordion__title
@@ -68,7 +69,7 @@ block content
 								img.wh-100(src="./img/products/prod1.webp", srcset="./img/products/prod1@2x.webp 2x", alt="img" loading="lazy")
 							
 							.basket-card__desk
-								.txt-20 Название товара
+								.txt-20 Речной мытый песок
 								.specifications-acordion.accordion
 									.accordion__item
 										.accordion__title
@@ -97,7 +98,8 @@ block content
 						.basket-group__header.flex
 							.txt-16 Строй материалы
 							button.remove-btn.flex-link
-								span.remove-icon
+								svg.svg-cross
+									use(href='./img/sprite.svg#svg-cross')
 						//CARD-ROW
 						.basket-card
 							.basket-card__status
@@ -169,8 +171,41 @@ block content
 							.basket-card__remove
 								button.remove-btn
 									span.remove-icon
-		include ../sections/_sales
-	include ../sections/_footer
+		
+				//ИТОГ
+				.order-card.detailed-card
+					.detailed-card__body
+						.order-num.txt-12 Заказ: 105703
+						.accordion.order-card-acordion
+							.accordion__item
+								.accordion__title
+									.accordion__arrow
+										svg.svg-carret
+											use(href="../img/sprite.svg#svg-carret")
+									
+									span.accordion__title-text.detailed-title.txt-24 Всего в корзине
+								.accordion__content
+									ul.detailed-list
+										li
+											span.list__name Строй материалы 
+											p.list__val 130 000 руб
+										li
+											span.list__name Аренда
+											p.list__val 500 200 руб
+										li
+											span.list__name Оборудование 
+											p.list__val 30 200 руб
+						
+						.order-list-total
+							span Всего: 
+							p.amount 206 200 руб*
+				
+						.center-txt *Цена указана без учета доставки
+					
+					.float-order-btn
+						a(href="#!").btn-primary 
+							span Оформить заказ
+							span 206 567 руб
 		
 block variables	
 	-var title = "Корзина";

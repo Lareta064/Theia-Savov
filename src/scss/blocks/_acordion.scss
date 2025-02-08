@@ -27,7 +27,9 @@
 
 .accordion__item .accordion__title .accordion__arrow {
 	position: absolute;
-	top: 18px; right: 10px;
+	top:50%;
+	transform: translateY(-50%);
+	 right: 10px;
 	display: inline-block;
 	vertical-align: middle;
 	width: 12px;
@@ -40,8 +42,8 @@
 		width: 12px;
 	}
 }
-.accordion__item .accordion__rotate {
-	transform: rotate(-180deg);
+.accordion__item .accordion__arrow.accordion__rotate {
+	transform: translateY(-50%) rotate(-180deg);
 }
 .accordion__item .accordion__content {
 	padding-block: 16px;
