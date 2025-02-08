@@ -1,0 +1,193 @@
+.mobile-menu-wrapper
+	.mobile-scroll-wrapper
+		//LEVEL-1
+		ul.mobile-nav
+			li.mobile-nav-item
+				a(href="")
+					span Главная
+			li.mobile-nav-item.mobile-nav-hasDrop
+				a(href="")
+					span Каталог
+			li.mobile-nav-item.mobile-nav-hasDrop
+				a(href="")
+					span Контакты
+				
+		//LEVEL-2 КАТЕГОРИИ. По клику на элемент с data-type, считывается его значение и ищем с таким же значением в .level-3
+		.mobile-cat-menu.level-2
+			.mobile-menu-header
+				button.close-menu-level
+					svg.svg-carret
+						use(href='./img/sprite.svg#svg-carret')
+				span.mobile-cat__title Каталог
+			ul.mobile-cat-list
+				li.mobile-nav-item(data-type="materials")
+					a(href="#!")
+						img(src="./img/category/cat1.webp", width="65" height="64" alt="img")
+						span Строительные материалы
+				li.mobile-nav-item(data-type="equipment")
+					a(href="#!") 
+						img(src="./img/category/cat2.webp", width="65" height="64" alt="img")
+						span Строительное оборудование
+				
+				li.mobile-nav-item(data-type="machines")
+					a(href="#!")
+						img(src="./img/category/cat3.webp", width="65" height="64" alt="img")
+						span Строительное оборудование для строй машин
+
+		//LEVEL-3
+		.mobile-cat-menu.level-3(data-type="materials")
+			//Подменю Строительные материалы
+			
+			.mobile-menu-header
+				button.close-menu-level
+					svg.svg-carret
+						use(href='./img/sprite.svg#svg-carret')
+				span.mobile-cat__title Строительные материалы
+			//По клику на элемент с data-type, считывается его значение и ищем с таким же значением в .level-4
+			ul.mobile-cat-list
+				li.mobile-nav-item(data-type="pesok")
+					a(href="#!")
+						img(src="./img/category/cat1.webp",width="34" height="34" alt="img")
+						span песок
+				li.mobile-nav-item(data-type="beton")
+					a(href="#!") 
+						img(src="./img/category/cat2.webp",width="34" height="34" alt="img")
+						span Бетон
+				li.mobile-nav-item(data-type="plastik")
+					a(href="#!")
+						img(src="./img/category/cat3.webp",width="34" height="34" alt="img")
+						span Пластик
+				li.mobile-nav-item(data-type="beton-materials")
+					a(href="#!")
+						img(src="./img/category/cat3.webp",width="34" height="34" alt="img")
+						span Бетоные материалы 
+				li.mobile-nav-item(data-type="sheben")
+					a(href="#!")
+						img(src="./img/category/cat3.webp",width="34" height="34" alt="img")
+						span Щебень
+			
+			//Подменю Строительное оборудование
+		.mobile-cat-menu.level-3(data-type="equipment")
+			.mobile-menu-header
+				button.close-menu-level
+					svg.svg-carret
+						use(href='./img/sprite.svg#svg-carret')
+				span.mobile-cat__title Строительное оборудование
+			ul.mobile-cat-list
+				li.mobile-nav-item(data-type="obor1")
+					a(href="#!")
+						img(src="./img/category/cat1.webp",width="34" height="34" alt="img")
+						span Оборудование-1
+				li.mobile-nav-item(data-type="obor2")
+					a(href="#!") 
+						img(src="./img/category/cat2.webp",width="34" height="34" alt="img")
+						span Оборудование-2
+				li.mobile-nav-item(data-type="obor3")
+					a(href="#!")
+						img(src="./img/category/cat3.webp",width="34" height="34" alt="img")
+						span Оборудование-3
+				li.mobile-nav-item(data-type="obor4")
+					a(href="#!")
+						img(src="./img/category/cat3.webp",width="34" height="34" alt="img")
+						span Оборудование-4
+				li.mobile-nav-item(data-type="obor5")
+					a(href="#!")
+						img(src="./img/category/cat3.webp",width="34" height="34" alt="img")
+						span Оборудование-5
+
+			//Подменю Строительное оборудование для строй машин
+		.mobile-cat-menu.level-3(data-type="machines")
+			.mobile-menu-header
+				button.close-menu-level
+					svg.svg-carret
+						use(href='./img/sprite.svg#svg-carret')
+				span.mobile-cat__title Строительное оборудование для строй машин
+			ul.mobile-cat-list
+				li.mobile-nav-item(data-type="machines1")
+					a(href="#!")
+						img(src="./img/category/cat1.webp",width="34" height="34" alt="img")
+						span Оборудование для машин-1
+				li.mobile-nav-item(data-type="machines2")
+					a(href="#!") 
+						img(src="./img/category/cat2.webp",width="34" height="34" alt="img")
+						span Оборудование для машин-2
+				li.mobile-nav-item(data-type="machines3")
+					a(href="#!")
+						img(src="./img/category/cat3.webp",width="34" height="34" alt="img")
+						span Оборудование для машин-3
+				li.mobile-nav-item(data-type="machines4")
+					a(href="#!")
+						img(src="./img/category/cat3.webp",width="34" height="34" alt="img")
+						span Оборудование для машин-4
+				li.mobile-nav-item(data-type="machines5")
+					a(href="#!")
+						img(src="./img/category/cat3.webp",width="34" height="34" alt="img")
+						span Оборудование для машин-5
+
+		//LEVEL-4
+		.mobile-cat-menu.level-4(data-type="pesok")
+			//Подменю песок
+			.mobile-menu-header
+				button.close-menu-level
+					svg.svg-carret
+						use(href='./img/sprite.svg#svg-carret')
+				span.mobile-cat__title Песок
+			ul.mobile-cat-list
+				li.mobile-nav-item
+					a(href="") Песок речной
+				li.mobile-nav-item
+					a(href="") Песок белый
+				li.mobile-nav-item
+					a(href="") Песок морской
+					
+			
+			//Подменю Щебень
+		.mobile-cat-menu.level-4(data-type="beton")
+			.mobile-menu-header
+				button.close-menu-level
+					svg.svg-carret
+						use(href='./img/sprite.svg#svg-carret')
+				span.mobile-cat__title Песок
+			ul.mobile-cat-list
+				li.mobile-nav-item
+					a(href="") Гранитный
+				li.mobile-nav-item
+					a(href="") Известняковый
+				li.mobile-nav-item
+					a(href="") Базальтовый
+				li.mobile-nav-item
+					a(href="") Шлаковый
+				li.mobile-nav-item
+					a(href="") Сланцевый
+				li.mobile-nav-item
+					a(href="") Керамзитовый 
+		
+		//Подменю Строительное оборудование - Оборудование-1
+		.mobile-cat-menu.level-4(data-type="obor1")
+			.mobile-menu-header
+				button.close-menu-level
+					svg.svg-carret
+						use(href='./img/sprite.svg#svg-carret')
+				span.mobile-cat__title  Оборудование-1
+			ul.mobile-cat-list
+				li.mobile-nav-item
+					a(href="") Оборудование-11
+				li.mobile-nav-item
+					a(href="") Оборудование-12
+				li.mobile-nav-item
+					a(href="") Оборудование-13
+
+		//Подменю Строительное оборудование для машин - Оборудование для машин-1
+		.mobile-cat-menu.level-4(data-type="machines1")
+			.mobile-menu-header
+				button.close-menu-level
+					svg.svg-carret
+						use(href='./img/sprite.svg#svg-carret')
+				span.mobile-cat__title  Оборудование для машин-1
+			ul.mobile-cat-list
+				li.mobile-nav-item
+					a(href="") Оборудование для машин-11
+				li.mobile-nav-item
+					a(href="") Оборудование для машин-12
+				li.mobile-nav-item
+					a(href="") Оборудование для машин-13

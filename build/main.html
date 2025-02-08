@@ -22,6 +22,148 @@
 		<title>Главная</title>
 	</head>
 	<body>
+		<div class="mobile-menu-wrapper">
+			<div class="mobile-scroll-wrapper">
+				<!--LEVEL-1-->
+				<ul class="mobile-nav">
+					<li class="mobile-nav-item"><a href=""><span>Главная</span></a></li>
+					<li class="mobile-nav-item mobile-nav-hasDrop"><a href=""><span>Каталог</span></a></li>
+					<li class="mobile-nav-item mobile-nav-hasDrop"><a href=""><span>Контакты</span></a></li>
+				</ul>
+				<!--LEVEL-2 КАТЕГОРИИ. По клику на элемент с data-type, считывается его значение и ищем с таким же значением в .level-3-->
+				<div class="mobile-cat-menu level-2">
+					<div class="mobile-menu-header">
+						<button class="close-menu-level">
+							<svg class="svg-carret">
+								<use href="./img/sprite.svg#svg-carret"></use>
+							</svg>
+						</button><span class="mobile-cat__title">Каталог</span>
+					</div>
+					<ul class="mobile-cat-list">
+						<li class="mobile-nav-item" data-type="materials"><a href="#!"><img src="./img/category/cat1.webp" width="65" height="64" alt="img"><span>Строительные материалы</span></a></li>
+						<li class="mobile-nav-item" data-type="equipment"><a href="#!"> <img src="./img/category/cat2.webp" width="65" height="64" alt="img"><span>Строительное оборудование</span></a></li>
+						<li class="mobile-nav-item" data-type="machines"><a href="#!"><img src="./img/category/cat3.webp" width="65" height="64" alt="img"><span>Строительное оборудование для строй машин</span></a></li>
+					</ul>
+				</div>
+				<!--LEVEL-3-->
+				<div class="mobile-cat-menu level-3" data-type="materials">
+					<!--Подменю Строительные материалы-->
+					<div class="mobile-menu-header">
+						<button class="close-menu-level">
+							<svg class="svg-carret">
+								<use href="./img/sprite.svg#svg-carret"></use>
+							</svg>
+						</button><span class="mobile-cat__title">Строительные материалы</span>
+					</div>
+					<!--По клику на элемент с data-type, считывается его значение и ищем с таким же значением в .level-4-->
+					<ul class="mobile-cat-list">
+						<li class="mobile-nav-item" data-type="pesok"><a href="#!"><img src="./img/category/cat1.webp" width="34" height="34" alt="img"><span>песок</span></a></li>
+						<li class="mobile-nav-item" data-type="beton"><a href="#!"> <img src="./img/category/cat2.webp" width="34" height="34" alt="img"><span>Бетон</span></a></li>
+						<li class="mobile-nav-item" data-type="plastik"><a href="#!"><img src="./img/category/cat3.webp" width="34" height="34" alt="img"><span>Пластик</span></a></li>
+						<li class="mobile-nav-item" data-type="beton-materials"><a href="#!"><img src="./img/category/cat3.webp" width="34" height="34" alt="img"><span>Бетоные материалы </span></a></li>
+						<li class="mobile-nav-item" data-type="sheben"><a href="#!"><img src="./img/category/cat3.webp" width="34" height="34" alt="img"><span>Щебень</span></a></li>
+					</ul>
+					<!--Подменю Строительное оборудование-->
+				</div>
+				<div class="mobile-cat-menu level-3" data-type="equipment">
+					<div class="mobile-menu-header">
+						<button class="close-menu-level">
+							<svg class="svg-carret">
+								<use href="./img/sprite.svg#svg-carret"></use>
+							</svg>
+						</button><span class="mobile-cat__title">Строительное оборудование</span>
+					</div>
+					<ul class="mobile-cat-list">
+						<li class="mobile-nav-item" data-type="obor1"><a href="#!"><img src="./img/category/cat1.webp" width="34" height="34" alt="img"><span>Оборудование-1</span></a></li>
+						<li class="mobile-nav-item" data-type="obor2"><a href="#!"> <img src="./img/category/cat2.webp" width="34" height="34" alt="img"><span>Оборудование-2</span></a></li>
+						<li class="mobile-nav-item" data-type="obor3"><a href="#!"><img src="./img/category/cat3.webp" width="34" height="34" alt="img"><span>Оборудование-3</span></a></li>
+						<li class="mobile-nav-item" data-type="obor4"><a href="#!"><img src="./img/category/cat3.webp" width="34" height="34" alt="img"><span>Оборудование-4</span></a></li>
+						<li class="mobile-nav-item" data-type="obor5"><a href="#!"><img src="./img/category/cat3.webp" width="34" height="34" alt="img"><span>Оборудование-5</span></a></li>
+					</ul>
+					<!--Подменю Строительное оборудование для строй машин-->
+				</div>
+				<div class="mobile-cat-menu level-3" data-type="machines">
+					<div class="mobile-menu-header">
+						<button class="close-menu-level">
+							<svg class="svg-carret">
+								<use href="./img/sprite.svg#svg-carret"></use>
+							</svg>
+						</button><span class="mobile-cat__title">Строительное оборудование для строй машин</span>
+					</div>
+					<ul class="mobile-cat-list">
+						<li class="mobile-nav-item" data-type="machines1"><a href="#!"><img src="./img/category/cat1.webp" width="34" height="34" alt="img"><span>Оборудование для машин-1</span></a></li>
+						<li class="mobile-nav-item" data-type="machines2"><a href="#!"> <img src="./img/category/cat2.webp" width="34" height="34" alt="img"><span>Оборудование для машин-2</span></a></li>
+						<li class="mobile-nav-item" data-type="machines3"><a href="#!"><img src="./img/category/cat3.webp" width="34" height="34" alt="img"><span>Оборудование для машин-3</span></a></li>
+						<li class="mobile-nav-item" data-type="machines4"><a href="#!"><img src="./img/category/cat3.webp" width="34" height="34" alt="img"><span>Оборудование для машин-4</span></a></li>
+						<li class="mobile-nav-item" data-type="machines5"><a href="#!"><img src="./img/category/cat3.webp" width="34" height="34" alt="img"><span>Оборудование для машин-5</span></a></li>
+					</ul>
+				</div>
+				<!--LEVEL-4-->
+				<div class="mobile-cat-menu level-4" data-type="pesok">
+					<!--Подменю песок-->
+					<div class="mobile-menu-header">
+						<button class="close-menu-level">
+							<svg class="svg-carret">
+								<use href="./img/sprite.svg#svg-carret"></use>
+							</svg>
+						</button><span class="mobile-cat__title">Песок</span>
+					</div>
+					<ul class="mobile-cat-list">
+						<li class="mobile-nav-item"><a href="">Песок речной</a></li>
+						<li class="mobile-nav-item"><a href="">Песок белый</a></li>
+						<li class="mobile-nav-item"><a href="">Песок морской</a></li>
+					</ul>
+					<!--Подменю Щебень-->
+				</div>
+				<div class="mobile-cat-menu level-4" data-type="beton">
+					<div class="mobile-menu-header">
+						<button class="close-menu-level">
+							<svg class="svg-carret">
+								<use href="./img/sprite.svg#svg-carret"></use>
+							</svg>
+						</button><span class="mobile-cat__title">Песок</span>
+					</div>
+					<ul class="mobile-cat-list">
+						<li class="mobile-nav-item"><a href="">Гранитный</a></li>
+						<li class="mobile-nav-item"><a href="">Известняковый</a></li>
+						<li class="mobile-nav-item"><a href="">Базальтовый</a></li>
+						<li class="mobile-nav-item"><a href="">Шлаковый</a></li>
+						<li class="mobile-nav-item"><a href="">Сланцевый</a></li>
+						<li class="mobile-nav-item"><a href="">Керамзитовый </a></li>
+					</ul>
+				</div>
+				<!--Подменю Строительное оборудование - Оборудование-1-->
+				<div class="mobile-cat-menu level-4" data-type="obor1">
+					<div class="mobile-menu-header">
+						<button class="close-menu-level">
+							<svg class="svg-carret">
+								<use href="./img/sprite.svg#svg-carret"></use>
+							</svg>
+						</button><span class="mobile-cat__title"> Оборудование-1</span>
+					</div>
+					<ul class="mobile-cat-list">
+						<li class="mobile-nav-item"><a href="">Оборудование-11</a></li>
+						<li class="mobile-nav-item"><a href="">Оборудование-12</a></li>
+						<li class="mobile-nav-item"><a href="">Оборудование-13</a></li>
+					</ul>
+				</div>
+				<!--Подменю Строительное оборудование для машин - Оборудование для машин-1-->
+				<div class="mobile-cat-menu level-4" data-type="machines1">
+					<div class="mobile-menu-header">
+						<button class="close-menu-level">
+							<svg class="svg-carret">
+								<use href="./img/sprite.svg#svg-carret"></use>
+							</svg>
+						</button><span class="mobile-cat__title"> Оборудование для машин-1</span>
+					</div>
+					<ul class="mobile-cat-list">
+						<li class="mobile-nav-item"><a href="">Оборудование для машин-11</a></li>
+						<li class="mobile-nav-item"><a href="">Оборудование для машин-12</a></li>
+						<li class="mobile-nav-item"><a href="">Оборудование для машин-13</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
 		<!--header mobile-->
 		<header class="header-mobile">
 			<div class="container"><a class="logo" href="index.html">

@@ -1,23 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const bodyEl = document.body;
-    const menuButton = document.querySelector('.menu-button');
-	  // const mobileMenu = document.querySelector('#mobile-menu');
-	  if(menuButton){
+    // const bodyEl = document.body;
+    // const menuButton = document.querySelector('.menu-button');
+	  // // const mobileMenu = document.querySelector('#mobile-menu');
+	  // if(menuButton){
 
-        menuButton.addEventListener('click', ()=> {
+    //     menuButton.addEventListener('click', ()=> {
          
-          if( menuButton.classList.contains('active')){
-            menuButton.classList.remove('active');
-            // mobileMenu.classList.remove('active');
-            bodyEl.classList.remove('lock');
+    //       if( menuButton.classList.contains('active')){
+    //         menuButton.classList.remove('active');
+    //         // mobileMenu.classList.remove('active');
+    //         bodyEl.classList.remove('lock');
             
-          }else{
-            menuButton.classList.add('active');
-            // mobileMenu.classList.add('active');
-            bodyEl.classList.add('lock');
-          }
-        });
-    }
+    //       }else{
+    //         menuButton.classList.add('active');
+    //         // mobileMenu.classList.add('active');
+    //         bodyEl.classList.add('lock');
+    //       }
+    //     });
+    // }
 
     // header search form
     const searchFormOpen = document.querySelector('#searchForm-open');
@@ -943,4 +943,80 @@ document.addEventListener("DOMContentLoaded", () => {
        
       });
 });
- 
+document.addEventListener("DOMContentLoaded", function () {
+  const bodyEl = document.body;
+  const menuButton = document.querySelector(".menu-button");
+  const mobileMenuWrapper = document.querySelector(".mobile-menu-wrapper");
+
+  if (menuButton && mobileMenuWrapper) {
+      menuButton.addEventListener("click", () => {
+          const isActive = menuButton.classList.contains("active");
+
+          if (isActive) {
+              // Закрываем меню и все вложенные уровни
+              menuButton.classList.remove("active");
+              mobileMenuWrapper.classList.remove("active");
+              bodyEl.classList.remove("lock");
+
+              document.querySelectorAll(".mobile-cat-menu.active").forEach((menu) => {
+                  menu.classList.remove("active");
+              });
+
+          } else {
+              // Открываем главное меню
+              menuButton.classList.add("active");
+              mobileMenuWrapper.classList.add("active");
+              bodyEl.classList.add("lock");
+          }
+      });
+  }
+
+  // 1. Открытие level-2 при клике на .mobile-nav-hasDrop
+  document.querySelectorAll(".mobile-nav-hasDrop").forEach((item) => {
+      item.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(".mobile-cat-menu.level-2")?.classList.add("active");
+      });
+  });
+
+  // 2. Открытие level-3 при выборе пункта в level-2
+  document.querySelectorAll(".mobile-cat-menu.level-2 .mobile-nav-item").forEach((item) => {
+      item.addEventListener("click", function (e) {
+          e.preventDefault();
+          let dataType = this.getAttribute("data-type");
+          
+          // Закрываем все .level-3 перед открытием нужного
+          document.querySelectorAll(".mobile-cat-menu.level-3").forEach((menu) => {
+              menu.classList.remove("active");
+          });
+
+          // Открываем соответствующий level-3
+          let level3 = document.querySelector(`.mobile-cat-menu.level-3[data-type="${dataType}"]`);
+          if (level3) level3.classList.add("active");
+      });
+  });
+
+  // 3. Открытие level-4 при выборе пункта в level-3
+  document.querySelectorAll(".mobile-cat-menu.level-3 .mobile-nav-item").forEach((item) => {
+      item.addEventListener("click", function (e) {
+          e.preventDefault();
+          let dataType = this.getAttribute("data-type");
+          
+          // Закрываем все .level-4 перед открытием нужного
+          document.querySelectorAll(".mobile-cat-menu.level-4").forEach((menu) => {
+              menu.classList.remove("active");
+          });
+
+          // Открываем соответствующий level-4
+          let level4 = document.querySelector(`.mobile-cat-menu.level-4[data-type="${dataType}"]`);
+          if (level4) level4.classList.add("active");
+      });
+  });
+
+  // 4. Закрытие конкретного меню при клике на .close-menu-level
+  document.querySelectorAll(".close-menu-level").forEach((closeBtn) => {
+      closeBtn.addEventListener("click", function () {
+          this.closest(".mobile-cat-menu")?.classList.remove("active");
+      });
+  });
+});
