@@ -1,0 +1,196 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_burger-menu
+	include ../sections/_header-mob
+	main.main
+		.container
+			.promo-top
+				+breadcrumbs('Каталог','Аренда','Экскаватор')
+		section.product-details
+			.container
+				.product-preview__img
+					img.img-contain(src="./img/products/prod5.webp", srcset="./img/products/prod5@2x.webp 2x" alt="img" width="372" height="343")
+			
+				.detailed-card
+					.detailed-card__body.bx-sh
+						.detailed-card-group
+							span.detailed-art.txt-12 Код: 105703
+							.detailed-title.txt-24 Речной мытый песок
+							.rating-block.flex
+								.rating-stars
+								span.txt-12 39 отзывов
+						
+						.price-block
+							.price-block__item
+								p от от 870 руб./м3
+								span.txt-12 за шт
+							.price-block__item
+								p от 700 руб./тн
+								span.txt-12 В розницу
+						.detailed-card-group
+							+counter
+							.detailed-total
+								span.txt-12 Стоимость
+								p.amount 700 000 руб
+						
+						button.btn-primary В корзину
+						button.btn Рассчитать стоимость
+					
+					.detailed-card__footer.bx-sh
+						ul.dotted-list
+							li
+								p.list__name Наличие
+								span.line-bwn
+								p.list__val Много
+							li
+								p.list__name Доставка
+								span.line-bwn
+								p.list__val 24/7
+							li
+								p.list__name Способ получения
+								span.line-bwn
+								p.list__val Самовывоз, Доставка
+					
+					
+					
+					.product-preview__info
+						.specifications__list-block
+							p.specifications__list-title Характеристики
+							ul.dotted-list
+								li
+									p.list__name Модуль крупности
+									span.line-bwn
+									p.list__val 2.0-2.5
+								li
+									p.list__name Коэфф. фильтрации
+									span.line-bwn
+									p.list__val до 12 м
+								li
+									p.list__name Насыпная плотность
+									span.line-bwn
+									p.list__val 1.6
+								li
+									p.list__name Содержание глины
+									span.line-bwn
+									p.list__val ≤ 0,25%
+								
+							
+							p.specifications__list-title Применение
+							p Изготовление высокопрочного бетона, ЖБИ, ЖБК, тротуарной плитки и кладочного раствора, а также стекла и кирпича.
+							a(href="#!").flex-link.txt-16 Посмотреть все виды речного песка 
+								span.arrow-right
+			
+			
+				.specifications-acordion.accordion
+					//ОПИСАНИЕ
+					.accordion__item
+						.accordion__title
+							.accordion__arrow
+								svg.svg-carret
+									use(href="../img/sprite.svg#svg-carret")
+							span.accordion__title-text ОПИСАНИЕ
+						
+						.accordion__content
+							.specifications__desk
+								.title-24 Речной песок 
+								p Песок - один из самых востребованных строительных материалов. Используется для приготовления строительных растворов, сухих строительных смесей, а также в качестве выравнивающего основания.
+								p Подходит как для внутренних, так и для наружных работ. Применяется в строительстве и отделочных работах, возведении дорог и ландшафтном обустройстве. Продается в мешках весом 30 кг. Произведен в России.
+								p
+									strong Внимание! Товар весом более 1 тонны. необходимо перемещать минимум двумя людьми или с помощью механизированного оборудования.
+					//Доставка
+					.accordion__item
+						.accordion__title
+							.accordion__arrow
+								svg.svg-carret
+									use(href="../img/sprite.svg#svg-carret")
+							span.accordion__title-text Доставка
+						.accordion__content
+							.specifications__desk
+								.title-24 Доставка
+								p Песок - один из самых востребованных строительных материалов. Используется для приготовления строительных растворов, сухих строительных смесей, а также в качестве выравнивающего основания.
+								p Подходит как для внутренних, так и для наружных работ. Применяется в строительстве и отделочных работах, возведении дорог и ландшафтном обустройстве. Продается в мешках весом 30 кг. Произведен в России.
+								p
+									strong Внимание! Товар весом более 1 тонны. необходимо перемещать минимум двумя людьми или с помощью механизированного оборудования.  
+					//Преимущества
+					.accordion__item
+						.accordion__title
+							.accordion__arrow
+								svg.svg-carret
+									use(href="../img/sprite.svg#svg-carret")
+							span.accordion__title-text Преимущества
+						.accordion__content
+							.specifications__desk
+								.title-24 Преимущества
+					//Документы
+					.accordion__item
+						.accordion__title
+							.accordion__arrow
+								svg.svg-carret
+									use(href="../img/sprite.svg#svg-carret")
+							span.accordion__title-text Документы
+						.accordion__content
+							.specifications__desk
+								.title-24 Документы
+									p Песок - один из самых востребованных строительных материалов. Используется для приготовления строительных растворов, сухих строительных смесей, а также в качестве выравнивающего основания.
+									//DOCUMENTS
+									.documents-wrapper
+										a(href="./img/docs/doc.webp" data-fancybox="gallery").document-item
+											img(src="./img/docs/doc-thumb.webp", alt="img" width="159" height="220")
+										a(href="./img/docs/doc.webp" data-fancybox="gallery").document-item
+											img(src="./img/docs/doc-thumb.webp", alt="img" width="159" height="220")
+										a(href="./img/docs/doc.webp" data-fancybox="gallery").document-item
+											img(src="./img/docs/doc-thumb.webp", alt="img" width="159" height="220")
+										a(href="./img/docs/doc.webp" data-fancybox="gallery").document-item
+											img(src="./img/docs/doc-thumb.webp", alt="img" width="159" height="220")
+					//О компании
+					.accordion__item
+						.accordion__title
+							.accordion__arrow
+								svg.svg-carret
+									use(href="../img/sprite.svg#svg-carret")
+							span.accordion__title-text О компании
+						.accordion__content
+							.specifications__desk
+								.title-24 О компании
+								p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно-монтажных работ в промышленном и гражданском строительстве 
+								p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно-монтажных работ в промышленном и гражданском строительстве 
+			
+			 
+		section.review
+			.container
+				include ../sections/_review-swiper
+			
+		section.article-slider
+			.container
+			
+				.header-group
+					p.title-24 Похожие
+					a(href="#!").flex-link.txt-16 Показать больше
+						span.arrow-right
+				
+				.reccomend-products.swiper
+					.swiper-wrapper
+						.swiper-slide
+							+product-card-ui(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+						.swiper-slide
+							+product-card-ui(6,'ЩПС С2 фракции', '0-20 мм', 2300)
+						.swiper-slide
+							+product-card-ui(7,'ЩПС С2 фракции', '0-20 мм', 2300)
+						.swiper-slide
+							+product-card-ui(8,'ЩПС С2 фракции', '0-20 мм', 2300)
+						.swiper-slide
+							+product-card-ui(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+						.swiper-slide
+							+product-card-ui(6,'ЩПС С2 фракции', '0-20 мм', 2300)
+						.swiper-slide
+							+product-card-ui(7,'ЩПС С2 фракции', '0-20 мм', 2300)
+						.swiper-slide
+							+product-card-ui(8,'ЩПС С2 фракции', '0-20 мм', 2300)
+					
+					.mySwiper-pagination
+		
+	include ../sections/_footer
+		
+block variables	
+	-var title = "Карточка товара Материалы";
