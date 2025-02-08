@@ -3,13 +3,28 @@
 		//LEVEL-1
 		ul.mobile-nav
 			li.mobile-nav-item
-				a(href="")
+				a(href="main.html")
 					span Главная
 			li.mobile-nav-item.mobile-nav-hasDrop
-				a(href="")
+				a(href="#!")
 					span Каталог
-			li.mobile-nav-item.mobile-nav-hasDrop
+			li.mobile-nav-item
 				a(href="")
+					span Аренда
+			li.mobile-nav-item
+				a(href="")
+					span Строительство
+			li.mobile-nav-item
+				a(href="")
+					span Партнерам
+			li.mobile-nav-item
+				a(href="")
+					span О компании
+			li.mobile-nav-item
+				a(href="blog.html")
+					span Блог
+			li.mobile-nav-item
+				a(href="contacts.html")
 					span Контакты
 				
 		//LEVEL-2 КАТЕГОРИИ. По клику на элемент с data-type, считывается его значение и ищем с таким же значением в .level-3
@@ -22,16 +37,19 @@
 			ul.mobile-cat-list
 				li.mobile-nav-item(data-type="materials")
 					a(href="#!")
-						img(src="./img/category/cat1.webp", width="65" height="64" alt="img")
+						.mobile-nav__img
+							img(src="./img/burger-menu/ca1.webp", width="65" height="64" alt="img")
 						span Строительные материалы
 				li.mobile-nav-item(data-type="equipment")
 					a(href="#!") 
-						img(src="./img/category/cat2.webp", width="65" height="64" alt="img")
+						.mobile-nav__img
+							img(src="./img/burger-menu/ca2.webp", width="65" height="64" alt="img")
 						span Строительное оборудование
 				
 				li.mobile-nav-item(data-type="machines")
 					a(href="#!")
-						img(src="./img/category/cat3.webp", width="65" height="64" alt="img")
+						.mobile-nav__img
+							img(src="./img/burger-menu/ca3.webp", width="65" height="64" alt="img")
 						span Строительное оборудование для строй машин
 
 		//LEVEL-3
@@ -47,23 +65,28 @@
 			ul.mobile-cat-list
 				li.mobile-nav-item(data-type="pesok")
 					a(href="#!")
-						img(src="./img/category/cat1.webp",width="34" height="34" alt="img")
+						.mobile-nav__img
+							img(src="./img/burger-menu/ca4.webp",width="34" height="34" alt="img")
 						span песок
 				li.mobile-nav-item(data-type="beton")
 					a(href="#!") 
-						img(src="./img/category/cat2.webp",width="34" height="34" alt="img")
+						.mobile-nav__img
+							img(src="./img/burger-menu/ca5.webp",width="34" height="34" alt="img")
 						span Бетон
 				li.mobile-nav-item(data-type="plastik")
 					a(href="#!")
-						img(src="./img/category/cat3.webp",width="34" height="34" alt="img")
+						.mobile-nav__img
+							img(src="./img/burger-menu/ca6.webp",width="34" height="34" alt="img")
 						span Пластик
 				li.mobile-nav-item(data-type="beton-materials")
 					a(href="#!")
-						img(src="./img/category/cat3.webp",width="34" height="34" alt="img")
+						.mobile-nav__img
+							img(src="./img/burger-menu/ca7.webp",width="34" height="34" alt="img")
 						span Бетоные материалы 
 				li.mobile-nav-item(data-type="sheben")
 					a(href="#!")
-						img(src="./img/category/cat3.webp",width="34" height="34" alt="img")
+						.mobile-nav__img
+							img(src="./img/burger-menu/ca8.webp",width="34" height="34" alt="img")
 		
 						span Щебень
 			
@@ -78,23 +101,28 @@
 			ul.mobile-cat-list
 				li.mobile-nav-item(data-type="obor1")
 					a(href="#!")
-						img(src="./img/category/cat1.webp",width="34" height="34" alt="img")
+						.mobile-nav__img
+							img(src="./img/burger-menu/ca4.webp",width="34" height="34" alt="img")
 						span Оборудование-1
 				li.mobile-nav-item(data-type="obor2")
 					a(href="#!") 
-						img(src="./img/category/cat2.webp",width="34" height="34" alt="img")
+						.mobile-nav__img
+							img(src="./img/burger-menu/ca5.webp",width="34" height="34" alt="img")
 						span Оборудование-2
 				li.mobile-nav-item(data-type="obor3")
 					a(href="#!")
-						img(src="./img/category/cat3.webp",width="34" height="34" alt="img")
+						.mobile-nav__img
+							img(src="./img/burger-menu/ca6.webp",width="34" height="34" alt="img")
 						span Оборудование-3
 				li.mobile-nav-item(data-type="obor4")
 					a(href="#!")
-						img(src="./img/category/cat3.webp",width="34" height="34" alt="img")
+						.mobile-nav__img
+							img(src="./img/burger-menu/ca7.webp",width="34" height="34" alt="img")
 						span Оборудование-4
 				li.mobile-nav-item(data-type="obor5")
 					a(href="#!")
-						img(src="./img/category/cat3.webp",width="34" height="34" alt="img")
+						.mobile-nav__img
+							img(src="./img/burger-menu/ca8.webp",width="34" height="34" alt="img")
 						span Оборудование-5
 			
 			//Подменю Строительное оборудование для строй машин
@@ -107,23 +135,28 @@
 			ul.mobile-cat-list
 				li.mobile-nav-item(data-type="machines1")
 					a(href="#!")
-						img(src="./img/category/cat1.webp",width="34" height="34" alt="img")
+						.mobile-nav__img
+							img(src="./img/burger-menu/ca4.webp",width="34" height="34" alt="img")
 						span Оборудование для машин-1
 				li.mobile-nav-item(data-type="machines2")
 					a(href="#!") 
-						img(src="./img/category/cat2.webp",width="34" height="34" alt="img")
+						.mobile-nav__img
+							img(src="./img/burger-menu/ca5.webp",width="34" height="34" alt="img")
 						span Оборудование для машин-2
 				li.mobile-nav-item(data-type="machines3")
 					a(href="#!")
-						img(src="./img/category/cat3.webp",width="34" height="34" alt="img")
+						.mobile-nav__img
+							img(src="./img/burger-menu/ca6.webp",width="34" height="34" alt="img")
 						span Оборудование для машин-3
 				li.mobile-nav-item(data-type="machines4")
 					a(href="#!")
-						img(src="./img/category/cat3.webp",width="34" height="34" alt="img")
+						.mobile-nav__img
+							img(src="./img/burger-menu/ca7.webp",width="34" height="34" alt="img")
 						span Оборудование для машин-4
 				li.mobile-nav-item(data-type="machines5")
 					a(href="#!")
-						img(src="./img/category/cat3.webp",width="34" height="34" alt="img")
+						.mobile-nav__img
+							img(src="./img/burger-menu/ca8.webp",width="34" height="34" alt="img")
 						span Оборудование для машин-5
 
 		//LEVEL-4

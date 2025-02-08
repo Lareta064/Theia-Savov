@@ -1,27 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // const bodyEl = document.body;
-    // const menuButton = document.querySelector('.menu-button');
-	  // // const mobileMenu = document.querySelector('#mobile-menu');
-	  // if(menuButton){
-
-    //     menuButton.addEventListener('click', ()=> {
-         
-    //       if( menuButton.classList.contains('active')){
-    //         menuButton.classList.remove('active');
-    //         // mobileMenu.classList.remove('active');
-    //         bodyEl.classList.remove('lock');
-            
-    //       }else{
-    //         menuButton.classList.add('active');
-    //         // mobileMenu.classList.add('active');
-    //         bodyEl.classList.add('lock');
-    //       }
-    //     });
-    // }
+    let bodyEl = document.body;
+    
 
     // header search form
     const searchFormOpen = document.querySelector('#searchForm-open');
     if(searchFormOpen){
+      console.log(searchFormOpen);
         const headerSearchForm = document.querySelector('#header-search-form');
         searchFormOpen.addEventListener('click', ()=>{
             if(headerSearchForm.classList.contains('active')){
@@ -548,274 +532,221 @@ document.addEventListener("DOMContentLoaded", () => {
   const imageItems = document.querySelectorAll(".cm-image-group li");
   const bodyEl = document.body;
   let hoverTimeout;
+  if(menuButton){
+        // Сброс всех активных классов
+        function clearActiveClasses() {
+            mainItems.forEach((item) => item.classList.remove("active"));
+            subLists.forEach((list) => list.classList.remove("active"));
+            subSubLists.forEach((list) => list.classList.remove("active"));
+            subItems.forEach((item) => item.classList.remove("active"));
+            imageItems.forEach((img) => img.classList.remove("active"));
 
-  // Сброс всех активных классов
-  function clearActiveClasses() {
-      mainItems.forEach((item) => item.classList.remove("active"));
-      subLists.forEach((list) => list.classList.remove("active"));
-      subSubLists.forEach((list) => list.classList.remove("active"));
-      subItems.forEach((item) => item.classList.remove("active"));
-      imageItems.forEach((img) => img.classList.remove("active"));
+            cmLevel2?.classList.remove("active");
+            cmLevel3?.classList.remove("active");
+        }
 
-      cmLevel2?.classList.remove("active");
-      cmLevel3?.classList.remove("active");
-  }
+        // Активировать первый пункт меню
+        function activateFirstMenuItem() {
+            const firstMainItem = document.querySelector("[data-drop='1']");
+            const firstSubList = document.querySelector("[data-subdrop='1']");
+            const firstImage = document.querySelector("[data-img='1']");
 
-  // Активировать первый пункт меню
-  function activateFirstMenuItem() {
-      const firstMainItem = document.querySelector("[data-drop='1']");
-      const firstSubList = document.querySelector("[data-subdrop='1']");
-      const firstImage = document.querySelector("[data-img='1']");
+            clearActiveClasses();
 
-      clearActiveClasses();
+            if (firstMainItem) firstMainItem.classList.add("active");
+            if (firstSubList) firstSubList.classList.add("active");
+            if (firstImage) firstImage.classList.add("active");
+        }
 
-      if (firstMainItem) firstMainItem.classList.add("active");
-      if (firstSubList) firstSubList.classList.add("active");
-      if (firstImage) firstImage.classList.add("active");
-  }
+        // Логика для маленьких экранов
+        function setupSmallScreenLogic() {
+            console.log("Логика для маленьких экранов активна");
 
-  // Логика для маленьких экранов
-  function setupSmallScreenLogic() {
-      console.log("Логика для маленьких экранов активна");
+            menuButton.addEventListener("click", () => {
+                if (menuWrapper.classList.contains("active")) {
+                    // Если меню активно, закрываем его
+                    menuWrapper.classList.remove("active");
+                    bodyEl.classList.remove('lock');
+                    clearActiveClasses();
+                } else {
+                    // Если меню не активно, открываем его
+                    clearActiveClasses();
+                    menuWrapper.classList.add("active");
+                    bodyEl.classList.add('lock');
+                }
+            });
 
-      menuButton.addEventListener("click", () => {
-          if (menuWrapper.classList.contains("active")) {
-              // Если меню активно, закрываем его
-              menuWrapper.classList.remove("active");
-              bodyEl.classList.remove('lock');
-              clearActiveClasses();
-          } else {
-              // Если меню не активно, открываем его
-              clearActiveClasses();
+            mainItems.forEach((item) => {
+                item.addEventListener("click", () => {
+                    const subdrop = item.getAttribute("data-drop");
+                    const relatedSublist = document.querySelector(`[data-subdrop="${subdrop}"]`);
+
+                    clearActiveClasses();
+
+                    item.classList.add("active");
+                    cmLevel2?.classList.add("active");
+                    if (relatedSublist) {
+                        relatedSublist.classList.add("active");
+                    }
+                });
+            });
+
+            subItems.forEach((item) => {
+                item.addEventListener("click", () => {
+                    const subSubdrop = item.getAttribute("data-sub-subdrop");
+                    const relatedSubSublist = document.querySelector(`[data-sublist="${subSubdrop}"]`);
+
+                    cmLevel3?.classList.remove("active");
+                    subSubLists.forEach((list) => list.classList.remove("active"));
+
+                    item.classList.add("active");
+                    cmLevel3?.classList.add("active");
+                    if (relatedSubSublist) {
+                        relatedSubSublist.classList.add("active");
+                    }
+                });
+            });
+
+            closeButtons.forEach((button) => {
+                button.addEventListener("click", () => {
+                    const closestActive = button.closest(".cm-level.active");
+
+                    closestActive?.classList.remove("active");
+                    const childActive = closestActive?.querySelector(".active");
+                    childActive?.classList.remove("active");
+                });
+            });
+
+            document.addEventListener("click", (e) => {
+                if (!menuWrapper.contains(e.target) && e.target !== menuButton) {
+                    menuWrapper.classList.remove("active");
+                    clearActiveClasses();
+                }
+            });
+            menuWrapper.addEventListener("click", (e) => {
+              
+              if(e.target == e.currentTarget){
+                menuWrapper.classList.remove("active");
+                clearActiveClasses();
+              }       
+            });
+        }
+
+        function setupLargeScreenLogic() {
+          console.log("Логика для больших экранов активна");
+
+          let hoverTimeout;
+
+          // Открываем меню при наведении на menuButton
+          menuButton.addEventListener("mouseenter", () => {
               menuWrapper.classList.add("active");
               bodyEl.classList.add('lock');
-          }
-      });
+              activateFirstMenuItem();
+          });
 
-      mainItems.forEach((item) => {
-          item.addEventListener("click", () => {
-              const subdrop = item.getAttribute("data-drop");
-              const relatedSublist = document.querySelector(`[data-subdrop="${subdrop}"]`);
+          // Закрываем меню при уходе курсора с menuWrapper
+          menuWrapper.addEventListener("mouseleave", () => {
+              hoverTimeout = setTimeout(() => {
+                  menuWrapper.classList.remove("active");
+                  bodyEl.classList.remove('lock');
+                  clearActiveClasses();
+              }, 300);
+          });
 
-              clearActiveClasses();
-
-              item.classList.add("active");
-              cmLevel2?.classList.add("active");
-              if (relatedSublist) {
-                  relatedSublist.classList.add("active");
+          // Закрываем меню, если кликнули за его пределами
+          menuWrapper.addEventListener("click", (e) => {
+              if (e.target == e.currentTarget) {
+                  menuWrapper.classList.remove("active");
+                  bodyEl.classList.remove('lock');
+                  clearTimeout(hoverTimeout);
               }
           });
-      });
 
-      subItems.forEach((item) => {
-          item.addEventListener("click", () => {
-              const subSubdrop = item.getAttribute("data-sub-subdrop");
-              const relatedSubSublist = document.querySelector(`[data-sublist="${subSubdrop}"]`);
+          // Убираем задержку закрытия, если вернулись в меню
+          menuWrapper.addEventListener("mouseenter", () => {
+              clearTimeout(hoverTimeout);
+          });
 
-              cmLevel3?.classList.remove("active");
-              subSubLists.forEach((list) => list.classList.remove("active"));
-
-              item.classList.add("active");
-              cmLevel3?.classList.add("active");
-              if (relatedSubSublist) {
-                  relatedSubSublist.classList.add("active");
+        
+          menuButton.addEventListener("mouseleave", (event) => {
+              let toElement = event.relatedTarget || event.toElement; // Элемент, на который ушёл курсор
+              if (!menuWrapper.contains(toElement)) {
+                  hoverTimeout = setTimeout(() => {
+                      menuWrapper.classList.remove("active");
+                      bodyEl.classList.remove('lock');
+                      clearActiveClasses();
+                  }, 300);
               }
           });
-      });
 
-      closeButtons.forEach((button) => {
-          button.addEventListener("click", () => {
-              const closestActive = button.closest(".cm-level.active");
+          // Наведение на пункт первого уровня
+          mainItems.forEach((item) => {
+              item.addEventListener("mouseenter", () => {
+                  const subdrop = item.getAttribute("data-drop");
+                  const relatedSublist = document.querySelector(`[data-subdrop="${subdrop}"]`);
+                  const relatedImage = document.querySelector(`[data-img="${subdrop}"]`);
 
-              closestActive?.classList.remove("active");
-              const childActive = closestActive?.querySelector(".active");
-              childActive?.classList.remove("active");
+                  clearActiveClasses();
+
+                  item.classList.add("active");
+                  if (relatedSublist) relatedSublist.classList.add("active");
+                  if (relatedImage) relatedImage.classList.add("active");
+              });
           });
-      });
 
-      document.addEventListener("click", (e) => {
-          if (!menuWrapper.contains(e.target) && e.target !== menuButton) {
-              menuWrapper.classList.remove("active");
-              clearActiveClasses();
-          }
-      });
-      menuWrapper.addEventListener("click", (e) => {
-        
-        if(e.target == e.currentTarget){
-          menuWrapper.classList.remove("active");
-           clearActiveClasses();
-        }       
-      });
-  }
+          // Наведение на пункт второго уровня
+          subItems.forEach((item) => {
+              item.addEventListener("mouseenter", () => {
+                  const subSubdrop = item.getAttribute("data-sub-subdrop");
+                  const relatedSubSublist = document.querySelector(`[data-sublist="${subSubdrop}"]`);
 
-  // // Логика для больших экранов
-  // function setupLargeScreenLogic() {
-  //     console.log("Логика для больших экранов активна");
+                  subItems.forEach((subItem) => subItem.classList.remove("active"));
+                  subSubLists.forEach((list) => list.classList.remove("active"));
 
-  //     menuButton.addEventListener("mouseenter", () => {
-  //         menuWrapper.classList.add("active");
-  //         bodyEl.classList.add('lock');
-  //         activateFirstMenuItem();
-  //     });
-
-  //     menuWrapper.addEventListener("mouseleave", () => {
-  //         hoverTimeout = setTimeout(() => {
-  //             menuWrapper.classList.remove("active");
-  //             bodyEl.classList.remove('lock');
-  //             clearActiveClasses();
-  //         }, 300);
-  //     });
-  //     menuWrapper.addEventListener("click", (e) => {
-        
-  //       if(e.target == e.currentTarget){
-  //         menuWrapper.classList.remove("active");
-  //         bodyEl.classList.remove('lock');
-  //          clearTimeout(hoverTimeout);
-  //       }       
-  //     });
-  //     menuWrapper.addEventListener("mouseenter", () => {
-  //         clearTimeout(hoverTimeout);
-  //     });
-
-  //     mainItems.forEach((item) => {
-  //         item.addEventListener("mouseenter", () => {
-  //             const subdrop = item.getAttribute("data-drop");
-  //             const relatedSublist = document.querySelector(`[data-subdrop="${subdrop}"]`);
-  //             const relatedImage = document.querySelector(`[data-img="${subdrop}"]`);
-
-  //             clearActiveClasses();
-
-  //             item.classList.add("active");
-  //             if (relatedSublist) relatedSublist.classList.add("active");
-  //             if (relatedImage) relatedImage.classList.add("active");
-  //         });
-  //     });
-
-  //     subItems.forEach((item) => {
-  //         item.addEventListener("mouseenter", () => {
-  //             const subSubdrop = item.getAttribute("data-sub-subdrop");
-  //             const relatedSubSublist = document.querySelector(`[data-sublist="${subSubdrop}"]`);
-
-  //             subItems.forEach((subItem) => subItem.classList.remove("active"));
-  //             subSubLists.forEach((list) => list.classList.remove("active"));
-
-  //             item.classList.add("active");
-  //             if (relatedSubSublist) relatedSubSublist.classList.add("active");
-  //         });
-  //     });
-  // }
-  function setupLargeScreenLogic() {
-    console.log("Логика для больших экранов активна");
-
-    let hoverTimeout;
-
-    // Открываем меню при наведении на menuButton
-    menuButton.addEventListener("mouseenter", () => {
-        menuWrapper.classList.add("active");
-        bodyEl.classList.add('lock');
-        activateFirstMenuItem();
-    });
-
-    // Закрываем меню при уходе курсора с menuWrapper
-    menuWrapper.addEventListener("mouseleave", () => {
-        hoverTimeout = setTimeout(() => {
-            menuWrapper.classList.remove("active");
-            bodyEl.classList.remove('lock');
-            clearActiveClasses();
-        }, 300);
-    });
-
-    // Закрываем меню, если кликнули за его пределами
-    menuWrapper.addEventListener("click", (e) => {
-        if (e.target == e.currentTarget) {
-            menuWrapper.classList.remove("active");
-            bodyEl.classList.remove('lock');
-            clearTimeout(hoverTimeout);
-        }
-    });
-
-    // Убираем задержку закрытия, если вернулись в меню
-    menuWrapper.addEventListener("mouseenter", () => {
-        clearTimeout(hoverTimeout);
-    });
-
-    // 🛠 **Новый обработчик**: Закрытие при уходе курсора с `menuButton`
-    menuButton.addEventListener("mouseleave", (event) => {
-        let toElement = event.relatedTarget || event.toElement; // Элемент, на который ушёл курсор
-        if (!menuWrapper.contains(toElement)) {
-            hoverTimeout = setTimeout(() => {
-                menuWrapper.classList.remove("active");
-                bodyEl.classList.remove('lock');
-                clearActiveClasses();
-            }, 300);
-        }
-    });
-
-    // Наведение на пункт первого уровня
-    mainItems.forEach((item) => {
-        item.addEventListener("mouseenter", () => {
-            const subdrop = item.getAttribute("data-drop");
-            const relatedSublist = document.querySelector(`[data-subdrop="${subdrop}"]`);
-            const relatedImage = document.querySelector(`[data-img="${subdrop}"]`);
-
-            clearActiveClasses();
-
-            item.classList.add("active");
-            if (relatedSublist) relatedSublist.classList.add("active");
-            if (relatedImage) relatedImage.classList.add("active");
-        });
-    });
-
-    // Наведение на пункт второго уровня
-    subItems.forEach((item) => {
-        item.addEventListener("mouseenter", () => {
-            const subSubdrop = item.getAttribute("data-sub-subdrop");
-            const relatedSubSublist = document.querySelector(`[data-sublist="${subSubdrop}"]`);
-
-            subItems.forEach((subItem) => subItem.classList.remove("active"));
-            subSubLists.forEach((list) => list.classList.remove("active"));
-
-            item.classList.add("active");
-            if (relatedSubSublist) relatedSubSublist.classList.add("active");
-        });
-    });
-}
-
-  // Переключение логики
-  function handleResize() {
-      const isLargeScreen = window.innerWidth >= 1200;
-
-      menuWrapper.classList.remove("active");
-      clearActiveClasses();
-
-      if (isLargeScreen) {
-          setupLargeScreenLogic();
-      } else {
-          setupSmallScreenLogic();
+                  item.classList.add("active");
+                  if (relatedSubSublist) relatedSubSublist.classList.add("active");
+              });
+          });
       }
-  }
 
-  window.addEventListener("resize", handleResize);
-  handleResize();
+        // Переключение логики
+        function handleResize() {
+            const isLargeScreen = window.innerWidth >= 1200;
+
+            menuWrapper.classList.remove("active");
+            clearActiveClasses();
+
+            if (isLargeScreen) {
+                setupLargeScreenLogic();
+            } else {
+                setupSmallScreenLogic();
+            }
+        }
+
+        window.addEventListener("resize", handleResize);
+        handleResize();
+}
 });
 //стики шапка + счетчик
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".header"); // 
-  let lastScrollTop = 0; // Переменная для хранения предыдущей позиции скролла
+  if(header){
+    let lastScrollTop = 0; // Переменная для хранения предыдущей позиции скролла
 
-  window.addEventListener("scroll", () => {
-      const currentScrollTop = window.scrollY || document.documentElement.scrollTop;
+    window.addEventListener("scroll", () => {
+        const currentScrollTop = window.scrollY || document.documentElement.scrollTop;
 
-      // Если пользователь прокручивает вверх
-      if (currentScrollTop < lastScrollTop) {
-          header.classList.add("fix-header"); // Добавляем класс
-      } else {
-          header.classList.remove("fix-header"); // Удаляем класс
-      }
+        // Если пользователь прокручивает вверх
+        if (currentScrollTop < lastScrollTop) {
+            header.classList.add("fix-header"); // Добавляем класс
+        } else {
+            header.classList.remove("fix-header"); // Удаляем класс
+        }
 
-      // Обновляем предыдущую позицию скролла
-      lastScrollTop = currentScrollTop;
-  });
+        // Обновляем предыдущую позицию скролла
+        lastScrollTop = currentScrollTop;
+    });
+  }
   // СЧЕТЧИК
   const counters = document.querySelectorAll('.counter');
 
@@ -944,7 +875,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 });
 document.addEventListener("DOMContentLoaded", function () {
-  const bodyEl = document.body;
+  let bodyEl = document.body;
   const menuButton = document.querySelector(".menu-button");
   const mobileMenuWrapper = document.querySelector(".mobile-menu-wrapper");
 

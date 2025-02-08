@@ -1,3 +1,4 @@
+@use "../base/var" as *;
 /*MOBILE NAV*/
 .mobile-navigation {
     position: fixed;
@@ -26,7 +27,7 @@
 .mobile-navigation li {
     flex: 1; 
     text-align: center;
-	
+	&.active svg{color: $accent;}
 }
 
 .mobile-navigation a {
@@ -35,7 +36,10 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    width: 100%; /* Делаем ссылку во всю ширину, чтобы кликать было удобно */
+    width: 100%;
+    svg{
+        color: #1c1c1c;
+    }
 }
 
 .mobile-navigation img,

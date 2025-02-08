@@ -3,16 +3,20 @@
 	ul
 		li
 			a(href="#!")
-				img(src="./img/mob-menu/search.webp", srcset="./img/mob-menu/search@2x.webp 2x" width="21" height="21" alt="alt")
-		li
+				svg.svg-search(width="22" height="22")
+					use(href='./img/sprite.svg#svg-search')
+		li.active
 			a(href="#!")
-				img(src="./img/mob-menu/catalogy.webp", srcset="./img/mob-menu/catalogy@2x.webp 2x" width="21" height="21" alt="alt")
+				svg.svg-catalogy(width="22" height="22")
+					use(href='./img/sprite.svg#svg-catalogy')
 		li
 			a(href="#!")
 				img(src="./img/mob-menu/tools.webp", srcset="./img/mob-menu/tools@2x.webp 2x" width="28" height="28" alt="alt")
 		li
 			a(href="#!")
-				img(src="./img/mob-menu/user.webp", srcset="./img/mob-menu/user@2x.webp 2x" width="21" height="21" alt="alt")
+				svg.svg-user(width="22" height="22")
+					use(href='./img/sprite.svg#svg-user')
 		li
-			a(href="#!")
-				img(src="./img/mob-menu/cart.webp", srcset="./img/mob-menu/cart@2x.webp 2x" width="21" height="21" alt="alt")
+			a(href="basket-page-mob.html")
+				svg.svg-cart(width="22" height="22")
+					use(href='./img/sprite.svg#svg-cart')
