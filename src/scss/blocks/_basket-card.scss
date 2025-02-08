@@ -195,10 +195,7 @@
 	}
 }
 @media (max-width: 767px) {
-	.basket .title-24{
-		font-size: 24px;
-		margin-bottom: 0;
-	}
+	
 	.basket-card__desk{
 		padding-left: 0;
 		padding-right:0;
@@ -287,7 +284,9 @@
 		}
 	}
 	
-	.basket .order-card .detailed-card__body{row-gap: 0;}
+	.basket, .basket-order{
+		.order-card .detailed-card__body{row-gap: 0;}
+	} 
 	.order-card-acordion{
 		.accordion__title{
 			padding-top: 7px;
