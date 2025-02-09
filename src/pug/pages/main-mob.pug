@@ -1,0 +1,23 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_burger-menu
+	include ../sections/_header-mob
+	main.main
+		include ../sections/_promo-main-page-mob.pug
+		include ../sections/_categories.pug
+		include ../sections/_building-materials-mob.pug
+		include ../sections/_rent-mob.pug
+		include ../sections/_sales.pug
+		include ../sections/_equipment-mob.pug
+		include ../sections/_our-service.pug
+		include ../sections/_about-section-mob.pug
+		include ../sections/_geo.pug
+		include ../sections/_blog-section-mob.pug
+		include ../sections/_contacts-section.pug
+
+	include ../sections/_footer-mob.pug
+		
+	
+block variables	
+	-var title = "Главная";
