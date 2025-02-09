@@ -1,0 +1,13 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_burger-menu
+	include ../sections/_header-mob
+	main.main
+		+promo-dark('rent-promo', 'Аренда', 'Арендовать спецтехнику в один клик ')(class="promo--gradient")
+		include ../sections/_rent-content
+		include ../sections/_equipment-mob
+	include ../sections/_footer-mob
+block variables		
+	
+	-var title = "Аренда";
