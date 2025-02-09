@@ -1,14 +1,15 @@
 extends ../layouts/layout.pug
 
 block content
-	include ../sections/_header
+	include ../sections/_burger-menu
+	include ../sections/_header-mob
 	
 	main.inner-main
 		include ../sections/_about-page-promo-mobile
 		
 		include ../sections/_contacts-form-dark
 		
-	include ../sections/_footer
+	include ../sections/_footer-mob
 	
 block variables	
 	- var title = "О компании";
