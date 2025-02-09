@@ -9,19 +9,24 @@
 	color: white;
 	padding: 20px;
     height: auto;
-	min-height: calc(100vh - 64px);
+	height: calc(100vh - 64px);
 	transform: translateX(110%);
 	transition: .3s;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	row-gap:30px;
+	overflow: hidden;
+	overflow-y: auto;
+	scrollbar-width: none;
+	&::-webkit-scrollbar{display: none;}
 	&.active{transform: translateX(0);}
 }
 
+
 .mobile-cat-menu{
 	position: fixed;
-	height: calc(100vh - 64px - 345px);
+	height: calc(100vh - 64px - 150px);
 	overflow: hidden;
 	overflow-y: auto;
 	scrollbar-width: none;
@@ -41,7 +46,7 @@
 	}
 }
 .mobile-nav{
-	height: calc(100vh - 64px - 345px);
+	height: calc(100vh - 64px - 170px);
 	overflow: hidden;
 	overflow-y: auto;
 	scrollbar-width: none;
