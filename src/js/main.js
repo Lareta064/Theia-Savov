@@ -224,7 +224,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       breakpoints:{
         1439:{
-          slidesPerView: 'auto',
+          slidesPerView: '2',
         }
       }
     });

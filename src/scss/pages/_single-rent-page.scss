@@ -8,11 +8,15 @@
 		line-height: 1.2;
 		text-transform: capitalize;
 		color: #222;
+		@media (max-width: 767px) {
+		font-size: 20px!important;
+	}
 	}
 	@media (max-width: 1439px) {
 		font-size: 14px;
 		&__list-title{font-size: 16px;}
 	}
+	
 	
 }
 .specifications.two-columns{
@@ -70,7 +74,7 @@
 }
 .specifications p,.specifications__list-block .dotted-list li, .specifications__list-block p{
 	font-size: 16px;
-	@media (max-width: 424px) {
+	@media (max-width: 376px) {
 		font-size: 14px;
 	}
 }

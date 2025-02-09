@@ -8,38 +8,62 @@ block content
 			.promo-mobile__banner.promo-overlay(style="background-image:url(./img/rent-mobile-bg.webp)")
 				h1.title-20.txt-white ЭКСКАВАТОР ФРОНТАЛЬНЫЙ
 					span.bold-txt 2550 руб/ч
+			
+		
 		.container
 			.promo-top
-				+breadcrumbs('Каталог','Аренда','Экскаватор')
+				+breadcrumbs('Каталог','Оборудование','Экскаватор')
 		section.product-details
 			.container.gap-20
-				.product-preview__img
-					img.img-contain(src="./img/products/prod5.webp", srcset="./img/products/prod5@2x.webp 2x" alt="img" width="372" height="343")
-			
+				.fotorama
+					.swiper.mySwiperThumb(thumbsslider)
+						.swiper-wrapper
+							.swiper-slide
+								img(src='./img/fotorama/fotorama4-t.webp' srcset='./img/fotorama/fotorama4-t@2x.webp 2x' width="193" height="130" alt="img")
+							.swiper-slide
+								img(src='./img/fotorama/fotorama2-t.webp' srcset='./img/fotorama/fotorama2-t@2x.webp 2x' width="193" height="130" alt="img")
+							.swiper-slide
+								img(src='./img/fotorama/fotorama3-t.webp' srcset='./img/fotorama/fotorama3-t@2x.webp 2x' width="193" height="130" alt="img")
+							.swiper-slide
+								img(src='./img/fotorama/fotorama1-t.webp' srcset='./img/fotorama/fotorama1-t@2x.webp 2x' width="193" height="130" alt="img")
+							.swiper-slide
+								img(src='./img/fotorama/fotorama2-t.webp' srcset='./img/fotorama/fotorama2-t@2x.webp 2x' width="193" height="130" alt="img")
+							.swiper-slide
+								img(src='./img/fotorama/fotorama3-t.webp' srcset='./img/fotorama/fotorama3-t@2x.webp 2x' width="193" height="130" alt="img")
+						
+					.swiper.mySwiperFotorama
+					
+						.swiper-wrapper
+							.swiper-slide
+								img(src='./img/fotorama/fotorama4.webp' srcset="./img/fotorama/fotorama4@2x.webp 2x" width="900" height="470" alt="img")
+							.swiper-slide
+								img(src='./img/fotorama/fotorama2.webp' srcset="./img/fotorama/fotorama2@2x.webp 2x" width="900" height="470" alt="img")
+							.swiper-slide
+								img(src='./img/fotorama/fotorama3.webp' srcset="./img/fotorama/fotorama3@2x.webp 2x" width="900" height="470" alt="img")
+							.swiper-slide
+								img(src='./img/fotorama/fotorama1.webp' srcset="./img/fotorama/fotorama1@2x.webp 2x" width="900" height="470" alt="img")
+							.swiper-slide
+								img(src='./img/fotorama/fotorama2.webp' srcset="./img/fotorama/fotorama2@2x.webp 2x" width="900" height="470" alt="img")
+							.swiper-slide
+								img(src='./img/fotorama/fotorama3.webp' srcset="./img/fotorama/fotorama3@2x.webp 2x" width="900" height="470" alt="img")
+				
 				.detailed-card
 					.detailed-card__body.bx-sh
 						.detailed-card-group
 							span.detailed-art.txt-12 Код: 105703
-							.detailed-title.txt-24 Речной мытый песок
+							.detailed-title.txt-24 Ковши «Обратная лопата»
 							.rating-block.flex
 								.rating-stars
 								span.txt-12 39 отзывов
 						
-						.price-block
-							.price-block__item
-								p от 870 руб./м3
-								span.txt-12 за шт
-							.price-block__item
-								p от 700 руб./тн
-								span.txt-12 В розницу
+							
 						.detailed-card-group
 							+counter
 							.detailed-total
 								span.txt-12 Стоимость
 								p.amount 700 000 руб
-						
+								
 						button.btn-primary В корзину
-						button.btn Рассчитать стоимость
 					
 					.detailed-card__footer.bx-sh
 						ul.dotted-list
@@ -54,38 +78,43 @@ block content
 							li
 								p.list__name Способ получения
 								span.line-bwn
-								p.list__val Самовывоз, Доставка
-					
-					
-					
+								p.list__val Самовывоз, Доставка	
+				
+				
 				.product-preview__info
+					//LIST BLOCK
 					.specifications__list-block
 						p.specifications__list-title Характеристики
 						ul.dotted-list
 							li
-								p.list__name Модуль крупности
+								p.list__name Объём
 								span.line-bwn
-								p.list__val 2.0-2.5
+								p.list__val 15 м3
 							li
-								p.list__name Коэфф. фильтрации
+								p.list__name Масса
 								span.line-bwn
-								p.list__val до 12 м
+								p.list__val 17800 кг
 							li
-								p.list__name Насыпная плотность
+								p.list__name A
 								span.line-bwn
-								p.list__val 1.6
+								p.list__val 3300 мм
 							li
-								p.list__name Содержание глины
+								p.list__name B
 								span.line-bwn
-								p.list__val ≤ 0,25%
-							
-						
+								p.list__val 3100 мм
+							li
+								p.list__name C
+								span.line-bwn
+								p.list__val 3800 мм
+						//IMAGE
+						.characteristics-img
+							img(src="./img/specificate.webp", srcset="./img/specificate@2x.webp 2x"  width="551" height="373" alt="img")
+					.specifications__list-block
 						p.specifications__list-title Применение
 						p Изготовление высокопрочного бетона, ЖБИ, ЖБК, тротуарной плитки и кладочного раствора, а также стекла и кирпича.
-						a(href="#!").flex-link.txt-16 Посмотреть все виды речного песка 
+						a(href="#!").flex-link.txt-16 Посмотреть все размеры
 							span.arrow-right
-			
-			
+
 				.specifications-acordion.accordion
 					//ОПИСАНИЕ
 					.accordion__item
@@ -188,7 +217,7 @@ block content
 		section.review
 			.container
 				include ../sections/_review-swiper
-			
+					
 		section.article-slider
 			.container
 			
@@ -212,13 +241,9 @@ block content
 						
 					
 					.mySwiper-pagination
-	//fixed-button
-	.float-bottom-btn
-		a(href="basket-order-mobile.html").btn-primary.flex-justify 
-			span Оформить заказ
-			span 206 567 руб
-			
+	
+	
 	include ../sections/_footer-mob
 		
 block variables	
-	-var title = "Карточка товара Материалы";
+	-var title = "Карточка товара Обрудование";
