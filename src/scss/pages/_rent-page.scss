@@ -46,3 +46,8 @@
 	aspect-ratio:551/350;
 	overflow: hidden;
 }
+.categories-menu-mobile{
+	@media (max-width: 767px) {
+	.title-24-fix{margin-bottom: 10px;}
+	}
+}
