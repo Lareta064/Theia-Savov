@@ -1,12 +1,13 @@
 extends ../layouts/layout.pug
 
 block content
-	include ../sections/_header
+	include ../sections/_burger-menu
+	include ../sections/_header-mob
 	
 	main.inner-main
-		include ../sections/_service-page-mob-content
+		include ../sections/_rent-categories-page-mob
 		
-	include ../sections/_footer
+	include ../sections/_footer-mob
 	
 block variables	
 	-var title = "Аренда категории";

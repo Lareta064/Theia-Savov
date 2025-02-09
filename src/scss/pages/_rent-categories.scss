@@ -6,4 +6,15 @@
 	@media (max-width: 1279px) {
 		&>*{grid-column: span 4;}
 	}
+	@media (max-width: 767px) {
+		display: flex;
+		width: calc(50% + 50vw);
+		overflow: hidden;
+		overflow-x: auto;
+		scrollbar-width: none;
+		&::-webkit-scrollbar{display: none;}
+		padding: 10px;
+		
+		column-gap:8px;
+	}
 }
