@@ -815,10 +815,15 @@ document.addEventListener("DOMContentLoaded", () => {
       if(flipCards.length>0){
         flipCards.forEach((card)=>{
           const cardFlipBtn = card.querySelector('.flip-card-btn');
+          const cardFlipClose = card.querySelector('.close-btn');
           cardFlipBtn.addEventListener('click', ()=>{
             card.classList.add('flip-active');
           });
-
+          if(cardFlipClose){
+            cardFlipClose.addEventListener('click', ()=>{
+              card.classList.remove('flip-active');
+            });
+          }
         });
         
       }

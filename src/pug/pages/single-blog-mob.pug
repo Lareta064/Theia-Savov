@@ -1,0 +1,15 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_burger-menu
+	include ../sections/_header-mob
+	
+	main.inner-main
+		include ../sections/_blog-single-promo
+		include ../sections/_blog-single-page-content
+		
+		include ../sections/_contacts-form-dark
+	include ../sections/_footer-mob
+	
+block variables	
+	-var title = "Блог";

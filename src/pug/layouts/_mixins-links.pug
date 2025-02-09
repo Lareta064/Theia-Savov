@@ -222,6 +222,9 @@ mixin flipCard(img=1)
 		
 		//CARD BACK
 		.flip-card__back
+			button.close-btn
+				svg.svg-cross
+					use(href='./img/sprite.svg#svg-cross')
 			.detailed-card
 				.detailed-card-group
 					span.detailed-art.txt-12 Код: 105703
