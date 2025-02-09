@@ -4,8 +4,28 @@ block content
 	include ../sections/_burger-menu
 	include ../sections/_header-mob
 	main.main
-		+promo-dark('rent-promo', 'Аренда', 'Арендовать спецтехнику в один клик ')(class="promo--gradient")
-		include ../sections/_rent-content
+		.container
+			.promo-top
+				+breadcrumbs('аренда')
+		section.categories-menu-mobile
+			.container
+				h1.title-24-fix Выбрать категорию:
+				.rent-categories-list
+					+mini-card('1', 'Автовышки')
+					+mini-card('2', 'Автокраны')
+					+mini-card('3', 'Бортовые автомобили')
+					+mini-card('4', 'Бульдозеры')
+					+mini-card('5', 'Длинномеры')
+					+mini-card('6', 'Катки')
+					+mini-card('7', 'Коммунальная техника')
+					+mini-card('8', 'Компрессоры')
+					+mini-card('9', 'Манипуляторы')
+					+mini-card('10', 'Мини экскаваторы')
+					+mini-card('11', 'Минипогрузчики')
+					+mini-card('12', 'Пухто')
+					+mini-card('13', 'Самосвалы')
+					+mini-card('14', 'Телескопические погрузчики')
+		include ../sections/_rent-content-mob
 		include ../sections/_equipment-mob
 	include ../sections/_footer-mob
 block variables		

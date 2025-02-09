@@ -1,0 +1,18 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_burger-menu
+	include ../sections/_header-mob
+	
+	main.inner-main
+		include ../sections/_building-page-promo
+		include ../sections/_building-page-content
+		include ../sections/_pros
+		include ../sections/_contacts-form-dark
+		include ../sections/_building-materials-mob
+		include ../sections/_equipment-mob
+
+	include ../sections/_footer-mob
+	
+block variables	
+	-var title = "Строительство";
