@@ -259,7 +259,7 @@ mixin flipCard(img=1)
 					button.btn Добавить корзину
 
 mixin mini-card(img, title, txt)
-	a(href="#!").mini-card
+	a(href="#!").mini-card&attributes(attributes)
 		.mini-card__img
 			img.img-contain(src="./img/mini-cards/mini"+ img +".webp",srcset="./img/mini-cards/mini"+ img+"@2x.webp 2x" alt="img" width="96" height="96")
 		.mini-card__txt
@@ -268,7 +268,7 @@ mixin mini-card(img, title, txt)
 				p #{txt}
 
 mixin mini-card2(img, title)
-	a(href="#!").mini-card
+	a(href="#!").mini-card&attributes(attributes)
 		.mini-card__img
 			img.img-contain(src="./img/mini-cards/"+ img +".webp",srcset="./img/mini-cards/"+ img+"@2x.webp 2x" alt="img" width="96" height="96")
 		.mini-card__txt

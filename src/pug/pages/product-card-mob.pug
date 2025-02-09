@@ -1,0 +1,160 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_burger-menu
+	include ../sections/_header-mob
+	main.main
+		.promo-mobile-inner
+			.promo-mobile__banner.visible-sm.promo-overlay(style="background-image:url(./img/rent-mobile-bg.webp)")
+				h1.title-20.txt-white ЭКСКАВАТОР ФРОНТАЛЬНЫЙ
+					span.bold-txt 2550 руб/ч
+		section.product-details
+			.container
+				.promo-top
+					+breadcrumbs('Каталог','Песок')
+
+				.product-details-content.gap-60
+					.header-block
+						h2.title-24-fix.mb-20 Речной песок
+						.preview-text
+							p Песок - один из самых востребованных строительных материалов. Используется для приготовления строительных растворов, сухих строительных смесей, а также в качестве выравнивающего основания.
+							p Подходит как для внутренних, так и для наружных работ. Применяется в строительстве и отделочных работах, возведении дорог и ландшафтном обустройстве. Продается в мешках весом 30 кг. Произведен в России.
+							p
+								strong Внимание! Товар весом более 1 тонны. необходимо перемещать минимум двумя людьми или с помощью механизированного оборудования.
+					.accordion-group
+						h3.title-24-fix Виды песка
+						//ACORDION VISIBLE MOBILE
+						.accordion-list.accordion
+							//row
+							.accordion__item
+								.accordion__title
+									.accordion__arrow
+										span.accordion__arrow-item
+											svg.svg-carret
+												use(href="./img/sprite.svg#svg-carret")
+									span.accordion__title-text Намывной песок
+								.accordion__content
+									.accordion-list__row
+										.accordion-list__cell
+											span Цена
+											.txt-14 320 руб/м3
+										.accordion-list__cell
+											span Розницу
+											.txt-14 320 руб/м3
+										+counter
+							//row
+							.accordion__item
+								.accordion__title
+									.accordion__arrow
+										span.accordion__arrow-item
+											svg.svg-carret
+												use(href="./img/sprite.svg#svg-carret")
+									span.accordion__title-text Крупный речной песок
+								.accordion__content
+									.accordion-list__row
+										.accordion-list__cell
+											span Цена
+											.txt-14 320 руб/м3
+										.accordion-list__cell
+											span Розницу
+											.txt-14 320 руб/м3
+										+counter
+							//row
+							.accordion__item
+								.accordion__title
+									.accordion__arrow
+										span.accordion__arrow-item
+											svg.svg-carret
+												use(href="./img/sprite.svg#svg-carret")
+									span.accordion__title-text Крупный речной песок
+								.accordion__content
+									.accordion-list__row
+										.accordion-list__cell
+											span Цена
+											.txt-14 320 руб/м3
+										.accordion-list__cell
+											span Розницу
+											.txt-14 320 руб/м3
+										+counter
+					
+					.specifications-acordion.accordion.mt-0
+						//Преимущества
+						.accordion__item
+							.accordion__title
+								.accordion__arrow
+									svg.svg-carret
+										use(href="./img/sprite.svg#svg-carret")
+								span.accordion__title-text Преимущества
+							.accordion__content
+								.specifications__desk
+									.benefits-list.two-columns
+										.benefit-item
+											.flex-center
+												img(src="./img/benefits/icon5.webp", srcset="./img/benefits/icon5@2x.webp 2x" alt="icon" width="28" height="28")
+											p Есть пропуска:<br>ТТК, СК, МКАД
+										
+										.benefit-item
+											.flex-center
+												img(src="./img/benefits/icon6.webp", srcset="./img/benefits/icon6@2x.webp 2x" alt="icon" width="28" height="28")
+											p На рынке <br>c 2006 года
+
+										.benefit-item
+											.flex-center
+												img(src="./img/benefits/icon7.webp", srcset="./img/benefits/icon7@2x.webp 2x" alt="icon" width="28" height="28")
+											p Любой удобный<br> способ оплаты
+										
+										.benefit-item
+											.flex-center
+												img(src="./img/benefits/icon8.webp", srcset="./img/benefits/icon8@2x.webp 2x" alt="icon" width="28" height="28")
+											p Без недогруза
+										.benefit-item
+											.flex-center
+												img(src="./img/benefits/icon9.webp", srcset="./img/benefits/icon9@2x.webp 2x" alt="icon" width="28" height="28")
+											p Работаем напрямую<br>с произво&shy;дите&shy;лями
+										.benefit-item
+											.flex-center
+												img(src="./img/benefits/icon10.webp", srcset="./img/benefits/icon10@2x.webp 2x" alt="icon" width="28" height="28")
+											p Собственный<br> автопарк
+
+						//О компании
+						.accordion__item
+							.accordion__title
+								.accordion__arrow
+									svg.svg-carret
+										use(href="./img/sprite.svg#svg-carret")
+								span.accordion__title-text О компании
+							.accordion__content
+								.specifications__desk
+									.title-24 О компании
+									p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно-монтажных работ в промышленном и гражданском строительстве 
+									p Являясь одной из ведущих строительных компании, ТСИ предлагает комплекс работ в области управления строительством и широкий спектр строительно-монтажных работ в промышленном и гражданском строительстве 
+					
+					.review
+						include ../sections/_review-swiper
+					
+					
+					//CARDS SLIDER
+					.article-slider
+						.header-group
+							p.title-24 Похожее
+							a(href="#!").flex-link Показать больше
+								span.arrow-right
+						.reccomend-products.swiper
+							.swiper-wrapper
+								.swiper-slide
+									+product-card-ui(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+								.swiper-slide
+									+product-card-ui(6,'ЩПС С2 фракции', '0-20 мм', 2300)
+								.swiper-slide
+									+product-card-ui(7,'ЩПС С2 фракции', '0-20 мм', 2300)
+								.swiper-slide
+									+product-card-ui(8,'ЩПС С2 фракции', '0-20 мм', 2300)
+								.swiper-slide
+									+product-card-ui(5,'ЩПС С2 фракции', '0-20 мм', 2300)
+							
+							.mySwiper-pagination
+						
+	include ../sections/_footer-mob
+		
+block variables	
+	-var title = "Карточка товара Речной песок";

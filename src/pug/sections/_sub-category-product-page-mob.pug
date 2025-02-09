@@ -1,0 +1,52 @@
+.container
+	.promo-top
+		+breadcrumbs('каталог','Отделочные и строй материалы ')
+		
+section.categories-menu-mobile
+	.container
+		a(href="#!").back-link.flex-link
+			svg.svg-arrow-left
+				use(href='./img/sprite.svg#svg-arrow-left')
+			| Вернуться в каталог
+		
+		.rent-categories-list
+			+mini-card2('cat1', 'Песок')
+			+mini-card2('cat2', 'Щебень')(class="active")
+			+mini-card2('cat3', 'Бетонные смеси')
+			+mini-card2('cat1', 'Песок')
+			+mini-card2('cat2', 'Щебень')
+			+mini-card2('cat3', 'Бетонные смеси')
+		h1.title-17 Отделочные и строй материалы
+
+section.product-assort
+	.container
+		.tabs-block.tabs-block--grid
+			.tabs-nav.tabs-nav--center
+				a.tabs-nav__item.active(href="#!" data-tab="all") Все
+				a.tabs-nav__item(href="#!" data-tab="tab_2") Гранитный 
+				a.tabs-nav__item(href="#!" data-tab="tab_3") Известняковый
+				a.tabs-nav__item(href="#!" data-tab="tab_4") Базальтовый
+				a.tabs-nav__item(href="#!" data-tab="tab_5") Песчаник 
+				a.tabs-nav__item(href="#!" data-tab="tab_6") Шлаковый
+				a.tabs-nav__item(href="#!" data-tab="tab_7") Сланцевый
+				a.tabs-nav__item(href="#!" data-tab="tab_8") Керамзитовый  
+				a.tabs-nav__item(href="#!" data-tab="tab_9") Черный  
+				a.tabs-nav__item(href="#!" data-tab="tab_10") Вторичный  
+				a.tabs-nav__item(href="#!" data-tab="tab_11") Строительный 
+				a.tabs-nav__item(href="#!" data-tab="tab_12") стротельство
+			// SINGLE  TAB CONTENT
+			#all.tabs-body.active
+				+product-card(7,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+				+product-card(7,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+				+product-card(7,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+				+product-card(7,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+				+product-card(7,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+				+product-card(7,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+				+product-card(7,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+				+product-card(7,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+			#tab_2.tabs-body
+				+product-card(6,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+				+product-card(6,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+				+product-card(6,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+				+product-card(6,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+

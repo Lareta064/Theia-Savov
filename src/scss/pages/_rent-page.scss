@@ -47,7 +47,11 @@
 	overflow: hidden;
 }
 .categories-menu-mobile{
+	padding-top: 0;
+	padding-bottom: 0;
 	@media (max-width: 767px) {
 	.title-24-fix{margin-bottom: 10px;}
+	.back-link{margin-bottom: 10px; font-family: $fs;}
+	title-17{margin-bottom: 0;}
 	}
 }

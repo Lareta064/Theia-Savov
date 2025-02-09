@@ -1,0 +1,12 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_burger-menu
+	include ../sections/_header-mob
+	main.inner-main
+		include ../sections/_sub-category-product-page-mob
+		
+	include ../sections/_footer-mob
+	
+block variables	
+	-var title = "Подкатегории";

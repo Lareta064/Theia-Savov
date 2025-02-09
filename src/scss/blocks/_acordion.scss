@@ -52,3 +52,38 @@
 	display: none;
 	
 }
+.accordion-list{
+	.accordion__title {font-size: 16px; text-transform: unset;}
+	&__row{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		column-gap: 10px;
+		text-align: center;
+		font-weight: 400;
+		font-size: 14px;
+		letter-spacing: -0.03em;
+		text-transform: capitalize;
+		color: #1c1c1c;
+	}
+	&__cell span{
+		font-weight: 700;
+		font-size: 13px;
+		margin-bottom: 6px;
+		display: inline-block;
+	}
+	.counter{
+			button{
+			background-size: 12px 12px;
+			width: 30px;
+		}
+		.counter-value{font-size: 13px; min-width:40px;padding-inline:0;}
+	}
+}
+.accordion-group{
+	.title-24-fix{
+		border-bottom:1px solid #1c1c1c;
+		padding-bottom: 16px;
+		font-weight: 400;
+	}
+}
+						

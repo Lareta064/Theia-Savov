@@ -33,6 +33,9 @@
 	column-gap: 16px;
 	row-gap: 8px;
 	margin-top: 34px;
+	@media (max-width: 767px) {
+		column-gap: 10px;
+	}
 }
 .swiper-pagination-bullets .swiper-pagination-bullet{
 	height: 10px;

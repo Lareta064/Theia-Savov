@@ -10,6 +10,8 @@
     background-color: #fff;
 	column-gap:30px;
 	transition: .3s;
+	border:1px solid transparent;
+	&.active{border:1px solid #1c1c1c;}
 	.title-20{transition: .3s; }
 	&__img{
 		width: 96px;

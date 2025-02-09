@@ -137,14 +137,7 @@ section + .dark-bg{margin-top: 45px;}
 		padding-inline:20px;
 	}
 }
-// .header .container{
-// 	@media (max-width: 1649px) {
-// 		padding-inline:30px;
-// 	}
-// 	@media (max-width: 1279px) {
-// 		padding-inline:16px;
-// 	}
-// }
+
 .container-narrow{
 	width: min(1182px, 100%);
 	@media (max-width: 767px) {
@@ -208,6 +201,7 @@ section + .dark-bg{margin-top: 45px;}
 	
 	
 }
+.mt-0{margin-top: 0!important;}
 .mb-20{margin-bottom: 20px;}
 .mt-20{margin-top: 20px;}
 .mt-40{margin-top: 40px!important;}
