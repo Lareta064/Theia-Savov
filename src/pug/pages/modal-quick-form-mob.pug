@@ -1,0 +1,16 @@
+extends ../layouts/layout-mob-quick-form.pug
+
+block content
+	include ../sections/_burger-menu
+	include ../sections/_header-mob
+	
+	main.inner-main
+		include ../sections/_blog-page-promo-mob
+		include ../sections/_blog-page-content
+		include ../sections/_sales
+	include ../sections/_footer-mob
+
+	
+block variables
+	
+	-var title = "Блог";
