@@ -1287,7 +1287,7 @@
 						</svg></a></li>
 			</ul>
 		</div>
-		<!--POPUP-->
+		<!--POPUP заказ с выбором даты-->
 		<!-- POPUP-->
 		<div class="modal-frame" data-modal="calc-order">
 			<div class="modal-frame-content">
@@ -1366,6 +1366,94 @@
 			</div>
 		</div>
 		<!--ВЫБОР ГОРОДА-->
+		<!--POPUP с выбором количества-->
+		<!-- POPUP Быстрый заказ со счетчиком количества-->
+		<div class="modal-frame modal-frame--block visible" data-modal="quick-order">
+			<header class="header-mobile">
+				<div class="container"><a class="logo" href="index.html">
+						<svg class="logo-group">
+							<use href="./img/sprite.svg#logo-group"></use>
+						</svg></a>
+					<button class="link-close" data-close>
+						<svg class="svg-cross">
+							<use href="./img/sprite.svg#svg-cross"></use>
+						</svg>
+					</button>
+				</div>
+			</header>
+			<div class="modal-frame-content">
+				<h3 class="h3">Оформить заказ в один клик </h3>
+				<form class="order-form">
+					<!-- выбранный товар + выбор дополнительный товара-->
+					<div class="select-products-form">
+						<!--один товар + даты-->
+						<div class="add-product-group flex">
+							<div class="form-dropdown dropdown">
+								<button class="dropdown__button" type="button">Речной песок</button>
+								<div class="dropdown__list">
+									<ul>
+										<li class="dropdown__list-item" data-value="select">Выбрать</li>
+										<li class="dropdown__list-item" data-value="Речной песок">Речной песок</li>
+										<li class="dropdown__list-item" data-value="Щебень">Щебень</li>
+										<li class="dropdown__list-item" data-value="Продукт 1">Продукт 1</li>
+										<li class="dropdown__list-item" data-value="Продукт 2">Продукт 2</li>
+										<li class="dropdown__list-item" data-value="Продукт 3">Продукт 3</li>
+										<li class="dropdown__list-item" data-value="Продукт 4">Продукт 4</li>
+									</ul>
+								</div>
+								<!-- в этот скрытый инпут в качестве value  выводится значение из data-value из.dropdown__list-item -->
+								<input class="dropdown__input-hidden" type="text" name="select_product">
+							</div>
+							<!--счетчик-->
+							<div class="form-counter">
+								<div class="counter">
+									<button class="counter-minus" type="button" disabled="disabled" aria-label="Уменьшить количество"></button><span class="counter-value" contenteditable="true">2</span>
+									<button class="counter-plus" type="button" aria-label="Увеличить количество"></button>
+								</div>
+							</div>
+						</div>
+						<!-- кнопка выбрать еще-->
+						<button class="add-product add-product-btn"><span class="button-icon">
+								<svg class="svg-plus">
+									<use href="./img/sprite.svg#svg-plus"></use>
+								</svg></span>Добавить еще технику</button>
+					</div>
+					<!--USER DATA-->
+					<div class="form-item">
+						<input type="text" placeholder="Адрес *" value="Достоевского 4">
+					</div>
+					<div class="form-row">
+						<div class="form-item">
+							<input type="text" placeholder="Имя *" value="Миша">
+						</div>
+						<div class="form-item">
+							<input type="text" placeholder="Фамилия *" value="Петров">
+						</div>
+					</div>
+					<div class="form-item">
+						<input type="text" placeholder="Email *" value="апри@gmail.com">
+					</div>
+					<div class="form-item">
+						<input type="text" placeholder="Телефон *" value="8 (911) 219 98 67">
+					</div>
+					<div class="form-item">
+						<input type="text" placeholder="Компания">
+					</div>
+					<div class="form-item">
+						<textarea placeholder="Примечания"></textarea>
+					</div>
+					<!--==== инпут загрузки файла с компьютера====-->
+					<div class="fileUpload-group">
+						<label class="fileUpload-label">
+							<input class="form-input fileUploadInput" type="file"><span class="form-input-add">+</span><span class="form-input-clear">&ndash;</span><span class="fileUpload-name">Приложить карточку предприятия </span>
+						</label>
+					</div>
+					<!--КНОПКА ОТПРАВИТЬ-->
+					<button class="btn-primary" type="submit">Заказать</button>
+					<p class="agree-txt center-txt">Согласен с обработкой моих персональных данных в соответствии с <a href="#!">политикой конфиденциальности</a>.<br> Поля, отмеченные *, являются обязательными для заполнения</p>
+				</form>
+			</div>
+		</div>
 		<!-- POPUP CALLBACK-->
 		<div class="modal-frame" data-modal="callback-form">
 			<div class="modal-frame-content">

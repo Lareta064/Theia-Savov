@@ -1,5 +1,5 @@
-// POPUP с выбором даты
-.modal-frame.modal-frame--block(data-modal="calc-order")
+// POPUP Быстрый заказ со счетчиком количества
+.modal-frame.modal-frame--block.visible(data-modal="quick-order")
 	header.header-mobile
 		.container
 			a(href="index.html").logo
@@ -10,12 +10,12 @@
 					use(href='./img/sprite.svg#svg-cross')
 
 	.modal-frame-content
-		h3.h3 Заказать спецтехнику
+		h3.h3 Оформить заказ в один клик 
 		form.order-form
 			// выбранный товар + выбор дополнительный товара
 			.select-products-form
 				//один товар + даты
-				.add-product-group.flex.select-date-group
+				.add-product-group.flex
 					.form-dropdown.dropdown
 						button.dropdown__button(type="button") Речной песок
 						
@@ -31,19 +31,17 @@
 					
 						// в этот скрытый инпут в качестве value  выводится значение из data-value из.dropdown__list-item 
 						input.dropdown__input-hidden(type="text", name="select_product")
-					//диапазон дат
-					.select-date
-						.form-item
-							input.start-date(type='text' name="startDay")
-						.form-item
-							input.end-date(type='text' name="endtDay")
+					
+					//счетчик
+					.form-counter
+						+counter
 				
 				// кнопка выбрать еще
 				button.add-product.add-product-btn
 					span.button-icon
 						svg.svg-plus
 							use(href='./img/sprite.svg#svg-plus')
-					| Добавить еще товар
+					| Добавить еще технику
 
 			//USER DATA
 			.form-item
@@ -72,5 +70,3 @@
 			//КНОПКА ОТПРАВИТЬ
 			button.btn-primary(type="submit") Заказать
 			p.agree-txt.center-txt Согласен с обработкой моих персональных данных в соответствии с #[a(href="#!") политикой конфиденциальности].<br> Поля, отмеченные *, являются обязательными для заполнения
-
-
