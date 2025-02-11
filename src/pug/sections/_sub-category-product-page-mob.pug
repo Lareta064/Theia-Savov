@@ -9,13 +9,13 @@ section.categories-menu-mobile
 				use(href='./img/sprite.svg#svg-arrow-left')
 			| Вернуться в каталог
 		
-		.rent-categories-list
-			+mini-card2('cat1', 'Песок')
-			+mini-card2('cat2', 'Щебень')(class="active")
-			+mini-card2('cat3', 'Бетонные смеси')
-			+mini-card2('cat1', 'Песок')
-			+mini-card2('cat2', 'Щебень')
-			+mini-card2('cat3', 'Бетонные смеси')
+		.rent-categories-list.js-group
+			+mini-card2('cat1', 'Песок')(class="js-click-item active")
+			+mini-card2('cat2', 'Щебень')(class="js-click-item")
+			+mini-card2('cat3', 'Бетонные смеси')(class="js-click-item")
+			+mini-card2('cat1', 'Песок')(class="js-click-item")
+			+mini-card2('cat2', 'Щебень')(class="js-click-item")
+			+mini-card2('cat3', 'Бетонные смеси')(class="js-click-item")
 		h1.title-17 Отделочные и строй материалы
 
 section.product-assort

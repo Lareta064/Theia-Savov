@@ -1,0 +1,29 @@
+
+.container
+	.promo-top
+		+breadcrumbs('Поиск')
+		
+		a.link-close(href="index.html")
+			svg.svg-cross
+				use(href='./img/sprite.svg#svg-cross')
+section.search-results
+	.container
+		.search-page-form
+			form.header-search-form
+				.form-item.search-form-relative
+					input(type="search" placeholder="Поиск")
+					button.btn.search-btn(type="submit")
+						svg.svg-search
+							use(href='./img/sprite.svg#svg-search')
+		.search-results-list
+			h2.title-24-fix.mb-20 Результаты поиска
+			.two-columns
+				+product-card(7,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+				+product-card(7,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+				+product-card(7,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+				+product-card(7,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+				+product-card(7,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+				+product-card(7,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+				+product-card(7,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+				+product-card(7,'ЩПС С2 фракции фракции, все очень хвалят и рекомендуют', '0-20 мм', 2300)
+			

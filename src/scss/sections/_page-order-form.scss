@@ -5,4 +5,17 @@
     background: white;
 	.order-form{max-width: 772px; margin-inline:auto;}
 	.btn-primary{width: max-content; margin-inline:auto; margin-top: 30px;}
+	
+}
+@media (max-width: 767px) {
+	.order-form{
+		.add-product-group.flex{
+			flex-direction: column-reverse;
+			.form-dropdown{width: 100%; margin-top: 10px;}
+			.select-date{
+				width: 100%;
+				input{width: 100%;}
+			}
+		}
+	}
 }

@@ -37,3 +37,27 @@
 			}
 	}
 }
+.search-results-list{
+	.title-24-fix{margin-bottom: 20px!important;}
+}
+.search-page-form{
+	margin-bottom: 40px;
+}
+.search-form-relative{
+	position: relative;
+	input{
+		height: 52px;
+		border-color: #1c1c1c;
+	}
+	.search-btn{
+		position: absolute;
+		border-color: transparent;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 5;
+		svg{color: #1c1c1c; width:20px; height:20px;}
+		width: 50px;
+		padding: 0;
+	}
+}

@@ -373,7 +373,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const modalOpen = document.querySelectorAll('[data-btn]');
     const modalFrames = document.querySelectorAll('[data-modal]');
     if( modalFrames.length > 0){
-    //  const modalFramesClose = document.querySelectorAll('[data-close]');
+      const modalFramesClose = document.querySelectorAll('[data-close]');
 
     for(let item of modalOpen){
       item.addEventListener('click', function(e){
@@ -402,6 +402,35 @@ document.addEventListener("DOMContentLoaded", function () {
             bodyEl.classList.remove('lock');
           }
         });
+      }
+
+      if(modalFramesClose){
+        modalFramesClose.forEach((closeItem)=>{
+          closeItem.addEventListener('click', ()=>{
+              bodyEl.classList.remove('lock');
+              closeItem.closest('.visible').classList.remove('visible')
+          });
+        });
+        
+      }
+    }
+
+    const jsGroups = document.querySelectorAll('.js-group');
+    if (jsGroups.length > 0){
+      for (let group of jsGroups){
+        const jsGroupItems= group.querySelectorAll('.js-click-item');
+       
+        
+        jsGroupItems.forEach((item)=>{
+          item.addEventListener('click', ()=>{
+            const jsGroupItemActive= group.querySelector('.active');
+            jsGroupItemActive.classList.remove('active');
+            item.classList.add('active');
+              
+          });
+
+        });
+
       }
     }
 });

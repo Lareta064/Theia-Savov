@@ -1,0 +1,86 @@
+include _mixins-links.pug
+block variables
+
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		//запрет на индексацию
+		meta(name="robots" content="noindex, nofollow")
+		//- meta(name="viewport" content="width=1280, initial-scale=1.0, maximum-scale=1.0") 
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		//=======убрать перевод цифр в номер телефона на ios  и safari ======
+		meta(name="format-detection" content="telephone=no")
+		//===custom scrollbar plugin ===
+		//- link(rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css")
+		//fancybox
+		link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css')
+		//Datapicker
+		link(rel='stylesheet' href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css")
+		//Swiper
+		link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css")
+		//========= fonts ========
+		link(rel="stylesheet", href="./fonts/fonts.css")
+		//========= custom styles ========
+		link(rel="stylesheet"  href="./css/main.css")
+		title !{title}
+		
+		//-style.
+
+			!{customStyle}
+	
+	body(class=(bodyCl !=="" ? bodyCl : ''))
+
+
+		
+		block content
+		
+		//MOBILE BOTTOM FIXED MOB MENU
+		include ../blocks/_mobile-menu
+		
+		//POPUP
+		include ../blocks/_modal-mobile
+		// POPUP CALLBACK
+		.modal-frame(data-modal="callback-form")
+			.modal-frame-content
+				h3.h3 Обратный звонок
+				
+				form.contacts-form
+					.form-item
+						input(type="text" name="name" placeholder="Имя")
+					.form-item
+						input(type="text" name="phone" placeholder="Телефон")
+					.form-item
+						input(type="text" name="email"  placeholder="E-mail")
+					.form-item
+						textarea( name="message" placeholder="Ваш вопрос *")
+					.form-item.form-btn
+						button(type="submit").btn.btn--white ОТПРАВИТЬ
+					p.agree-txt.center-txt Согласен с обработкой моих персональных данных в соответствии с #[a(href="#!") политикой конфиденциальности].<br> Поля, отмеченные *, являются обязательными для заполнения
+		
+		//SEARCH BLOCK
+		.search-block-mobile#search-mobile
+			//SEARCH FORM
+			.header-form-wrapper#mobile-search-form
+				form.header-search-form
+					.form-item.search-form-group
+						input(type="search" placeholder="Поиск")
+						button.btn.search-btn(type="submit")
+							svg.svg-search
+								use(href='./img/sprite.svg#svg-search')
+		
+		script(src="./libs/jquery/jquery-3.0.0.min.js")
+		//script(src="./libs/jquery.lazy.min.js")
+		//Swiper
+		script(src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js")
+		//Datapicker
+		script(src='https://cdn.jsdelivr.net/npm/flatpickr')
+		script(src='https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js')
+		
+		//===custom scrollbar plugin ===
+		//- script(src='https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js')
+		//fancy
+		script(src='https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js')
+		//=============== custom scripts ===================
+		script(src="./js/main.js")
