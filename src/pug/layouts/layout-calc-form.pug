@@ -1,0 +1,141 @@
+include _mixins-links.pug
+block variables
+
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		//запрет на индексацию
+		meta(name="robots" content="noindex, nofollow")
+		//- meta(name="viewport" content="width=1280, initial-scale=1.0, maximum-scale=1.0") 
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		//=======убрать перевод цифр в номер телефона на ios  и safari ======
+		meta(name="format-detection" content="telephone=no")
+		//===custom scrollbar plugin ===
+		//- link(rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css")
+		//fancybox
+		link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css')
+		//Datapicker
+		link(rel='stylesheet' href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css")
+		//Swiper
+		link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css")
+		//========= fonts ========
+		link(rel="stylesheet", href="./fonts/fonts.css")
+		//========= custom styles ========
+		link(rel="stylesheet"  href="./css/main.css")
+		title !{title}
+		
+		//-style.
+
+			!{customStyle}
+	
+	body(class=(bodyCl !=="" ? bodyCl : ''))
+
+
+		
+		block content
+		
+		//MOBILE BOTTOM FIXED MOB MENU
+		include ../blocks/_mobile-menu
+		
+		// POPUP с выбором даты
+		.modal-frame.visible(data-modal="calc-order")
+			.modal-frame-content
+				h3.h3 Заказать спецтехнику
+				form.order-form
+					// выбранный товар + выбор дополнительный товара
+					.select-products-form
+						//один товар + даты
+						.add-product-group.flex
+							.form-dropdown.dropdown
+								button.dropdown__button(type="button") Речной песок
+								
+								.dropdown__list
+									ul
+										li.dropdown__list-item(data-value="select") Выбрать
+										li.dropdown__list-item(data-value="Речной песок") Речной песок
+										li.dropdown__list-item(data-value="Щебень") Щебень
+										li.dropdown__list-item(data-value="Продукт 1") Продукт 1
+										li.dropdown__list-item(data-value="Продукт 2") Продукт 2
+										li.dropdown__list-item(data-value="Продукт 3") Продукт 3
+										li.dropdown__list-item(data-value="Продукт 4") Продукт 4
+							
+								// в этот скрытый инпут в качестве value  выводится значение из data-value из.dropdown__list-item 
+								input.dropdown__input-hidden(type="text", name="select_product")
+							//диапазон дат
+							.select-date
+								.form-item
+									input.start-date(type='text' name="startDay")
+								.form-item
+									input.end-date(type='text' name="endtDay")
+						
+						// кнопка выбрать еще
+						button.add-product.add-product-btn
+							span.button-icon
+								svg.svg-plus
+									use(href='./img/sprite.svg#svg-plus')
+							| Добавить еще товар
+
+					//USER DATA
+					.form-item
+						input(type="text" placeholder="Адрес *" value="Достоевского 4")
+					.form-row
+						.form-item
+							input(type="text" placeholder="Имя *" value="Миша")
+						.form-item
+							input(type="text" placeholder="Фамилия *" value="Петров")
+					.form-item
+						input(type="text" placeholder="Email *" value="апри@gmail.com")
+					.form-item
+						input(type="text" placeholder="Телефон *" value="8 (911) 219 98 67")
+					.form-item
+						input(type="text" placeholder="Компания")
+					.form-item
+						textarea(placeholder="Примечания")
+					//==== инпут загрузки файла с компьютера====
+					.fileUpload-group
+						label.fileUpload-label
+							input.form-input.fileUploadInput(type="file")
+							span.form-input-add +
+							span.form-input-clear &ndash;
+							span.fileUpload-name Приложить карточку предприятия 
+
+					//КНОПКА ОТПРАВИТЬ
+					button.btn-primary(type="submit") Заказать
+					p.agree-txt.center-txt Согласен с обработкой моих персональных данных в соответствии с #[a(href="#!") политикой конфиденциальности].<br> Поля, отмеченные *, являются обязательными для заполнения
+		
+		//POPUP с выбором количества
+		include ../blocks/_modal-quick-form
+		
+		// POPUP CALLBACK
+		.modal-frame(data-modal="callback-form")
+			.modal-frame-content
+				h3.h3 Обратный звонок
+				
+				form.contacts-form
+					.form-item
+						input(type="text" name="name" placeholder="Имя")
+					.form-item
+						input(type="text" name="phone" placeholder="Телефон")
+					.form-item
+						input(type="text" name="email"  placeholder="E-mail")
+					.form-item
+						textarea( name="message" placeholder="Ваш вопрос *")
+					.form-item.form-btn
+						button(type="submit").btn.btn--white ОТПРАВИТЬ
+					p.agree-txt.center-txt Согласен с обработкой моих персональных данных в соответствии с #[a(href="#!") политикой конфиденциальности].<br> Поля, отмеченные *, являются обязательными для заполнения
+		script(src="./libs/jquery/jquery-3.0.0.min.js")
+		//script(src="./libs/jquery.lazy.min.js")
+		//Swiper
+		script(src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js")
+		//Datapicker
+		script(src='https://cdn.jsdelivr.net/npm/flatpickr')
+		script(src='https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js')
+		
+		//===custom scrollbar plugin ===
+		//- script(src='https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js')
+		//fancy
+		script(src='https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js')
+		//=============== custom scripts ===================
+		script(src="./js/main.js")

@@ -5,7 +5,7 @@
 	flex-direction: column;
 	row-gap:15px;
 	&>*{width: 100%;}
-	textarea{height: 44px;}
+	textarea{height: 64px;}
 	input{font-weight: 600;
 	&::placeholder{font-weight: 400;}}
 	.btn{
